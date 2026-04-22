@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab Doctor ne kaha ki ye sab bas 'stress' hai, toh mera dimaag sunn ho gaya aur main hospital ke bahar baith kar bilakh-bilakh kar rone lagi. Is anjaan shehar mein na bhasha samajh aati hai na koi apna hai, bas ghar ki yaad mein dil phata ja raha hai. Abhi mujhse padhai ki baat mat karo, mera man itna bhari hai ki lag raha hai jaise main kahin kho gayi hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "alienation",
+    "intensity_seed": 5,
+    "cultural markers": ["shehar", "bhasha", "bilakh-bilakh kar rona", "dimaag sunn hona"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Doctor ki baatein sunkar mere hosh udd gaye aur main hostel ke kamre mein aakar sunn hokar deewar takne lagi, ab shaadi ka dabaav kaise jhelun? Gaon mein sab meri padhai ka intezar kar rahe hain par yahan akelepan mein mera dum ghut raha hai. Abhi main koi solution nahi soch sakti, bas ek ajeeb si ghabrahat ho rahi hai aur rona ruk hi nahi raha.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "isolation",
+    "intensity_seed": 4,
+    "cultural markers": ["gaon", "hostel", "shaadi ka dabaav", "akelepan", "dum ghutna"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Main toh bilkul toot gayi hoon jab Doctor ne meri takleef ko halke mein liya, jaise mera darr bas ek 'natak' ho. Shehar ki bheed aur restricted mobility ne mujhe pinjre mein band kar diya hai, aur upar se biradari ki baatein dimaag mein bheed lagaye baithi hain. Mujhse abhi kuch nahi hoga, mera dil itna bhara hua hai ki bas cheekh nikalne wali hai.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "grief",
+    "intensity_seed": 5,
+    "cultural markers": ["natak", "biradari", "restricted mobility", "shehar", "toot jana"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab unhone phir wahi stress wali baat ki, toh meri aatma kaanp gayi aur main bas sadak par khade-khade kaanpne lagi. Safety concerns ki wajah se ghar se nikalna mushkil hai aur yahan koicommunity nahi hai jo mera haal pooche. Abhi main future ya career ki baat nahi kar sakti, bas dimaag mein ek hulchul machi hai aur main dher ho gayi hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["safety concerns", "community", "aatma kaanp jana", "hulchul"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Doctor ne bol diya ki ye bas stress hai par mera dimaag fatne laga hai aur bas 'log kya kahenge' wali chinta dimaag mein ghoom rahi hai. Gaon se yahan metro city aana ek sapna tha par ab ye akelapan mujhe pagal kar raha hai, rona ruk hi nahi raha. Abhi mujhse mat pucho ki aage kya hoga, bas mujhe koi yahan se nikaal lo, mera dum ghut raha hai.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "alienation",
+    "intensity_seed": 5,
+    "cultural markers": ["gaon", "metro city", "log kya kahenge", "akelepan", "dum ghutna"]
+  }
+]

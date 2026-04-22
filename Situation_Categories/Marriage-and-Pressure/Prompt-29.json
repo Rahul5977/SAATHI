@@ -1,0 +1,77 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Papa ne aaj announce kar diya ki mere hone wale sasural wale permanently humare saath shift ho rahe hain taaki meri 'expired' age se pehle rishta pakka ho jaye. Main apni hidden queer identity ke saath ghut raha hoon, par unke faisle ke khilaaf bol kar khandaan ki 'izzat' mitti mein nahi mila sakta. Maine bas sir jhuka kar haan keh di hai taaki Papa ka samman bana rahe aur ghar mein koi tamasha na ho.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "anxiety",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "expired",
+      "sasural",
+      "hidden identity",
+      "izzat",
+      "samman"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "In-laws ke ghar aane ki khabar sunkar mera dum ghut raha hai kyunki wo meri lifestyle monitor karke jaldi shaadi ka pressure daalenge. Main apni asliyat chhupane ke liye urban isolation mein khush tha, par ab parivaar ki maryada ke liye mujhe unke samne ek aadarsh bacche ki acting karni padegi. Main unhe naraz nahi kar sakta kyunki unke upkar mujh par bahut hain, isliye main apni saari bagawat daba kar baitha hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "urban isolation",
+      "maryada",
+      "acting",
+      "bagawat",
+      "monitoring"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy-Papa ne kaha ki meri 25+ umar dekh kar kundali ke hisaab se ab in-laws ka saath rehna hi shubh hai taaki rishta haath se na nikal jaye. Main andar se toot rahi hoon kyunki meri queer identity is ghar mein kabhi accept nahi hogi, par main unhe palat kar jawab dekar unki 'naak nahi katwa' sakti. Maine apne saare sawal aur suppressed emotions ko kurban kar diya hai taaki ghar ki shanti bhang na ho.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "25+",
+      "kundali",
+      "naak katwana",
+      "shanti",
+      "suppressed emotions"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab in-laws ne permanently aane ka faisla sunaya, toh mujhe laga meri bachi-kuchi azaadi bhi chhin gayi, par main unke aage zubaan nahi chala sakta. 'Log kya kahenge' ki badhti umar mein ladka nakhre dikha raha hai, is darr se main bas unki har zidd maan raha hoon. Papa ne mere liye itni kurbaniyan di hain ki unhe dukh pahunchana mere liye paap jaisa hai, isliye main bas chup-chap seva mein lag gaya hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "azaadi",
+      "log kya kahenge",
+      "badhti umar",
+      "paap",
+      "seva"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Sasural walo ka hamare ghar shift hona meri hidden identity ke liye maut jaisa hai, par khandaan ka naam kharab na ho isliye maine muskurakar unka swagat kiya. Mummy keh rahi hain ki ab deri hui toh samaj humein 'expired' samajh kar bahishkar kar dega, aur main unki baat taal nahi sakti. Apne darr aur family fear ko nigal kar main bas ek aadarsh bahu banne ki taiyari kar rahi hoon taaki parivaar ki izzat bani rahe.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "hidden identity",
+      "khandaan",
+      "samaj",
+      "expired",
+      "izzat"
+    ]
+  }
+]

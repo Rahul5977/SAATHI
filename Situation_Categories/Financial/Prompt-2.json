@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah termination email dekha aur dimaag sunn ho gaya, par rone ka time nahi hai kyunki agle mahine ki home loan EMI ka sawal hai. Papa ne kisan hokar apni life savings meri engineering par laga di thi, isliye main thak kar baith nahi sakta. Mere liye breakdown ek luxury hai jo main afford nahi kar sakti; mujhe bas ek machine ki tarah naya job dhoondna hai taaki ghar ki 'izzat' bachi rahe.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "home loan", "EMI", "life savings", "izzat"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Startup se layoff ka email aaya hai par main WFH isolation mein chup-chap baitha kaam dhoond raha hoon taaki ghar walon ko pata na chale. Vehicle loan ki kist default hui toh bank wale gaon mein phone karenge aur 'log kya kahenge' ye soch kar darr lagta hai. Thakan itni hai ki sharir jawab de raha hai, par structural endurance hi meri reality hai kyunki main hi apne parivaar ki aakhri umeed hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 4,
+    "cultural markers": ["layoff", "WFH isolation", "log kya kahenge", "vehicle loan", "structural endurance"]
+  },
+  {
+    "situation id": "S003",
+    "text": "MNC se nikaale jaane ke baad bank balance zero dikh raha hai, par main bache huye remittance se kisi tarah agle mahine ki EMI manage karne ki koshish kar raha hoon. Chit fund mein Papa ke paise doobne ke baad saara bojh mere kandhon par hai, isliye main rone ke bajaye din-raat upskilling kar raha hoon. Mera farz meri personal takleef se bada hai, isliye main bas endure kar raha hoon taaki ghar ka chula chalta rahe.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": ["MNC", "remittance", "chit fund", "EMI", "chula jalana"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Subah subah termination letter mila aur ab EMI bounce hone ka pura darr hai, par main thak kar haar nahi maan sakta. Tier-2 city mein baithe Maa-Baap ne sahukaar se karz lekar meri shuruat karwayi thi, isliye mujhe har haal mein pathar ban kar khade rehna hai. Mere paas mental health ke liye waqt nahi hai, mujhe bas apne parivaar ki 'shaan' bachane ke liye bina ruke ladte rehna hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["Tier-2 city", "sahukaar", "EMI bounce", "shaan", "karz"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Job chali gayi hai par main laptop band nahi kar sakta kyunki savings wipe out ho chuki hain aur debt spiral ka darr hai. Bacchon ki school fees aur home loan ki zimmedari mujhe breakdown karne ki ijaazat nahi deti. Ye structural endurance hi meri pehchaan hai; main thak sakta hoon par ruk nahi sakta kyunki mere peeche poora khandaan khada hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 4,
+    "cultural markers": ["savings wiped", "debt spiral", "home loan", "khandaan", "structural endurance"]
+  }
+]

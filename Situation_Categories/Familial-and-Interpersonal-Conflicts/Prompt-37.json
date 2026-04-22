@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj rishtey wale aaye aur unhone saaf mana kar diya kyunki meri placement nahi hui, upar se Papa ne Sharma ji ke bete ka example dekar sabke samne zaleel kiya. Mera dimaag ekdum sunn ho gaya hai aur bas rona aa raha hai, samajh nahi aa raha ki hostel wapas jaun ya wahin zameen mein dhas jaun. Itni zyada ghabrahat ho rahi hai ki agle round ke interview ke baare mein soch bhi nahi pa raha hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["Sharma ji ka beta", "rishta", "placement pressure", "zaleel"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Ladki walo ne rejection de diya aur Mummy ne rona shuru kar diya ki meri 'dropper' wali image ki wajah se parivaar ki izzat mitti mein mil gayi. Main itna toot chuka hoon ki bas bistar par pada hoon, na kuch sujhayi de raha hai na koi umeed dikh rahi hai. Dimag mein bas wahi baatein ghoom rahi hain ki main kitna bada loser hoon, abhi padhai ki baat toh dimaag mein aa hi nahi rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["dropper stigma", "izzat", "parivaar", "losers"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Party ke jane ke baad Papa ne phir wahi comparison shuru kar diya ki padosi ka ladka IIT mein hai aur main ek rishta tak handle nahi kar paya. Mera gala rone se bhara hua hai aur flood of emotions ki wajah se main unhe ye bhi nahi bata pa raha ki meri galti nahi thi. Bas akele baith kar siskiyaan nikal rahi hain, career aur solution toh bahut door ki baat lag rahi hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["padosi ka ladka", "joint family", "comparison", "siskiyaan"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne mere 'career gap' par sawal uthaye aur Papa ne unke samne hi mujhe nikamma bol diya, ab mera dimaag kaam karna band kar gaya hai. Bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai. Itne saare emotions ek saath aa rahe hain ki main hostel ki fees ya aage ki planning ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["career gap", "nikamma", "blank", "hostel life"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj ki rejection ke baad Mummy keh rahi hain ki 'log kya kahenge' ki beta padhai mein bhi fail aur rishtey mein bhi, mera dimaag fatne ko hai. Main itna zyada overwhelm ho gaya hoon ki bas rona nikal raha hai aur lag raha hai ki sab khatam ho gaya. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye ek kona chahiye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "fail", "overwhelm", "sharma ji ka beta"]
+  }
+]

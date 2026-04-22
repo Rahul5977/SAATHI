@@ -1,0 +1,73 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah jab main apne college ke mid-terms ke liye padh rahi thi, Sasu-maa ne taana maara ki unki beti hoti toh is dowry ke sath-sath ghar ka sara kaam akele bina shikayat sambhalti. Main physical aur mental thakan se poori tarah toot chuki hoon, par mujhe bina ruke rasoi ka kaam aur padhai dono manage karni hai. Agar main thak kar baith gayi toh 'log kya kahenge' ki nayi bahu padhai ke naam par kaam chhor rahi hai, isliye main bas bina soche apna farz nibha rahi hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "dowry",
+      "sasu-maa",
+      "log kya kahenge",
+      "nayi bahu"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Sasu-maa ne aaj fir sabke samne kaha ki meri nanad apne sasural mein kitni sanskari hai aur mera rishta yahan sirf mere college wale nakhro ki wajah se tikna mushkil ho raha hai. Naye ghar ki restricted mobility ki wajah se main subah 5 baje uthkar poore ghar ka bojh uthati hoon aur andar se bilkul exhaust ho chuki hoon. Par mujhe ye structural endurance dikhani hi padegi warna mere maike walon ki izzat mitti mein mil jayegi aur main apni aage ki padhai afford nahi kar paungi.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "sanskari",
+      "rishta",
+      "sasural",
+      "izzat",
+      "nanad"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Aaj Sasu-maa ne kundali mein mere dosh ka zikr karte huye kaha ki unki apni beti mujhse lakh guna zyada suljhi hui hai aur usne aisi bad-tameezi kabhi nahi ki. College se aakar turant kitchen mein ghusna padta hai aur main itni jyada thak jati hoon ki theek se khade rehne ki himmat nahi hoti. Par main afford nahi kar sakti ki main ruk jaun, kyunki mere saare obligations aur is nayi life ki peace meri ishi duty aur chup-chap sehne par tiki hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "kundali",
+      "dosh",
+      "bad-tameezi",
+      "sasu-maa"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Caste mismatch ki wajah se shuru se hi Sasu-maa mujhe taane deti hain, aur aaj fir unhone apni beti se mera comparison karke mere tareeqo ko ghatiya bataya. Main sasural ke expectations aur apni degree ke beech itni ghisi ja rahi hoon ki mera dimaag kaam karna band kar chuka hai. Par main rone ya shikyat karne ka risk nahi le sakti, mujhe apni nayi bahu wali duty nibha kar ghar ko sambhale rakhna hai chahe main andar se kitni bhi toot jaun.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "caste mismatch",
+      "taane",
+      "sasural",
+      "nayi bahu"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj jab maine college jane ki jaldi mein nashta banane mein thodi der kar di, toh Sasu-maa ne fir kaha ki unki beti kitni sarvgun-sampann hai aur mera rishta bas is ghar par ek bojh hai. Andar se main itni jyada nichudi hui mehsus karti hoon ki lagta hai jaise jaan hi nikal jayegi, par mujhe aasu poch kar apni saari duties time par poori karni hain. Agar main abhi exhaust hokar ruk gayi, toh sasural wale meri safety ka bahana dekar hamesha ke liye meri aage ki padhai band karwa denge.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "anxiety",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "sarvgun-sampann",
+      "rishta",
+      "sasural",
+      "bojh"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah termination email dekha aur dimaag sunn ho gaya, par rone ka time nahi hai kyunki agle mahine gaon remittance bhejni hai aur bike ki EMI bhi deni hai. Papa ne kisan hokar karz lekar mujhe shehar bheja tha, isliye main thak kar baith nahi sakta. Mere liye breakdown ek luxury hai jo main afford nahi kar sakta, mujhe bas ek machine ki tarah naya kaam dhoondna hai taaki ghar ki 'izzat' bachi rahe.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "remittance", "EMI", "izzat", "metro isolation"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Naukri chali gayi hai par main metro isolation mein chup-chap baitha laptop pe naye projects dhoond raha hoon taaki EMI bounce na ho. Chit fund mein Papa ke paise doobne ke baad saara bojh mere kandhon par hai, isliye thakan mein bhi mujhe 16 ghante jaagna hi hoga. Language gap ki wajah se yahan koi sunne wala nahi hai, par structural endurance hi meri pehchaan hai kyunki main hi apne parivaar ki aakhri umeed hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "chit fund", "structural endurance", "language gap", "sole earner"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Termination letter milte hi laga jaise saans ruk gayi, par home loan ki kist default hui toh bank wale gaon mein phone karenge aur 'log kya kahenge' ye soch kar darr lagta hai. Sharir jawab de raha hai par ek beta hone ke naate mujhe pathar ban kar khade rehna hoga taaki ghar ka chula chalta rahe. Mere paas mental health ke liye waqt nahi hai, mujhe bas apne parivaar ki 'shaan' bachane ke liye bina ruke ladte rehna hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["home loan", "log kya kahenge", "chula jalana", "shaan", "remittance"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Subah email aaya aur ab sahukaar ka vyaj chukane ka darr dimaag mein ghar kar gaya hai, par main chup-chap doosri shift dhoondne nikal gaya hoon. Savings wipe out ho chuki hain aur debt spiral itna gehra hai ki breakdown karna gunah lagta hai. Mujhe bas bina ruke endure karte rehna hai kyunki meri kisan identity mujhe har haal mein parivaar ka pet paalne ki hidayat deti hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["sahukaar", "vyaj", "savings wiped", "debt spiral", "kisan identity"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Metro city mein akele reh kar ye zillat seh raha hoon ki job chali gayi, par EMI default ka risk mujhe tootne nahi deta. Papa ki purani sarkari naukri ki pension se sabka pet nahi bharta, isliye mujhe har haal mein structural endurance dikhani hogi. Thakna mere liye ek gunah hai kyunki mere peeche poora khandaan khada hai jo meri taraf umeed se dekhta hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI default", "sarkari naukri", "khandaan", "metro isolation", "structural endurance"]
+  }
+]

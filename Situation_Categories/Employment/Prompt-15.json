@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah subah EMI bounce ka message aaya aur mere paas hostel ki mess fees ke bhi paise nahi bache hain. Parivaar ko lagta hai ki main placement lekar unhe kirana shop ke karz se nikaal loonga, isliye main thak kar baith nahi sakta. Mujhe bas kisi bhi tarah padhai aur part-time kaam jaari rakhna hai kyunki mere rukne ka matlab pura ghar doobna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI", "kirana shop", "hostel", "placement pressure"]
+  },
+  {
+    "situation id": "S002",
+    "text": "JEE dropout hone ke baad Papa ne kisan hokar bhi bank se loan liya tha taaki main private college se degree kar sakoon, aur ab wahi EMI bounce ho gayi hai. Raat-raat bhar jaag kar coding kar raha hoon taaki startup mein koi internship mil jaye, bhale hi meri himmat jawab de rahi ho. Mujhe har haal mein ye bojh uthana hi hoga kyunki main hi is ghar ki aakhri umeed hoon.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 4,
+    "cultural markers": ["JEE dropout", "kisan", "EMI", "startup"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ki dawai aur choti behen ki school fees ka kharcha mere upar hai, aur aaj bank ka notification dekh kar darr lag raha hai par rone ka waqt nahi hai. Main placement coordinator ke chakkar kaat raha hoon taaki kisi MNC mein entry mil jaye aur ye sarkari naukri ka wait karne ka option mere paas hai hi nahi. Thakan bahut hai par endurance dikhani hogi kyunki mere peeche pura khandaan khada hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 5,
+    "cultural markers": ["school fees", "MNC", "sarkari naukri", "bank notification"]
+  },
+  {
+    "situation id": "S004",
+    "text": "EMI bounce hone ka matlab hai ki agli baar bank wale sidhe ghar par phone karenge, aur main nahi chahta ki Papa ki 'izzat' gaon mein mitti mein mile. First-gen earner hone ka matlab hi ye hai ki aapko girne ki permission nahi milti, isliye main din-raat internship aur studies manage kar raha hoon. Mera shareer saath nahi de raha par dharam aur zimmedari mujhe rukne nahi deti.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["EMI", "izzat", "first-gen earner", "internship"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Jabse placement pressure bada hai aur EMI bounce hui hai, mujhe lagta hai jaise main ek machine hoon jise bas kaam karte rehna hai. Papa ke khet pehle hi karz mein hain aur meri naukri hi sabko bacha sakti hai, isliye main apni mental health ke baare mein soch bhi nahi sakta. Mujhe bas endure karna hai taaki mahine ke ant mein ghar paise bhej sakoon aur sabka vishwas bana rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["placement pressure", "EMI", "karz", "first-gen"]
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat papa se shehar me rehne ke kharche par bohot behes hui, unhone saaf keh diya ki mujhe apni salary ka zyada hissa gaon bhejna chahiye chahe yahan main kaise bhi jiyun. Main janta hoon metro me survival mushkil hai, par unka dil dukhakar aur 'log kya kahenge' ke darr se maine subah unse maafi maang li. Parivaar ki shanti aur bapu ki izzat ke liye maine apna protest daba diya aur agle mahine se extra remittance bhejne ka wada kiya.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "remittance",
+      "metro survival",
+      "log kya kahenge",
+      "bapu ki izzat",
+      "parivaar ki shanti"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Papa ne bina mujhse pooche gaon me ek rishta tay kar diya hai aur kal raat isi baat par hamara jhagda bina kisi nateeje ke khatam hua. Main yahan shehar me settle hona chahta hoon, par unhone khandaan ki naak aur apne authoritarian control ka waasta dekar mujhe chup kara diya. Unse bagawat karke main apne buzurg baap ko society me chota feel nahi karwa sakta, isliye ab bas unki khushi ke liye is rishte me haan milane ka naatak kar raha hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta tay",
+      "khandaan ki naak",
+      "authoritarian control",
+      "buzurg baap",
+      "society"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mera man tha ki main yahan metro me rehkar koi skill course karun taaki naukri behtar ho, par kal raat papa ne strictly mana kar diya kyunki unhe joint family ke liye turant paiso ki zaroorat hai. Unhone chillakar kaha ki main shehar jaakar matlabi ho gaya hoon aur unke budhape ka sahara nahi banna chahta. Unka BP aur ghar ki shanti dekh kar maine apna admission plan cancel kar diya, kyunki unhe dukh dekar milne wali kamyabi mere liye kisi kaam ki nahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "joint family",
+      "budhape ka sahara",
+      "ghar ki shanti",
+      "metro",
+      "remittance"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Kal raat ki behes ke baad se papa ne mujhse phone par baat karna band kar diya hai kyunki maine unke bataye huye galat investment ke liye mana karne ki himmat ki thi. Meri mehnat ki salary par unka authoritarian control itna hai ki main apna point of view rakh hi nahi sakta bina 'izzat' kharab kiye. Joint family me unki authority bani rahe aur gaon me humara naam na doobe, isliye maine aaj subah unke bataye bank account me saare paise transfer kar diye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "powerlessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "authoritarian control",
+      "izzat",
+      "joint family",
+      "salary transfer",
+      "gaon"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "First-gen migrant hone ke naate mujhpar poore khandaan ki umeedon ka bojh hai, aur kal raat papa ne saaf bol diya ki mujhe shehar ki azaadi bhool kar sirf unke rules se chalna hoga. Main yahan language gap aur isolation se pehle hi pareshaan hoon, par unhe palat kar jawab dena humare sanskaron ke khilaf hai. Unki nazron me giri hui na banoon aur parivaar me darar na aaye, isliye maine unke authoritarian control ko chupchap sweekar kar liya hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "loneliness",
+    "intensity_seed": 3,
+    "cultural markers": [
+      "first-gen migrant",
+      "khandaan",
+      "sanskaron",
+      "authoritarian control",
+      "parivaar me darar"
+    ]
+  }
+]

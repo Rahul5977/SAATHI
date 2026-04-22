@@ -1,0 +1,73 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Meeting mein Boss ne sabke samne mujhe 'gawar' bol diya aur layoff ki dhamki di, tab se dimaag ekdum sunn pad gaya hai. Main bas khet ke medh par baith kar roye ja raha hoon, moneylender ka karz aur EMI kaise chukega ye sochna toh door, mujhse khana tak nahi khaya ja raha. Itna bura lag raha hai ki lagta hai sab kuch mitti mein mil gaya, bas rona ruk hi nahi raha.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kisan",
+      "moneylender",
+      "layoff",
+      "EMI",
+      "bezatti"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Boss ne team ke samne chilla kar kaha ki mujh jaise kisan ko tech mein hona hi nahi chahiye tha, aur tab se main poori tarah overwhelmed hoon. Dimaag bilkul blank ho chuka hai aur mujhe sirf wahi humiliation yaad aa rahi hai, aage ka career backup sochna namumkin lag raha hai. Flood of emotions itna zyada hai ki main bas sunn hokar baitha hoon, na kisi se baat ho rahi hai na kaam.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kisan identity",
+      "humiliation",
+      "MNC",
+      "emotional flooding"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Aaj meeting mein Boss ne mere kaam ko kachra bol kar nikalne ki baat kahi toh mera dil itni buri tarah toot gaya ki hal chalane ki himmat bhi nahi bachi. Pehle hi crop failure se ghar ki halat kharab thi, aur ab is bezatti ne mujhe poori tarah tod diya hai. Main is waqt koi solution dhoondne ke layak hi nahi bacha, bas lag raha hai ki main sabke liye ek bojh hoon aur sirf dukh mehsus ho raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "worthlessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "crop failure",
+      "bojh",
+      "bezatti",
+      "startup"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Boss ne sabke samne meri capability par sawal uthaya aur tab se main itna ghut raha hoon ki saans lena bhi bhari lag raha hai. Sahukar ka karz aur ghar ki EMI kaise handle hogi ye baad ki baat hai, pehle ye jo darr aur rona dimaag mein baith gaya hai usne mujhe duba diya hai. Main bas ek loop mein fasa hoon jahan sirf nakami aur purani kisan wali takleefein yaad aa rahi hain.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "sahukar",
+      "EMI",
+      "nakami",
+      "kisan"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Meeting mein Boss ke taane sunne ke baad se main bas sunn hokar leta hoon, dimaag mein sirf wahi humiliation goonj rahi hai. MNC ki ye naukri parivaar ki 'izzat' thi aur ab is layoff ke darr ne mujhe poori tarah emotional flooding ka shikar bana diya hai. Kuch bhi plan karna toh door, mujhe ye bhi yaad nahi ki maine aakhri baar paani kab piya tha, bas gehra sannata mehsus ho raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "izzat",
+      "layoff",
+      "MNC",
+      "taane"
+    ]
+  }
+]

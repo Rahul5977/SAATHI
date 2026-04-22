@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj rishta party ne mujhe reject kar diya aur Papa ne sabke samne taana maara ki Sharma ji ka beta toh settle ho gaya par main dhang ka rishta tak nahi nibha pa raha. Mera dimaag ekdum sunn ho gaya hai aur bas rona aa raha hai, samajh nahi aa raha ki is hidden identity ke saath kaise jiyun. Itni ghabrahat ho rahi hai ki lag raha hai saans hi ruk jayegi, aage kya karna hai ye toh dimaag mein aa hi nahi raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["Sharma ji ka beta", "izzat", "hidden identity", "taana"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Rejection ke baad Mummy ne rona shuru kar diya ki meri 'ajeeb fitrat' ki wajah se parivaar ki izzat mitti mein mil gayi aur log kya kahenge. Main yahan urban city mein akele baith kar sisak raha hoon aur dimaag mein itna shor hai ki kuch sujhayi nahi de raha. Bas lag raha hai ki sab meri hi galti hai aur main ek manhoos beta hoon, abhi career ya solutions ke baare mein sochne ki himmat nahi hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "izzat", "manhoos", "urban isolation"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Papa ne aaj phir comparison shuru kar diya ki padosi ka ladka married hai aur kitna khush hai, aur main yahan akela reh kar sirf unka sir nicha kar raha hoon. Mera gala rone se bhara hua hai aur flood of emotions ki wajah se main unhe ye bhi nahi bol pa raha ki meri pasand alag hai. Bas akele baith kar rona aa raha hai, aage ka plan kya hoga ye toh dimaag mein aa hi nahi raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["padosi ka ladka", "joint family", "comparison", "sir nicha karna"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne mere 'reclusiveness' par sawal uthaye aur Papa ne unke samne hi mujhe nikamma bol diya, ab mera dimaag kaam karna band kar gaya hai. Bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai kyunki mujhe darr hai ki meri asliyat kabhi accept nahi hogi. Itne saare emotions ek saath aa rahe hain ki main apne office calls ya kal ki meeting ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": ["family fear", "nikamma", "blank", "hidden identity"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishta party ne jabse mana kiya hai, ghar mein kalesh shuru ho gaya hai aur Mummy keh rahi hain ki 'log kya kahenge' ki beta shehar jaakar bigad gaya hai. Main itni zyada overwhelm ho gaya hoon ki bas rona nikal raha hai aur lag raha hai ki meri zindagi ka koi mol nahi hai. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye ek kona chahiye jahan koi mujhe Sharma ji ke bete ka waasta na de.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "overwhelm", "kalesh", "urban isolation"]
+  }
+]

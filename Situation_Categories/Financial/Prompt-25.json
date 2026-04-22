@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah mobile par jab crypto portfolio zero dekha aur saath mein client ka termination email aaya, toh mera dimaag bilkul sunn ho gaya aur main library ke washroom mein baith kar rone laga. Papa ne kisan hokar apni sari zameen bech kar meri UPSC coaching mein invest kiya tha, par maine wo paise chupchap crypto mein duba diye. Is waqt main koi recovery plan ya study schedule nahi soch pa raha, bas ek gehra panic aur sadma hai jo mujhe duba raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["UPSC coaching", "kisan", "zameen bechna", "crypto loss", "savings wiped"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Stock market crash mein saari savings wipe out ho gayi aur aaj side business ka contract bhi cancel ho gaya, main bas sunn hokar deewar ko tak raha hoon. Dropper stigma ki wajah se pehle hi ghar walon se nazrein churata tha, ab is zillat ke baad mujhe saans lena bhi bhari lag raha hai. Main logically kuch nahi soch paa raha ki agle mahine ki EMI kaise bhari jayegi, bas ek flood of emotions hai jisme main poori tarah beh gaya hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["stock loss", "dropper stigma", "EMI bounce", "zillat", "savings wiped"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ke operation ke liye rakhe chit fund ke paise maine chupke se options trading mein laga diye thay jo ab zero ho gaye hain, aur aaj meri consultancy bhi band ho gayi. Main UPSC aspirant hoon par is waqt kitabein dekh kar bas rona aa raha hai kyunki dimaag mein itna emotional pressure hai ki kuch yaad nahi rehta. Is waqt mujhe koi financial strategy sujh nahi rahi, bas ek gehra despair hai jo mujhe andar se kha raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "UPSC aspirant", "options trading", "business closure"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Market mein paise dubne ke baad jab client ne contract cancel kiya, toh mera dum ghutne laga aur main bas sadak par baith kar kaanpne laga. Neighborhood mein sabko lagta tha ki main IAS banne wala hoon, par ab is financial failure mein mujhe bas maut dikh rahi hai. Main koi backup plan ya HR se baat nahi kar sakta, bas ek extreme guilt aur breakdown mehsus ho raha hai jisme dimaag bilkul blank hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["IAS", "neighborhood shame", "log kya kahenge", "contract cancellation", "breakdown"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Sarkari naukri ki taiyari ke saath thoda crypto kiya tha par sab doob gaya, aur aaj bank se EMI bounce ka notification dekh kar mera hosh ud gaya. Papa ne kisan credit card se jo paise meri padhai ke liye nikale thay, unhe dubane ke baad main unse baat karne ki himmat nahi juta pa raha. Is emotional flooding mein mujhe kuch bhi sujh nahi raha, bas ek ajeeb sa darr hai jisne mujhe jhakad liya hai aur rona ruk hi nahi raha.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["sarkari naukri", "kisan credit card", "EMI bounce", "crypto loss", "emotional flooding"]
+  }
+]

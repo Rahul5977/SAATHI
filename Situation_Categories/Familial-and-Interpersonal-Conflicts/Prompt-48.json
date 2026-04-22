@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj rishta party ne mere 'divorced' hone ki wajah se mana kar diya aur Mummy ne sabke samne Sharma ji ki beti ka example diya jo ek bar mein settle ho gayi. Mera dimaag ekdum sunn ho gaya hai aur bas rona aa raha hai, samajh nahi aa raha ki is stigma ke saath kaise jiyun. Itni ghabrahat ho rahi hai ki bacchon ke school fees ke baare mein sochne ki himmat hi nahi bachi, bas andhera dikh raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["Sharma ji ki beti", "divorced", "stigma", "izzat"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Rejection ke baad Papa ne taana maara ki meri 'nakaami' ki wajah se parivaar ki izzat mitti mein mil gayi aur 'log kya kahenge' ki beti ghar baithi hai. Main itni toot chuki hoon ki bas kamre mein baith kar sisak rahi hoon, dimaag mein itna shor hai ki kuch sujhayi nahi de raha. Bas lag raha hai ki sab meri hi galti hai aur main apne bacchon ke liye ek manhoos bojh hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "manhoos", "bojh", "joint family"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Aaj ki rejection ke baad Mummy keh rahi hain ki padosi ki beti ne compromise karke ghar bacha liya par maine ego dikhayi, mera gala rone se bhara hua hai. Flood of emotions ki wajah se main unhe ye bhi nahi bol pa rahi ki wo rishta kitna toxic tha. Bas akele baith kar rona aa raha hai, aage economic precarity se kaise ladungi ye toh dimaag mein aa hi nahi raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["padosi ki beti", "toxic", "economic precarity", "compromise"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne mere bacchon par sawal uthaye aur Papa ne unke samne hi mujhe nicha dikhaya ki main Sharma ji ke bete ki tarah 'successful' nahi ho payi. Mera dimaag kaam karna band kar gaya hai, bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai. Itne saare emotions ek saath aa rahe hain ki main bacchon ke wellbeing ya unke khane ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["Sharma ji ka beta", "blank", "children's wellbeing", "community exclusion"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishta party ne jabse mana kiya hai, ghar mein kalesh shuru ho gaya hai aur Mummy keh rahi hain ki meri wajah se khandaan ka naam kharab ho raha hai. Main itni zyada overwhelm ho gayi hoon ki bas rona nikal raha hai aur lag raha hai ki mera koi wajood hi nahi bacha. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye ek kona chahiye jahan koi mujhe inadequacy ka ehsas na dilaye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["khandaan", "kalesh", "overwhelm", "inadequacy"]
+  }
+]

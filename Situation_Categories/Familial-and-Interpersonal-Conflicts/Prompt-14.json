@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Papa ne aaj khane par announce kar diya ki meri internship cancel hai aur main shehar nahi jaungi kyunki wahan safety nahi hai. Jab maine thoda rone ki koshish ki toh mummy ne seene pe haath rakh kar bol diya ki meri zidd unhe shamshaan pahuncha degi. Mera dimaag sunn ho gaya hai, bas rona nikal raha hai aur samajh nahi aa raha ki ab saans kaise loon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "safety",
+      "emotional manipulation",
+      "zidd",
+      "shamshaan"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bina mujhse pooche papa ne ek rishta pakka kar diya hai aur bol rahe hain ki Master's ki kya zaroorat hai. Mummy baar-baar bol rahi hain ki parivaar ki izzat mere haath mein hai aur unki tabiyat meri wajah se hi bigad rahi hai. Itna dukh aur ghabrahat ho rahi hai ki main kuch soch hi nahi pa rahi, bas kamre mein band hokar sisak rahi hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta pakka",
+      "izzat",
+      "tabiyat bigadna",
+      "joint family"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Papa ne announce kiya ki main ab hostel se nikal kar bua ke ghar rahungi taaki meri mobility pe nazar rakhi ja sake. Mummy ne taana maara ki meri vajah se ghar mein har roz kalesh hota hai aur unka sar samaj mein neecha ho raha hai. Mera gala rone se bhara hua hai, itni zyada flood of emotions hai ki main syllabus ki ek line bhi nahi padh pa rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "mobility",
+      "bua ka ghar",
+      "kalesh",
+      "sar neecha hona"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Aaj subah papa ne decide kiya ki main aage ki coaching nahi jaungi aur bas ghar ke kaam seekhungi. Mummy ne rona shuru kar diya ki meri wajah se unhe roz papa ki dant sunni padti hai aur unka BP badh gaya hai. Mujhe itna gussa aur frustration mehsus ho raha hai ki mera dimaag kaam karna band kar gaya hai, bas akele baith kar rona aa raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "ghar ke kaam",
+      "BP badhna",
+      "emotional blackmail",
+      "restricted mobility"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Bina meri marzi ke papa ne mera phone check kiya aur ab wo meri padhai rok rahe hain kyunki unhe lagta hai main bigad rahi hoon. Mummy keh rahi hain ki 'log kya kahenge' aur agar maine unki baat nahi mani toh wo zeher kha lengi. Main poori tarah se toot gayi hoon, bas rona hi nikal raha hai aur future bilkul andhera lag raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "log kya kahenge",
+      "emotional manipulation",
+      "restricted mobility",
+      "future andhera"
+    ]
+  }
+]

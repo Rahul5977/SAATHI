@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah EMI bounce ka message dekha aur dil baith gaya, par rone ka time nahi hai kyunki bacchon ka tiffin aur office ki meeting dono wait kar rahe hain. Main thak kar gir nahi sakti kyunki meri salary hi ghar ka chula jalati hai aur Papa ki purani sarkari naukri ki pension se guzara nahi hota. Bas ek machine ki tarah kaam kiye ja rahi hoon kyunki mere rukne ka matlab hai pura parivaar bikhar jana.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI", "sarkari naukri", "chula jalana", "dual burden"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bank notification ne meri neend uda di hai, par ghar par sabko lagta hai ki MNC mein kaam karke main bohot aish kar rahi hoon. Sasural ki umeedon aur office ke targets ke beech pis rahi hoon, phir bhi muskurakar kaam karna padta hai kyunki main hi is ghar ki sole earner hoon. Thakan itni hai ki sharir saath nahi deta, par 'farz' ke aage meri thakan ki koi keemat nahi hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 4,
+    "cultural markers": ["MNC", "sasural", "farz", "sole earner", "EMI"]
+  },
+  {
+    "situation id": "S003",
+    "text": "EMI bounce ho gayi hai aur ab darr hai ki bank wale Papa ki kirana shop par na pahunch jayein, isliye main ab double shift kar rahi hoon. Mere paas apni suppressed ambition ke baare mein sochne ka waqt nahi hai, bas endurance dikhani hai taaki Mummy ki dawai aur bacchon ki school fees ruk na jaye. First-gen earner hone ka yahi bojh hai ki aapko har haal mein bas chalte rehna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": ["kirana shop", "school fees", "suppressed ambition", "first-gen earner"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Startup mein layoff ka mahol hai aur upar se EMI bounce ka notification, par main apne darr ko bacchon ke samne nahi aane de sakti. Raat ko ghar ka kaam khatam karke coding kar rahi hoon taaki side income bani rahe, bhale hi aankhein dard se fat rahi hon. Mere liye thakna ek luxury hai jo main afford nahi kar sakti kyunki pura parivaar meri taraf dekh raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["startup", "layoff", "luxury", "dual burden"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Ghar ki EMI chukane ke liye maine apni health aur sapne dono peeche chhod diye hain, kyunki kisan baap ne isi umeed mein mujhe padhaya tha. Aaj bank ka message dekh kar dil ghabra raha hai, par main chupchap kitchen aur laptop ke beech bhag rahi hoon taaki 'izzat' bani rahe. Ye structural endurance hi meri kismat hai, jahan mujhe bas ek khambe ki tarah sabko sambhaalna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["kisan", "izzat", "structural endurance", "EMI"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj pati ne announce kiya ki sasur-ji aur saas-ma hamesha ke liye shift ho rahe hain kyunki meri 'umar' nikal gayi thi par abhi tak koi waaris nahi aaya. Mera mann tha ki main bolun ki joint family mein meri bachi-kuchi identity bhi khatam ho jayegi, par khandaan ki 'izzat' aur bado ke samman ke liye maine sir jhuka kar haan keh diya. Main unhe naraz karke apne maike ki naak nahi katwana chahti, isliye chup-chap sab swikar kar liya.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": ["umar", "waaris", "joint family", "izzat", "maike", "naak katwana"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Saas-ma ne permanently saath rehne ka faisla sunaya taaki wo mujh par child pressure bana sakein, kyunki samaj mein sab keh rahe hain ki main 'expired' ho rahi hoon. Main andar se bilkul toot gayi hoon par unse bahas nahi kar sakti kyunki beti aur bahu ka farz hamesha sehne ka hota hai. Maine apni career gap ki chinta aur darr ko daba diya hai taaki ghar ka kalesh bahar na jaye aur parivaar ki maryada bani rahe.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["expired", "samaj", "farz", "maryada", "career gap", "kalesh"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Pati ne bina mujhse pooche in-laws ko bula liya kyunki unhe lagta hai ki meri age badhne ki wajah se ab humein kundali ke hisaab se pooja-paath ki zaroorat hai. Mujhe lagta hai meri personal space chhin jayegi, par main virodh karke unke dil ko thais nahi pahunchana chahti. 'Log kya kahenge' ki bahu ne saas-sasur ko ghar mein jagah nahi di, is sharam se main bas unki har baat maan rahi hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["kundali", "pooja-paath", "personal space", "log kya kahenge", "samman"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab saas-ma ne kaha ki meri badhti umar ke karan ab wo yahi reh kar meri lifestyle monitor karengi, toh mujhe bahut ghabrahat hui. Par main unhe palat kar jawab nahi de sakti kyunki unhone mere rishta aur dowry ke waqt bahut kurbaniyan di thi. Maine apne saare sawaal aur suppressed ambition ko daba liya hai taaki unka aur pati ka sir hamesha uncha rahe aur ghar mein shanti bani rahe.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "anxiety",
+    "intensity_seed": 5,
+    "cultural markers": ["badhti umar", "rishta", "dowry", "suppressed ambition", "shanti"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj in-laws ke permanent aane ke faisle ne meri lost identity ko aur gehra kar diya, par main bade-buzurgo ke aage zubaan nahi chala sakti. Unhe lagta hai ki main 'expired' bahu hoon jise har waqt guidance ki zaroorat hai, aur main bas yehi soch kar chup hoon ki meri bagawat se parivaar ki 'izzat' bazaar mein uchal jayegi. Apne darr ko nigal kar main bas unki seva karne ki taiyari kar rahi hoon taaki koi ungli na utha sake.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 3,
+    "cultural markers": ["lost identity", "bade-buzurgo", "expired", "bagawat", "izzat"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Laptop screen par EMI bounce ka notification dekhte hi meri aankhon ke aage andhera chha gaya aur main wahi rone lagi. Papa ke cancer treatment ne MNC ki saari savings wipe out kar di hain aur ab dimaag bilkul blank hai, main code ki ek line bhi nahi padh paa rahi hoon. Is waqt mujhe koi insurance claim ya financial plan nahi sujh raha, bas ek gehra panic hai jo mujhe duba raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "MNC", "savings wiped", "hospital bills"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bank se kist bounce hone ka message aaya aur main WFH isolation mein akele baith kar kaanpne laga. Mummy ke hospital bills bharne ke liye gaon ka khet aur Gehne tak bech diye, phir bhi ye debt spiral khatam hi nahi ho raha. Main logically kuch nahi soch paa raha ki agle mahine rent kaise dunga, bas ek flood of emotions hai jisme main poori tarah sunn ho gaya hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "WFH isolation", "debt spiral", "khet bechna"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Startup mein layoff ka darr pehle se hi tha aur aaj EMI bounce ne meri bachi-kuchi himmat bhi tod di, main bas breakdown kar gaya hoon. Neighborhood mein sabko lagta tha ki shehar jaakar main bohot bada aadmi ban gaya hoon, par ab is zillat ke bojh mein mujhe bas maut dikh rahi hai. Is waqt career ya credit score dimaag mein nahi aa raha, bas ek gehra despair hai jo mujhe saans nahi lene de raha.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["startup", "EMI bounce", "neighborhood shame", "zillat"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Tier-2 city ke is flat mein baith kar main bas ye soch kar roye ja raha hoon ki main apne parivaar ki 'izzat' nahi bacha paya. Chit fund ka paisa aur saari remittance hospital mein chali gayi, aur aaj loan default hone par mera dimaag kaam karna band kar gaya hai. Main koi strategy ya HR se baat nahi kar sakta, bas ek extreme guilt mehsus ho raha hai jisme dimaag bilkul sunn hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["Tier-2 city", "izzat", "chit fund", "remittance", "loan default"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Sarkari naukri toh mili nahi aur ab is software job ki salary aane se pehle hi hospital bills mein saaf ho gayi, main poori tarah toot chuki hoon. Bank ka bounce alert dekh kar mera dum ghutne laga hai aur bas purane taane dimaag mein goonj rahe hain. Is emotional flooding mein mujhe kuch bhi sujh nahi raha, bas rona aa raha hai aur darr lag raha hai ki sab kuch bikhar jayega.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["sarkari naukri", "hospital bills", "EMI bounce", "taane"]
+  }
+]

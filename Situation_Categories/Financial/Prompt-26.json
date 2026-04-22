@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah mobile par jab crypto portfolio zero dekha aur saath mein client ka termination email aaya, toh mera dimaag bilkul sunn ho gaya aur main WFH desk par hi rone laga. MNC ki saari savings wipe out ho chuki hain aur Papa ne kisan hokar jo umeed mujh par lagayi thi, wo mitti mein milti dikh rahi hai. Is waqt main koi recovery plan ya naya job search nahi kar pa raha, bas ek gehra panic aur sadma hai jo mujhe duba raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["MNC", "kisan", "crypto loss", "savings wiped", "WFH isolation"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Stock market crash mein saari jama-poonji chali gayi aur aaj side business ka contract bhi cancel ho gaya, main bas sunn hokar deewar ko tak raha hoon. Tier-2 city mein sabko lagta tha ki main bohot bada software engineer ban gaya hoon, par ab is zillat ke baad mujhe saans lena bhi bhari lag raha hai. Main logically kuch nahi soch paa raha ki agle mahine ki EMI kaise bhari jayegi, bas ek flood of emotions hai jisme main poori tarah beh gaya hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["stock loss", "Tier-2 city", "EMI pressure", "zillat", "jama-poonji"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ke operation ke liye rakhe chit fund ke paise maine chupke se stocks mein laga diye thay jo ab zero ho gaye hain, aur aaj meri consultancy bhi band ho gayi. Startup culture mein itni mehnat ke baad ye haal dekh kar bas rona aa raha hai kyunki dimaag mein itna emotional pressure hai ki kuch yaad nahi rehta. Is waqt mujhe koi financial strategy sujh nahi rahi, bas ek gehra despair hai jo mujhe andar se kha raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "startup", "stock loss", "business nearly closed", "savings wiped"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Market mein paise dubne ke baad jab client ne contract cancel kiya, toh mera dum ghutne laga aur main bas laptop band karke kaanpne laga. Neighborhood mein sabko lagta tha ki main lakhs mein kama raha hoon, par ab is failure mein mujhe 'log kya kahenge' wale darr ne jhakad liya hai. Main koi backup plan ya HR se baat nahi kar sakta, bas ek extreme guilt aur breakdown mehsus ho raha hai jisme dimaag bilkul blank hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["log kya kahenge", "neighborhood shame", "contract cancellation", "breakdown", "WFH isolation"]
+  },
+  {
+    "situation id": "S005",
+    "text": "MNC mein hone ke bawajood maine saari remittance aur savings crypto mein duba di, aur aaj EMI bounce ka notification dekh kar mera hosh ud gaya. Papa ne kisan credit card se jo paise meri shuruat ke liye nikale thay, unhe dubane ke baad main unse baat karne ki himmat nahi juta pa raha. Is emotional flooding mein mujhe kuch bhi sujh nahi raha, bas ek ajeeb sa darr hai jisne mujhe jhakad liya hai aur rona ruk hi nahi raha.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["MNC", "kisan credit card", "EMI bounce", "crypto loss", "remittance", "emotional flooding"]
+  }
+]

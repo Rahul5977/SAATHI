@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj rishta party ne mana kar diya kyunki unhe laga shehar mein reh kar bhi meri salary kam hai, aur Bapu ne Sharma ji ke ladke ka example dekar mujhe sabke samne nicha dikhaya. Mera dimaag ekdum sunn ho gaya hai aur bas rone ka mann kar raha hai, samajh nahi aa raha ki is metro ki bheed mein khud ko kaise sambhalun. Itni ghabrahat ho rahi hai ki remittance bhejne ya agle mahine ke kiraye ke baare mein soch bhi nahi pa raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Sharma ji ka ladka",
+      "rishta",
+      "remittance burden",
+      "metro isolation"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Rejection ke baad Mummy ne phone par rona shuru kar diya ki meri 'city lifestyle' ki wajah se parivaar ki izzat mitti mein mil gayi. Main yahan akele apne kamre mein baith kar sisak raha hoon aur dimaag mein itna shor hai ki agle hafte ki deadline ka kuch sujhayi nahi de raha. Bas lag raha hai ki sab meri hi galti hai aur main ek nakara beta hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "izzat",
+      "nakara",
+      "siskiyaan",
+      "metro isolation"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bapu ne aaj phir comparison shuru kar diya ki padosi ka beta on-site chala gaya aur main yahan language gap ki wajah se nicha dikh raha hoon isliye rishta tuta. Mera gala rone se bhara hua hai aur flood of emotions ki wajah se main unhe ye bhi nahi bol pa raha ki shehar mein survive karna kitna mushkil hai. Bas akele baith kar rona aa raha hai, career ya savings ka plan toh dimaag mein aa hi nahi raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "on-site",
+      "language gap",
+      "comparison",
+      "joint family"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne mere 'urban migrant' status par sawal uthaye aur Bapu ne unke samne hi mujhe nikamma bol diya, ab mera dimaag kaam karna band kar gaya hai. Bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai. Itne saare emotions ek saath aa rahe hain ki main apne office calls ya kal ki meeting ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "urban migrant",
+      "nikamma",
+      "blank",
+      "remittance burden"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishta party ne jabse mana kiya hai, gaon mein kalesh shuru ho gaya hai aur Mummy keh rahi hain ki 'log kya kahenge' ki beta shehar gaya par dhang ka rishta nahi la paya. Main itni zyada overwhelm ho gaya hoon ki bas rona nikal raha hai aur lag raha hai ki meri mehnat ka koi mol nahi hai. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye ek kona chahiye jahan koi mujhe Sharma ji ke bete ka waasta na de.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "log kya kahenge",
+      "overwhelm",
+      "kalesh",
+      "Sharma ji ka ladka"
+    ]
+  }
+]

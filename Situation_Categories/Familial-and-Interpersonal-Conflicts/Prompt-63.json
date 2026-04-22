@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Dada ji ke guzarne ke baad property ko lekar Tauji se sibling estrangement ho gayi hai, aur ab Papa ne announce kiya ki Mausa-Mausi permanently hamare sath rahenge. Meri UPSC prep ka critical saal hai par main unhe mana nahi kar sakta kyunki hamare yahan bade-buzurgo ke faisle par sawal uthana 'izzat' ke khilaf hai. Main bas mann maar kar unki seva mein laga hoon taaki parivar mein aur kalesh na ho.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["sibling estrangement", "izzat", "bade-buzurgo", "mann maar kar", "kalesh"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Inheritance dispute ki wajah se pehle hi parivaar fracture ho gaya hai aur ab Mummy keh rahi hain ki in-laws ke aane se hi hamara paksh mazboot hoga. Mujhe multi-year prep aur dropper stigma ki wajah se pehle hi guilt hai, isliye main Papa ke samman ke liye unhe mana nahi kar sakta. Main bas sabki khatir-daari kar raha hoon taaki rishtedar ye na kahein ki UPSC ki padhai ne mujhe bad-tameez bana diya hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["inheritance dispute", "dropper stigma", "samman", "rishtedar", "bad-tameez"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Ghar mein property ko lekar bhai-bhai mein darar aa chuki hai, aur ab in-laws ke permanent aane se library jane ka waqt bhi nahi mil raha. Mera dimaag fat raha hai par parivaar ki shanti ke liye main chup-chap unki baatein sunta hoon kyunki hamare yahan बड़ों ke aage bolna sanskar ke khilaf mana jata hai. Main apni takleef kisi ko nahi bata raha taaki ghar ki 'izzat' bazaar mein na uchle.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 3,
+    "cultural markers": ["darar", "shanti", "sanskar", "izzat"]
+  },
+  {
+    "situation id": "S004",
+    "text": "PSC aspirant hone ke naate mujh par pehle hi family investment ka bojh hai, aur ab property jhagde ke beech in-laws ka permanent aana meri privacy khatam kar raha hai. Main hostel jana chahti hoon par Mummy kehti hain ki is waqt mera ghar chhodna 'log kya kahenge' wala masla ban jayega. Papa ki khushi ke liye main unki haan mein haan mila rahi hoon taaki parivar mein aur fracture na aaye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["family investment", "log kya kahenge", "fracture", "privacy"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Dadi ke marne ke baad property ka jhagda itna badha ki ab in-laws ko sulah ke liye permanently bulaya gaya hai. Main coaching institute ki life chhod kar ghar aaya hoon aur ab unhe jane ko nahi bol sakta kyunki rishto ka lihaz rakhna meri duty hai. Main bas mann hi mann ghut raha hoon par bahar se sabki seva kar raha hoon taaki parivar ki unity bani rahe.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": ["sulah", "rishto ka lihaz", "mann hi mann ghutna", "joint family", "unity"]
+  }
+]

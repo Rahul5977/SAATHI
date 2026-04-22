@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Papa ne aaj phone par announce kar diya ki main UPSC chhod kar wapas gaon aa jaun kyunki ab mujh par aur paisa barbaad nahi kar sakte. Mummy ne turant rona shuru kiya aur boli ki meri zidd ki wajah se unka BP badh gaya hai aur 'tumhari wajah se ghar me kalesh hota hai'. Mera dimaag sunn ho gaya hai, bas rona aa raha hai aur kuch samajh nahi aa raha ki ab zindgi ka kya karun.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "UPSC",
+      "paisa barbaad",
+      "BP badhna",
+      "kalesh"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bina mujhse pooche papa ne mere liye ek rishta pakka kar diya hai kyunki unhe lagta hai ki 4 saal se main bas time waste kar raha hoon. Mummy keh rahi hain ki 'log kya kahenge' aur agar maine mana kiya toh wo zeher kha lengi kyunki unka sar samaj me neecha ho raha hai. Itni ghabrahat ho rahi hai aur dukh hai ki main kuch soch hi nahi pa rahi, bas rone se gala bhara hua hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta pakka",
+      "log kya kahenge",
+      "zeher kha lengi",
+      "sar neecha hona"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Papa ne aaj announce kiya ki wo mera coaching ka room band karwa rahe hain aur main ab bua ke ghar reh kar padhungi. Mummy ne taana maara ki meri padhai ke chakkar me didi ki shadi ka dahej kam pad gaya aur 'sab meri vajah se ho raha hai'. Mera dimaag itna bhara hua hai aur main itni helplessness mehsus kar raha hoon ki main syllabus ki ek line bhi nahi padh pa raha, bas siskiyaan nikal rahi hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "dahej",
+      "bua ka ghar",
+      "coaching life",
+      "taana"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Bina meri marzi ke papa ne decide kiya ki main State PSC chhod kar bank PO ki local coaching join karun. Mummy ne rona-dhona shuru kar diya ki meri wajah se unhe roz papa ki dant sunni padti hai aur unka heart kamzor ho gaya hai. Mujhe itna gussa aur frustration mehsus ho raha hai ki mera dimaag kaam karna band kar gaya hai, bas akele baith kar rona aa raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "State PSC",
+      "bank PO",
+      "emotional manipulation",
+      "heart kamzor"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj subah papa ne decide kiya ki mera ye aakhiri attempt hai aur iske baad wo mujhe kisi se milne nahi denge. Mummy baar-baar bol rahi hain ki parivaar ki izzat mere haath me hai aur meri nakamiyabi ne unhe beemar kar diya hai. Main poori tarah se toot gaya hoon, bas rona hi nikal raha hai aur future bilkul andhera lag raha hai, kuch samajh nahi aa raha kaise handle karun.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "izzat",
+      "family investment",
+      "attempt",
+      "future andhera"
+    ]
+  }
+]

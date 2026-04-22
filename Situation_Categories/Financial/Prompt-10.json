@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Meeting mein Boss ne sabke samne meri aukaat dikha di, tabhi se mere sir mein itna tez dard hai ki aankhein nahi khul rahi hain. Gaon mein Monsoon fail hone se Papa ki fasal barbaad ho gayi aur Sahukaar ka karz sar par hai, shaayad isiliye mera sharir bilkul toot raha hai aur thakan khatam hi nahi ho rahi. Metro city mein akele baith kar ye sir dard thik nahi ho raha, lagta hai dimaag fat jayega.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["Sahukaar", "fasal barbaad", "Monsoon", "metro isolation", "sir dard"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Team meeting mein zillat milne ke baad se meri chhati mein itni jakdan aur bhari-pan hai ki saans lena mushkil ho raha hai. Papa ne kisan hokar karz lekar mujhe shehar bheja tha par ab crop failure se remittance ruk gayi hai, isi wajah se shaayad mujhe raat bhar neend nahi aati. Ye chest tightness thik nahi ho rahi aur language gap ki wajah se yahan kisi ko bata bhi nahi sakta.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["kisan", "crop failure", "remittance", "language gap", "chhati mein jakdan"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Boss ki screaming ke baad se mere pet mein ajeeb si marod aur jalan ho rahi hai jo ja hi nahi rahi. Gaon mein kisan credit card ka loan baki hai aur fasal na hone se EMI bounce hone ka darr hai, isliye shaayad mera sharir har waqt kaanpta rehta hai. Is thakan aur kamzori ka koi ilaj batao kyunki metro city ke kharche mujhe andar se nichod rahe hain.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan credit card", "EMI bounce", "metro isolation", "pet mein jalan", "sharir kaanpna"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Meeting mein meri capability par sawal uthaye gaye, tabhi se mere poore jism mein ek ajeeb sa sunn-pan aur bhari-pan chha gaya hai. Savings wipe out ho chuki hain aur chit fund ka paisa bhi doob gaya, isi wajah se shaayad meri aankhon mein har waqt jalan aur neend ki kami rehti hai. Ye thakan itni hai ki metro city ki bheed mein chalne ki bhi himmat nahi bachi.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["savings wiped", "chit fund", "metro isolation", "neend ki kami", "jism sunn hona"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj meeting mein bezatti milne ke baad se mere kaano mein seetiyaan baj rahi hain aur gardan mein itni akdan hai ki hilna mushkil hai. Crop insurance na hone ki wajah se moneylender ka dabav gaon mein badh raha hai, isi wajah se shaayad mera haazma bilkul bigad gaya hai. Is bhari-pan aur sharir ki thakan ne meri metro mein survive karne ki kshamta hi khatam kar di hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["crop insurance", "moneylender", "bezatti", "gardan mein akdan", "haazma bigadna"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat Sasu-maa ne phir se taana maara ki meri wajah se meri nanad ke rishtey baar-baar toot rahe hain kyunki hamari kundali mein hi dosh hai. Main itni zyada toot chuki hoon ki bas subah se roye ja rahi hoon, dimaag ekdum sunn ho gaya hai aur samajh nahi aa raha ki rasoi ka kaam kaise shuru karun. Bas ek gehra andhera dikh raha hai aur lag raha hai ki main hi is ghar ke liye manhoos hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["taana", "nanad", "kundali", "dosh", "manhoos", "joint family"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Raat ko pati se bahut behas hui kyunki unhone kaha ki meri career gap aur badhte wazan ki wajah se log hamari family ki baatein karte hain aur rishtey laut jate hain. Main itni ghabrahat mein hoon ki meri saans phool rahi hai, bas ek kone mein baith kar sisak rahi hoon aur kuch bhi sochna namumkin lag raha hai. Flood of emotions itna zyada hai ki mujhe lag raha hai meri koi pehchan hi nahi bachi, bas rona nikal raha hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "anxiety",
+    "intensity_seed": 4,
+    "cultural markers": ["career gap", "log kya kahenge", "pechan", "sasural"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Kal raat ki ladaai ke baad Mummy-ji ne bol diya ki dowry ki baatein toh bahana hain, asli wajah meri nakaami hai ki har rishta reject ho raha hai. Main itni zyada overwhelmed hoon ki dimaag bilkul blank ho chuka hai, na bacchon ko tiffin diya ja raha hai na ghar sambhala ja raha hai. Bas rone ka mann kar raha hai aur lag raha hai ki main sabke liye bas ek bojh ban gayi hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["dowry", "bojh", "overwhelmed", "child pressure", "saas-bahu dynamics"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Raat ko ladaai khatam hi nahi hui aur Sasu-maa ne kaha ki 'log kya kahenge' ki is ghar ki aurat hi dhang ki nahi hai isliye rishta mana ho gaya. Mera dimaag itni buri tarah ghoom raha hai ki main ek kadam bhi nahi chal pa rahi, bas sunn hokar leti hoon. Solution kya hoga ye toh bahut door ki baat hai, mujhe toh bas is waqt lag raha hai ki main kahin gayab ho jaun.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "worthlessness",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "sasural", "sunn", "lost identity"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Kal raat jab pati ne kaha ki caste mismatch toh sirf bahana hai, meri 'negative energy' hi rishtey tod deti hai, toh mera gala rone se bhar gaya. Main itni zyada emotional flooding mehsus kar rahi hoon ki dimaag mein bas wahi kadwi baatein cheekh rahi hain. Samajh nahi aa raha ki is situation se kaise niklu, bas lag raha hai ki meri zindagi ek kalesh ban kar reh gayi hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["caste mismatch", "kalesh", "emotional flooding", "sasural"]
+  }
+]

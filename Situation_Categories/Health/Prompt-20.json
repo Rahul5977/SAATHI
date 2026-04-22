@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj office mein jab unhone mere accent ka mazak udaya, toh mere poore sharir mein aisi kampann shuru hui ki pen pakadna mushkil ho gaya. Divorcee hone ke naate pehle hi 'log kya kahenge' ka bojh tha, ab ye peeth ka dard itna shiddat ka hai ki lagta hai haddiyaan toot rahi hain. Doctor kehta hai sab normal hai par ye jo nasein phat rahi hain, wo unhe 'natak' lagta hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 5,
+    "cultural markers": ["natak", "shiddat", "log kya kahenge", "divorcee stigma", "kampann"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Unke mazaak ke baad se mere seene mein aisi jakdan mehsus ho rahi hai jaise koi dum ghont raha ho. Akeli maa hoon toh rona toh bhool hi gayi hoon, par ye sir ka bhari-pan aur aankhon ki jalan mujhe bacchon ke samne khade hone nahi deti. Hospital ka kharcha badh raha hai par reports saaf aane ki wajah se ghar wale ise 'bimari ka bahana' samajhte hain.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["bimari ka bahana", "hospital ka kharcha", "seene mein jakdan", "sir ka bhari-pan"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Accent wale tano ne mere andar aisi bechaini bhar di hai ki ab hatheliyon mein paseena aur poore badan mein tootan rehti hai. Community exclusion ki wajah se koi sunne wala nahi hai, isliye ye sara dukh ab pet ki jalan aur acidity bankar nikal raha hai. Doctor ne stress bol kar nikaal diya par ye jo sharir mein suiyan chubhti hain, kya wo sab mere dimaag ka nakhra hai?",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["community exclusion", "tootan", "suiyan chubhna", "nakhra", "tano"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab accent ka mazak uda toh mere dimaag ki nasein phulne lagi aur gale mein kuch atka sa mehsus hone laga. Economic precarity ke beech 'izzat' bachane ke liye main hamesha sakht bani rehti hoon, par ye sharir ki jhanjhanahat mere bas ke bahar hai. Doctor meri takleef ko dismiss karta hai par ye jo dil ki ghabrahat sharir mein dard bankar nikal rahi hai, wo koi nahi dekh raha.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 4,
+    "cultural markers": ["izzat", "economic precarity", "jhanjhanahat", "ghabrahat", "nasein phulna"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Unke mazaak ke baad se meri hatheliyon aur talwon mein aisi jalan rehti hai ki bacchon ke liye khana banana dushwar ho gaya hai. Single mother hone ke naate main apni health neglect karti hoon, par ab ye shiddat ki thakan aur badan ka tootna 'natak' kaise ho sakta hai? Reports normal hain isliye samaj mujhe 'kaam-chor' samajhta hai, par mera sharir jawab de chuka hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["natak", "single mother", "health neglect", "shiddat", "samaj"]
+  }
+]

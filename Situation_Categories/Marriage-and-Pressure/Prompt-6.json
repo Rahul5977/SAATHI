@@ -1,0 +1,79 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Papa ne aaj subah bina mujhse pooche announce kar diya ki mera rishta hamari biradari mein tay ho gaya hai kyunki unhe mera inter-caste relationship manzoor nahi. Mera mann kar raha tha ki main chilla kar bolu ki main apni padhai aur pyar dono nahi chhodna chahti, par parivaar ki 'izzat' aur Papa ke samman ke samne meri aawaz hi nahi nikli. Main bas chup-chap aansoo peeti rahi taaki 'log kya kahenge' wala kalesh na ho aur ghar ki shanti bhang na ho.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta",
+      "biradari",
+      "inter-caste relationship",
+      "izzat",
+      "log kya kahenge",
+      "kalesh"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Jab Papa ko mere dusre religion wale boyfriend ke baare mein pata chala, toh unhone aaj achanak faisla suna diya ki mera college jana band aur ghar se nikalne par pabandi hai. Main ghut rahi hoon kyunki meri degree aakhri saal mein hai, par main unse behas nahi kar sakti kyunki hamare yahan baap ki aagya ke khilaf jana sabse bada paap mana jata hai. Apne rishte aur azaadi dono ka gala ghot kar main bas isliye chup hoon taaki khandaan ka naam kharab na ho.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "anxiety",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "religion",
+      "college jana band",
+      "pabandi",
+      "aagya",
+      "khandaan ka naam"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Papa ne aaj sabke samne keh diya ki agar maine us dusri caste wale ladke se shadi ki, toh unki 'izzat' mitti mein mil jayegi aur meri choti behen ke liye kabhi koi aacha rishta nahi aayega. Main usse bahut pyar karti hoon par ye baat sunkar maine apne hoth see liye, kyunki main apni khushi ke liye poore parivaar ko samaaj ki nazron mein gira nahi sakti. Apne pyar ko kurban karke main ek achi beti banne ka farz nibha rahi hoon taaki ghar ki maryada bachi rahe.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "caste",
+      "izzat",
+      "rishta",
+      "samaaj",
+      "maryada",
+      "farz"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Papa ne kundali na milne ka bahana banakar mere boyfriend ko reject kar diya aur aaj achanak mera roka kisi aur ke sath fix kar diya bina meri marzi sune. Main andar se poori tarah toot chuki hoon par maine uff tak nahi ki, kyunki agar maine virodh kiya toh rishtedaron mein hamari naak kat jayegi. Apne sapne aur padhai ko aag lagakar main bas Papa ke aage sir jhukaye khadi hoon taaki unhe samaj ke taane na sunne padein.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kundali",
+      "roka",
+      "rishtedar",
+      "naak kat jayegi",
+      "samaj ke taane"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Mere love marriage ke proposal ko reject karne ke baad Papa ne aaj decide kar liya ki wo bhari dowry dekar meri shadi agle mahine hi apni biradari mein kar denge. Mujhe safety aur apna future chhinne ka bahut darr lag raha hai, par Papa ki heart condition aur parivaar ki 'izzat' dekh kar main bagawat nahi kar saki. Main bas ghut-ghut kar ro rahi hoon aur unke faisle ko maan rahi hoon taaki samaaj mein unka sir hamesha uncha rahe.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "love marriage",
+      "dowry",
+      "biradari",
+      "izzat",
+      "bagawat"
+    ]
+  }
+]

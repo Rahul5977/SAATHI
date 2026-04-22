@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Bina bataye papa ne gaon mein rishta pakka kar diya aur keh rahe hain ki metro ki naukri chhod kar wapas aa jao. Mummy ne phone par rona shuru kar diya ki meri zidd unhe shamshaan pahuncha degi aur 'sab tumhari wajah se ho raha hai'. Mera dimaag sunn ho gaya hai, bas rona aa raha hai aur kuch samajh nahi aa raha ki is bheed mein main saans kaise loon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta pakka",
+      "shamshaan",
+      "metro isolation",
+      "remittance burden"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Papa ne aaj khane par announce kar diya ki meri salary ka 80% ab chacha ji ke karze mein jayega. Mummy ne seene pe haath rakh kar bol diya ki meri 'matlabi' fitrat unhe maar dalegi aur unka heart kamzor ho gaya hai. Mera gala rone se bhara hua hai, itni zyada flood of emotions hai ki main agli mahine ke kamre ke kiraye ke baare mein soch bhi nahi pa raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "salary",
+      "chacha ji",
+      "karza",
+      "remittance burden"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bina mujhse salah liye papa ne gaon mein purani zameen bech di aur sara paisa chote bhai ki shadi mein lagane ka faisla kiya. Mummy baar-baar bol rahi hain ki meri wajah se ghar mein kalesh ho raha hai aur unka BP meri wajah se hi badh raha hai. Itni ghabrahat aur dukh ho raha hai ki main office mein language gap ki wajah se pehle hi akela hoon, ab bas siskiyaan nikal rahi hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "pushtaini zameen",
+      "kalesh",
+      "BP badhna",
+      "language gap"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Papa ne aaj announce kiya ki main ab MNC chhod kar gaon mein local sarkari naukri ki taiyari karunga taaki 'maryada' bani rahe. Mummy ne rona-dhona shuru kar diya ki meri wajah se unhe roz papa ki jhidkiyan sunni padti hain aur 'log kya kahenge' ki beta haath se nikal gaya. Mujhe itna gussa aur frustration mehsus ho raha hai ki mera dimaag kaam karna band kar gaya hai, bas akele baith kar rona aa raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "MNC",
+      "sarkari naukri",
+      "maryada",
+      "log kya kahenge"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Bina meri marzi ke papa ne ghar ka renovation shuru karwa diya aur saara bojh meri urban savings par daal diya. Mummy keh rahi hain ki 'sab tumhari wajah se ho raha hai' aur agar maine paise nahi diye toh wo zeher kha lengi kyunki unka sar samaj mein neecha ho gaya hai. Main poori tarah se toot gaya hoon, bas rona hi nikal raha hai aur future bilkul andhera lag raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "urban savings",
+      "zeher kha lengi",
+      "sar neecha hona",
+      "first-gen migrant"
+    ]
+  }
+]
