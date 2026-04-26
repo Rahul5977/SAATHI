@@ -1,0 +1,76 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab Bapuji ne phone par kaha ki college ke baad ek aur saal drop le kar Mukherjee Nagar mein padhai kar lo, toh meri saari himmat toot gayi. Main pehle hi Kota mein JEE dropper reh chuka hoon aur andar se poori tarah thak gaya hoon, par main unhe mana nahi kar sakta. Ek first-gen student hone ke naate mujhe is exhaustion ko dabakar Laxmikanth uthani hi padegi kyunki parivaar ko ek 'sarkari babu' chahiye aur main rukne ka risk nahi le sakta.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Mukherjee Nagar",
+      "Kota",
+      "JEE dropper",
+      "first-gen student",
+      "sarkari babu"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "College placement mein job mil rahi thi par joint family ne kaha ki ek aur drop lekar UPSC ki tyari karun taaki Sharma ji ke bete ki tarah unchi rank aaye. Andar se main bilkul burnt out hoon aur aur test series lagane ki himmat nahi hai, par unki itni badi investment aur ghar ki 'izzat' ka bojh mujh par hai. Mujhe chupchap apne hostel ke kamre mein baith kar phir se notes ratne honge kyunki mere paas thak kar baithne ki luxury nahi hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "joint family",
+      "UPSC",
+      "Sharma ji ka beta",
+      "rank",
+      "izzat",
+      "hostel"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Pichle saal prelims ka cutoff clear nahi hua aur ab B.A. ke back paper ke saath ghar walon ne ek aur saal dropper banne ka farmaan suna diya hai. Main is saalon ki preparation aur failure se itna exhausted hoon ki dimaag kaam karna band kar chuka hai, lekin gaon mein baithi maa ki umeedon ko main tod nahi sakta. Ye tayari ab ek saza lagti hai par mujhe bina ruke padhna hi hoga kyunki mera rukna poore parivaar ke sapno ka tootna hoga.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "cutoff",
+      "back paper",
+      "dropper",
+      "gaon"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Aaj jab chacha ji ne kaha ki private placement chhod kar ek saal aur UPSC ko do, toh mujhe apna wo failed Kota wala trauma yaad aa gaya. Main janta hoon meri rank aas-paas bhi nahi aane wali aur main mentally poori tarah toot chuka hoon, par aspirational family ki demand ke aage meri thakan ki koi keemat nahi hai. Mujhe raat bhar jaag kar current affairs padhne hi padenge kyunki main apni duty se peeche nahi hat sakta, chahe main andar se kitna hi khokhla kyun na ho jaun.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "placement",
+      "UPSC",
+      "Kota",
+      "rank",
+      "aspirational family"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Jab Papa ne kaha ki ek aur attempt de do kyunki abhi tumhari age hi kya hai, toh mujhe laga jaise kisi ne meri bachi-kuchi zindagi bhi chheen li ho. Main is joint family pressure ke tale itna dab gaya hoon ki kitab kholte hi ghutan hoti hai, par khandaan ki 'izzat' ka bojh uthana mera farz hai. Apna saara dukh aur shame side mein rakh kar main waapas mock paper solve karne baith gaya hoon, kyunki is structural marathon mein rukne ka haq mujhe nahi mila hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "attempt",
+      "joint family pressure",
+      "izzat",
+      "mock paper"
+    ]
+  }
+]

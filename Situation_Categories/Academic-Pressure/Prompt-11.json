@@ -1,0 +1,85 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab Amma ne kaha ki MS ke liye US jaane ka plan cancel karke UPSC ke liye ek aur saal drop le lo, toh mera dimaag bilkul sunn pad gaya. Ek toh waise hi restricted mobility ke karan main Chennai akele aane-jane se darti hoon, aur ab cutoff clear na hone ki sharam ne mujhe dabo liya hai. 'Log kya kahenge' ki beti dropper ban ke ghar baithi hai, is ghabrahat mein main aage syllabus ya strategy ke baare mein kuch nahi soch pa rahi, bas aansu beh rahe hain.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Amma",
+      "US MS",
+      "drop",
+      "restricted mobility",
+      "Chennai",
+      "cutoff",
+      "log kya kahenge",
+      "dropper"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Appa ne seedha keh diya ki ek aur saal dropper ban jao, clear hua toh theek warna agle saal NRI ladke se shaadi tay hai. Pichle attempt ki failure aur itni low rank dekh kar main pehle hi khokhli ho chuki hoon, aur Iyer uncle ki beti ka IAS nikalne se ye dard aur badh gaya hai. Mujhe agle prelims ki tayari nahi karni, mera dimaag sharam se itna bhara hua hai ki main bas bed par gir kar ro rahi hoon aur blank feel kar rahi hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Appa",
+      "dropper",
+      "NRI ladka",
+      "rank",
+      "Iyer uncle ki beti",
+      "prelims",
+      "shaadi"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Jab ghar walon ne ek aur saal drop lekar Bangalore ke strict PG mein rehne ka farmaan sunaya, toh meri aatma kaanp gayi aur main bas khadi rone lagi. Main pehle hi B.A. ke back paper aur UPSC ke repeated failure se itni toot chuki hoon ki is curfew aur safety concerns wali life ne mujhe paralyse kar diya hai. Mujhe further coaching ya next year ki planning ka kuch nahi sochna, bas is ghutan ne mujhe bilakh-bilakh kar rone par majboor kar diya hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "drop",
+      "Bangalore",
+      "strict PG",
+      "back paper",
+      "repeated failure",
+      "curfew",
+      "safety concerns"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Pichle saal prelims ka cutoff reh gaya tha aur ab jab family ne ek aur drop year ka pressure dala, toh 'log kya kahenge' ke darr se mera dimaag sunn ho gaya. Relatives pehle hi meri safety aur shehar mein restricted mobility ko lekar taane marte hain, aur is failure ke baad main completely helpless ho chuki hoon. Main next attempt ki answer writing ke baare mein nahi soch sakti, bas dimaag itna overflood ho chuka hai ki andhere kamre mein rona band nahi ho raha.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "prelims",
+      "cutoff",
+      "drop year",
+      "log kya kahenge",
+      "restricted mobility",
+      "safety"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Result failure ke baad jab Appa ne ek aur saal prep continue karne ko kaha, toh mere dimaag ne poori tarah respond karna band kar diya aur panic haavi ho gaya. Ek multi-year dropper ka daag aur uske sath latakti shaadi ki talwaar mujhe andar se bilkul tod chuki hai. Main next year ki books ya rank strategy ke baare mein soch hi nahi sakti, mera dimaag itna blank hai ki main bas rone ke alawa kuch aur process hi nahi kar pa rahi.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Appa",
+      "prep",
+      "multi-year dropper",
+      "shaadi",
+      "rank"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Backup campus placement mein naam nahi aaya toh Kota wali JEE dropper failure phir se saamne aa gayi, par main rone ka waqt afford nahi kar sakta. Bapuji ne khet girvi rakh kar Mukherjee Nagar bheja hai taaki main 'sarkari babu' ban saku, toh ye identity crisis mujhe rok nahi sakti. Thakan chahe dimaag kha rahi ho, par mujhe table par baith kar Laxmikanth khatam karni hi hogi kyunki khandaan ki umeed mujh par hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["Kota", "JEE dropper", "Mukherjee Nagar", "sarkari babu", "identity crisis"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Placement drive ka rejection dekh kar wahi purani inadequacy feel hui jahan main hamesha Sharma ji ke bete ki rank se peeche reh jata hoon. Joint family ki izzat ka pura bojh mere UPSC prep par tika hai, isliye main is rejection ya dropper stigma par rone ka luxury nahi rakhta. Aankhein neend se jal rahi hain, par abhi PSC ka prelims cutoff clear karne ke liye test series lagani hi padegi.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": ["Sharma ji ka beta", "rank", "joint family", "izzat", "UPSC prep", "dropper stigma", "cutoff"]
+  },
+  {
+    "situation id": "S003",
+    "text": "College ke last year mein placement shortlist se bahar hona waisa hi laga jaise NEET ke 3rd attempt mein fail hona, par main emotionally break nahi ho sakti. Coaching institute ki fees aur parivaar ki itni heavy investment ne mujhe ek aisi race mein daal diya hai jahan thak kar baithne ka option hi nahi hai. Andar se poori tarah burnt out hoon, par agle mock test mein baithna hi mera farz hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["NEET", "3rd attempt", "coaching institute", "family investment"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab company ka rejection mail aaya toh mere graduation ke back paper aur dropper hone ka sharam wapas haavi ho gaya. Lekin main panick karke apni multi-year PSC preparation kharab nahi kar sakta, kyunki maa-baap ne mere sapne ke liye apni zarooratein maari hain. Dimaag kaam nahi kar raha aur ghutan ho rahi hai, fir bhi mujhe apne notes revise karne padenge taaki is saal selection pakka ho.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 4,
+    "cultural markers": ["back paper", "dropper", "multi-year PSC preparation"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Placement drive se reject hona meri 2nd attempt identity crisis ko wapas le aaya, jaise main hamesha sabse peeche rehne wala failure hoon. Par us sharam ko dar-kinar karna padega kyunki main is coaching hub mein parivaar ki aakhri umeed ban kar baitha hoon. Main completely exhausted hoon, par ek sarkari naukri ke zariye apne parivaar ki halat theek karne ki duty mujhe sone nahi degi.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["2nd attempt", "identity crisis", "coaching hub", "sarkari naukri"]
+  }
+]
