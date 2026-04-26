@@ -17,7 +17,8 @@
     "intensity_seed": 5,
     "cultural markers": ["batwara", "suppressed ambition", "saas-bahu dynamics", "joint family"]
   },
-  {
+ 
+    {
     "situation id": "S003",
     "text": "Bhai ko jaydad milne par 'log kya kahenge' ki chinta mein main chup hoon aur office ke baad ghar ke kaamo mein din-raat ek kar rahi hoon. Main itni zyada exhaust ho chuki hoon ki lagta hai abhi gir jaungi, par bacchon ki padhai aur ghar ki 'izzat' ki wajah se 'cannot afford to stop' wali halat hai. Meri kurbani hi is parivaar ki structural stability banaye rakhegi.",
     "context_category": "Joint family tensions & Parental Authority",
@@ -26,8 +27,7 @@
     "intensity_seed": 3,
     "cultural markers": ["jaydad", "log kya kahenge", "izzat", "structural stability"]
   },
-  {
-    "situation id": "S004",
+  { "situation id": "S004",
     "text": "Saas kehti hain ki bhai ko property dena hi sahi tha kyunki wahi khandaan ka naam aage badhayega, aur main unki baat maan kar office se aakar rasoi mein pis rahi hoon. Main mentally aur physically toot chuki hoon, par mujhe bhai ki shadi aur ghar ke kharche ke liye himmat jutani hi hogi. Rukne ka koi option nahi hai, yahi mera bade hone ka farz hai.",
     "context_category": "Joint family tensions & Parental Authority",
     "coping_mechanism": "Duty-Based Coping",

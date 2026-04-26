@@ -1,0 +1,81 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab TnP portal par company ki cutoff aayi aur meri rank usse bohot door thi, toh mere dimaag ne kaam karna band kar diya. Kota mein dropper banke JEE fail hone ka trauma aur ab on-campus placement mein failure—mera dimaag bilkul sunn pad gaya hai. Mujhe samajh nahi aa raha ki gaon mein Bapuji ko kya munh dikhaunga, main aage ka kuch soch hi nahi pa raha bas panic se meri saans atak rahi hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "TnP portal",
+      "cutoff",
+      "rank",
+      "Kota",
+      "dropper",
+      "JEE failure",
+      "sunn pad jana"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Hostel ke group mein jab sab apni coding rank share kar rahe the aur mera cutoff clear nahi hua, toh mujhe laga main wahi zameen par dher ho jaunga. Sharma ji ke bete ko day-one offer mil gaya aur main ek back paper ki tension ke beech is rejection se poori tarah toot gaya hoon. Abhi main off-campus placement ya aage ka kuch nahi soch pa raha, bas apne aap par itni sharam aa rahi hai ki blanket mein muh chhupa kar ro raha hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "hostel",
+      "coding rank",
+      "cutoff",
+      "Sharma ji ka beta",
+      "back paper"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Placement exam ka result dekhte hi mere hosh udd gaye, rank cutoff se itna door hai ki joint family ki saari 'izzat' mitti mein mil jayegi. Sarkari babu banne ka option chhod kar maine B.Tech chuna tha, par ab on-campus offer na milne ke darr se mera dimaag completely blank ho chuka hai. Mujhe koi solution ya next round ki tayari nahi karni, bas ye rona rukne ka naam hi nahi le raha hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rank",
+      "cutoff",
+      "joint family",
+      "izzat",
+      "sarkari babu",
+      "blank ho jana"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Mass recruiter ka result aaya aur meri rank cutoff ke aas-paas bhi nahi thhi, us ek pal ne mujhe andar se khokhla kar diya. First-gen student hone ka bojh aur baaki doston ke on-campus placement packages dekh kar mujhe itni ghutan ho rahi hai ki lagta hai mera sach mein kuch nahi hoga. Agli company ke liye coding padhna mere palle nahi pad raha, meri aankhon se bas aansu nikal rahe hain aur dimaag ne kaam karna band kar diya hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "mass recruiter",
+      "rank",
+      "cutoff",
+      "first-gen student",
+      "kuch nahi hoga mindset"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Placement drive ki list mein apni rank cutoff se itni neeche dekh kar meri aatma kaanp gayi. Aisa lag raha hai jaise purana dropper tag phir se zinda ho gaya aur aspirational parivaar ke saare sapne barbaad ho gaye. Main aage aane wali companies ya placement strategy ke baare mein kuch nahi soch sakta, bas ek ajeeb si ghabrahat machi hai aur main completely paralyse ho gaya hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "placement drive",
+      "rank",
+      "cutoff",
+      "dropper tag",
+      "aspirational parivaar",
+      "ghabrahat"
+    ]
+  }
+]
