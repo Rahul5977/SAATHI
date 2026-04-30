@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Rishtey wale bina haan bole chale gaye aur Papa ne sabke samne taana maara ki Sharma ji ka beta Google mein hai isliye uska turant ho gaya aur main startup mein sirf waqt barbaad kar raha hoon. Mera dimaag ekdum sunn ho gaya hai aur bas rona aa raha hai, samajh nahi aa raha ki kal ke sprint delivery ka kya hoga. Itni ghabrahat ho rahi hai ki lag raha hai saans hi ruk jayegi, kaam toh bahut door ki baat hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Sharma ji ka beta",
+      "izzat",
+      "startup",
+      "taana"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Party ke jane ke baad Mummy ne rona shuru kar diya ki meri 'inadequacy' ki wajah se parivaar ki izzat mitti mein mil gayi aur 'log kya kahenge' ki IT mein hokar bhi rishta reject ho gaya. Main itna toot chuka hoon ki bas WFH setup ke samne baith kar sisak raha hoon, na kuch sujhayi de raha hai na koi umeed dikh rahi hai. Dimaag mein bas wahi baatein ghoom rahi hain, laptop kholne ki himmat hi nahi ho rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "log kya kahenge",
+      "izzat",
+      "WFH isolation",
+      "siskiyaan"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Aaj ki rejection ke baad Papa keh rahe hain ki padosi ki beti MNC mein manager ban gayi aur main ek EMI tak dhang se manage nahi kar paa rahi isliye rishta tuta. Mera gala rone se bhara hua hai aur flood of emotions ki wajah se main unhe ye bhi nahi bol pa rahi ki recession chal raha hai. Bas akele baith kar rona aa raha hai, career ya budget ka plan toh dimaag mein aa hi nahi raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "EMI pressure",
+      "MNC",
+      "comparison",
+      "joint family"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne mere 'work-life balance' par sawal uthaye aur Papa ne unke samne hi mujhe nikamma bol diya kyunki main Sharma ji ke bete ki tarah on-site nahi gaya. Mera dimaag kaam karna band kar gaya hai, bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai. Itne saare emotions ek saath aa rahe hain ki main apne code deployment ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "on-site",
+      "nikamma",
+      "blank",
+      "work-life balance"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishta party ne jabse mana kiya hai, ghar mein kalesh shuru ho gaya hai aur Mummy keh rahi hain ki meri kismat hi kharab hai ki hamesha peeche reh jati hoon. Main itni zyada overwhelm ho gayi hoon ki bas rona nikal raha hai aur lag raha hai ki sab meri hi galti hai. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye ek kona chahiye jahan koi mujhe comparison na sunaye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kalesh",
+      "overwhelm",
+      "kismat",
+      "rishta party"
+    ]
+  }
+]

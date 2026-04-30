@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah papa ne sabke samne announce kar diya ki mera rishta agle mahine pakka hai aur main mana nahi kar sakta. Mummy ne rona shuru kar diya ki meri khamoshi unhe maar dalegi aur 'sab meri manhoosiyat ki wajah se ho raha hai'. Mera dimaag ekdum sunn ho gaya hai, bas rona aa raha hai aur samajh nahi aa raha ki is ghutan mein saans kaise loon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta pakka",
+      "manhoosiyat",
+      "ghutan",
+      "emotional manipulation"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bina mujhse pooche papa ne shehar mein mera kamra band karwa diya aur wapas gaon aane ka faisla suna diya. Mummy baar-baar bol rahi hain ki parivaar ki izzat mitti mein mil jayegi agar maine unki baat nahi mani aur meri wajah se unka BP badh gaya hai. Itni ghabrahat aur dukh ho raha hai ki main kuch soch hi nahi pa raha, bas rone se gala bhara hua hai aur future andhera lag raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "izzat",
+      "BP badhna",
+      "future andhera",
+      "urban isolation"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Papa ne aaj announce kiya ki main ab se kisi dost se nahi milunga aur sirf family business par dhyan dunga. Mummy ne seene pe haath rakh kar bol diya ki meri zidd unhe shamshaan pahuncha degi aur 'log kya kahenge' ki unka beta haath se nikal gaya. Mera dimaag kaam karna band kar gaya hai, bas flood of emotions mein dooba hua hoon aur lag raha hai ki saans ruk jayegi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "fear",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "shamshaan",
+      "log kya kahenge",
+      "family business",
+      "hidden identity"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Bina meri marzi ke papa ne mera phone check kiya aur ab wo meri poori life control karne ka announce kar chuke hain. Mummy ne rona-dhona shuru kar diya ki meri wajah se unhe roz papa ki jhidkiyan sunni padti hain aur unka sukh-chain chheen gaya hai. Mujhe itna gussa aur helplessness mehsus ho raha hai ki mera dimaag kaam hi nahi kar raha, bas akele baith kar rona nikal raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "sukh-chain",
+      "jhidkiyan",
+      "hidden identity",
+      "authoritarian control"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj khane par papa ne bol diya ki main ab se gaon mein hi rahungi kyunki unhe meri 'fitrat' par shak ho raha hai. Mummy keh rahi hain ki 'sab tumhari wajah se ho raha hai' aur agar maine bagawat ki toh wo zeher kha lengi kyunki unka sar samaj mein neecha ho gaya hai. Main poori tarah se toot gaya hoon, bas rona hi aa raha hai aur dimaag ekdum sunn hai, kuch samajh nahi aa raha kaise handle karun.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "zeher kha lengi",
+      "sar neecha hona",
+      "fitrat",
+      "bagawat"
+    ]
+  }
+]

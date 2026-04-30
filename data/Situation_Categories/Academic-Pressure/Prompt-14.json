@@ -1,0 +1,91 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab Iyer uncle ki beti ko campus mein day-zero offer mil gaya aur main unplaced reh gayi, toh mujhe apni is forced IT branch par bohot gussa aaya jisme mera zero interest hai. Par maine Appa se kuch nahi kaha kyunki unka sapna mujhe MS ke liye US bhejna hai aur main unki 'izzat' kharab nahi karna chahti. 'Log kya kahenge' ke darr aur shaadi ke dabaav se bachne ke liye, main apni nafrat chhupa kar bas agle interview ki tayari ka natak kar rahi hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "Iyer uncle ki beti",
+      "day-zero offer",
+      "forced IT branch",
+      "Appa",
+      "MS",
+      "izzat",
+      "log kya kahenge",
+      "shaadi ka dabaav"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Meri roommate ka cutoff clear ho gaya aur use offer letter mil gaya, jabki main is zabardasti thopi gayi ECE branch mein apne back paper ke darr se mar rahi hoon. Amma ne mujhe dropper banakar zabardasti Chennai ke is strict hostel mein bheja tha, par main unhe taana nahi maar sakti kyunki unhone meri padhai ke liye apni savings laga di hain. Apne career ki frustration ko main andar hi daba leti hoon taaki family ki shanti na bigde aur mujhe akelepan ka taana na sunna pade.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "cutoff",
+      "forced branch",
+      "back paper",
+      "Amma",
+      "dropper",
+      "Chennai",
+      "strict hostel",
+      "family ki shanti"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Aaj jab Reddy uncle ke bete ko IT park mein job mili aur mera on-campus placement nahi hua, toh mujhe laga main is jabardasti ki engineering ko chhod doon. Lekin main janti hoon ki agar maine complain kiya toh Appa meri padhai chhudwa kar turant shaadi karwa denge kyunki unke liye ladki ka akele Bangalore mein rehna safety concern hai. Unka garv banaye rakhne aur parivaar mein kalesh avoid karne ke liye, main apna saara dukh pee kar muskurati rehti hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "Reddy uncle ka beta",
+      "on-campus placement",
+      "jabardasti ki engineering",
+      "Appa",
+      "shaadi",
+      "Bangalore",
+      "safety concern",
+      "garv"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Dost ka badi MNC mein placement ho gaya aur main apne forced course mein lowest rank laakar baithi hoon, jisme mera aage badhne ka koi mann nahi hai. Main apne parents ko blame nahi kar sakti kyunki unhone biradari mein 'log kya kahenge' se bachne ke liye NRI aspirations paale hain aur meri padhai par bohot invest kiya hai. Ghar ki harmony ko bachane ke liye main apni ghutan chup-chap sehti hoon, warna unhe lagega ki unki beti unki qadar nahi karti.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "forced course",
+      "rank",
+      "biradari",
+      "log kya kahenge",
+      "NRI aspirations",
+      "ghar ki harmony",
+      "ghutan"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Batchmate ka cutoff cross ho gaya aur uski naukri lag gayi, par main is zabardasti wali medical seat ke bojh tale apni life barbad hoti dekh rahi hoon. Mujhe bohot rona aata hai par main Amma-Appa se kuch nahi kehti kyunki wo meri restricted mobility aur safety ko lekar pehle hi is strict curfew wale PG mein mujhe rakh kar pareshan hain. Family ki 'izzat' aur unke sacrifice ke aage maine apne sapne tootne ka gussa poori tarah daba liya hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "cutoff",
+      "medical seat",
+      "Amma-Appa",
+      "restricted mobility",
+      "safety",
+      "strict curfew",
+      "PG",
+      "izzat"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj office mein Boss ne meri language ka mazaak udate huye sabke samne chillaya, par maine bas sir jhuka kar 'Sorry Sir' bol diya. Gaon mein baarish se kisan Papa ki poori fasal barbaad ho gayi hai aur bank ki kist bounce ho gayi, isliye main unhe naraz karke apni naukri risk mein nahi daal sakta. Agar main palat kar jawab deta toh ye meri parvarish par sawal hota aur khandaan ki 'izzat' mitti mein mil jati.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["language gap", "kisan", "fasal barbaad", "izzat", "bank ki kist"]
+  },
+  {
+    "situation id": "S002",
+    "text": "MNC mein Boss roz unpaid overtime karate hain aur mana karne par gaali-galoch karte hain, par main unhe 'malik' maan kar sab seh leta hoon. Metro isolation mein koi community support nahi hai, aur udhar khet ujadhne se remittance ka pressure badh gaya hai, isliye unse kalesh karna parivaar ke liye paap jaisa hoga. Main chup-chap unki har zillat sehta hoon taaki ghar ki shanti aur Papa ka samman bana rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "humiliation",
+    "intensity_seed": 4,
+    "cultural markers": ["MNC", "unpaid overtime", "metro isolation", "remittance burden", "kalesh"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Startup ka Boss mere gaon wale background ka mazaak udata hai, par main unhe hamesha bade-buzurgo ke barabar samman deta hoon taaki wo mujhe nikal na dein. Udhar loan installment na bhar paane ki wajah se ghar par economic crisis hai, isliye meri ek bagawat pure khandaan ki 'naak' katwa sakti hai. Main apne saare suppressed emotions daba deta hoon taaki unse sambandh kharab na ho aur gaon paise jaate rahein.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": ["startup", "naak katwana", "suppressed emotions", "loan installment", "samman"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Sarkari naukri ki taiyari mein barson barbaad karne ke baad ye private job mili hai, isliye Boss ki screaming main bina uff kiye sunta hoon. Fasal destroy hone se Sahukar ka darr badh gaya hai, isliye is waqt palat kar bolna meri 'maryada' ke khilaaf hoga. Main bas unki gulamiyat kar raha hoon taaki Papa ko gaon mein kisi ke samne nichi aankhein na karni padein.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["sarkari naukri", "Sahukar", "nichi aankhein", "maryada", "gulamiyat"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj meeting mein Boss ne meri capability par sawal uthate huye zaleel kiya, par maine hamesha 'Ji Sir' hi kaha taaki meri image ek shaleen vyakti ki bani rahe. Urban migrant hone ki wajah se yahan mera koi nahi hai, aur udhar khet mein nuksan ne mujhe majboor kar diya hai ki main unki har shart maanu. Main chup-chap sab nigaal raha hoon taaki parivaar ki 'shaan' aur Boss ke saath sambandh dono bache rahein.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "worthlessness",
+    "intensity_seed": 4,
+    "cultural markers": ["urban migrant", "shaleen", "shaan", "remittance", "bezatti"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Placement list mein apna naam nahi dekh kar mera dimaag bilkul sunn ho gaya, bilkul waisa hi jaise NEET ke 2nd attempt ke result par hua tha. Appa ke NRI aspirations the aur ab placement na hone par shaadi ka pressure badh jayega, ye soch kar bas rona nikal raha hai. Mujhe nahi samajh aa raha agle interview ki tayari kaise karun, bas 'log kya kahenge' ki ghabrahat ne mujhe bilkul nichod diya hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["NEET 2nd attempt", "Appa", "NRI aspirations", "log kya kahenge"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Jab company ka rejection mail aaya toh wahi purani dropper shame ne mujhe phir se dabo liya aur main hostel ke kamre mein bilakh kar rone lagi. Iyer uncle ki beti ki rank aur placement dono achi aayi, aur main pehle back paper aur ab is failure se khokhli ho chuki hoon. Restricted mobility ke karan main Bangalore mein bahar ja kar hawa bhi nahi kha sakti, bas dimaag blank hai aur sharam se dum ghut raha hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["dropper shame", "Iyer uncle ki beti", "rank", "back paper", "restricted mobility", "Bangalore"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Campus placement ki shortlist se bahar hone par mujhe wahi 3rd attempt wali identity crisis hit kar gayi aur main completely paralyse ho gayi. Amma ab seedha shaadi ki baat karengi kyunki unhe lagta hai mera kuch nahi hoga, aur is darr se meri saans atak rahi hai. Agli company ke cutoff ke baare mein sochne ka hosh hi nahi hai, mera dil itna bhara hua hai ki bas cheekhne ka mann kar raha hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": ["3rd attempt", "Amma", "shaadi", "kuch nahi hoga", "cutoff"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Doston ko placement drive mein shortlist hote dekh mujhe apna failed JEE dropout wala tag chubhne laga aur main washroom mein chup kar rone lagi. Sharma ji ke bete ko IT park mein job mil gayi par main yahan safety aur hostel curfew ki pabandiyon mein completely toot chuki hoon. Mujhe aage ka koi career plan nahi dikh raha, bas itni hopelessness hai ki dimaag ne kaam karna band kar diya hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["JEE dropout", "Sharma ji ka beta", "IT park", "safety", "hostel curfew"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Placement drive ka result dekh kar meri aankhon ke aage andhera chha gaya, jaise mere dropper hone ka daag kabhi nahi mitega. Chennai ke is strict hostel mein akele baith kar main bas ro rahi hoon kyunki ab family ka marriage pressure aur taane bardasht se bahar hain. Mujhe resume update karne ya HR se baat karne ka kuch nahi sochna, bas mere andar itna rona bhara hai jo rukne ka naam hi nahi le raha.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["dropper", "Chennai", "strict hostel", "marriage pressure"]
+  }
+]

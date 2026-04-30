@@ -1,0 +1,75 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat papa se doosre shehar placement lene par behes hui, par unhone saaf keh diya ki akele rehne wali ladkiyon ke achhe rishte nahi aate. Main apna career banana chahti thi, lekin taya ji aur papa ki samaj me izzat bani rahe, isliye subah maine chupchap offer letter reject kar diya. Unka dil dukhakar aur family me badnaami karwakar main aage nahi badhna chahti.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "sacrifice",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "doosre shehar placement",
+      "achhe rishte",
+      "taya ji",
+      "izzat",
+      "badnaami"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "College ki industrial visit ke liye maine papa se permission mangi thi, par kal raat unhone 'log kya kahenge' aur safety ka hawala dekar strictly mana kar diya. Meri apni koi azaadi nahi hai aur bohot rona aa raha hai, par joint family me kalesh na ho aur papa ko taana na pade, isliye maine dosto ko jhooth bol diya ki meri tabiyat theek nahi hai. Apne baap ki baat kaat kar main unhe society me chota feel nahi karwa sakti.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "log kya kahenge",
+      "safety",
+      "joint family",
+      "kalesh",
+      "taana"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Graduation ke baad Master's karne ki meri zidd par kal raat papa ne gusse me keh diya ki meri shaadi ka kharcha unpar bojh ban raha hai. Unki is baat ne mujhe andar se tod diya hai, par first-born beti hone ke naate mera farz hai ki main unka bojh kam karun. Apne sapno ko dabakar maine aaj khud hi mummy ko bol diya ki jahan aap log kahenge main shadi karne ko taiyar hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "shaadi ka kharcha",
+      "bojh",
+      "first-born beti",
+      "farz"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Evening coaching join karne ko lekar kal raat papa ke sath bohot behas hui, unka manna hai ki shaam ke baad betiyon ka ghar se bahar rehna humari maryada ke khilaf hai. Main janti hoon ki unki soch conservative hai, par bua aur dadi unhe taane na maarein, isliye maine chup rehna behtar samjha. Ghar ki shanti bachane ke liye ab main akele hi online padhne ki koshish kar rahi hoon taaki papa ka maan bana rahe.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resignation",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "maryada",
+      "bua aur dadi",
+      "taane",
+      "ghar ki shanti"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Final year exams chal rahe hain aur kal raat papa ne bina meri sunne ek rishtewalo ko ghar bula liya hai. Maine thoda protest kiya toh unhone kaha ki khandaan ki naak katwane ka irada hai kya. Unki izzat aur joint family ke rules ke aage meri awaaz kuch nahi hai, isliye main aaj apne aansu poonch kar aur dhang ke kapde pehen kar mehmaanon ke samne chai lekar jane ko majboor hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishtewalo",
+      "khandaan ki naak",
+      "izzat",
+      "joint family",
+      "mehmaanon"
+    ]
+  }
+]

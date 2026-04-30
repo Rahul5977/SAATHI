@@ -1,0 +1,49 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat papa aur sasur ji ne milkar meri naukri wapas shuru karne ki baat par saaf mana kar diya aur behes bina nateeje ke khatam ho gayi. Main jaanti hoon ki ghar ki izzat unke liye meri identity se badi hai, isliye aaj subah maine chup-chaap nashta banaya aur kisi se koi shikayat nahi ki. Apne career ke sapno ko maine parivaar ki shanti ke liye phir se dabba diya hai kyunki kalesh karne se rishte toot jayenge.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["izzat", "nashta", "parivaar ki shanti", "kalesh"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Mummy ji ne kal raat phir sabke samne mere doosre bachhe ko lekar tana maara aur mere pati ne bhi unka hi saath diya. Main andar se toot rahi hoon par 'log kya kahenge' ke darr se maine apne aansu pee liye aur unse maafi maang li. Sasural me apni maryada banaye rakhne ke liye main apna dard kisi ko nahi dikha sakti, bas ek acchi bahu hone ka farz nibha rahi hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["saas-bahu dynamics", "log kya kahenge", "maryada", "acchi bahu"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Kal raat jab maine apni hobby class join karne ki himmat ki, toh papa ne saaf keh diya ki hamare khandaan ki auratein bahar akele nahi ghoomti. Behes bohot badh sakti thi par maine bade-buzurgo ka lihaz karte hue turant haan me haan mila di. Ghar ki izzat aur rishton me darar na aaye, bas isliye main apni marzi ka gala ghot kar ghar ke kamo me lag gayi hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["khandaan", "bade-buzurgo ka lihaz", "izzat", "marzi"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Mere career gap ko lekar kal raat sasur ji ne itna sunaya ki mujhe apni padhai hi bojh lagne lagi. Main unhe samjhana chahti thi par joint family me bado ki baat kaatna humare sanskar nahi hain, isliye main khamosh rahi. Apne pati aur sasural walo ki nazar me giri hui na banoon, isliye maine unke authoritarian control ko chupchap sweekar kar liya hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "powerlessness",
+    "intensity_seed": 3,
+    "cultural markers": ["joint family", "sanskar", "authoritarian control", "sasural"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Bachhe ki parvarish ko lekar kal raat jo behes shuru hui thi, wo bina kisi samadhan ke khatam ho gayi kyunki papa ne meri ek nahi suni. Mujhe lagta hai ki main is ghar me sirf ek naukrani ban kar reh gayi hoon, par baccho ke bhavishya aur rishte ki khatir maine unse dubara behes nahi ki. Mummy-papa ki izzat society me bani rahe, bas isliye main har roz thak kar bhi muskurane ka natak karti hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": ["parvarish", "izzat", "society", "muskurane ka natak"]
+  }
+]
+
+

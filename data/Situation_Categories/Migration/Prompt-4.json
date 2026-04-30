@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Doctor ne bol diya ki ye sab bas 'stress' hai par mera dimaag sunn ho gaya hai aur bas rona nikal raha hai, unhe kya pata meri asli identity ka darr. Is bade shehar mein bhasha ki vajah se koi mera dukh nahi samajhta, bas aisa lag raha hai jaise main kisi gahre gaddhe mein gir raha hoon. Abhi main koi solution nahi soch sakta, bas ye ghutan khatam ho jaye kaise bhi.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "alienation",
+    "intensity_seed": 5,
+    "cultural markers": ["shehar", "bhasha", "ghutan", "hidden identity"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Jab Doctor ne meri takleef ko halke mein liya toh mera dil baith gaya aur main PG ke kone mein baith kar ghanton bilakh-bilakh kar roya. Akelepan ne mujhe itna nichod diya hai ki ab ghar walon ka phone aate hi meri aatma kaanp jati hai ki kahin wo meri sacchai na jaan lein. Mujhe samajh hi nahi aa raha aage kya hoga, bas dimaag mein ek ajeeb si hulchul machi hai aur main dher ho gaya hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "isolation",
+    "intensity_seed": 4,
+    "cultural markers": ["PG", "bilakh-bilakh kar rona", "akelepan", "family fear", "hulchul"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Doctor ne phirse wahi 'stress' wali baat ki toh mere hosh udd gaye aur main bas sunn hokar metro station par deewar ko takta reh gaya. Gaon se yahan metro city aana ek azadi lagta tha, par na koi apni biradari ka hai na koi baat karne wala, bas har waqt ek darr sa lagta hai. Abhi mujhse mat pucho ki main kaise theek hounga, mera dil itna bhara hua hai ki bas cheekh nikalne wali hai.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "grief",
+    "intensity_seed": 5,
+    "cultural markers": ["biradari", "metro city", "gaon", "hosh udd jana", "sunn hona"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Zimmedari itni hai aur upar se Doctor ne meri halat ko 'natak' jaise dismiss kar diya, main toh bilkul toot gaya hoon. Shehar mein reh kar bhi main itna akela hoon ki ab lagta hai main pagal ho jaunga, kyunki apni sacchai batayi toh 'log kya kahenge' wali baat ghar ujad degi. Dimaag blank hai, bas ek ajeeb sa khali-pan mehsus ho raha hai jaise metro ki bheed mein mera dam nikal jayega.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["natak", "log kya kahenge", "khali-pan", "metro isolation", "dam nikalna"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Doctor ki baatein sunkar mera dimaag fatne laga aur main bas sadak par baith gaya, gaon ki mitti ki bohot yaad aa rahi hai jahan kam se kam bhasha toh apni thi. Is bade shehar mein koi community nahi hai aur apni identity chhupana mujhe pagal kar raha hai, rona ruk hi nahi raha hai. Abhi main career ya adjustment ki baat nahi kar sakta, bas mujhe koi yahan se nikaal lo, mera dum ghut raha hai.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "alienation",
+    "intensity_seed": 5,
+    "cultural markers": ["gaon", "bhasha", "no community", "dum ghutna", "hidden identity"]
+  }
+]

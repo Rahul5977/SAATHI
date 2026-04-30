@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Bapu ne gaon ki zameen ka bada hissa chote bhai ke naam kar diya taaki wo shehar mein settle ho sake, par bade hone ke naate main koi sawal nahi utha sakta. Metro city mein akele reh kar main overtime kar raha hoon taaki ghar ki remittance aur EMI time par jaye. Main itna thak gaya hoon ki lagta hai gir jaunga, par main afford nahi kar sakta ki main thoda bhi slow padun.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "bade hone ke naate",
+      "remittance burden",
+      "metro isolation",
+      "hissa"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Joint family mein property batwara hua aur bhai ko sab mil gaya taaki uski shadi ki 'izzat' bani rahe, aur mujhse umeed ki jati hai ki main shehar se paise bhejta rahoon. Language gap ki wajah se office mein pehle hi struggle kar raha hoon, par ab rone ka waqt bhi nahi milta kyunki poore parivaar ka bojh mere hi kandhon par hai. Mujhe bas chalte rehna hai kyunki mera rukna sab kuch bikhar dega.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "batwara",
+      "izzat",
+      "language gap",
+      "parivaar ka bojh"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bhai ko jaydad milne par 'log kya kahenge' ki chinta mein main chup raha aur ab apni salary ka 70% gaon bhej raha hoon. Main burnout ki kagar par hoon par rukne ka option nahi hai kyunki chote bhai ki coaching fees mere hi bharose hai. Bade hone ka farz yahi hai ki aap thak kar bhi endurance dikhate raho aur parivaar ko sambhale rakho.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 3,
+    "cultural markers": [
+      "log kya kahenge",
+      "farz",
+      "coaching fees",
+      "remittance"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Metro mein layoffs ka darr hai aur yahan property bhi bhai ke naam ho gayi, phir bhi mujhe bina ruke agle shift par lagna hai taaki ghar ka kharcha na ruke. Main physically aur mentally poori tarah exhaust ho chuka hoon, par mujhe pata hai ki mera endurance hi ghar ki structural stability hai. Main complain nahi kar sakta kyunki mujhe behen ki shadi aur bapu ki dawai ke liye paise jorne hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "layoffs",
+      "structural endurance",
+      "shadi",
+      "first-gen urban migrant"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Bade hone ki yahi keemat hai ki bhai ko azadi aur property mili, aur mujhe sirf metro isolation aur remittance ka bojh. Main itna thak gaya hoon ki dimaag sunn ho gaya hai, par 'cannot afford to stop' wali feeling mujhe har subah utha deti hai. Meri kurbani hi bhai ka rasta saaf karegi, isliye mujhe ye duty bina kisi sawal ya break ke nibhani hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "bade hone ki keemat",
+      "metro isolation",
+      "kurbani",
+      "obligations"
+    ]
+  }
+]

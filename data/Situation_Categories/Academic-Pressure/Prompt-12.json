@@ -1,0 +1,80 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab Papa ne kaha ki ek aur saal Mukherjee Nagar mein reh kar padh lo, toh andar se meri jaan nikal gayi. Main multi-year dropper hoon aur lagatar failures ne mujhe poori tarah nichod diya hai, par Bapuji ki zameen girvi rakhi hai isliye main rukk nahi sakta. Mujhe apni thakan aur depression bhula kar agle attempt ke liye Laxmikanth dobara kholni hi padegi, kyunki ek first-gen aspirant ke paas give up karne ka option nahi hota.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Mukherjee Nagar",
+      "multi-year dropper",
+      "Bapuji",
+      "zameen girvi",
+      "Laxmikanth",
+      "first-gen aspirant"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Tauji ne jab joint family ke samne kaha ki ek aur saal drop lekar tayari karo, toh mera dimaag thakan se sunn ho gaya. Sharma ji ke bete ki state rank aane ke baad family ki 'izzat' ka saara bojh meri is UPSC coaching par aa gaya hai, jisse main buri tarah burnt out hoon. Lekin main haar maan kar is cycle se bahar nahi nikal sakta, mujhe chupchap ek machine ki tarah apne notes revise karte rehna hai taaki unka 'sarkari babu' ka sapna zinda rahe.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "Tauji",
+      "joint family",
+      "Sharma ji ka beta",
+      "state rank",
+      "izzat",
+      "UPSC coaching",
+      "sarkari babu"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "UPSC prelims ka cutoff phir se miss hone par jab ghar walo ne bola 'ek aakhri drop aur le lo', toh main mentally poori tarah toot gaya. Coaching institute ke in chhote kamron mein saalon nikal gaye aur ye dropper stigma mujhe kha raha hai, par family ki itni heavy investment ke baad main padhai rokne ka afford nahi kar sakta. Meri aankhein neend aur stress se jal rahi hain, par mujhe agle din subah uth kar answer writing karni hi padegi kyunki ye meri duty hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "UPSC prelims",
+      "cutoff",
+      "coaching institute",
+      "dropper stigma",
+      "family investment",
+      "answer writing"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab maa ne rote hue kaha ki beta ek saal aur try kar le, toh mujhe apna purana Kota aur B.Tech ke back paper wala trauma yaad aa gaya. Main is saalon lambi prep se itna thak chuka hoon ki kitaab dekh kar ghutan hoti hai, par unki saari umeed mere IAS banne par tiki hai. Mujhe is structural marathon mein sab kuch seh kar bas chalte rehna hai, chahe andar se main kitna bhi khokhla kyun na ho jaun.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "Kota",
+      "back paper",
+      "IAS",
+      "structural marathon"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Mains ka result negative aane par jab Papa ne bina soche 'ek drop aur' ki baat keh di, toh mujhe apni poori jawani barbad hoti hui dikhi. Doosre log settle ho gaye hain aur main is multi-year prep mein ek zinda laash ban gaya hoon, par ghar walo ke paise aur sacrifice ki wajah se main apni tayari chhod nahi sakta. Mujhe apni sharam aur thakan ko ignore karke kal se phir coaching aana hi hoga, kyunki is race mein rukne ka haq mujhe nahi mila hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Mains",
+      "drop",
+      "multi-year prep",
+      "sacrifice",
+      "coaching"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Doctor ne phir stress bol kar nikaal diya, par unhe kya pata ki dual burden mujhe andar se kha raha hai. Sasu-maa chahti hain ki main job chhod doon taaki 'bahu' ki zimmedari thik se nibhaun, par main mana nahi kar sakti kyunki kalesh hoga toh Mummy-Papa ki izzat mitti mein mil jayegi. Isliye main office mein promotion thukra rahi hoon taaki ghar ki shanti bani rahe aur log mere sasural par ungli na uthayein.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["bahu", "izzat", "kalesh", "dual burden", "ungli uthana"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Office mein manager ki baatein aur ghar par 'achi bahu' banne ka pressure, Doctor ko lagta hai ye bas mamuli stress hai. Main career ki ambition chhupaye rakhti hoon kyunki agar maine apne liye stand liya toh samaj kahega ki beti haath se nikal gayi hai aur parivar ki shaan khatam ho jayegi. Sabka maan rakhne ke liye main chupchap resignation ki taiyari kar rahi hoon taaki kisi ko shikayat ka mauka na mile.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["achi bahu", "samaj", "shaan", "beti haath se nikalna", "maan rakhna"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Ghabrahat hoti hai par Doctor ne kaha relax karo, unhe nahi pata ki divorce stigma ke darr se main sasural mein apni awaaz daba leti hoon. Meri salary se ghar chalta hai par phir bhi mujhse ummeed ki ja rahi hai ki main career chhod kar chula-chauka sambhalun. Main kuch nahi bolti kyunki main nahi chahti ki mere maa-baap ko logon ke taane sunne padein, bas unki khushi ke liye apne sapne maar rahi hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": ["divorce stigma", "chula-chauka", "taane", "sasural", "awaaz dabana"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Doctor ne phir symptoms dismiss kar diye, par ye ghutan career vs sanskar ki ladaai ki wajah se hai. Main promotion ke liye travel nahi karti kyunki khandaan ki bahu ka bahar rehna 'log kya kahenge' wale darr ko badha deta hai. Parvarish par sawal na uthein, isliye main apni suppressed ambition ko smile ke peeche chhupa kar sabki seva karti rehti hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 4,
+    "cultural markers": ["sanskar", "log kya kahenge", "parvarish", "khandaan ki bahu", "suppressed ambition"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Doctor ko lagta hai ki main overworked hoon, par asli dard toh apni pehchaan khone ka hai taaki rishta bacha rahe. Sasural wale kehte hain ki aurat ka asli gehna uska ghar hai, isliye main office ki problems kabhi share nahi karti taaki koi kalesh na ho. Unka sar uncha rahe, bas isiliye main ek silent performer bani hoon jo apni khwahishon ka gala har din ghot-ti hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 3,
+    "cultural markers": ["aurat ka gehna", "rishta bachana", "sar uncha rakhna", "kalesh", "silent performer"]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat pata chala ki Papa ne saari pushtaini property Bhai ke naam kar di kyunki unke hisaab se divorcee beti ka ghar par koi haq nahi hota. Main subah se bas roye ja raha hoon, dimaag ekdum sunn hai aur samajh nahi aa raha ki apni hidden identity ke saath ab kahan jaunga. Itna bura lag raha hai ki lagta hai meri koi aukat hi nahi bachi, bas rone ka mann kar raha hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "pushtaini property",
+      "divorcee",
+      "haq",
+      "hidden identity"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bhai ko ghar ka bada hissa mila aur Mummy ne kaha ki 'log kya kahenge' agar ek chhori hui aulad property maangne lage jiske taur-tareeke pehle hi ajeeb hain. Main itni zyada overwhelmed hoon ki bas ek kone mein baithi hoon, na kisi se baat karne ka mann hai na aage ka kuch sujhh raha hai. Flood of emotions itna zyada hai ki mujhe lag raha hai meri saari koshish aur meri izzat sab mitti mein mil gayi.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "log kya kahenge",
+      "chhori hui aulad",
+      "izzat",
+      "overwhelmed"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Raat ko ladaai mein Papa ne bol diya ki sasural se wapas aane ke baad maine khandaan ki naak kata di hai, isliye ab Bhai hi waris hai aur wahi sab sambhalega. Meri asli LGBTQ identity chhupate chhupate main bas ghut rahi hoon aur dimaag bilkul blank ho chuka hai. Kuch bhi sochna namumkin lag raha hai, bas ek ajeeb sa darr baith gaya hai dimaag mein aur saans phool rahi hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "anxiety",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "sasural",
+      "khandaan ki naak",
+      "waris",
+      "hidden identity"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Papa ne saari registry Bhai ke naam kar di aur mujhe bola ki meri shadi mein pehle hi itna dowry diya tha jo ab barbaad ho gaya. Main itni toot chuki hoon ki bas sunn hokar leti hoon, na bhook lag rahi hai na pyaas, bas ek gehra dard mehsus ho raha hai. Is waqt main koi solution dhoondne ke layak hi nahi bachi, bas lag raha hai ki main sabke liye ek bojh ban gayi hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "worthlessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "registry",
+      "dowry",
+      "bojh",
+      "divorce shame"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Kal raat ki bahas ke baad Bhai ne saaf keh diya ki ab mera is ghar par koi haq nahi kyunki mera rishta toot chuka hai aur main 'alag' kism ka insaan hoon. Mera dil itni buri tarah toot gaya hai ki bed se uthne ki himmat nahi ho rahi, dimaag mein bas wahi taane goonj rahe hain. Main poori tarah emotional flooding ka shikar hoon, samajh hi nahi aa raha ki is urban isolation mein ab mera kya hoga.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "haq",
+      "rishta",
+      "taane",
+      "urban isolation"
+    ]
+  }
+]

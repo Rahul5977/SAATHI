@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Doctor ne phir stress bol kar baat taal di, par main unhe kaise samjhaun ki career gap ke baad ab saas kehti hain ki bahu ko sirf ghar sambhalna chahiye. Main unse behes nahi karti kyunki joint family mein kalesh hoga toh Mummy-Papa ki izzat mitti mein mil jayegi. Main apni saari khwahishein andar daba leti hoon taaki khandaan ki shanti bani rahe aur log ye na kahein ki ladki ko sanskar nahi diye.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["bahu", "joint family", "izzat", "sanskar", "kalesh"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Doctor ko lagta hai ki ye bas stress hai, par unhe kya pata ki har din apni identity kho kar ek 'achi bahu' banne ka natak karna kitna bhari padta hai. Main naukri wapas shuru karne ki zid nahi karti kyunki divorce stigma ka darr hai aur main nahi chahti ki meri wajah se sasural mein kisi ka sar jhuke. Sabka maan rakhne ke liye main chupchap chula-chauka sambhalti hoon, chahe andar se main khatam ho rahi hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 4,
+    "cultural markers": ["achi bahu", "divorce stigma", "sasural", "sar jhukna", "chula-chauka"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Ghabrahat hoti hai par Doctor ne kaha relax karo, unhe nahi dikhta ki child pressure aur career ki bali chadhane ka bojh mujhe sone nahi deta. Agar maine career ke liye stand liya toh samaj kahega ki bahu swarthi ho gayi hai aur bachon par dhyan nahi de rahi. Parivaar ki shaan bachane ke liye main apni awaaz daba leti hoon kyunki hamare yahan aurat ka farz sirf sacrifice karna hi bataya gaya hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["child pressure", "samaj", "bahu", "aurat ka farz", "sacrifice"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Doctor ne phir symptoms ko halke mein liya, par ye g घुटन toh career chhod kar ghar ki chaar-diwari mein qaid hone ki wajah se hai. Main Saas ke samne career ki baat nahi chhedti kyunki rishta tootne ka darr lagta hai aur main nahi chahti ki log meri maa ko taane dein. Unki khushi ke liye main apni saari ambition ko maar kar bas ek silent homemaker bani rehti hoon taaki ghar ki izzat bani rahe.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 4,
+    "cultural markers": ["chaar-diwari", "taane", "izzat", "log kya kahenge", "homemaker"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Doctor ne palpitations ko stress bataya, par ye toh woh darr hai ki main kabhi apni khoi hui pehchaan wapas nahi paaungi. Main chup rehti hoon kyunki sasural mein ladkiyon ko jhukna padta hai aur main kaleshi bahu nahi banna chahti. Apne sapno ka gala ghot kar main sabka khayal rakhti hoon taaki khandaan ki shaan par koi aanch na aaye aur sab khush rahein.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 3,
+    "cultural markers": ["sasural", "kaleshi bahu", "khandaan ki shaan", "ladkiyon ko jhukna padta hai"]
+  }
+]

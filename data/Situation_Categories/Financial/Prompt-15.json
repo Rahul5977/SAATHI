@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Mobile pe EMI bounce ka message dekhte hi meri aankhon ke aage andhera chha gaya aur main wahi khet ki meid par baith kar rone laga. Biwi ke hospital bills ne pehle hi saari savings wipe out kar di thi, ab is alert ne dimaag ekdum sunn kar diya hai. Is waqt main kisan credit card ya aage ka rasta nahi soch pa raha, bas ek gehra sadma aur panic hai jo mujhe duba raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "savings wiped", "hospital bills", "kisan credit card"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bank ka notification dekh kar mera dum ghutne laga hai kyunki maine apni aakhri zameen bech di thi hospital ka karz chukane ke liye aur phir bhi kist reh gayi. Gaon mein 'log kya kahenge' ye soch kar main bilkul toot gaya hoon aur mera dimaag bilkul blank ho gaya hai. Is emotional flooding mein mujhe koi raasta nahi dikh raha, bas ek ajeeb sa darr hai jisne mujhe jhakad liya hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "log kya kahenge", "zameen bechna", "hospital debt"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Medical expense spiral ne humein sadak par la diya hai aur aaj kist bounce hone par main bas Sahukaar ki chaukhat ke paas khada hokar kaanp raha hoon. Dimaag mein koi kisan identity ya mardangi ka khayal nahi aa raha, bas rona ruk hi nahi raha aur zero bank balance dekh kar hosh ud gaye hain. Main bilkul sunn ho chuka hoon aur lag raha hai ki ab saans lena bhi mushkil hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": ["medical expense spiral", "Sahukaar", "kisan identity", "EMI bounce"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Bete ki bimari mein saara chit fund ka paisa chala gaya aur ab EMI bounce hone par mujhe extreme breakdown mehsus ho raha hai. Main hal pakadne ki koshish karta hoon par dimaag mein itna zyada emotional pressure hai ki kuch samajh hi nahi aata. Is waqt mujhe bas ek gehra despair duba raha hai aur main kisi se madad maangne ke layak bhi nahi bacha.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["chit fund", "EMI bounce", "breakdown", "kisan"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj subah bank se call aaya ki tractor ki kist bounce ho gayi hai aur main wahi sunn hokar baith gaya, mujhse baat bhi nahi kari ja rahi. Crop failure ke baad ye zillat dekh kar dimaag kaam karna band kar gaya hai, bas neighborhood shame ka darr flood kar raha hai. Main koi remittance ya agla kadam nahi soch sakta, bas ek gehra sannata mehsus ho raha hai jisme main khota ja raha hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["tractor kist", "EMI bounce", "crop failure", "neighborhood shame", "remittance"]
+  }
+]

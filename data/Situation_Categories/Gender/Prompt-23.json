@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Office pantry mein unhe mere accent ka mazak udate suna toh dil baith gaya, par mere paas rone ka waqt nahi hai kyunki mujhe login karke bacchon ki school fees ke liye extra shift lagani hai. Widowed hone ke baad samaj pehle hi ungli uthata hai, isliye main bas apna sar jhuka kar kaam karti hoon kyunki mera rukna poore khandaan ki 'izzat' aur financial stability ke liye khatra hai. Thakan itni hai ki sharir toot raha hai, par 'farz' nibhane ke liye mujhe har haal mein bas machine ki tarah chalte rehna hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["widowhood", "school fees", "izzat", "farz", "khandaan"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Mera accent unke liye joke hai, par mere liye ye meri din-raat ki mehnat ka nishaan hai jo main bacchon ki parvarish aur unki community exclusion se bachane ke liye kar raha hoon. Ek single mother ki tarah bacchon ko paalna aur apni hidden identity chhupana itna thaka deta hai ki dimaag blank ho chuka hai, par main break nahi le sakta kyunki rukna mere liye option hi nahi hai. Bas endurance hi meri majboori hai kyunki mujh par poore parivaar ka bojh hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "suffocation",
+    "intensity_seed": 4,
+    "cultural markers": ["parvarish", "community exclusion", "hidden identity", "structural endurance", "single mother role"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Colleague ke tano ke baad dil kiya ki laptop band kar doon, par phir yaad aaya ki home loan ki kist baki hai aur divorcee hone ke baad 'log kya kahenge' ka darr hamesha rehta hai. Main apni LGBTQ identity aur apni insult dono bhool kar bas client deadlines poori karne mein lagi hoon taaki bacchon ki schooling mein koi rukawat na aaye. Mere liye mental health ek luxury hai jo main afford nahi kar sakta, bas dharma hi mera asli sahara hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "home loan kist", "divorce stigma", "dharma", "schooling pressure"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Accent ka mazak sunkar laga ki shehar mein akele rehna mere bas ka nahi, par phir bacchon ka chehra yaad aa gaya jinke liye mujhe 'samaj' ki nazron mein ideal banna hai. Main exhausted hoon par rona 'kamzori' lagega aur mujhe pata hai ki ek single parent ko double mehnat karni padti hai taaki koi ungli na utha sake. Main afford nahi kar sakta ki bacchon ko koi financial kami mehsus ho, isliye main bas bina ruke ek structural endurance dikha raha hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["samaj", "ungli uthana", "kamzori", "structural endurance", "financial precarity"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Logon ke mazak aur urban isolation ne mujhe andar se tod diya hai, par bacchon ki schooling aur unki izzat ke liye main har din double shift karti hoon. Single mother hone ki wajah se hamare samaj mein ek galti bhi 'divorce stigma' ko badha deti hai, isliye main thakan mein bhi har 'duty' nibhati hoon. Mera sharir bol raha hai ki ruk jao, par mera 'farz' kehta hai ki mere paas thakne ka waqt nahi hai kyunki bacchon ka future mujh par tika hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["divorce stigma", "izzat", "double shift", "farz", "urban isolation"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Doctor ne phir stress bol kar nikaal diya, par unhe kya pata ki bedridden Bapu ki seva aur business ka nuksaan mujhe sone nahi deta. Main parivaar ka mukhiya hoon, 'kuch nahi hone dunga' bol kar sab sambhal toh raha hoon par structural endurance ki bhi hadd hoti hai. Mujhe bas bina ruke kaam karte rehna hai kyunki hospital ka kharcha aur ghar ki zimmedari mere thakne ka intezar nahi karegi.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["mukhiya", "hospital ka kharcha", "kuch nahi hone dunga", "bedridden", "zimmedari"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bapu ko dementia hai aur wo ab pehchante bhi nahi, par unka khayal rakhna mera dharma hai bhale hi Doctor meri takleef ko 'natak' samajh kar dismiss kar dein. Salaried job mein itna pressure hai aur koi support system nahi, par main afford nahi kar sakta ki apni health pe dhyan doon. Ek mard hone ke naate mujhe bas chalti machine ki tarah parivaar ke liye khada rehna hai kyunki rukkna mere liye option hi nahi hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "invalidation",
+    "intensity_seed": 4,
+    "cultural markers": ["dharma", "natak", "mard", "dementia", "support system"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Hospital ka kharcha roz badh raha hai aur yahan Doctor kehta hai ki meri chest pain bas stress hai, jaise mere pas rone ki fursat ho. Main exhausted hoon par endurance hi mera sahara hai kyunki agar main dukan pe nahi gaya toh bacchon ki fees aur Bapu ki bimari ka bojh kaun uthayega? 'Log kya kahenge' agar ghar ka bada hi toot gaya, isliye main bas bina ruke ek mask pehan kar chal raha hoon.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "hospital ka kharcha", "breadwinner", "structural endurance", "bimari"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab Doctor ne kaha ki ye sab dimaag ka khel hai, toh mujhe laga unhe meri zimmedariyon ka ehsas hi nahi jahan bedridden baap ki caregiving aur EMI ka pressure saath chalta hai. Main thak kar choor hoon par rukkne ka matlab hai poore khandaan ki haar, isliye main apni health neglect karke bas endurance dikha raha hoon. Mujhe har haal mein bas lade rehna hai kyunki mujh par poore parivaar ka bhavishya tika hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["khandaan", "bedridden", "EMI pressure", "health neglect", "zimmedari"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Doctor ne phir stress bol kar dismiss kar diya, par unhe nahi dikhta ki ek family head ke liye burnout jaisa koi word nahi hota. Bapu ki caregiving mein poori raat nikal jati hai aur subah office jana meri duty hai jise main 'farz' samajh kar nibhata hoon. Main afford nahi kar sakta ki bimar baap ko chhod kar aaram karoon, isliye bas bina ruke ek structural endurance dikha raha hoon taaki ghar ki shaan bani rahe.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "invalidation",
+    "intensity_seed": 5,
+    "cultural markers": ["family head", "burnout", "farz", "shaan", "duty"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "MNC ki job aur bimaar maa ki caregiving mein itni thak gayi thi ki apni partner ki shaadi tak attend nahi kar paayi, par ghar walon ke samne bas 'work pressure' ka bahana banaya. Agar maine unhe apni sacchai batayi toh Papa ki 'izzat' samaj mein mitti mein mil jayegi aur log kahenge ki beti haath se nikal gayi hai. Main is WFH isolation mein ghut rahi hoon, par parivaar ki shaan bachane ke liye apni asli pehchaan ko andar hi dafan rakhti hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["izzat", "samaj", "log kya kahenge", "beti haath se nikalna", "WFH isolation"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Caregiving ki thakan ki wajah se main us wedding mein nahi ja saka jahan mujhe thoda sukoon milta, aur ab Mummy mere liye rishte dhoond rahi hain. Main unhe mana nahi kar sakta kyunki 'mard nahi rota' aur mard hi ghar ki 'maryada' ka rakhwala hota hai, isliye main apni LGBTQ identity chhupaye rakhta hoon. Khandaan ki shaan bani rahe, isliye main unki har pasand par haan bol deta hoon taaki ghar mein koi kalesh na ho.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 4,
+    "cultural markers": ["mard nahi rota", "maryada", "kalesh", "khandaan ki shaan", "rishte"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Startup ki deadlines aur bimar bade-buzurgon ki seva ne mujhe itna nichod diya hai ki main apne partner se milne tak nahi ja saka, par dukh chhupakar bas muskurata rehta hoon. Main apni identity reveal karke maa-baap ki 'parvarish' par sawal nahi uthne dena chahta, isliye unki nazron mein ek 'sanskari beta' bana rehta hoon. EMI pressure ke beech main apni khushi sacrifice kar raha hoon taaki samaj mein humare ghar ka naam hamesha uncha rahe.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["parvarish", "sanskari beta", "naam uncha rakhna", "EMI pressure", "samaj"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Dadi ki caregiving mein itni exhaust ho chuki hoon ki main us wedding ka hissa nahi ban saki jahan mere community ke log thay, aur ab ye isolation mujhe kha raha hai. Main ghar mein koi kalesh nahi chahti isliye shaadi ke topic par hamesha chup rehti hoon taaki Mummy ko 'divorce stigma' ya samaj ki baaton ka darr na sataye. Rishton mein koi doori na aaye, bas isi liye main har din ek jhoot jee rahi hoon aur apni feelings ko daba leti hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["divorce stigma", "kalesh", "samaj", "rishton mein doori", "WFH isolation"]
+  },
+  {
+    "situation id": "S005",
+    "text": "MNC mein hone ke bawajood main gaon ke kisan parivaar ki remittance aur yahan ki caregiving ka bojh utha rahi hoon, par apni asli pehchaan batane ki himmat nahi hai. Agar maine bataya toh log kahenge ki shehar jaakar beti ne sanskar bech diye, isliye main ideal 'bahu' banne ki taiyari kar rahi hoon taaki parivaar ka maan bana rahe. Unka sar neechu na ho, bas isiliye main apni soul ka qatal har din karti hoon taaki parivaar ki shanti bani rahe.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["sanskar", "bahu", "parivaar ka maan", "sar neechu hona", "remittance"]
+  }
+]

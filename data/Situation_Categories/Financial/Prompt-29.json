@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah jab crypto portfolio zero dekha aur saath mein client ka termination call aaya, toh mera dimaag bilkul sunn ho gaya aur main dukan ke counter pe hi rone laga. Bachon ki shaadi ke liye rakhi saari savings wipe out ho chuki hain aur ab mujhe saans lena bhi bhari lag raha hai. Is waqt main koi recovery plan ya business bachane ke baare mein soch hi nahi pa raha, bas ek gehra panic aur sadma hai jo mujhe duba raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["crypto loss", "savings wiped", "business owner", "breadwinner", "emotional flooding"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Stock market crash mein saari jama-poonji chali gayi aur aaj achanak contract cancel hone se mera hosh ud gaya hai, main bas sunn hokar deewar ko tak raha hoon. Family head hone ke naate 'log kya kahenge' aur izzat jaane ka darr itna zyada hai ki dimaag kaam karna band kar gaya hai. Main logically kuch nahi soch paa raha ki agle mahine ki home loan EMI kaise bhari jayegi, bas ek flood of emotions hai jisme main beh gaya hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["stock loss", "jama-poonji", "log kya kahenge", "EMI bounce", "family head"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ke operation aur beti ke college ke liye rakhe chit fund ke paise maine chupke se stocks mein duba diye, aur aaj business band hone ki khabar aayi toh main breakdown kar gaya. Breadwinner hokar itni badi galti karne ke baad ab dimaag mein itna emotional pressure hai ki kuch yaad nahi rehta. Is waqt mujhe koi financial strategy ya backup plan sujh nahi raha, bas ek gehra despair hai jo mujhe andar se kha raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "breadwinner", "stock loss", "business closure", "savings wiped"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Market mein paise dubne ke baad jab client ne contract cancel kiya, toh mera dum ghutne laga aur main bas akele baith kar kaanpne laga. Neighborhood mein sabko lagta tha ki mera business bohot bada hai, par ab is financial failure mein mujhe bas maut dikh rahi hai aur dimaag blank ho gaya hai. Main koi legal solution ya bank se baat nahi kar sakta, bas ek extreme guilt aur breakdown mehsus ho raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["neighborhood shame", "contract cancellation", "breakdown", "shame of loss", "family head"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Gaon mein Papa ko jo remittance bhejni thi wo saari maine options trading mein duba di, aur aaj business khatam hone ka message dekh kar mera dimaag blast ho gaya. Ghar walon se nazrein churane ke alawa mujhe kuch samajh nahi aa raha, main bilkul sunn ho chuka hoon aur bas rona ruk hi nahi raha. Is emotional flooding mein mujhe agle kadam ka koi hosh nahi hai, bas ek ajeeb sa darr hai jisne mujhe poori tarah pakad liya hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["remittance", "options trading", "business closure", "shame", "emotional flooding"]
+  }
+]

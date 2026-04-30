@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah termination email aaya aur tabhi se mere seene mein ek bhayankar jakdan mehsus ho rahi hai jaise kisi ne bhari pathar rakh diya ho. Papa ne kisan hokar apni sari jama-pungi mere UPSC coaching mein laga di thi, aur ab is khabar ke baad mera gala itna sookh gaya hai ki paani bhi nahi nigla ja raha. Mere hath-pair thande pad gaye hain aur dimaag ki nasen fatne ko ho rahi hain.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kisan",
+      "UPSC coaching",
+      "sarkari naukri",
+      "termination email"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "MNC se layoff ki news milte hi mere pure badan mein ek ajeeb si thakan aur kapkapi shuru ho gayi hai jo rukne ka naam nahi le rahi. Ghar par sabko lagta hai ki main sarkari naukri ki taiyari kar raha hoon, par is termination ke baad mere pet mein aisi marod uthi hai ki main hostel ke kamre se bahar bhi nahi nikal pa raha. Sar mein itna bhari dard hai ki lag raha hai abhi behosh hokar gir jaunga.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "MNC",
+      "layoff",
+      "sarkari naukri",
+      "hostel"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Subah se email dekh kar mere kandhon aur peeth mein aisi aithan ho gayi hai ki hilna bhi mushkil ho gaya hai. Papa ki kirana shop ki income se ghar ki EMI jaati hai aur unhe mujhse bahut umeed thi, par is termination ne mere dimaag ko bilkul sunn kar diya hai. Mujhe lagatar chakkar aa rahe hain aur aakhon ke aage itna andhera chha gaya hai ki lagta hai mera shareer jawaab de raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "anxiety",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kirana shop",
+      "EMI",
+      "termination",
+      "family honour"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Startup se nikalne ka mail padhte hi mere gale mein ek ajeeb si jalan aur ghutan mehsus hone lagi hai jaise koi mera dam ghont raha ho. JEE dropout hone ke baad ye naukri hi mera sahara thi, par ab mere ghutne dard se kaanp rahe hain aur chalna bhi bojh lag raha hai. Pure jism mein ek aisi jalan phail rahi hai ki mujhe samajh nahi aa raha ye bukhar hai ya meri nakami ka dard.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "startup",
+      "JEE dropout",
+      "termination email",
+      "nakami"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Hostel mein baith kar jab termination mail padha toh mere dimaag mein ek zor ki seeti bajne lagi aur mera poora chehra laal ho gaya. Pehle hi SSC fail hone ka darr tha aur ab ye private job bhi chali gayi, jiski wajah se mere hath-pair bilkul sunn pad gaye hain. Dil itni zor se dhadak raha hai ki lagta hai abhi seena cheer kar bahar aa jayega, aur mujhe sans lene mein bahut takleef ho rahi hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "hostel",
+      "SSC fail",
+      "termination mail",
+      "private job"
+    ]
+  }
+]

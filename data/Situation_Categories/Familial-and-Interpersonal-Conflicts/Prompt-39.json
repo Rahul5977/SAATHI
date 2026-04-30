@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj rishtey wale aaye aur unhone meri multi-year prep aur 'dropper' tag dekh kar saaf mana kar diya. Papa ne Sharma ji ke bete ka example dekar sabke samne zaleel kiya, mera dimaag ekdum sunn ho gaya hai aur bas rona aa raha hai. Itni ghabrahat ho rahi hai ki main agle hafte ke Prelims ke baare mein soch bhi nahi pa raha hoon, bas andhera dikh raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["dropper stigma", "Sharma ji ka beta", "rishta", "zaleel"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Ladki walo ke rejection ke baad Mummy ne rona shuru kar diya ki meri wajah se khandaan ki izzat mitti mein mil gayi kyunki main abhi tak berozgaar hoon. Main itna toot chuka hoon ki bas coaching library ke kone mein baith kar sisak raha hoon, na kuch sujhayi de raha hai na koi umeed dikh rahi hai. Dimaag mein bas wahi baatein ghoom rahi hain, UPSC ki kitab kholne ki himmat hi nahi ho rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["izzat", "berozgaar", "khandaan", "sisak raha"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Rishta party ke jane ke baad Papa ne phir wahi comparison shuru kar diya ki padosi ka ladka Tehsildar ban gaya aur main sirf ghar ka paisa barbaad kar rahi hoon. Mera gala rone se bhara hua hai aur flood of emotions ki wajah se main unhe ye bhi nahi bol pa rahi ki mera Mains nikalne wala hai. Bas akele baith kar rona aa raha hai, aage ka plan kya hoga ye toh dimaag mein aa hi nahi raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["paisa barbaad", "comparison", "joint family", "Tehsildar"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Aaj ki rejection ke baad Mummy keh rahi hain ki 'log kya kahenge' ki itne saal coaching mein reh kar bhi na naukri mili na chokra. Main itni zyada overwhelm ho gayi hoon ki bas rona nikal raha hai aur lag raha hai ki sab meri hi galti hai. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye ek kona chahiye jahan koi mujhe Sharma ji ke bete se compare na kare.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "overwhelm", "coaching life", "Sharma ji ka beta"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishtey walo ne mere 'dropper' status par sawal uthaye aur Papa ne unke samne hi mujhe nikamma bol diya, ab mera dimaag kaam karna band kar gaya hai. Bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai. Itne saare emotions ek saath aa rahe hain ki main Current Affairs ya mock test ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["dropper stigma", "nikamma", "blank", "mock test"]
+  }
+]

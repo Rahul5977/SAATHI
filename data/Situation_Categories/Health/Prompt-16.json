@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj jab unhone mere accent ka mazak udaya, toh mere poore sharir mein ek ajeeb si kampann hone lagi aur peeth ka dard itna badh gaya ki khade hona mushkil hai. Saas kehti hain ki ye sab mera 'natak' hai kaam se bachne ke liye, par ye jo nasein phat rahi hain wo unhe kaise dikhau? Doctor bhi kehta hai sab normal hai, par meri ye thakan aur badan ka tootna khatam hi nahi hota.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 4,
+    "cultural markers": ["natak", "kampann", "nasein phatna", "badan ka tootna", "saas-bahu"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Office ke purane dosto ne jab accent par tana mara, toh mere pet mein achanak aisi jalan shuru hui ki saans lena bhari ho gaya. Career gap ke baad waise hi himmat kam thi, ab ye sir ka bhari-pan aur aankhon ki jalan mujhe bed se uthne nahi deti. Ghar mein sab kehte hain ki hospital ka kharcha faltu ho raha hai kyunki reports mein kuch nahi aata, par ye jalan toh asli hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 3,
+    "cultural markers": ["hospital ka kharcha", "career gap", "sir ka bhari-pan", "aankhon ki jalan", "tana"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Unke mazaak ke baad se mere gale mein kuch atka sa rehta hai aur dil ki dhadkan itni tez ho jati hai jaise koi pahaad chadha ho. Joint family mein identity kho chuki hai aur ab ye naya dard kandhon mein jakdan bankar baith gaya hai. Doctor ne stress bol kar nikaal diya par ye jo sharir mein suiyan chubhti hain, kya wo sab mere dimaag ka nakhra hai?",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["joint family", "dhadkan", "suiyan chubhna", "gale mein kuch atka hona", "nakhra"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Logon ke accent wale mazaak ne mere andar aisi bechaini bhar di hai ki ab hatheliyon mein paseena aur poore badan mein tootan rehti hai. Child pressure aur saas ke taano ke beech mera sharir bas jawab de raha hai, par report normal aane par sab ise 'natak' bolte hain. Main rona nahi chahti par ye peeth ka dard aur migraine mujhe har waqt andhere kamre mein rehne par majboor kar deta hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["natak", "child pressure", "badan mein tootan", "migraine", "bechaini"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Jab accent ka mazak uda toh mere seene mein aisi jakdan hui jaise koi dil ko nichod raha ho, par doctor ne phirse stress bol kar dawai likh di. Ghar par sabko lagta hai ki main kaam se bachne ke liye bimari ka bahana kar rahi hoon kyunki koi zakhm dikhta nahi hai. Ye thakan itni shiddat ki hai ki main ab bacchon ki zimmedari bhi thik se nahi nibha paa rahi, bas sharir dhalta ja raha hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["seene mein jakdan", "shiddat", "bimari ka bahana", "zimmedari", "thakan"]
+  }
+]

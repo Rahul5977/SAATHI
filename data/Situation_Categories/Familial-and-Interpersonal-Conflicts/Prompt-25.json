@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab bhi dadi meri padhai ka comparison bua ki beti se karti hain, mere sir mein itna tez dard hota hai ki aankhein kholna mushkil ho jata hai. Hostel wapas aane ke baad bhi ye migraine ja hi nahi raha, lagta hai dimaag ki nasein phat jayengi. Bas thakan aisi hai ki din bhar bistar se uthne ki himmat nahi hoti.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "dadi",
+      "sir dard",
+      "bua ki beti",
+      "thakan"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Ghar gaya tha toh phir wahi shuru ho gaya ki bua ki ladki ne NEET nikal liya aur main placement nahi le pa raha. Unki baatein sunte hi mere pet mein ajeeb si jalan aur cramps hone lagte hain, kuch bhi hazam nahi hota. Hostel aakar bhi body ache itna hai ki lagta hai bukhar chadha hua hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "NEET",
+      "pet mein jalan",
+      "placement pressure",
+      "body ache"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Dadi har waqt mujhe neecha dikhati hain ki unki beti kitni hoshiyaar hai aur main sirf paise barbaad kar raha hoon. Jab bhi wo ye bolti hain, mera gala ghutne lagta hai aur seene mein itni bhari-pan mehsus hoti hai jaise koi pathar rakha ho. Kal raat se haath-pair thande pad rahe hain aur bilkul jaan nahi bachi sharir mein.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "gala ghutna",
+      "seene mein bhari-pan",
+      "paise barbaad",
+      "haath-pair thande"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Joint family mein privacy toh hai nahi, upar se dadi sabke samne meri comparison bua ki beti se karke mujhe sharminda karti hain. Us argument ke baad se meri pith mein itna bhayanak dard hai ki seedhe baith kar coding bhi nahi ho rahi. Pura badan toot raha hai aur samajh nahi aa raha ye kamzori kyun aa gayi hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 3,
+    "cultural markers": [
+      "privacy loss",
+      "pith mein dard",
+      "joint family",
+      "badan tootna"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj phir dadi ne sabke samne taana maara ki bua ki beti toh ghar ka kaam aur padhai dono sambhalti hai aur main bas computer par baitha rehta hoon. Tabse mera sir ajeeb tarike se chakkar kha raha hai aur aankhon ke aage andhera aa raha hai. Itni thakan mehsus ho rahi hai jaise mahino se soya nahi hoon, sharir ekdum dhila pad gaya hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "taana",
+      "sir chakkar khana",
+      "andhera aana",
+      "thakan"
+    ]
+  }
+]

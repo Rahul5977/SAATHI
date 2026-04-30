@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah subah bank se EMI bounce ka notification aaya aur mera dil baith gaya, par main rone ka risk nahi le sakti kyunki login ka time ho gaya hai. Papa ne kisan hokar apni saari zameen girvi rakh di thi taaki main MNC mein aa sakun, isliye thakan chahe kitni bhi ho, mujhe coding karte rehna hi hoga. Mere rukne ka matlab hai pura khandaan sadak par aa jayega, toh ye structural endurance hi ab meri reality hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "kisan", "MNC", "structural endurance"]
+  },
+  {
+    "situation id": "S002",
+    "text": "WFH isolation mein akele baith kar jab EMI bounce ka message dekha toh laga jaise saans ruk gayi, par main burnout afford nahi kar sakta. Ghar par Mummy ki dawai aur behen ki shadi ka pura kharcha meri startup ki salary par hai, isliye main ek machine ki tarah 14 ghante kaam kar raha hoon. Mujhe har haal mein ye bojh uthana hi hoga kyunki main hi is ghar ka sole earner hoon aur mere peeche koi backup nahi hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 5,
+    "cultural markers": ["WFH isolation", "startup", "sole earner", "EMI"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bank notification dekh kar pata chala ki home loan ki kist nahi gayi, aur ab mujhe darr hai ki Papa ki kirana shop par bank wale na aa jayein. Main Tier-1 city ke mehnge rent aur is remittance burden ke beech pis raha hoon, par main thak kar haar nahi maan sakta. First-gen earner hone ka matlab hi ye hai ki aapko girne ki permission nahi milti, bas ek kartavya samajh kar kaam karte rehna padta hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 4,
+    "cultural markers": ["kirana shop", "Tier-1 city", "remittance burden", "first-gen earner"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Startup mein layoff ka mahol hai aur upar se EMI bounce ho gayi hai, par main apne darr ko dimaag mein jagah nahi de sakta. Papa ne sarkari naukri na milne par bhi mujh par vishwas dikhaya tha, isliye ab thakan se aankhein band ho rahi hon tab bhi main bug fixing kar raha hoon. Main is breakdown ko afford nahi kar sakta kyunki mere survival par pura parivaar tika hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["layoff", "sarkari naukri", "EMI", "survival"]
+  },
+  {
+    "situation id": "S005",
+    "text": "EMI bounce hone se ghar ki 'izzat' par baat aayegi, isliye main ab health neglect karke extra freelance projects bhi le raha hoon. Tier-2 city mein baithe mere parivaar ko lagta hai MNC ki life bahut aaramdayak hai, aur main unhe sach bata kar dukhi nahi kar sakta. Mere paas thakne ka waqt nahi hai kyunki family looks up to me, aur ye structural endurance hi mera ekmatra vikalp hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["izzat", "MNC", "Tier-2 city", "health neglect"]
+  }
+]

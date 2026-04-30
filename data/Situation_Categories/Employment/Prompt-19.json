@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah subah bank se EMI bounce ka message aaya aur mera dil baith gaya, par khet mein hal chalana toh nahi rok sakta. Sahukar ka karz aur ghar ka chula dono mujh par tike hain, isliye thakan chahe kitni bhi ho, mujhe har haal mein khet mein pasina bahana hi hoga. Mere rukne ka matlab hai poore parivaar ka bhookha sona, toh endurance hi ab meri kismat hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI", "sahukar", "chula", "kisan"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Crop failure ki wajah se pehle hi haath khali tha aur ab bank kist bounce hone par darr hai ki gaon mein 'izzat' mitti mein na mil jaye. Main ab kheti ke baad raat ko kirana shop par mazdoori kar raha hoon taaki kisi tarah bank walo ko shaant rakh sakoon. Meri himmat jawab de rahi hai par ek baap aur pati hone ka farz mujhe thakne ki ijaazat nahi deta.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": ["crop failure", "izzat", "kirana shop", "mazdoori"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bank notification dekh kar pata chala ki tractor ka loan chukana namumkin hota ja raha hai, par main chup-chap kaam kiye ja raha hoon. Shehar mein rehne wale bete ki college fees aur ghar ki zimmedari sirf meri mehnat par tiki hai, isliye main is breakdown ko afford nahi kar sakta. Sharir saath nahi de raha par first-gen earner ka bojh mujhe ek machine ki tarah chalne par majboor karta hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 4,
+    "cultural markers": ["tractor loan", "college fees", "zimmedari", "first-gen earner"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Moneylender ka darr aur EMI bounce hone ki chinta ne meri neend uda di hai, par main kisan hoon aur thakna mere naseeb mein nahi. Ghar par sab meri taraf umeed se dekhte hain, isliye main apni takleef kisi ko bata kar unka hausla nahi tod sakta. Mujhe bas endure karte rehna hai kyunki mere peeche koi backup nahi hai, bas mera kartavya hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["moneylender", "EMI", "kisan", "kartavya"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj bank se message aaya toh laga jaise sab khatam ho gaya, par maine fauda uthaya aur khet ki taraf nikal gaya kyunki survival ka koi aur rasta nahi. Sarkari naukri toh mili nahi, ab is mitti se hi ghar walon ka pet paalna hai chahe jism kitna bhi dard kare. Mere liye thakna ek luxury hai jo main afford nahi kar sakta, mujhe bas apne parivaar ke liye khade rehna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI", "survival", "sarkari naukri", "luxury"]
+  }
+]

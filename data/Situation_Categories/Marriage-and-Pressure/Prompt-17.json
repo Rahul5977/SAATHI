@@ -1,0 +1,75 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj nanad ke liye rishta wale aaye the par unhone yeh keh kar mana kar diya ki 5 saal baad bhi badi bahu ke bache nahi hue toh zaroor inke khandaan mein khot hai. Sasu-maa ke taane sunte hi mere seene mein itni bhari jakdan mehsus hone lagi jaise meri saans wahin ruk jayegi. Pura din is joint family ki rasoi mein kaam karte hue meri peeth aur gardan mein aisi aithan ho rahi hai ki ab khade rehna bhi mushkil lag raha hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta wale",
+      "badi bahu",
+      "khandaan",
+      "sasu-maa",
+      "joint family"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Devar ko dekhne aaye rishte walo ne achanak se mana kar diya kyunki kisi ne unhe mere PCOD aur infertility treatments ke baare mein bata diya tha aur unhe 'log kya kahenge' ka darr tha. Unke darwaze se nikalte hi mere sar ki naso mein aisi bhayankar dard uthi jaise dimaag abhi phat jayega. Apni lost identity aur in taanon ke beech mere pure badan mein itni ajeeb si thakan ghus gayi hai ki mere hath-pair barf ki tarah thande pad gaye hain.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishte walo",
+      "PCOD",
+      "log kya kahenge",
+      "lost identity",
+      "taanon"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Choti nanad ki kundali milne ke baad bhi rishta walo ne ladki walo ko isliye mana kar diya kyunki unhe lagta hai ki is ghar ki badi bahu 'baanjh' hai aur uska saaya manhoos hai. Jab Saas ne is baat par poore sasural ke aage mera tamasha banaya, toh mere pet mein ek aisi jalan shuru hui jo sidhe gale tak aa rahi hai. Mujhe lagatar chakkar aa rahe hain aur meri aakhon ke aage itna andhera chha gaya hai ki mujhe lag raha hai main gir jaungi.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "humiliation",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kundali",
+      "rishta",
+      "badi bahu",
+      "baanjh",
+      "sasural"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Aaj teesri baar devar ka rishta isliye wapas chala gaya kyunki samaj mein baat phail gayi hai ki mere medical issues ki wajah se is ghar mein bacche ki kilkari nahi goonji. Apna career chhod kar maine is ghar ko sambhala, par aaj in baaton se mere dil ki dhadkan itni tez ho gayi ki meri aawaz hi nahi nikal rahi. Tension ke mare mere kandho par jaise 100 kilo ka pahaad rakha hai aur poora jism dard se buri tarah toot raha hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "rishta",
+      "samaj",
+      "career gap",
+      "bacche ki kilkari"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishta party ne devar ko sab kuch dekhne ke baad reject kar diya aur Sasu-maa ne saara ilzaam meri 'khoti kismat' aur maa na ban paane par daal diya. Unki kadwi baatein sunkar mera gala itna sookh gaya hai ki ek paani ka ghoont peena bhi kaante chubhne jaisa dardnak lag raha hai. Dimaag mein ek aisi bhayankar thakan chha gayi hai ki mere ghutne aur ediyaan chalte chalte dard se kaanp rahe hain.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "worthlessness",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "rishta party",
+      "sasu-maa",
+      "khoti kismat",
+      "maa na ban paane"
+    ]
+  }
+]

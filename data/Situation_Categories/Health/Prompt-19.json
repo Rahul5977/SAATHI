@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab saheli ne mere accent ka mazaak udaya, toh mere seene mein aisi jakdan hui jaise koi dum ghont raha ho. Doctor kehta hai report normal hai par ye jo nasein phat rahi hain aur badan mein kampann hai, wo 'natak' kaise ho sakta hai? Buzurg hone ke naate sab ignore karte hain, par ye jo sharir mein suiyan chubhti hain wo unhe kaise dikhau?",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 5,
+    "cultural markers": ["natak", "seene mein jakdan", "nasein phatna", "ignore", "suiyan chubhna"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Unke mazaak ke baad se mere sar mein aisa bhari-pan hai jaise koi pathar rakha ho, aur poore badan mein ek ajeeb si tootan rehti hai. Hospital ka kharcha badh raha hai par doctor bas 'stress' bol kar nikaal deta hai, jabki meri acidity aur pet ki jalan mujhe sone nahi deti. Main dukh nahi jata sakti warna bahu kahegi ki saas nakhre kar rahi hai, par ye sharir ka dard asli hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["hospital ka kharcha", "badan mein tootan", "pet ki jalan", "saas-bahu", "nakhre"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Logon ke tano ne mere andar aisi bechaini bhar di hai ki ab kandhon mein hamesha jakdan aur peeth mein aisi jalan rehti hai jaise mirchi lagi ho. Generational gap itna hai ki bache meri loneliness nahi samajhte, par ye jo gale mein kuch atka sa mehsus hota hai, wo doctor ko samajh hi nahi aata. Reports saaf hain isliye sab ise 'bimari ka bahana' samajhte hain, par meri ye thakan meri haddiyon tak pahunch gayi hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["bimari ka bahana", "loneliness", "generational gap", "gale mein kuch atka hona", "jakdan"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab accent ka mazak uda toh mere dimaag ki nasein phulne lagi aur aankhon mein aisi jalan hui ki dhoop mein nikalna mushkil ho gaya. 'Log kya kahenge' agar main kamzor dikhi, isliye main bas 'ghutno ka dard' bol kar chup rehti hoon. Doctor meri takleef ko dismiss karta hai par ye jo dil ki ghabrahat sharir mein kampann bankar nikal rahi hai, wo koi nahi dekh raha.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 4,
+    "cultural markers": ["log kya kahenge", "ghabrahat", "ghutno ka dard", "nasein phulna", "kampann"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Unke mazaak ke baad se meri hatheliyon aur talwon mein aisi jalan rehti hai ki ghar mein chalna-phirna dushwar ho gaya hai. Dependent hone ke naate main apni takleef chhupati hoon, par ab ye sharir mein hone wali jhanjhanahat mere bas ke bahar hai. Sab kehte hain main 'natak' kar rahi hoon kyunki reports normal hain, par meri ye shiddat ki thakan buzurgon ki asli bimari hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["natak", "jhanjhanahat", "dependent", "shiddat", "talwon mein jalan"]
+  }
+]

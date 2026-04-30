@@ -1,0 +1,79 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat papa ne saaf keh diya ki ek talaqshuda beti ko ghar ki maryada ke liye zyada bahar nahi nikalna chahiye, aur meri naukri wali baat wahi dab gayi. Main janti hoon ki mere bacchon ke liye paise zaroori hain, par padosiyon ke taano aur papa ki izzat ke darr se maine subah unse maafi maang li. Unka dil dukhakar main is ghar mein bojh bankar nahi reh sakti, isliye maine unka faisla maan liya.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "talaqshuda",
+      "maryada",
+      "padosiyon ke taano",
+      "izzat",
+      "bojh"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Papa ne kal raat bina mujhse pooche meri doosri shaadi ka rishta ek aise aadmi se tay karne ki baat ki jo sirf mere bacchon ko 'apnane' ka ehsan kar raha hai. Maine thoda sa virodh kiya toh unhone khandaan ki naak aur 'log kya kahenge' ka waasta dekar mujhe chup kara diya. Parivaar mein kalesh na ho aur mere bacchon ka bhavishya na bigde, isliye maine apne aansu pee liye aur unke authoritarian control ke aage sar jhuka liya.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta",
+      "khandaan ki naak",
+      "log kya kahenge",
+      "kalesh",
+      "authoritarian control"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Kal raat ki bahas ke baad papa ne mujhse seedhe munh baat nahi ki kyunki maine bacchon ko boarding school bhejne ke unke ziddi faisle ka sawal kiya tha. Main janti hoon ki wo bacchon ko mujhse door karna chahte hain taaki samaj mein unki bezzati kam ho, par joint family mein bado ka lihaz karna humare sanskar hain. Unka ashirwad bana rahe aur ghar ki shanti na toote, isliye maine subah unhe chai dete waqt unki har baat mein haan mila di.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "bezzati",
+      "joint family",
+      "lihaz",
+      "sanskar",
+      "ashirwad",
+      "ghar ki shanti"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Bacchon ke kharche ke liye jab maine papa se thode paise maange, toh unhone saaf bol diya ki ek baar ghar chhodne ke baad beti ka koi haq nahi banta. Behas bohot kadwi ho gayi thi, par maine beech mein hi baat khatam kar di kyunki rishtedaaron mein badnaami ka darr tha. Apne pita ki izzat bachane ke liye aur bacchon ko is kalesh se door rakhne ke liye maine apna gussa daba diya aur unse maafi maang li.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "haq",
+      "rishtedaaron",
+      "badnaami",
+      "izzat",
+      "kalesh"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Kal raat papa ne saaf mana kar diya ki main shehar jaakar akele nahi reh sakti kyunki 'samaj' mein ek single mother ki koi izzat nahi hoti. Main thak gayi hoon unke is authoritarian control se, par unke budhape ka sahara banna mera farz hai aur main unhe akela nahi chhod sakti. Unki nazron mein giri hui na banoon aur parivaar ki unity bani rahe, isliye maine apna transfer request wapas le liya.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "powerlessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "samaj",
+      "single mother",
+      "izzat",
+      "authoritarian control",
+      "budhape ka sahara",
+      "farz"
+    ]
+  }
+]

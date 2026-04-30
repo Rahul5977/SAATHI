@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab shehar mein un logon ko mere accent ka mazaak udate suna, toh mere seene mein aisi jakdan hui jaise koi dil ko nichod raha ho. Khet mein crop failure aur sahukar ka karza toh pehle hi bojh tha, ab ye sharir mein aisi suiyan chubhti hain ki hal chalana mushkil ho gaya hai. Doctor kehta hai report normal hai aur ghar wale ise 'natak' samajhte hain, par ye peeth ka dard aur kampann asli hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 5,
+    "cultural markers": ["sahukar", "crop failure", "natak", "jakdan", "suiyan chubhna"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Unke mazaak ke baad se mere sar mein aisa bhari-pan rehta hai jaise dimaag ki nasein phat jayengi. Kisan parivaar mein mard ko rona shobha nahi deta, isliye ye sara dukh ab pet ki jalan aur acidity bankar nikal raha hai. Hospital ka kharcha badh raha hai par doctor kehta hai sab dimaag ka khel hai, jabki meri ye thakan aur badan ka tootna khatam hi nahi hota.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["hospital ka kharcha", "nasein phatna", "badan ka tootna", "kisan", "mard"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Logon ke tano ne mere andar aisi bechaini bhar di hai ki ab hatheliyon mein paseena aur poore sharir mein ek ajeeb si jhanjhanahat rehti hai. Karze ki chinta mein pehle hi neend ud gayi thi, ab ye kandhon ka khichav itna hai ki khet ka kaam nahi ho pa raha. Sab kehte hain ki kisan hokar bimari ka bahana kar raha hoon kyunki koi zakhm dikhta nahi, par ye jo dil ki ghabrahat sharir mein dard bankar nikal rahi hai wo kaise samjhau?",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["karza", "jhanjhanahat", "ghabrahat", "bimari ka bahana", "tano"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab accent ka mazak uda toh mere gale mein kuch atka sa rehta hai aur saans lene mein takleef hoti hai. Doctor ne stress bol kar nikaal diya par ye jo sharir toot raha hai, kya wo sab mere dimaag ka 'natak' hai? Moneylender ka dabaav aur ghar ki halat ne mere pairo mein aisi kamzori bhar di hai ki ab chala bhi nahi jata, bas thakan hi thakan mehsus hoti hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 4,
+    "cultural markers": ["natak", "moneylender", "sharir tootna", "thakan", "kamzori"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Unke mazaak ke baad se meri aankhon mein jalan aur migraine ka dard itna shiddat ka hai ki dhoop mein khet jana dushwar ho gaya hai. Gaon mein log kahenge ki kisan kaam se bachne ke liye nakhre kar raha hai kyunki reports saaf hain. Main rona nahi chahti par ye jo sharir mein kampann aur peeth ka dard hai, wo mujhe har waqt andhere mein rehne par majboor kar deta hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["migraine", "shiddat", "khet", "kampann", "nakhre"]
+  }
+]

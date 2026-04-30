@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj bank se EMI bounce ka message aaya aur mera dil baith gaya, par main rone ka risk nahi le sakta kyunki gaon paise bhejne ki date aa gayi hai. Papa ne kisan hokar apni sari umeed mujh par tikayi hai, isliye thakan chahe kitni bhi ho, mujhe metro city ki is bheed mein bas kaam karte rehna hai. Mere rukne ka matlab pura ghar doobna hai, toh ye structural endurance hi ab meri kismat hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "EMI", "remittance burden", "metro city"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Metro isolation mein akele baith kar jab EMI bounce ka notification dekha toh laga jaise saans ruk gayi, par main breakdown afford nahi kar sakta. Ghar par choti behen ki shaadi aur Papa ki kirana shop ka karz meri startup ki salary par hai, isliye main ek machine ki tarah double shift kar raha hoon. Mujhe har haal mein ye bojh uthana hi hoga kyunki main hi is ghar ka sole earner hoon.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 5,
+    "cultural markers": ["metro isolation", "kirana shop", "startup", "sole earner", "EMI"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bank notification dekh kar pata chala ki home loan ki kist nahi gayi, aur ab darr hai ki bank wale gaon mein ghar par phone na kar dein. Language gap ki wajah se office mein pehle hi struggle kar raha hoon, par main thak kar haar nahi maan sakta kyunki mere peeche koi backup nahi hai. First-gen earner hone ka yahi matlab hai ki aapko girne ki permission nahi milti, bas ek 'farz' samajh kar chalte rehna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 4,
+    "cultural markers": ["language gap", "home loan", "first-gen earner", "farz"]
+  },
+  {
+    "situation id": "S004",
+    "text": "MNC mein layoff ka mahol hai aur upar se EMI bounce ho gayi hai, par main apne darr ko dimaag mein jagah nahi de sakta. Papa ne sarkari naukri na milne par bhi gaon mein sabse karz lekar mujhe shehar bheja tha, isliye ab thakan se aankhein band ho rahi hon tab bhi main kaam kar raha hoon. Main is breakdown ko afford nahi kar sakta kyunki meri family ka survival sirf meri structural endurance par tika hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["layoff", "sarkari naukri", "karz", "survival", "MNC"]
+  },
+  {
+    "situation id": "S005",
+    "text": "EMI bounce hone se ghar ki 'izzat' par baat aayegi, isliye main ab health neglect karke extra overtime kar raha hoon. Gaon mein sabko lagta hai shehar mein main bohot sukoon mein hoon, aur main unhe sach bata kar unka bharosa nahi tod sakta. Mere paas thakne ka waqt nahi hai kyunki family looks up to me, aur ye bojh dhona hi mera ekmatra dharam hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["izzat", "health neglect", "overtime", "first-gen"]
+  }
+]

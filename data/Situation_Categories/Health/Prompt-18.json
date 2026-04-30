@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj jab colleague ko mere accent ka mazak udate suna, toh mere seene mein aisi jakdan hui jaise koi dil ko nichod raha ho. Doctor kehta hai report normal hai par ye jo nasein phat rahi hain aur hatheliyon mein paseena aa raha hai, wo 'natak' kaise ho sakta hai? Mukhiya hone ke naate 'kuch nahi hone dunga' bolta hoon par ye sharir ka bhari-pan ab bardasht nahi hota.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 5,
+    "cultural markers": ["natak", "seene mein jakdan", "nasein phatna", "mukhiya", "kuch nahi hone dunga"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Unke mazaak ke baad se mere sar mein aisa dard hai jaise koi hatoda maar raha ho, aur poore badan mein ek ajeeb si tootan rehti hai. Hospital ka kharcha badh raha hai par doctor bas stress bol kar nikaal deta hai, jabki meri acidity aur pet ki jalan mujhe sone nahi deti. Main rona nahi chahti kyunki mard ko dard nahi hota, par ye sharir ki kampann asli hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["hospital ka kharcha", "badan mein tootan", "pet ki jalan", "mard ko dard nahi hota", "kampann"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Logon ke tano ne mere andar aisi bechaini bhar di hai ki ab kandhon mein hamesha jakdan aur peeth mein suiyan chubhti rehti hain. Business owner hoon toh sabko lagta hai main thak nahi sakta, par ye jo gale mein kuch atka sa mehsus hota hai, wo doctor ko samajh hi nahi aata. Reports saaf hain isliye ghar wale bhi ise bimari ka bahana samajhte hain, par ye thakan meri haddiyon tak pahunch gayi hai.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["bimari ka bahana", "suiyan chubhna", "gale mein kuch atka hona", "thakan", "jakdan"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab accent ka mazak uda toh mere dimaag ki nasein phulne lagi aur aankhon mein aisi jalan hui ki laptop dekhna mushkil ho gaya. 'Log kya kahenge' agar main kamzor dikha, isliye main bas migraine ki painkiller kha kar kaam chala raha hoon. Doctor meri takleef ko dismiss karta hai par ye jo dil ki ghabrahat sharir mein dard bankar nikal rahi hai, wo koi nahi dekh raha.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "invalidation",
+    "intensity_seed": 4,
+    "cultural markers": ["log kya kahenge", "ghabrahat", "migraine", "nasein phulna", "kamzor"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Unke mazaak ke baad se meri hatheliyon aur talwon mein aisi jalan rehti hai ki dukan pe baithna dushwar ho gaya hai. Family head hone ke naate main apni health neglect karta raha, par ab ye sharir mein hone wali jhanjhanahat mere bas ke bahar hai. Sab kehte hain main 'natak' kar raha hoon kyunki reports normal hain, par meri ye shiddat ki thakan koi bimari se kam nahi.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["natak", "jhanjhanahat", "family head", "health neglect", "shiddat"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Dada ji ke guzarne ke baad khet ke batware ko lekar Papa aur Tauji mein sibling estrangement ho gayi hai, aur ab Mummy ne announce kiya ki Mausa-Mausi permanently hamare sath rahenge. Meri hidden identity ki wajah se main pehle hi darta hoon aur ab privacy bilkul khatam ho jayegi, par 'izzat' bachane ke liye main unhe mana nahi kar sakta. Main bas mann maar kar unke aage sir jhuka raha hoon taaki parivaar mein aur fracture na aaye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": ["sibling estrangement", "izzat", "hidden identity", "mann maar kar", "fracture"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Inheritance dispute ki wajah se pehle hi ghar mitti mein mil gaya hai aur ab Mummy keh rahi hain ki in-laws ke aane se hi hamara paksh mazboot hoga. Urban isolation mein main pehle hi ghabraya rehta hoon par Papa ki 'izzat' aur samman ke liye main in-laws ko jane ko nahi bol sakta. Main bas sabki khatir-daari kar raha hoon taaki rishtedar ye na kahein ki shehar jaakar main sanskar bhool gaya hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["inheritance dispute", "izzat", "samman", "khatir-daari", "sanskar"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Ghar mein jaydad ko lekar bhai-bhai mein darar aa chuki hai, aur ab in-laws ke permanent aane se meri secret life par khatra aur badh gaya hai. Mera dimaag fat raha hai par parivaar ki shanti ke liye main chup-chap unki baatein sunta hoon kyunki hamare yahan bade-buzurgo ke aage bolna bad-tameezi mani jati hai. Main apni takleef kisi ko nahi bata raha taaki ghar ki baat bazaar mein na uchle aur 'log kya kahenge' wala darr na bane.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["jaydad", "bad-tameezi", "log kya kahenge", "shanti", "bade-buzurgo"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Dadi ke marne ke baad property ka jhagda itna badha ki ab Mummy ne sulah ke liye apne bhai ko permanently mere paas bhej diya hai. Meri asliyat unke samne aane ka family fear hai par main unhe jaane ko nahi bol sakta kyunki rishto ka lihaz rakhna meri primary duty hai. Main bas mann hi mann ghut raha hoon par bahar se sabki seva kar raha hoon taaki parivaar ki unity aur Papa ka naam bana rahe.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["family fear", "rishto ka lihaz", "mann hi mann ghutna", "unity", "sulah"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Urban migrant hone ke naate main pehle hi isolated hoon, aur ab property dispute ke beech in-laws ka permanent aana mere liye ek naya stress hai. Main khul kar bolna chahta hoon ki mujhe privacy chahiye, par 'izzat' aur parivaar ke darr se main hamesha defensive rehta hoon. Bete hone ka farz nibhate huye main unke samman mein apni har khwahish kurban kar raha hoon taaki rishtey bache rahein.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["urban migrant", "izzat", "farz", "kurban", "rishtey"]
+  }
+]

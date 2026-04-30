@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Dost ki shaadi miss ho gayi kyunki khet aur bimar baap ki seva se itni thakan thi, par asli wajah wo dimaagi bimari ki goliyaan hain jo main sabse chhupa kar rakhta hoon. Agar gaon mein kisi ko pata chala toh log kahenge ki kisan hokar pagal ho gaya hai aur khandaan ki izzat mitti mein mil jayegi. Main bas 'sharir toot raha hai' bol kar chup rehta hoon taaki ghar ka maan bana rahe.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "pagal", "izzat", "khandaan", "maan"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Main shaadi mein nahi ja saka aur sabko laga ki main thak gaya hoon, par andar se main poori tarah toot chuka hoon aur apni depression ki dawa khet ki jhopdi mein chhupata hoon. Main nahi chahta ki meri wajah se ghar mein kalesh ho ya bacchon ke rishton par koi aanch aaye. Parivaar ki shanti ke liye main apni mental health ko 'thakan' ka naam dekar sahukar ke samne bhi sakht bana rehta hoon.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 4,
+    "cultural markers": ["kalesh", "parivaar ki shanti", "sahukar", "antidepressants hiding", "thakan"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Crop failure ke baad se mera dum ghutta hai, par doctor se li hui dimaag ki prescription maine phaar kar phenk di taaki ghar wale na dekh lein. Shaadi attend na kar paane par sabne kaha ki main 'natak' kar raha hoon, par maine kuch nahi kaha kyunki ek mard aur kisan ko har haal mein samajota karna padta hai. Main nahi chahta ki meri bimari ki wajah se sahukar ko lage ki main kamzor pad gaya hoon.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["crop failure", "natak", "mard", "kisan", "samajota"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Caregiving burnout ne mujhe itna nichod diya hai ki main bed se uth nahi paaya, par sabko yahi bola ki mausam badalne se 'bukhar' chadha hai. Main depression word use nahi kar sakta kyunki samaj mein ise pagalpan mana jata hai aur main ghar ki izzat bachane ke liye ye bojh akele utha raha hoon. Rishton mein doori na aaye aur koi taana na mare, isiliye main apni goliyaan khet ke boro mein chhupaye rakhta hoon.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["izzat", "pagalpan", "taana", "bukhar", "samaj"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Shaadi miss hone par jab sabne poocha toh maine bas body ache ka bahana kiya, kyunki main nahi chahta ki unhe pata chale ki main dimaagi taur par bimar hoon. Ek kisan parivaar mein rehne ka matlab hai ki aap kabhi apne liye stand nahi le sakte, warna hospital ka kharcha aur 'log kya kahenge' wali baat poore samaj mein phail jayegi. Main apni pehchaan daba raha hoon taaki meri beti ki shaadi mein koi rukawat na aaye.",
+    "context_category": "Health & Chronic Illness",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "hospital ka kharcha", "kisan", "samaj", "body ache"]
+  }
+]

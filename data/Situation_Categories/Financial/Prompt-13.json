@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah mobile pe EMI bounce ka message dekhte hi mera dimaag sunn ho gaya aur library mein baith kar bas rona aa raha hai. Mummy ke hospital bills ne saari savings wipe out kar di hain aur UPSC dropper hone ki wajah se pehle hi ghar par bojh lag raha tha. Is waqt main coaching ki koi class ya padhai ke baare mein soch hi nahi pa raha, bas ek gehra panic mehsus ho raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "savings wiped", "hospital bills", "UPSC dropper"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bank ka notification dekh kar mera dum ghutne laga hai kyunki Papa ne kisan hokar apni aakhri zameen bech di thi hospital ka karz chukane ke liye. Dropper stigma ki wajah se pehle hi log taane dete thay, ab is financial crisis mein main bilkul toot gaya hoon aur dimaag blank hai. Is emotional flooding mein mujhe koi rasta nahi dikh raha, bas ek ajeeb sa darr hai jisne mujhe jhakad liya hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "kisan", "zameen bechna", "dropper stigma", "log kya kahenge"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Medical expense spiral ne humein sadak par la diya hai aur aaj EMI bounce hone par main bas coaching institute ke bahar khada hokar kaanp raha hoon. Dimaag mein koi career strategy ya solution nahi aa raha, bas wahi hospital ke visuals aur zero bank balance ghoom raha hai. Main bilkul sunn ho chuka hoon aur mujhe lag raha hai ki main kabhi is dukh se bahar nahi nikal paunga.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["medical expense spiral", "EMI bounce", "coaching institute", "zero bank balance"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Mummy ki bimari mein saara chit fund ka paisa chala gaya aur ab EMI bounce hone par mujhe extreme breakdown mehsus ho raha hai. Main UPSC ki kitabein dekh kar bas rone lagta hoon kyunki dimaag mein itna zyada emotional pressure hai ki kuch yaad hi nahi rehta. Is waqt mujhe bas ek gehra despair duba raha hai aur main kisi se madad maangne ke layak bhi nahi bacha.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "EMI bounce", "UPSC", "breakdown", "medical expenses"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj bank se call aaya ki loan kist bounce ho gayi hai aur main wahi sunn hokar baith gaya, mujhse saans bhi nahi li ja rahi. PSC prep ke itne saalon baad ye zillat dekh kar dimaag kaam karna band kar gaya hai, bas neighborhood shame ka darr flood kar raha hai. Main koi backup plan ya agla kadam nahi soch sakta, bas ek gehra sannata mehsus ho raha hai jisme main khota ja raha hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI bounce", "PSC prep", "zillat", "neighborhood shame"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Be-mausam baarish se fasal barbaad ho gayi aur bank ki kist sar par hai, par maine shehar se bheja gaya saara paisa chote bhai ki shaadi mein laga diya. Kisan hokar main parivaar mein paison ka rona nahi ro sakta kyunki sab mujhse umeed lagaye baithe hain aur unki 'izzat' mere liye sabse upar hai. Sahukaar ke taane seh lunga par ghar walon ko ye nahi bataunga ki mere paas khud ke liye ek rupaya nahi bacha.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "bank ki kist", "izzat", "sahukaar", "fasal barbaad"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Crop destroy hone ke baad ghar ka chula jalana mushkil hai, phir bhi maine apna bacha-kucha remittance gaon ke mandir ke chande mein de diya taaki parivaar ki 'shaan' bani rahe. Main unhe financial distress ke baare mein bata kar unka sar jhukne nahi de sakta, chahe mujhe khud sahukaar se karz lena pade. Mere liye rishton ki garima meri apni bhookh se bohot badi hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["remittance", "shaan", "sahukaar", "chula jalana", "karz"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ki dawai aur loan installment ke liye maine apni saari savings wiped kar di aur ghar bhej di, par unhe kabhi nahi jataya ki main kitni takleef mein hoon. 'Log kya kahenge' agar bade bete ne remittance bhejni band kar di, isi darr se main apni financial precarity chhupaye rakhta hoon. Unke samne hamesha muskurata hoon taaki unhe lage ki unka kisan beta shehar mein bohot khush hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 3,
+    "cultural markers": ["savings wiped", "remittance", "log kya kahenge", "loan installment", "kisan"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Chit fund mein paise doobne ke baad Papa bohot toot gaye thay, isliye maine apni tankhwa ka 90% unhe bhej diya taaki unhe lage ki sab thik hai. Meri apni vehicle EMI bounce ho rahi hai, par unhe ye sach bata kar main unki umeedon ko thokar nahi maar sakta. Parivaar mein kalesh na ho aur badon ka maan bana rahe, bas isiliye main is remittance trap mein ghut raha hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "remittance trap", "EMI bounce", "maan", "kalesh"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Gaon mein fasal na hone se sab udhaar par chal raha hai, isliye maine apne shehar ke kharche bilkul band karke poora paisa remittance mein bhej diya. Main ek mard aur kisan hoon, isliye apni kamzori ya financial pressure dikhana mujhe shobha nahi deta. Ghar ki shanti aur Papa ki 'izzat' ke liye main har mahine debt spiral mein dhasne ko taiyaar hoon par unhe shikayat nahi karunga.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["remittance", "izzat", "kisan identity", "debt spiral", "udhaar"]
+  }
+]

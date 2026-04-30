@@ -1,0 +1,73 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab mere roomie ko placement ka offer letter mila, toh mera dimaag bilkul sunn pad gaya. Bapuji ne zabardasti Kota bhejkar mujhe is core engineering branch mein daal diya tha jisme mera zero interest tha, aur ab ye rejection mujhe andar se tod raha hai. Mujhe agle interview ki tayari nahi karni, bas ghabrahat se meri saans atak rahi hai aur rona ruk hi nahi raha.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Kota",
+      "core engineering branch",
+      "offer letter",
+      "sunn pad jana"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Sharma ji ke bete ki on-campus placement ho gayi aur main apni forced branch ke back papers mein hi atka hua hoon. Jab maine uski news suni, toh mera dil baith gaya aur ek 'kuch nahi hoga mera' wali feeling dimaag par haavi ho gayi. Mera dimaag itna blank ho chuka hai ki resume update karna toh door, main bistar se uth kar kisi se baat tak nahi kar pa raha.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "Sharma ji ka beta",
+      "on-campus placement",
+      "forced branch",
+      "back papers",
+      "kuch nahi hoga mindset"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Batchmate ki day-one placement dekh kar mujhe joint family ke taano ki aisi yaad aayi ki main hostel ke washroom mein ghus kar rone laga. Mujhe kabhi B.Tech karni hi nahi thi, par unke 'sarkari babu' wale sapno ke chakkar mein main is course mein zinda dafan ho gaya hoon. Ab is sharam se mera dum ghut raha hai aur aage ka ek bhi career rasta mujhe sujhayi nahi de raha.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "day-one placement",
+      "joint family",
+      "hostel",
+      "sarkari babu"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Mere dost ka cutoff clear hoke IT company mein lag gaya, aur main is bekar ki branch mein fail hone ke baad bilkul hopeless ho chuka hoon. First-gen student hone ka bojh aur parivaar ki 'izzat' girne ke darr ne mujhe itna nichod diya hai ki aaj bas rone ka mann kar raha hai. Placement drive ya coding ka kuch nahi sochna mujhe, mera dimaag poori tarah paralyse ho chuka hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "cutoff",
+      "first-gen student",
+      "izzat",
+      "placement drive"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Bagal wale kamre ke ladke ka bada package lagne ki khabar aate hi meri aatma kaanp gayi aur mera poora dimaag blank ho gaya. Papa ne zabardasti dropper banakar is college mein fenk diya tha, aur ab is forced branch mein reject hone ke baad lag raha hai mere wajood ka koi matlab nahi bacha. Main kisi off-campus option ke baare mein sochne ki himmat nahi rakhta, bas blanket mein munh chhupakar rone ke alawa mujhse kuch nahi ho raha.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "package",
+      "dropper",
+      "forced branch",
+      "off-campus option"
+    ]
+  }
+]

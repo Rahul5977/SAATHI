@@ -1,0 +1,76 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah jab main laptop bag pack kar rahi thi, Sasu-maa ne fir taana maara ki unki beti working hokar bhi poora ghar akele sambhalti hai. Main dual burden se itni thak chuki hoon ki dimaag sunn ho jata hai, par 'cannot afford to stop' wali halat hai kyunki ghar aur office dono mujh par dependent hain. Mujhe bas akele mein apne aansu pochne hain aur bina shikayat kiye duty nibhani hai taaki sasural ka routine na bigde.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "sasu-maa",
+      "taana",
+      "dual burden",
+      "sasural"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Sasu-maa ne aaj mehmaano ke samne meri nanad ki tareef ki aur mujhe sunate hue kaha ki career wali bahuyein ghar ke sanskar bhool jati hain. Mera promotion due hai par is guilt aur pressure se mera dimaag phata ja raha hai, fir bhi main apne suppressed ambition ko daba kar chai-nashta bana rahi hoon. Agar main thak kar baith gayi toh 'log kya kahenge' ki nayi bahu nakhre kar rahi hai, isliye mujhe ek masheen ki tarah bas chalte rehna hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "sasu-maa",
+      "nanad",
+      "sanskar",
+      "bahu",
+      "log kya kahenge"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Aaj saas ne meri nanad ki himmat ka gun-gaan karte hue kaha ki main toh bas office ka bahana banati hoon jabki usne apne sasural ko akele jodd kar rakha hai. Din bhar office aur phir kitchen ki double shift ne mujhe andar se poori tarah tod diya hai, par main rukne ka option soch bhi nahi sakti. Ek aadarsh bahu ka farz nibhane aur pariwaar ki structural stability ke liye, mujhe apni thakan ko bhula kar sab kuch theek karna hi padega.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "saas",
+      "nanad",
+      "sasural",
+      "aadarsh bahu",
+      "farz"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Sasu-maa ne aaj fir yaad dilaya ki caste mismatch aur career gap ke bawajood unhone mujhe apnaya, jabki unki beti apne sasural mein kitni sarvgun-sampann aur adjust karne wali hai. Ek taraf bacchon ka pressure aur dusri taraf office ke targets, main is dual burden ke bojh tale ghisi ja rahi hoon par thakne ki izazat nahi hai. Main akele bathroom mein 5 minute ro kar wapas bahar aati hoon taaki apni duty poori kar saku aur ghar mein koi naya kalesh na ho.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "anxiety",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "sasu-maa",
+      "caste mismatch",
+      "sasural",
+      "sarvgun-sampann",
+      "kalesh"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Maike ko chhodne ka adjustment shock abhi kam bhi nahi hua tha ki aaj Sasu-maa ne meri choti si galti par nanad ka example dekar meri parvarish par hi sawal utha diya. Main job aur ghar dono sambhalne ke chakkron mein mentally aur physically poori tarah nichudi ja chuki hoon, par mujhe pata hai ki mera ek din ka break bhi sab kuch bikhra dega. Apne aansuon ko nigal kar aur is structural endurance ko apni kismat maan kar, main bas kal ki meeting aur subah ke nashte ki taiyari mein lag gayi hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "maike",
+      "sasu-maa",
+      "nanad",
+      "parvarish",
+      "kismat"
+    ]
+  }
+]

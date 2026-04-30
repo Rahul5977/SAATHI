@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Gaon mein fasal barbaad hone ki wajah se ghar se call aaya ki bank ki kist nahi bhari gayi, isliye maine apni coaching ki bachi-kuchi savings bhi remittance mein bhej di. Main UPSC dropper hoon aur ghar wale mujh par itna bharosa karte hain ki unhe sach bata kar main unki 'izzat' mitti mein nahi mila sakta. Is waqt mere paas khane ke paise nahi bache, par main unhe phone par yahi bolta hoon ki main thik hoon taaki wo pareshan na hon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["UPSC dropper", "remittance", "bank ki kist", "izzat", "fasal barbaad"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Crop destroyed hone ke baad Sahukaar Papa ke darwaze par khada hai, toh maine apni test series ke paise bhi gaon bhej diye taaki parivaar ki 'shaan' bani rahe. PSC prep ke teesre saal mein bhi main unse koi financial help nahi maang sakta kyunki unhone pehle hi mujh par sab kuch invest kar diya hai. Main chupchap bhookha reh lunga, par unhe ye nahi bataunga ki mera remittance trap mujhe andar se nichod raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "helplessness",
+    "intensity_seed": 5,
+    "cultural markers": ["PSC prep", "Sahukaar", "remittance trap", "shaan", "family investment"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ka phone aaya ki loan installment repay nahi ho payi toh maine turant doston se udhaar lekar paise bhej diye, ye soche bina ki main apna rent kaise dunga. UPSC aspirant hone ka jo garv mere maa-baap gaon mein dikhate hain, main usse 'log kya kahenge' wale darr mein badalne nahi dena chahta. Mere paas ek rupaya nahi bacha, par unke samne shikayat karna mere liye gunah jaisa hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["UPSC aspirant", "remittance", "log kya kahenge", "loan installment", "dropper stigma"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Gaon mein kisan baap ki fasal sookh gayi hai aur unhe meri remittance ki sakht zaroorat hai, isliye maine apni saari savings wipe out karke unhe bhej di. Dropper stigma ki wajah se main pehle hi guilt mein rehta hoon, isliye unhe financial pressure ke baare mein bata kar unka dil nahi tod sakta. Main is shehar mein akele struggle kar lunga, par unhe yahi lagna chahiye ki unka beta kaamyab hone wala hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 3,
+    "cultural markers": ["kisan", "remittance", "dropper stigma", "savings wiped", "fasal sookhna"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Chit fund mein Papa ke paise doobne aur khet barbaad hone ke baad, ghar ki saari umeed mujh par hai, isliye main apna poora stipend gaon bhej deta hoon. Bank ki kist default hone ka darr unhe na sataye, isliye main apni coaching ki fees tak delay kar deta hoon par unhe hamesha 'all is well' hi bolta hoon. Unki khushi aur parivaar ki shanti mere liye apne career se zyada zaroori hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["chit fund", "remittance", "bank ki kist", "family expectations", "dropper"]
+  }
+]

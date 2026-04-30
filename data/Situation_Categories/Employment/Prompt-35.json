@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Client ne contract cancel kar diya aur mera saalon purana business band hone wala hai, par main thak kar baith nahi sakta kyunki ghar par naya baccha hai aur college ki fees ka bojh bhi aane wala hai. Papa kisan thay aur unhone mujhe is umeed mein padhaya tha ki main parivaar ko sambhaalunga, isliye thakan chahe kitni bhi ho, mujhe naye kaam ke liye bhatakna hi hoga. Mere liye rona ya break lena ek luxury hai jo main afford nahi kar sakta, mujhe bas apne parivaar ke liye endure karna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "college fees", "breadwinner", "luxury"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Contract loss ke baad ghar ki EMI aur naye bache ke kharche mujhe sone nahi dete, par main apni health neglect karke bhi 16 ghante kaam kar raha hoon kyunki failure ka koi margin nahi hai. MNC ki purani naukri chhod kar startup shuru kiya tha aur ab parivaar ki 'izzat' mujh par tiki hai, isliye main exhaustion ko ignore karke bas bhag raha hoon. Mera personal dukh aur guilt secondary hai, pehle mujhe ghar ka 'head' hone ka dharam nibhana hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI", "startup", "izzat", "dharam", "health neglect"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Sarkari naukri toh mili nahi, ab is business mein client ke jaane se survival ki ladaai hai aur bache ko time na de paane ka guilt andar hi andar kha raha hai. Par main thak kar haar nahi maan sakta kyunki mere peeche koi backup nahi hai aur kirana shop ka udhaar bhi chukana hai. Shareer saath nahi de raha par structural endurance hi mera ekmatra vikalp hai kyunki main hi khandaan ka aakhri sahara hoon.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 4,
+    "cultural markers": ["sarkari naukri", "kirana shop", "sole earner", "structural endurance"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Bache ko sote huye chhod kar main extra hours laga raha hoon kyunki client contract cancel hone se funding ruk gayi hai aur ghar chalana mushkil ho raha hai. First-gen earner hone ka yahi bojh hai ki aap thak kar gir nahi sakte, bas ek 'kartavya' samajh kar pathar ki tarah khade rehna padta hai. Mere kandhon par jo zimmedari hai woh bache se door rehne ke dukh se kahi zyada badi hai, aur mujhe bas endure karte rehna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["first-gen earner", "funding", "kartavya", "zimmedari"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj business loss ke baad meri himmat jawab de gayi hai, par bache ki fees aur loan ki kist mujhe rukne nahi deti. Gaon mein kisan bhai aur sasural mein sabko lagta hai ki main shehar mein bohot sukoon mein hoon, isliye main unhe sach bata kar parivaar ki 'naak' nahi katne de sakta. Ye structural endurance hi meri reality hai jahan mujhe bache ki muskurahat se zyada mahine ki ant mein remittance ki chinta hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["loan kist", "naak katna", "remittance", "family head"]
+  }
+]
