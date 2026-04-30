@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj jab client ka contract cancellation email aaya aur saath mein crypto portfolio zero dekha, toh mera dimaag bilkul sunn ho gaya aur main bacchon ke samne hi rone lagi. Divorce ke baad jo thodi bahut savings bachi thi wo sab maine chupchap invest kar di thi, ab mujhe saans lena bhi bhari lag raha hai. Is waqt main koi recovery plan ya business bachane ke baare mein soch hi nahi pa rahi, bas ek gehra panic aur sadma hai jo mujhe duba raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["crypto loss", "savings wiped", "divorced", "single mother", "emotional flooding"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Stock market crash mein bacchon ki school fees ke liye rakhi jama-poonji chali gayi aur aaj business band hone ki khabar aayi, main bas apne kamre mein sunn hokar deewar ko tak rahi hoon. Neighborhood mein sabko lagta tha ki divorce ke baad main bohot independent ban gayi hoon, par ab is zillat ke baad mujhe lag raha hai ki mera dum ghut jayega. Main logically kuch nahi soch paa rahi ki agle mahine ki home loan EMI kaise bhari jayegi, bas ek flood of emotions hai jisme main beh gayi hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["stock loss", "jama-poonji", "neighborhood shame", "EMI bounce", "stigma"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ke operation aur bacchon ke future ke liye rakhe chit fund ke paise maine chupke se options trading mein duba diye, aur aaj business nearly closed hone ka message aaya toh main breakdown kar gayi. Single mother hokar itni badi galti karne ke baad ab dimaag mein itna emotional pressure hai ki kuch yaad nahi rehta. Is waqt mujhe koi financial strategy ya naya client dhoondne ka hosh nahi hai, bas ek gehra despair hai jo mujhe andar se kha raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "single mother", "options trading", "business nearly closed", "savings wiped"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Market mein paise dubne ke baad jab aakhri client ne bhi contract cancel kiya, toh mera dum ghutne laga aur main bas darwaze pe baith kar kaanpne lagi. Community exclusion ka darr pehle hi tha, ab 'log kya kahenge' ki divorcee hokar sab barbaad kar diya, ye soch kar dimaag blank ho gaya hai. Main koi legal solution ya bank se baat nahi kar sakti, bas ek extreme guilt aur breakdown mehsus ho raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["log kya kahenge", "community exclusion", "contract cancellation", "breakdown", "shame of loss"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Gaon mein Papa ko jo remittance bhejni thi wo saari maine crypto mein duba di, aur aaj business khatam hone ka email dekh kar mera dimaag blast ho gaya. Bacchon se nazrein churane ke alawa mujhe kuch samajh nahi aa raha, main bilkul sunn ho chuki hoon aur bas rona ruk hi nahi raha. Is emotional flooding mein mujhe agle kadam ka koi hosh nahi hai, bas ek ajeeb sa darr hai jisne mujhe poori tarah pakad liya hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["remittance", "crypto loss", "economic precarity", "shame", "emotional flooding"]
+  }
+]

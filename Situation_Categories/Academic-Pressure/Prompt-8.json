@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab placement portal par rank aayi aur main cutoff se meelo door thi, toh mere dimaag ne poori tarah kaam karna band kar diya. Appa waise hi shaadi ka pressure daal rahe hain aur ab ye on-campus offer na milne par 'log kya kahenge' ki tension ne mujhe andha kar diya hai. Mujhe abhi kisi doosri company ki strategy nahi sunni, bas itni ghabrahat ho rahi hai ki main hostel ke room mein lock karke ro rahi hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["placement portal", "rank", "cutoff", "Appa", "shaadi ka pressure", "log kya kahenge", "hostel"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Aaj coding round ka rank list nikla aur cutoff clear na hone par mera US jaane ka NRI dream wahin dher ho gaya. Iyer uncle ki beti ko day-zero offer mil gaya, aur main apni rank dekh kar itni sunn pad gayi hoon ki saans lena mushkil ho raha hai. Abhi mujhse off-campus options ke baare mein mat pucho, mera dil sharam aur rone se itna bhara hua hai ki dimaag blank ho chuka hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["coding round", "rank list", "cutoff", "NRI dream", "Iyer uncle ki beti", "off-campus options"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Placement exam mein apni rank cutoff se itni peeche dekh kar meri aatma kaanp gayi, jaise mera purana dropper wala daag wapas ubar aaya ho. Amma kabhi mujhe safety concerns ke karan doosre city off-campus interview ke liye akele aane-jane nahi dengi aur yahan campus mein sab khatam ho gaya. Main completely paralyse ho chuki hoon aur meri itni himmat nahi bachi ki aage ka kuch soch sakun, bas bed par baith kar roye ja rahi hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["rank", "cutoff", "dropper", "Amma", "safety concerns", "off-campus interview"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Mere saare doston ka naam placement shortlist mein hai, aur meri rank cutoff ke aaspas bhi nahi dikhi toh main wahin washroom mein gir ke rone lagi. Ek toh pichle sem ka back paper aur upar se ye on-campus rejection, meri puri himmat toot chuki hai. Mujhe aage resume theek karne ya HR round ki koi baat nahi sochni, bas is inadequacy aur ghutan ne mujhe bilkul nichod diya hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": ["placement shortlist", "rank", "cutoff", "back paper", "on-campus rejection", "resume"]
+  },
+  {
+    "situation id": "S005",
+    "text": "System par apni rank dekhte hi mujhe samajh aa gaya ki mera on-campus placement ka cutoff cross nahi hua, aur uske baad mere aansu rukne ka naam hi nahi le rahe. Chennai ke is strict hostel curfew mein main bahar nikal kar fresh air bhi nahi le sakti, aur aage restricted mobility ke karan mera career kya hoga ye darr mujhe pagal kar raha hai. Mera dimaag fatne ko ho raha hai aur main completely blank ho gayi hoon, agle test ki padhai toh mere palle hi nahi pad rahi.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["rank", "on-campus placement", "cutoff", "Chennai", "strict hostel curfew", "restricted mobility"]
+  }
+]

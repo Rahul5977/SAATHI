@@ -1,0 +1,77 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj phir meri maa ne sabke samne meri tulna apni beti ke sasural ki ameeri se ki aur taana maara ki main ghar ka mard hokar bhi utna nahi kama pa raha. Uske baad se mere sir mein itna bhayanak dard hai jaise nasein phat jayengi aur aankhon ke aage andhera chha gaya hai. Office jane ki himmat nahi ho rahi, pura badan jaise pathar ho gaya hai aur thakan se bura haal hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "taana",
+      "sir dard",
+      "andhera chhana",
+      "ghar ka mard",
+      "thakan"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Jab maa ne sabke beech kaha ki unki beti ka rishta zyada unche khandaan mein hua hai aur main yahan joint family ka bojh uthate-uthate peeche reh gaya hoon, mere pet mein ajeeb si jalan shuru ho gayi. Kal raat se kuch bhi hazam nahi ho raha aur seene mein aisi bhari-pan hai jaise koi aag lagi ho. Is ghar ke kalesh mein meri tabiyat itni gir gayi hai ki haath-pair bilkul thande pad gaye hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta",
+      "pet mein jalan",
+      "seene mein bhari-pan",
+      "joint family",
+      "kalesh"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Har waqt maa ka domination aur unki beti se comparison sunte-sunte mera gala ghutne lagta hai aur dimaag sunn ho jata hai. Aaj phir wahi behes hui aur tabse meri saans phool rahi hai, lagta hai jaise dil par kisi ne bhari pathar rakh diya ho. Itni kamzori aa gayi hai ki office mein file uthate waqt bhi mere haath kaanp rahe hain par main kisi ko bata nahi sakta.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "domination",
+      "gala ghutna",
+      "saans phoolna",
+      "kamzori",
+      "kuch nahi hone dunga mask"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Privacy toh zero hai is ghar mein, upar se maa ne aaj phir meri mardaangi par chot ki aur apni beti ke bacchon ke sanskaron ki tareefo ke pull baandh diye. Us argument ke baad se meri pith aur kandhon mein aisi jakdan ho rahi hai ki main seedha khada bhi nahi ho pa raha hoon. Pura sharir jaise toot raha hai aur ajeeb si bechaini ho rahi hai jisse neend hi nahi aa rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 3,
+    "cultural markers": [
+      "privacy loss",
+      "pith mein jakdan",
+      "badan tootna",
+      "sanskaron",
+      "breadwinner"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Jab bhi maa meri kamai aur ghar ki izzat ko lekar apni beti ki tareef karti hain, mere kaano mein seetiyaan bajne lagti hain aur sir chakkar khane lagta hai. Aaj subah se itni thakan hai ki lagta hai bukhar chadh jayega aur pura badan dukh raha hai. Mujhse ab ye parivaar ka bojh aur roz ka kalesh bardaasht nahi ho raha, sharir jawab de raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "izzat",
+      "kaano mein seetiyaan",
+      "parivaar ka bojh",
+      "kalesh",
+      "health neglect"
+    ]
+  }
+]

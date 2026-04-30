@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah MNC se layoff ka termination email padhte hi mere seene mein ek bhayankar jakdan aur bhari-pan shuru ho gaya hai. Barson pehle sarkari naukri na milne ka dukh daba kar is private naukri mein khoon-pasina ek kiya tha, par ab is umar mein layoff dekh kar mera gala itna sookh gaya hai ki paani bhi nahi nigla ja raha. Mere hath-pair thande pad gaye hain aur dimaag ki nasen fatne ko ho rahi hain.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "MNC",
+      "layoff",
+      "sarkari naukri",
+      "seene mein jakdan"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Startup se nikalne ki khabar milte hi mere kandhon aur peeth mein ek aisi aithan shuru ho gayi hai jo rukne ka naam nahi le rahi. Ghar ki EMI aur bacchon ki college fees ka bojh hai, aur is fikar mein mere pet mein aisi marod uthi hai ki main kursi se uthne ki himmat bhi nahi juta pa raha. Sar mein itna bhari dard hai ki lagta hai aakhon ke aage andhera chha jayega aur main abhi gir jaunga.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "anxiety",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "startup",
+      "EMI",
+      "college fees",
+      "pet mein marod"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Email padh kar jabse pata chala hai ki kaam se nikal diya gaya hoon, mere dimaag mein ek zor ki seeti baj rahi hai aur mera chehra bilkul sunn pad gaya hai. Kirana shop chalane wale mere parivaar ki 'izzat' mujhse judi thi, par ab is nakami ke baad mere ghutne dard se kaanp rahe hain. Pure jism mein ek aisi jalan phail rahi hai jaise andar hi andar koi bhayanak bukhar chadh raha ho.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "kirana shop",
+      "izzat",
+      "nakami",
+      "dimaag sunn"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Subah se layoff ka mail dekhne ke baad mere gale mein ek ajeeb sa gola phans gaya hai aur meri aawaz bilkul baith gayi hai. Pehle hi sarkari naukri fail hone ka dabba laga tha, aur ab is private naukri ke jaane se dil itni zor se dhadak raha hai ki lagta hai seena cheer kar bahar aa jayega. Mujhe lagatar ghabrahat mehsus ho rahi hai aur hatho ki ungliyan thar-tharane lagi hain.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "layoff",
+      "sarkari naukri",
+      "ghabrahat",
+      "dil ki dhadkan"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "MNC se termination ka mail padhte hi mere pure badan mein aisi thakan aur sunn-pan chha gaya hai ki lag raha hai mera sharir jawaab de raha hai. Ek breadwinner hokar family head ki zimmedari nibhane mein health neglect ki thi, par ab is khabar se mere pet mein aisi jalan ho rahi hai jo sidhe gale tak aa rahi hai. Mere sar mein hathode jaisa dard ho raha hai aur saans lene mein bahut takleef ho rahi hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "MNC",
+      "breadwinner",
+      "health neglect",
+      "termination email"
+    ]
+  }
+]

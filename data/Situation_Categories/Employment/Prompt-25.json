@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj Boss ne meeting mein meri capability par sawal uthate hue sabke samne chillaya, par maine bas sir jhuka kar 'Sorry Sir' bol diya. Gaon mein kisan Papa ki fasal destroy ho gayi hai aur bank ki EMI chukana namumkin hai, isliye main unhe naraz karke apni naukri risk mein nahi daal sakti. Agar main palat kar jawab deti toh ye meri parvarish par sawal hota aur sasural mein bhi meri 'izzat' kam ho jati.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "EMI", "parvarish", "izzat", "sasural"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Startup ka mahol itna toxic hai ki Boss roz unpaid overtime karate hain aur mana karne par badtameezi karte hain, par main chupchap sab seh rahi hoon. Ghar se khabar aayi hai ki baarish ne khet tabah kar diye aur loan installment nahi bhar paye, isliye unka ashirwad banaye rakhna meri majboori hai. Main unse bahas karke ghar ki shanti bhang nahi karna chahti kyunki ek aadarsh bahu apne malik ke khilaaf nahi bolti.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 4,
+    "cultural markers": ["startup", "unpaid overtime", "ashirwad", "shanti", "aadarsh bahu"]
+  },
+  {
+    "situation id": "S003",
+    "text": "MNC mein Boss meri dual burden ki takleef ko mazaak udate hain, par main hamesha unhe Guru ki tarah samman deti hoon taaki meri image kharab na ho. Udhar gaon mein khet ujadh gaye hain aur Sahukar ka karz badh raha hai, isliye main kalesh karke Papa ki tension aur nahi badha sakti. Main har zillat sahungi taaki khandaan ki 'naak' bachi rahe aur sabko mujh par garv bana rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "humiliation",
+    "intensity_seed": 5,
+    "cultural markers": ["MNC", "dual burden", "Sahukar", "kalesh", "naak"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Boss ne aaj meri suppressed ambition ka mazaak banaya aur extra hours kaam karwaya, par maine unke aage zubaan nahi chalai taaki meri 'shaleen' beti ki image bani rahe. Gaon mein loan installment na bhar paane ka dukh hai aur meri ek galti pura rishta kharab kar sakti hai. Main bas unki har shart maan rahi hoon taaki maike ki maryada aur unka samman gaon mein bana rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["suppressed ambition", "shaleen", "maryada", "samman", "maike"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Office mein roz ki screaming aur humiliation se darr lagta hai, par main Boss ko hamesha 'ji sir' kehti hoon kyunki unhone mujhe private naukri mein mauka diya hai. Udhar kisan parivaar ki fasal barbaad hone se bank walo ke phone aa rahe hain, isliye meri bagawat parivaar ke liye paap jaisi hogi. Main chupchap unki gulamiyat kar rahi hoon taaki pati ka sar gaon mein nicha na ho aur khandaan ki izzat bachi rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["humiliation", "kisan", "paap", "gulamiyat", "izzat"]
+  }
+]

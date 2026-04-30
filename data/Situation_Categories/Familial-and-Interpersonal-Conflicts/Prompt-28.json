@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj phir saas ne sabke samne meri comparison apni beti se ki aur taana maara ki main bas 'laptop' par baithti hoon. Uske baad se mere sir mein itna bhayanak dard hai jaise nasein phat jayengi aur aankhon ke aage andhera chha gaya hai. Itni zyada thakan hai ki main agle sprint ki meeting attend nahi kar pa rahi, pura badan jaise pathar ho gaya hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["saas", "taana", "sir dard", "laptop", "thakan"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Joint family mein privacy toh hai nahi, upar se dadi ne phir meri comparison bua se karke meri MNC ki naukri ko 'fuzool kharchi' bola. Us argument ke baad se mere pet mein ajeeb si jalan aur cramps ho rahe hain, lagta hai jaise kuch hazam hi nahi ho raha. Kal raat se haath-pair thande pad gaye hain aur bilkul jaan nahi bachi sharir mein, bas sote rehne ka mann karta hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["joint family", "MNC", "fuzool kharchi", "pet mein jalan", "haath-pair thande"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Jab bhi saas kehti hain ki unki beti ne bina kisi help ke ghar aur EMI dono sambhale aur main nakara hoon, mera gala ghutne lagta hai. Aaj subah se seene mein itni bhari-pan aur jalan hai jaise koi aag lagi ho aur saans lena mushkil ho raha hai. Itni kamzori aa gayi hai ki code likhte waqt ungliyan kaanp rahi hain aur sir chakkar kha raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI", "nakara", "gala ghutna", "seene mein bhari-pan", "sir chakkar"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Aaj phir saas-bahu dynamics ki wajha se dadi ne meri comparison nanad se ki, jiske baad se meri pith aur kandhon mein itna bhayanak dard hai. Pura sharir jaise jakad gaya hai aur ajeeb si bechaini ho rahi hai jaise koi bhari bojh rakha ho mujh par. WFH isolation mein ye roz ka kalesh ab bardaasht nahi ho raha, lagta hai haddiyan dukh rahi hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 3,
+    "cultural markers": ["saas-bahu dynamics", "nanad", "pith mein dard", "WFH isolation", "kalesh"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Dadi har waqt mujhe neecha dikhati hain ki unki beti ne parivaar ki 'izzat' badhayi aur main sirf startup mein paise barbaad kar rahi hoon. Uske baad se mere kaano mein seetiyaan bajne lagti hain aur pura badan toot raha hai jaise bukhar chadhne wala ho. Bilkul himmat nahi hai login karne ki, aisa lagta hai sharir ke har ek joint mein dard ho raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["izzat", "startup", "paise barbaad", "badan tootna", "seetiyaan bajna"]
+  }
+]

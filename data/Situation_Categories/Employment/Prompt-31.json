@@ -1,0 +1,73 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Client ne contract cancel kar diya aur startup band hone ki kagar par hai, par main thak kar baith nahi sakti kyunki ghar mein 6 mahine ka baccha aur home loan ki bhari EMI hai. Papa ne kisan hokar apni saari zameen girvi rakhi thi taaki main MNC level tak pahunchu, isliye thakan chahe kitni bhi ho, mujhe naye clients dhoondne hi honge. Mere liye rone ka waqt ek luxury hai jo main afford nahi kar sakti, mujhe bas ek machine ki tarah endure karna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "kisan",
+      "home loan EMI",
+      "MNC",
+      "structural endurance"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "WFH isolation mein bache ko sote hue chhod kar main 16 ghante coding kar raha hoon kyunki contract loss ke baad business nearly closed hai aur failure ka koi margin nahi bacha. Tier-2 city mein baithe parivaar ki 'izzat' mujh par tiki hai, isliye main exhaustion ko ignore karke bas kaam kiye ja raha hoon taaki kirana shop ka udhaar aur hospital bills chuk sakein. Mera personal dukh aur guilt secondary hain, pehle mujhe ghar ka 'breadwinner' hone ka dharam nibhana hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "WFH isolation",
+      "Tier-2 city",
+      "izzat",
+      "kirana shop udhaar",
+      "dharam"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Sarkari naukri toh mili nahi, ab is startup mein funding rukne ke baad survival ki ladaai hai aur upar se naya baap banne ka bojh. Main thak kar haar nahi maan sakta kyunki mere peeche koi backup nahi hai aur bache ka future sirf meri endurance par tika hai. Shareer saath nahi de raha par structural endurance hi mera ekmatra vikalp hai kyunki main hi khandaan ka aakhri sahara hoon.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "sarkari naukri",
+      "startup funding",
+      "structural endurance",
+      "sole earner"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Client contract cancel hone se dimaag fatne ko hai, par MNC ki purani 'burnout' wali aadat ab structural endurance mein badal gayi hai taaki ghar ki EMI chalti rahe. Bache ke saath waqt bitane ka guilt hai, par main usse door reh kar kaam kar rahi hoon kyunki failure parivaar ke liye paap jaisa hoga. First-gen earner hone ka yahi matlab hai ki aap thak kar gir nahi sakte, bas bina ruke chalte rehna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "MNC",
+      "EMI",
+      "first-gen earner",
+      "paap"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj business loss ke baad meri himmat jawab de gayi hai, par Tier-1 city ke mehnge kharche aur bache ki zimmedari mujhe rukne nahi deti. Papa ne kisan hokar apni life-savings mujh par invest ki thin, isliye main thakan mein bhi extra hours laga raha hoon taaki unka bharosa na toote. Ye thakan aur isolation mere farz ka hissa hain, aur mujhe bas bina kisi umeed ke endure karte rehna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Tier-1 city",
+      "kisan",
+      "life-savings",
+      "farz"
+    ]
+  }
+]

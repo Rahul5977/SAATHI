@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Bete ko ghar par chhod kar shehar gaya tha taaki contract ke paise mil jayein, par client ne sab mana kar diya aur business thapp ho gaya. Ab ghar mein naya baccha hai aur Sahukar ka karz alag se hai, par kisan ka beta hoon toh thak kar baithne ka sawal hi nahi hai. Shareer jawab de raha hai par mujhe har haal mein khet aur ye chota dhanda dono khechna hai kyunki parivaar mujh par tika hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "Sahukar", "contract cancellation", "breadwinner"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Client ke contract cancel karne se funding ruk gayi hai aur bache ki muskurahat dekh kar rona aata hai kyunki usse door reh kar kaam karna pad raha hai. Papa ne khet girvi rakh kar mujhe padhaya tha taaki startup se kismat badle, isliye thakan chahe jitni ho, main rukna afford nahi kar sakta. Structural endurance hi ab mera sahara hai kyunki is ghar ki 'izzat' aur kirana shop ka udhaar sirf meri mehnat se hi chukega.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": ["khet girvi", "startup", "izzat", "kirana shop udhaar"]
+  },
+  {
+    "situation id": "S003",
+    "text": "MNC ka sapna dekha tha par ab is chote kaam mein client loss ke baad survival ki ladaai hai, aur ghar mein baccha hone se kharche aur badh gaye hain. First-gen earner hone ka yahi bojh hai ki main breakdown nahi kar sakta, bas bina ruke endure karte rehna hai taaki bank ki EMI aur sahukar ka vyaj chalta rahe. Thakan itni hai ki saans lena mushkil hai par mera farz mere personal dukh se bohot bada hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 4,
+    "cultural markers": ["MNC", "first-gen earner", "EMI", "sahukar", "farz"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Crop failure ke baad socha tha is contract se ghar sambhaal loonga par client ne moka cheen liya aur ab rasta band lag raha hai. Bache ko sote huye chhod kar khet mein pasina bahana aur phir dhande ke liye daudna meri majboori hai kyunki mere peeche koi backup nahi hai. Main thak kar haar nahi maan sakta kyunki failure khandaan ke liye paap jaisa hai aur mujhe bas apne kartavya ke liye endure karna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["crop failure", "khandaan", "paap", "kartavya"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Sarkari naukri toh mili nahi, ab is business loss ke baad dimaag fatne ko hai par bache ki fees aur loan ki kist mujhe sone nahi deti. Main apni mental health ke baare mein soch bhi nahi sakta kyunki kisan identity ka matlab hi ye hai ki aapko pathar ban kar khade rehna hai. Thakan aur guilt ab meri reality ban chuke hain par structural endurance hi wo rasta hai jisse mere parivaar ka chula jalega.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["sarkari naukri", "kisan identity", "loan kist", "chula"]
+  }
+]

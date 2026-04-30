@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab usne kaha ki shehar aakar main badal gayi hoon, toh mujhe laga wo gaon ki baadh mein sab kuch kho dene ka dard nahi samajhta jahan hamara ghar raakh ho gaya. Mere kandhon par parivaar ko phir se khada karne aur choti behen ki parvarish ka bojh hai, isliye thakan chahe jitni ho, main rukkne ka risk nahi le sakti. Studies ke saath-saath mujhe har haal mein adjust karna hi hoga kyunki mere rukkne ka matlab hai poore khandaan ki haar.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["gaon", "baadh", "parvarish", "khandaan", "structural endurance"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Partner ki baatein chubhi toh bohot, par mere paas rone ke liye waqt kahan hai jab ghar aag mein jal gaya aur government ki apathy ne humein metro city mein lachaar chhod diya. Ek beti hone ke naate mera dharma hai ki main yahan reh kar sirf padhai aur marriage pressure ko jhelte huye ghar rebuild karne mein madad karun. Mujhe bas ek machine ki tarah chalte rehna hai kyunki mere rukkne se ghar ka chulha thanda pad jayega.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "alienation",
+    "intensity_seed": 4,
+    "cultural markers": ["government apathy", "metro city", "dharma", "marriage pressure", "structural endurance"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Shehar ki bheed mein jab usne badlav ka taana mara, toh mera dil baith gaya par maine bas endurance dikhayi kyunki disaster ne hamari poori biradari ko tabaah kar diya hai. Main thak kar choor hoon par safety concerns aur restricted mobility ke beech bhi mujhe padhai puri karni hai taaki sab wapas shuru ho sake. Zimmedari ka bojh itna hai ki main apni thakan neglect karke bas parivaar ke liye khadi hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["taana", "biradari", "restricted mobility", "safety concerns", "zimmedari"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Jab usne kaha main 'metro lifestyle' mein kho gayi hoon, toh maine kuch nahi kaha kyunki usse kya pata ki main yahan reh kar kaise har pal ghar wapsi aur shaadi ke dabaav ke beech piasti hoon. Disaster ke baad starting over ka pressure itna hai ki main afford nahi kar sakti ki bimar padun ya rukun. Mera farz hi meri pehchaan hai aur main bas ek structural endurance mein jee rahi hoon taaki parivaar ki 'izzat' bani rahe.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "grief",
+    "intensity_seed": 4,
+    "cultural markers": ["metro lifestyle", "shaadi ka dabaav", "farz", "izzat", "starting over"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Disaster mein sab kho dene ke baad shehar aana koi shauk nahi, majboori thi, par jab usne mere badle huye svabhav ka mazaak udaya toh main sunn reh gayi. Main exhausted hoon par mujhe rukkne ka koi haq nahi hai kyunki poore gaon aur biradari ko mujhse umeed hai ki main padh-likh kar unki madad karungi. Mujhe bas bina ruke lade rehna hai kyunki mera endurance hi mere bimar maa-baap ki aakhri umeed hai.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "isolation",
+    "intensity_seed": 5,
+    "cultural markers": ["disaster", "shehar", "gaon", "biradari", "structural endurance"]
+  }
+]

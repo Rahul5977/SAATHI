@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Bade hone ke naate mujhe pata hai ki chote bhai ka bhavishya zyada zaroori hai, isliye property mein uska hissa zyada dekh kar bhi main chup hoon. Hostel mein reh kar placement ki tension hai, par mujhe pata hai ki mujhe bina ruke mehnat karni hi hogi taaki ghar ka kharcha chalta rahe. Mere pas thakne ka waqt nahi hai kyunki poore parivaar ki zimmedari mere hi kandhon par hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["Bade hone ke naate", "parivaar ki zimmedari", "placement tension", "hissa"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Ghar walon ne chote bhai ki padhai ke liye khet ka bada hissa uske naam kar diya, par main bade bhai ka farz nibhate huye shikayat nahi kar sakta. Meri JEE ki taiyari ka sapna peeche chhoot gaya, phir bhi mujhe din-raat ek karna hoga taaki uska future kharab na ho. Main afford nahi kar sakta ki main haar maan jaun, chahe kitna bhi exhaust ho chuka hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["farz", "JEE taiyari", "exhaust", "property hissa"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy-Papa ne faisla kiya ki chote bhai ko shehar bhejne ke liye property ka zyada share chahiye, aur mujhe unki baat maan-ni hi hogi. Main placement pressure mein hoon, par main break nahi le sakta kyunki mujhe agle mahine se ghar paise bhejne hain. Bade hone ki yahi keemat hai ki aapko apne sapne kurban karke endurance banaye rakhni padti hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 3,
+    "cultural markers": ["Bade hone ki keemat", "placement pressure", "kurban", "joint family"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Property batwara mein mere saath na-insafi hui, par parivaar ki izzat bachane ke liye mujhe ye duty nibhani hai aur mehnat karte rehna hai. Chote bhai ki fees bharne ke liye mujhe part-time kaam aur apni padhai dono saath karni pad rahi hai. Main itna thak gaya hoon ki lagta hai gir jaunga, par 'cannot afford to stop' wali baat mere dimaag mein baith gayi hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["izzat", "na-insafi", "part-time kaam", "batwara"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Chote bhai ko property ka bada share mila taaki wo stable rahe, aur main ab placement ke liye mar raha hoon taaki uski zimmedari mujh par na aaye. Ek aspirational family se hone ka yahi bojh hai ki aap kabhi ruk nahi sakte, hamesha chote bhai-behen ke liye rasta banana padta hai. Mere emotions secondary hain, mera kaam sirf endurance dikhana aur parivaar ko sambhalna hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": ["aspirational family", "bojh", "zimmedari", "endurance"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Bahar se wapas aane ke baad yahan adjust karna mushkil ho raha hai, upar se dost ki shaadi miss ho gayi kyunki bimar dadi ki dekhbhaal mein thak gaya tha. Main apni LGBTQ identity aur NRI return shock ka dukh ghar walon ko nahi batata taaki parivaar ki shanti na bigde aur unhe mujh par sharam na aaye. 'Log kya kahenge' ki itna bada ladka ghar par baith kar 'natak' kar raha hai, isliye main bas chup-chap sab sah raha hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "alienation",
+    "intensity_seed": 5,
+    "cultural markers": ["NRI", "log kya kahenge", "parivaar ki shanti", "natak", "hidden identity"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Dost ki shaadi attend nahi kar paya kyunki ghar ki zimmedariyon ne nichod diya hai, par asli wajah wo akelepan ka darr hai jo meri sacchai chhupane se aata hai. Main nahi chahta ki meri wajah se biradari mein koi sawal uthe ya Mummy-Papa ki 'izzat' kam ho, isliye main apne culture misfit wale dukh ko daba kar rakhta hoon. Sab kehte hain main kismat wala hoon jo India wapas aaya, toh main unka dil todne ke liye apni mental health ka zikr kaise karun?",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "isolation",
+    "intensity_seed": 4,
+    "cultural markers": ["biradari", "izzat", "NRI", "misfit", "family fear"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Shehar badalne ke baad se bhasha aur mahaul bilkul pardesi lagta hai, aur shaadi mein na ja paane ka dukh main kisi se share nahi kar sakta kyunki mera partner bhi hidden hai. Agar maine ghar walon ko bataya ki main yahan bilkul akela mehsus karta hoon, toh unhe lagega ki main unke ehsano ki kadar nahi kar raha. Parivaar ki harmony bachane ke liye main bas 'thakan' ka bahana banata hoon taaki wo meri asli halat ko lekar pareshan na hon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "alienation",
+    "intensity_seed": 4,
+    "cultural markers": ["bhasha", "pardesi", "harmony", "ehsan", "akelepan"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Wapas aakar lag raha hai jaise main apni hi zameen par ajnabi hoon, aur dadi ki caregiving ne mujhe itna nichod diya hai ki shaadi mein jaane ki himmat hi nahi bachi. Main apni identity ka struggle aur gussa sab pi jata hoon taaki Mummy ko ye na lage ki unka ladka shehar aakar 'bigad' gaya hai ya NRI lifestyle ne use badal diya hai. Ghar ki 'maryada' ke liye main bas ek mask pehan kar sabke samne normal dikhne ki koshish karta hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "grief",
+    "intensity_seed": 5,
+    "cultural markers": ["ajnabi", "maryada", "caregiving", "NRI shock", "hidden identity"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Shaadi miss hone par jab sabne taane diye toh maine chup-chap sun liye taaki ghar mein koi kalesh na ho aur Papa ka mujh par garv bana rahe. Main apni sexual orientation aur return shock ka struggle akele hi jhel raha hoon kyunki parivaar ki khushi mere liye unki 'shaan' bachane se badhkar hai. Is metro city ki bheed mein bhi main itna akela hoon, par ghar ki harmony ke liye mujhe muskurana hi padta hai.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "isolation",
+    "intensity_seed": 5,
+    "cultural markers": ["taane", "kalesh", "shaan", "metro isolation", "harmony"]
+  }
+]

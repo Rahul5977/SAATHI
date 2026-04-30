@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj pote ke liye rishtey wale aaye aur unhone mana kar diya, toh bete ne sabke samne mujhse kaha ki Sharma ji ke pitaji toh kitne 'active' hain par meri wajah se ghar ka mahol udaas rehta hai. Mera dimaag ekdum sunn ho gaya hai aur bas rona aa raha hai, samajh nahi aa raha ki ab parivaar ka saamna kaise karun. Itni ghabrahat ho rahi hai ki lag raha hai saans hi ruk jayegi, dawai ki baat toh bahut door ki baat hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["pote", "Sharma ji ke pitaji", "rishta", "izzat"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Rishta party ke jane ke baad bahu ne taana maara ki meri bimariyon aur 'negative energy' ki wajah se unka rishta tuta, aur Sharma ji ke ghar mein sab kitne khush hain. Main itni toot chuki hoon ki bas apne andhere kamre mein baith kar sisak rahi hoon, na kuch sujhayi de raha hai na koi umeed dikh rahi hai. Dimaag mein bas wahi kadwi baatein ghoom rahi hain, agle hafte ke checkup ke baare mein sochne ki himmat hi nahi hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["bahu", "taana", "siskiyaan", "joint family"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bete ne aaj phir comparison shuru kar diya ki padosi ke babuji on-site chale gaye aur main yahan dependent hokar sirf ghar ki 'izzat' kam kar raha hoon isliye rishta reject hua. Mera gala rone se bhara hua hai aur flood of emotions ki wajah se main use ye bhi nahi bol pa raha ki meri tabiyat theek nahi hai. Bas akele baith kar rona aa raha hai, generational gap itna badh gaya hai ki mera dimaag bilkul blank ho gaya hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["dependent", "on-site", "comparison", "generational gap"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne meri health par sawal uthaye aur bete ne unke samne hi mujhe 'bojh' bol diya, ab mera dimaag kaam karna band kar gaya hai. Bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai. Itne saare emotions ek saath aa rahe hain ki main apni sugar ki dawai ya khaane ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["bojh", "blank", "health", "ignored"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishta party ne jabse mana kiya hai, ghar mein kalesh shuru ho gaya hai aur bahu keh rahi hain ki 'log kya kahenge' ki buzurg hi dhang ke nahi hain. Main itni zyada overwhelm ho gaya hoon ki bas rona nikal raha hai aur lag raha hai ki meri zindagi ka koi mol nahi hai. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye ek kona chahiye jahan koi mujhe inadequacy ka ehsas na dilaye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "loneliness",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "overwhelm", "kalesh", "buzurg"]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj nanad ke liye rishtey wale aaye aur unhone mujhe dekh kar saaf mana kar diya, bole ki bhabhi itni 'simple' hain toh ladki pata nahi kaisi hogi. Saas ne sabke samne taana maara ki Sharma ji ki bahu kitni well-maintained hai aur meri wajah se ghar ki izzat mitti mein mil gayi. Mera dimaag ekdum sunn ho gaya hai, bas rona aa raha hai aur samajh nahi aa raha ki ab kitchen ka kaam kaise karun.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta",
+      "saas-bahu dynamics",
+      "izzat",
+      "Sharma ji ki bahu"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Rishta party ke jane ke baad Saas ne chillana shuru kar diya ki meri career gap aur 'lost identity' ki wajah se nanad ka rishta toot gaya. Main itni zyada overwhelm ho gayi hoon ki bas kamre mein baith kar sisak rahi hoon, dimaag mein itna shor hai ki bacchon ko khana khilane ki baat bhi dimaag mein nahi aa rahi. Lag raha hai sab meri hi galti hai aur main ek bojh hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "career gap",
+      "nanad",
+      "bojh",
+      "overwhelm"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Saas ne aaj phir comparison shuru kar diya ki padosi ki bahu ne ghar bhi sambhala aur nanad ki shadi bhi karwayi, aur main ek rishta tak handle nahi kar payi. Mera gala rone se bhara hua hai aur flood of emotions ki wajah se main unhe ye bhi nahi bata pa rahi ki ladke wale kitne ajeeb the. Bas akele baith kar rona aa raha hai, solution kya hoga ye toh dimaag mein aa hi nahi raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "padosi ki bahu",
+      "joint family",
+      "comparison",
+      "siskiyaan"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne mere 'divorced' hone ya past career par sawal uthaye aur Saas ne unke samne hi mujhe manhoos bol diya, ab mera dimaag kaam karna band kar gaya hai. Bas ek ajeeb sa andhera lag raha hai aur rone ke alawa kuch karne ki himmat nahi hai. Itne saare emotions ek saath aa rahe hain ki main bacchon ki school meeting ya ghar ke kharche ke baare mein bilkul blank hoon.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "manhoos",
+      "log kya kahenge",
+      "blank",
+      "child pressure"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj ki rejection ke baad Mummy keh rahi hain ki 'log kya kahenge' ki is ghar ki auratein hi aisi hain, mera dimaag fatne ko hai. Main itni zyada toot chuki hoon ki bas rona nikal raha hai aur lag raha hai ki mera koi wajood hi nahi bacha. Career toh bahut door ki baat hai, mujhe toh bas is waqt rone ke liye ek kona chahiye jahan koi mujhe Sharma ji ki bahu se compare na kare.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "log kya kahenge",
+      "lost identity",
+      "Sharma ji ki bahu",
+      "rejection"
+    ]
+  }
+]

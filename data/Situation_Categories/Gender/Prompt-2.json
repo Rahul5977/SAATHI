@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Doctor ne phir stress bol kar baat khatam kar di, par main unhe kaise samjhaun ki MNC ki job meri pehchaan hai jo shaadi ke baad chhudwayi ja rahi hai. Sasu-maa kehti hain ki ghar ki bahu itni raat tak laptop pe baithti hai toh 'log kya kahenge', isliye main chupchap apna resignation prepare kar rahi hoon. Main ghar mein kalesh nahi chahti, isliye apni ambition ko andar hi maar rahi hoon taaki parivaar ki izzat bani rahe.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["bahu", "log kya kahenge", "izzat", "MNC job", "kalesh"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Doctor ko lagta hai mujhe sirf kaam ka stress hai, par unhe kya pata ki mere upar career chhodne ka pressure kitna hai taaki main ek 'achi bahu' ban sakun. Meri salary se ghar ki EMI jaati hai par phir bhi samaj mein career wali aurat ko buri nazar se dekha jata hai, isliye main apna promotion dukh chhupakar thukra rahi hoon. Main Mummy-Papa ki parvarish par sawal nahi uthne dena chahti, isliye unki pasand ka rasta hi chuna hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["achi bahu", "samaj", "EMI pressure", "parvarish", "promotion refusal"]
+  },
+  {
+    "situation id": "S003",
+    "text": "WFH isolation mein meri ghabrahat badhti ja rahi hai par Doctor ne phir dismiss kar diya, shayad unhe meri suppressed identity nahi dikhti. Sasural wale chahte hain ki main software engineering chhod kar family business ya ghar sambhalun, aur main mana nahi kar sakti kyunki rishta tootne ka darr hai. Main apni awaaz daba leti hoon taaki khandaan ki shaan par koi aanch na aaye, chahe andar se main khatam ho rahi hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": ["WFH isolation", "sasural", "rishta tootna", "khandaan ki shaan", "suppressed identity"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Doctor ne meri palpitations ko stress kaha, par ye darr hai ki agar maine job ke liye stand liya toh log kahenge ki beti haath se nikal gayi hai. Startup ki itni mehnat ke baad ab career chhodna pad raha hai kyunki bahu ka kaam sirf seva karna mana jata hai, aur main maa-baap ki izzat ke liye ye sacrifice kar rahi hoon. Main chupchap unki har baat maanti hoon taaki unka sar hamesha uncha rahe.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 3,
+    "cultural markers": ["bahu", "izzat", "sar uncha rakhna", "startup", "beti haath se nikalna"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Doctor ne phir stress bol diya, par unhe kya pata ki career vs bahu ki jung mein main apni soul kho chuki hoon. Main career ki zid nahi karti kyunki divorce stigma ka darr hai aur main nahi chahti ki meri wajah se ghar walon ko neechu dekhna pade. Unki khushi ke liye maine apne saare sapne ek kone mein rakh diye hain, bas yahi mera sanskar hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["divorce stigma", "sanskar", "neechu dekhna", "bahu role", "career suppression"]
+  }
+]

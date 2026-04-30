@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "UPSC dropper stigma ke darr se maine ye chota business shuru kiya tha, par aaj client ne contract cancel kar diya aur ab sab khatam lag raha hai. Ghar mein chota baccha hai aur uski zimmedari ke beech mujhe 15 ghante kaam karna hi hoga kyunki Papa ne kisan hokar apni saari savings meri coaching mein laga di thi. Main thak kar ruk nahi sakta, bas ek machine ki tarah endure karna hai taaki parivaar ki 'izzat' bani rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["UPSC dropper stigma", "kisan", "coaching life", "izzat", "family investment"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Contract cancel hone se startup band hone ki kagar par hai aur upar se naya baap banne ka bojh, par main rone ka risk nahi le sakta. Barson tak sarkari naukri ke liye dhakke khaye hain, isliye ab thakan chahe kitni bhi ho, mujhe naye clients dhoondne hi honge kyunki EMI aur bache ka future mujh par tika hai. Mere liye mental health ek luxury hai jo main afford nahi kar sakta, mujhe bas apne farz ke liye khade rehna hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": ["startup", "sarkari naukri", "EMI", "farz", "luxury"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Client ke jaane se funding ruk gayi hai par main bache ke saath waqt bitane ke bajaye office mein extra hours laga raha hoon kyunki failure ka koi option nahi hai. Parivaar ko lagta hai ki UPSC na sahi toh business mein main bada aadmi ban gaya hoon, aur unka ye vishwas banaye rakhna meri structural endurance ki majboori hai. Sharir saath nahi de raha par sole earner hone ka matlab hai ki aapko girne ki ijaazat nahi milti.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 4,
+    "cultural markers": ["UPSC", "sole earner", "funding", "structural endurance", "family investment"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Bache ko sote huye chhod kar main coaching institute ke content projects kar raha hoon kyunki business nearly closed hai aur kirana shop ka udhaar chukana hai. Multi-year prep ke baad ye meri aakhri umeed hai, isliye main exhaustion ko ignore karke bas kaam kiye ja raha hoon. Mera personal dukh aur bache se doori ka guilt secondary hai, pehle mujhe ghar chalane ka apna dharam nibhana hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["coaching institute", "kirana shop", "multi-year prep", "dharam", "udhaar"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj client contract loss ke baad dimaag fatne ko hai, par PSC aspirant wali wahi purani 'survive karne ki aadat' kaam aa rahi hai. Main thak kar haar nahi maan sakta kyunki mere peeche ek poora khandaan khada hai jo meri taraf umeed se dekhta hai. Ye structural endurance hi meri kismat hai, jahan mujhe bache ki muskurahat se zyada mahine ki ant mein ghar paise bhejne ki chinta hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["PSC aspirant", "structural endurance", "khandaan", "kismat"]
+  }
+]

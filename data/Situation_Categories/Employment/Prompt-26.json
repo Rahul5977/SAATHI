@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Office mein Boss ne sabke samne mujhe 'anpadh kisan' bol kar chillaya, par maine bas sir jhuka kar maafi maang li kyunki unka ashirwad hi meri roti hai. Khet mein fasal barbaad ho gayi hai aur Sahukar ka karz sar par hai, isliye main palat kar jawab dekar apni naukri khatre mein nahi daal sakta. Agar main bahas karta toh ye meri parvarish par sawal hota aur gaon mein parivaar ki 'izzat' mitti mein mil jati.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["anpadh kisan", "ashirwad", "Sahukar", "izzat", "parvarish"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Boss roz unpaid overtime karwate hain aur mana karne par gaali-galoch karte hain, par main unhe 'malik' maan kar sab seh leta hoon. Udhar crop destroy hone se bank ki EMI ruk gayi hai, isliye unse kalesh karke main apne buzurg Maa-Baap ki tension aur nahi badhana chahta. Main chup-chap unki zillat sehta hoon taaki ghar ki shanti bhang na ho aur unka samman bana rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "humiliation",
+    "intensity_seed": 4,
+    "cultural markers": ["unpaid overtime", "malik", "EMI", "kalesh", "samman"]
+  },
+  {
+    "situation id": "S003",
+    "text": "MNC ke manager ne meeting mein mujhe itna zaleel kiya ki dil toot gaya, par maine hamesha 'Ji Sir' hi kaha taaki meri image ek shaleen vyakti ki bani rahe. Gaon mein loan installment na bhar paane ka darr hai aur meri ek bagawat pure khandaan ki 'naak' katwa sakti hai. Main apne saare suppressed emotions daba deta hoon taaki unse sambandh kharab na ho aur ghar ka chula chalta rahe.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": ["MNC", "shaleen", "naak katwana", "suppressed emotions", "chula"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Sarkari naukri toh mili nahi, ab is private kaam mein Boss roz sabke samne meri bezatti karte hain par main unke pairon ki dhool ban kar rehta hoon. Fasal ujadhne se moneylender ka dabao badh gaya hai, isliye is waqt mera bolna parivaar ke liye paap jaisa hoga. Main bas unki har shart maan raha hoon taaki khandaan ki maryada aur unka samman gaon mein nicha na ho.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["sarkari naukri", "bezatti", "moneylender", "paap", "maryada"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Startup ka Boss mere kisan hone ka mazaak udata hai, par main unhe bade-buzurgo ke barabar samman deta hoon taaki wo mujhe nikal na dein. Udhar loan ki kist nahi chuki hai aur agar main Boss se ulajh gaya toh ye mere sanskaron ke khilaaf hoga. Main chup-chap unki gulamiyat kar raha hoon taaki parivaar ki 'shaan' bachi rahe aur ghar mein koi tamasha na bane.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "worthlessness",
+    "intensity_seed": 5,
+    "cultural markers": ["startup", "sanskaron", "gulamiyat", "shaan", "tamasha"]
+  }
+]

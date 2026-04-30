@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Sasu-maa ki dekhbhaal aur office ke kaam mein itni nichod gayi hoon ki apni purani partner ki shaadi mein nahi ja saki, par ghar mein bas 'office stress' ka bahana banaya. Main unhe apni LGBTQ identity bata kar parivaar ki 'izzat' mitti mein nahi mila sakti, isliye chupchap ek ideal bahu ka natak karti rehti hoon. Mere liye ghar ki shanti aur 'log kya kahenge' wala darr meri apni pehchaan se bohot bada hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["izzat", "log kya kahenge", "bahu", "parivaar ki shanti", "natak"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Dual burden itna zyada hai ki caregiving ke chakkar mein dost ki wedding miss ho gayi, par asli dard ye hai ki main kabhi apne asli roop mein sasural walon ke samne nahi aa sakti. Agar maine sacchai batayi toh log kahenge ki working woman hone ka ghamand beti ko le dooba aur khandaan ki 'shaan' mitti mein mil gayi. Unka sar uncha rahe, bas isiliye main apne partner aur apni khwahishon ka qatal har din karti hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": ["dual burden", "shaan", "sar uncha rakhna", "working woman", "khandaan"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy-Papa ki seva aur dual responsibility ne mujhe itna thaka diya hai ki main us shaadi mein nahi ja saki jahan mujhe thoda sukoon milta, par main shikayat nahi karti. Main apni identity reveal karke unki 'parvarish' par sawal nahi uthne dena chahti, isliye unki nazron mein ek sanskari bahu bani rehti hoon. Rishton mein koi doori na aaye aur 'samaj' mein humari thoo-thoo na ho, bas isiliye main apni suppressed ambition aur identity daba leti hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["parvarish", "sanskari bahu", "samaj", "thoo-thoo", "suppressed ambition"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Wedding miss hone ka gham toh hai par usse bada darr Section 377 ke legacy fear aur 'divorce stigma' ka hai jo mujhe apni sacchai bolne nahi deta. Main office aur ghar ke beech pis rahi hoon par phir bhi sasural walon ke samne muskurati hoon taaki unhe lage ki unki bahu bohot khush hai. Parivaar ka maan bachane ke liye main har din ek jhoot jee rahi hoon aur apni feelings ko dafan kar rahi hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": ["divorce stigma", "bahu", "maan bachana", "legacy fear", "jhoot"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Caregiving ki exhaustion ne mujhe itna tod diya hai ki main us community wedding mein nahi ja saki jahan main khud ko explore kar sakti thi, par main chup hoon. Main ghar mein koi kalesh nahi chahti isliye apni LGBTQ identity ko career goals ki tarah hi daba kar rakha hai taaki Mummy ki 'izzat' par aanch na aaye. Unki khushi ke liye main poori zindagi ek silent sufferer bani rahungi, kyunki rishta bachana hi mera asli 'farz' hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["kalesh", "izzat", "farz", "rishta bachana", "silent sufferer"]
+  }
+]

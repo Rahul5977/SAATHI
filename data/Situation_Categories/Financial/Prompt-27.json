@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Subah mobile dekha toh crypto portfolio zero tha aur client ne bhi contract cancel kar diya, mera dimaag ekdum sunn ho gaya aur main khet ki meid par baith kar rone laga. Sahukaar ka karz pehle se tha aur ab ye nuksan dekh kar mujhe saans lena bhari lag raha hai, main kuch soch hi nahi paa raha hoon. Is waqt mujhe koi udhaar ya kisan credit card ka hosh nahi hai, bas ek gehra sadma aur panic hai jo mujhe duba raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["sahukaar", "kisan", "crypto loss", "savings wiped", "contract cancellation"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Stock market mein beti ki shaadi ke liye rakha chit fund ka paisa duba diya aur aaj dukan ka contract bhi chala gaya, main bas sunn hokar mitti ko tak raha hoon. Gaon mein sabko lagta tha ki main bohot samajhdaar kisan hoon, par is zillat ke baad mera dimaag kaam karna band kar gaya hai. Main logically kuch nahi soch paa raha ki agle mahine ki EMI kaise bhari jayegi, bas ek flood of emotions hai jisme main poori tarah beh gaya hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "kisan identity", "EMI bounce", "zillat", "stock loss"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Pichle saal crop failure ke baad jo thoda paisa bacha tha wo sab stocks mein lagaya par sab saaf ho gaya, aur aaj business band hone ki khabar aayi. Main mard hokar bhi is waqt bas rona chah raha hoon kyunki dimaag mein itna emotional pressure hai ki raasta nahi dikh raha. Is waqt mujhe koi khet ki planning ya recovery nahi sujh rahi, bas ek gehra despair hai jo mujhe andar se kha raha hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["crop failure", "kisan", "stock loss", "business closure", "emotional pressure"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Market mein paise dubne aur contract khatam hone ke baad mera dum ghutne laga hai aur main bas raste pe baith kar kaanpne laga hoon. Neighborhood mein 'log kya kahenge' ki maine khet bech kar ye sab kiya, ye soch kar mera hosh ud gaya hai. Main koi backup plan ya sahukaar se baat nahi kar sakta, bas ek extreme breakdown mehsus ho raha hai jisme dimaag bilkul blank hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["log kya kahenge", "neighborhood shame", "contract cancellation", "breakdown", "khet bechna"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Mera tractor loan ki kist baki hai aur maine saari remittance crypto mein duba di, aaj EMI bounce ka message dekh kar mera dimaag blast ho gaya. Ghar walon se nazrein churane ke alawa mujhe kuch samajh nahi aa raha, main bilkul sunn ho chuka hoon. Is emotional flooding mein mujhe kuch bhi sujh nahi raha, bas ek ajeeb sa darr hai jisne mujhe jhakad liya hai aur rona ruk hi nahi raha.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["tractor loan", "EMI bounce", "crypto loss", "remittance", "emotional flooding"]
+  }
+]

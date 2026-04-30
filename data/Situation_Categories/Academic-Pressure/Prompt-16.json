@@ -1,0 +1,81 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Result aane ke baad jab maine Bapuji ko apne 3 back papers aur itna low CGPA bataya, toh unhone phone kaat diya aur ab do din se baat nahi kar rahe. Main is hostel ke kamre mein akela baith kar bilakh raha hoon, mera dimaag bilkul sunn pad gaya hai. Mujhe nahi samajh aa raha re-eval bharu ya nahi, bas ek ajeeb si ghabrahat meri saansein rok rahi hai aur rona ruk nahi raha.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "Bapuji",
+      "back papers",
+      "low CGPA",
+      "hostel",
+      "re-eval",
+      "sunn pad jana"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "CGPA dekh kar Papa ki us khamoshi ne mujhe andar se khokhla kar diya hai, jaise meri 'izzat' aur unke 'sarkari babu' wale sapne dono mitti mein mil gaye. Sharma ji ke bete ke saamne main pehle hi Kota dropper tha aur ab attendance shortage ke chakkar mein college mein bhi fail ho gaya. Abhi mujhe extra classes lagane ka mat kaho, mera rona rukne ka naam hi nahi le raha hai aur main completely blank hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "CGPA",
+      "izzat",
+      "sarkari babu",
+      "Sharma ji ka beta",
+      "Kota dropper",
+      "attendance shortage"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Jabse result portal par meri low CGPA aayi hai aur Papa ne mujhse baat karna band kiya hai, mujhe joint family ke taane apne dimaag mein goonjte hue sunai de rahe hain. Placement ka darr aur ye back paper ka bojh mujhe itna dara raha hai ki main bistar se uth bhi nahi paa raha. Agli semester ki books dekhne ka mera koi mann nahi hai, bas ek ajeeb si ghutan ho rahi hai jisme main doob raha hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "result portal",
+      "low CGPA",
+      "joint family",
+      "placement",
+      "back paper"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Papa humesha gaali dete the par is baar meri 5 CGPA dekh kar unhone jo chuppi saadh li hai, usne meri aatma kaanp di hai. Ek first-gen student hone ka pressure aur uske upar ye nayi back papers, mera dimaag completely blank ho chuka hai. Main aage professor se milne ya makeup form bharne ka kuch nahi soch pa raha, bas hostel ke washroom mein chhup kar ro raha hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "5 CGPA",
+      "chuppi",
+      "first-gen student",
+      "back papers",
+      "makeup form",
+      "hostel"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Bapuji ki khamoshi mujhe cheer rahi hai kyunki wo pehle hi mere JEE drop saal mein bohot karcha kar chuke the. Ab college mein attendance shortage aur low CGPA ke baad lag raha hai jaise 'kuch nahi hoga mera' aur main bas ek parivaar par bojh hoon. Main koi supplementary exam ka plan nahi bana sakta, bas mera dimaag fatne ko ho raha hai aur ghabrahat mein saans atak rahi hai.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "Bapuji",
+      "JEE drop",
+      "attendance shortage",
+      "low CGPA",
+      "kuch nahi hoga mindset",
+      "supplementary exam"
+    ]
+  }
+]

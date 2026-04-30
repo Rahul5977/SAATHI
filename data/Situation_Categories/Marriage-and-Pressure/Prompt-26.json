@@ -1,0 +1,74 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Papa ne aaj announce kar diya ki mere hone wale sasural wale ab humare saath hi rahenge taaki meri 'umar' nikalne se pehle shaadi pakki ho jaye. Main college khatam karna chahti hoon par unke faisle ke khilaaf bol kar ghar ki 'izzat' mitti mein nahi mila sakti. Chup-chap sab maan liya hai taaki rishtedaron mein koi tamasha na bane aur Papa ka sir hamesha uncha rahe.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "umar",
+      "sasural",
+      "izzat",
+      "tamasha"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Ghar mein in-laws ke permanently aane ki baat sunkar mera dum ghut raha hai, par unke samne muskurana meri majboori hai kyunki ladke wale pehle hi meri age ko lekar nakhre kar rahe hain. Agar maine abhi virodh kiya toh log kahenge ki ladki ke 'sanskar' kharab hain aur rishta haath se nikal jayega. Maine apne career ke sapne daba diye hain taaki parivaar ki maryada bani rahe.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "anxiety",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "ladke wale",
+      "sanskar",
+      "rishta",
+      "maryada"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Papa ne kaha ki 22 saal ki umar mein agar shaadi nahi hui toh main 'expired' maani jaungi, isliye ab future in-laws yahi reh kar meri monitor karenge. Mujhe lagta hai meri padhai barbaad ho jayegi, par main unhe palat kar jawab nahi de sakti kyunki beti ka farz hamesha jhuk kar rehna hota hai. Bas yehi soch kar chup hoon ki meri bagawat se kahin Papa ki heart condition na bigad jaye.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "expired",
+      "in-laws",
+      "farz",
+      "bagawat"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Sasural walo ka permanent shift hona mere liye kisi jail se kam nahi hai, par Papa ki 'naak katne' ke darr se main haan mein haan mila rahi hoon. Woh keh rahe hain ki kundali mil chuki hai aur ab deri karna thik nahi kyunki 'log kya kahenge' ki ladki itni badi ho gayi aur abhi tak maike mein baithi hai. Maine apne saare sawaal andar hi daba liye hain taaki ghar ki shanti bhang na ho.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "sasural",
+      "naak katna",
+      "kundali",
+      "log kya kahenge",
+      "maike"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Mummy-Papa ne decide kiya hai ki in-laws ke aane se mera rishta pakka ho jayega aur dowry ka bojh bhi kam hoga. Main college ki topper hoon par aaj unke faisle ke aage sir jhuka diya kyunki unhone mere liye bahut kurbaniyan di hain. Mera mann nahi hai par main unhe dukhi nahi dekh sakti, isliye is restricted mobility ko apna naseeb maan kar sab swikar kar liya hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 3,
+    "cultural markers": [
+      "rishta",
+      "dowry",
+      "bojh",
+      "restricted mobility",
+      "naseeb"
+    ]
+  }
+]

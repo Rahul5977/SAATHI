@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj phir saas ne sabke samne meri comparison nanad se ki aur kaha ki wo ghar aur bacche mujhse behtar sambhalti hai. Uske baad se mere sir mein itna bhayanak dard hai jaise nasein phat jayengi aur aankhon ke aage bilkul andhera chha gaya hai. Itni thakan hai ki rasoi mein khade hone ki bhi himmat nahi bachi, pura badan jaise pathar ho gaya hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["saas", "nanad", "sir dard", "andhera chhana", "thakan"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Jab saas ne taana maara ki unki beti ne career aur parivaar dono manage kiya aur main sirf 'khali' baithi hoon, mere pet mein ajeeb si jalan shuru ho gayi. Kal raat se kuch bhi hazam nahi ho raha aur seene mein aisi jalan hai jaise koi aag lagi ho. Is joint family ke kalesh mein meri tabiyat itni gir gayi hai ki haath-pair thande pad gaye hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["taana", "career gap", "pet mein jalan", "joint family", "kalesh"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Har waqt saas ka domination aur unki beti se comparison sunte-sunte mera gala ghutne lagta hai aur seene mein bhari-pan mehsus hota hai. Aaj phir wahi behes hui aur tabse meri saans phool rahi hai, lagta hai jaise dil par kisi ne bhari pathar rakh diya ho. Itni kamzori aa gayi hai ki bacche ko uthane mein bhi mere haath kaanp rahe hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["domination", "gala ghutna", "seene mein bhari-pan", "kamzori", "saas-bahu dynamics"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Privacy toh zero hai is ghar mein, upar se saas ne aaj phir mere 'lost identity' par chot ki aur nanad ki tareefo ke pull baandh diye. Us argument ke baad se meri pith aur kandhon mein aisi chubhan ho rahi hai ki main seedhi khadi bhi nahi ho pa rahi hoon. Pura sharir jaise jakad gaya hai aur ajeeb si bechaini ho rahi hai jisse neend hi nahi aa rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 3,
+    "cultural markers": ["privacy loss", "lost identity", "pith mein chubhan", "bechaini", "nanad"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Jab bhi saas meri 'career gap' ko lekar izzat ka waasta deti hain aur apni beti ki tareef karti hain, mere kaano mein seetiyaan bajne lagti hain aur sir chakkar khane lagta hai. Aaj subah se itni zyada thakan hai ki lagta hai bukhar chadh jayega aur pura badan dukh raha hai. Mujhse ab ye roz-roz ki kheecha-taani bardaasht nahi ho rahi, sharir jawab de raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["career gap", "izzat", "sir chakkar khana", "badan dukhna", "kheecha-taani"]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "NRI ban kar bahar gaya tha par wapas aakar is metro mein khud ko misfit mehsus karta hoon, aur upar se dost ki shaadi miss ho gayi kyunki bimar tau ji ki seva mein din-raat ek kar diya. Main ghar walon ko apni alienation ke baare mein kuch nahi bolta kyunki unhe lagta hai ki main 'settle' ho gaya hoon aur unka garv bana rehna chahiye. Parivaar ki shanti ke liye main bas thakan ka bahana karta hoon taaki wo meri mental health ko lekar pareshan na ho.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "alienation",
+    "intensity_seed": 4,
+    "cultural markers": ["NRI", "misfit", "parivaar ki shanti", "garv", "shehar"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Shehar mein bhasha aur community na hone ki wajah se dum ghut-ta hai, par shaadi mein na ja paane ka asli dukh main Mummy-Papa se chhupata hoon taaki unhe 'remittance' ki chinta na ho. Main nahi chahta ki biradari mein ye baat phailay ki NRI beta wapas aakar kamzor pad gaya hai ya adjustment nahi kar paa raha. Unki 'izzat' bachane ke liye main apna sara akelepan akele hi jhel raha hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "isolation",
+    "intensity_seed": 5,
+    "cultural markers": ["bhasha", "remittance", "biradari", "izzat", "akelepan"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Wapas India aakar lag raha hai jaise main pardesi hoon, par jab shaadi miss hui toh maine bas caregiving burnout ka bahana kiya taaki ghar mein koi kalesh na ho. Agar maine bataya ki main yahan misfit hoon, toh gaon mein sab kahenge ki shehar ki hawa lag gayi hai aur Papa ka sar jhuk jayega. Rishton ki garima ke liye main bas muskurata hoon, bhale hi andar se main bilkul toot chuka hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "alienation",
+    "intensity_seed": 4,
+    "cultural markers": ["pardesi", "kalesh", "gaon", "shehar ki hawa", "garima"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Dost ki shaadi attend nahi kar paya kyunki ghar ki zimmedariyon ne nichod diya hai, par main apni mental struggle par 'natak' ka thappa nahi lagne dena chahta. Main apne depression ko daba kar rakhta hoon taaki ghar walon ko ye na lage ki unka 'breadwinner' nakamyab ho raha hai. Unke mujh par bharose aur parivaar ki harmony ke liye main bas har dard ko 'thakan' bol kar taal deta hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 3,
+    "cultural markers": ["natak", "breadwinner", "harmony", "thakan", "zimmedari"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Return shock itna shiddat ka hai ki ab metro city ki bheed se darr lagta hai, par shaadi miss hone par maine bas caregiving ki thakan ka zikr kiya taaki 'log kya kahenge' wali baat na uthe. Main nahi chahta ki meri wajah se Mummy-Papa ke sapne tootein ya unhe lage ki NRI ban-na meri galti thi. Parivaar ki shaan aur 'maryada' ke liye main apne alienation ko seene mein dafan kiye baitha hoon.",
+    "context_category": "Migration, Displacement & Acculturation",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "isolation",
+    "intensity_seed": 5,
+    "cultural markers": ["shiddat", "log kya kahenge", "shaan", "maryada", "return shock"]
+  }
+]

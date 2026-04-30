@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Bhai ko property mein zyada hissa mila taaki wo apna naya kaam shuru kar sake, aur main ghar ka bada hone ke naate khushi-khushi maan gaya. Ab MNC ki naukri mein overtime karke bacchon ki fees aur bhai ki settlement dono dekh raha hoon, kyunki mere paas thakne ka option nahi hai. Poore parivaar ka bojh mere kandhon par hai aur mujhe 'kuch nahi hone dunga' wala mask pehen kar bas chalte rehna hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["bada hone ke naate", "parivaar ka bojh", "kuch nahi hone dunga mask", "overtime"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Joint family mein property batwara hua aur Papa ne saari zameen bhai ke naam kar di taaki uska future secure rahe. Main breadwinner hoon toh mujhse umeed ki jati hai ki main bina shikayat sab sambhalun, bhale hi meri apni health jawab de rahi ho. Mujhe pata hai ki main afford nahi kar sakta ki main thoda bhi slow padun, kyunki mera rukna matlab poore ghar ka bikhar jana.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["batwara", "breadwinner", "health neglect", "joint family"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bhai ko jaydad milne par 'log kya kahenge' ki chinta mein maine koi sawal nahi uthaya aur ab extra shifts karke sab manage kar raha hoon. Main burnout ki kagar par hoon par rukne ka rasta nahi hai kyunki chote bhai-behen ki padhai aur shadi mere hi bharose hai. Bade hone ka farz yahi hai ki aap thak kar bhi endurance dikhate raho aur parivaar ki structural stability banaye rakho.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 3,
+    "cultural markers": ["log kya kahenge", "farz", "burnout", "structural stability"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Bhai ko property ka bada share mila taaki wo shehar jaake settle ho jaye, aur mere sar par ghar ka pura kharcha aur EMI chhod di gayi. Main physically aur mentally poori tarah exhaust ho chuka hoon, par 'cannot afford to stop' wala bojh mujhe har subah kaam par bhej deta hai. Meri kurbani hi bhai ka rasta saaf karegi, isliye mujhe ye duty bina kisi sawal ya break ke nibhani hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI pressure", "structural endurance", "kurbani", "family head"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Bade hone ki yahi keemat hai ki bhai ko azadi aur property mili, aur mujhe sirf health neglect aur remittance ka bojh. Main itna thak gaya hoon ki dimaag sunn ho gaya hai, par 'kuch nahi hone dunga' wali feeling mujhe har din ghisne par majboor karti hai. Mera kaam sirf endurance dikhana hai, chahe andar se main kitna bhi akela aur thaka hua mehsus karun.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["bade hone ki keemat", "health neglect", "kuch nahi hone dunga mask", "endurance"]
+  }
+]

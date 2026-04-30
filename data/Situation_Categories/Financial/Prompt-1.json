@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj subah termination email aaya aur mere hosh ud gaye, par rone ka waqt nahi hai kyunki agle mahine ki home loan EMI ka intezam karna hi hoga. UPSC coaching ke liye Papa ne kisan hokar apni zameen girvi rakhi thi, isliye main thak kar baith nahi sakta. Mere liye breakdown ek luxury hai jo main afford nahi kar sakta, mujhe bas ek machine ki tarah naya raasta dhoondna hai taaki ghar ki 'izzat' bachi rahe.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["EMI", "kisan", "zameen girvi", "UPSC coaching", "izzat"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Job chali gayi hai par main ghar walon ko nahi bata sakta kyunki unhone apni saari savings meri PSC prep aur is vehicle loan par laga di hain. Multi-year dropper hone ka stigma pehle hi tha, ab is financial distress mein mujhe double shift karke bhi paise jodne honge. Thakan itni hai ki sharir jawab de raha hai, par 'structural endurance' hi meri reality hai kyunki main hi apne parivaar ki aakhri umeed hoon.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": ["savings wiped", "dropper stigma", "vehicle loan", "PSC prep", "structural endurance"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Termination email ne sab bikher diya hai, par main chup-chap library ja raha hoon taaki Mummy-Papa ko lage ki main abhi bhi UPSC ki taiyari kar raha hoon. Home loan EMI default hui toh bank wale ghar aa jayenge aur gaon mein 'log kya kahenge' ye soch kar darr lagta hai. Mujhe bas bina ruke kaam dhoondna hai aur padhna bhi hai, kyunki mere girne ka matlab hai poore parivaar ka debt spiral mein doob jana.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "helplessness",
+    "intensity_seed": 4,
+    "cultural markers": ["log kya kahenge", "EMI default", "home loan", "debt spiral", "UPSC"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Subah email dekha aur ab dimaag fatne ko hai, par bache huye remittance se agle mahine ka kaam chalana hai aur bank ki kist bhi bharni hai. 5 saal se dropper hoon, isliye failure meri pehchaan ban gayi hai, par main haar nahi maan sakta kyunki sahukaar ka vyaj badhta ja raha hai. Mera farz meri personal takleef se bada hai, isliye main bas endure kar raha hoon taaki ghar ka chula chalta rahe.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["remittance", "sahukaar", "dropper", "chula jalana", "vyaj"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Coaching institute ki side job se nikaal diya gaya hoon aur ab EMI bounce hone ka pura khatra hai, par main thak kar baithne ka risk nahi le sakta. Chit fund mein Papa ke paise doobne ke baad main hi sole earner hoon, isliye mujhe har haal mein structural endurance dikhani hogi. Mere paas mental health ke liye waqt nahi hai, mujhe bas apne parivaar ki 'shaan' bachane ke liye pathar ban kar khade rehna hai.",
+    "context_category": "Financial Debt & Economic Distress",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["chit fund", "sole earner", "EMI bounce", "shaan", "structural endurance"]
+  }
+]

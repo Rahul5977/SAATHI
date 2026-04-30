@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat babuji se unki beemari ke kharche aur meri zameen girvi rakhne par bohot behes hui, par unhone saaf keh diya ki parivaar ke bade wahi hain. Main janta hoon ki unka ilaaj zaroori hai par unke authoritarian control ke aage meri bolti band ho gayi kyunki main joint family me kalesh nahi chahta. Unki izzat aur ghar ki shanti banaye rakhne ke liye maine apna protest daba diya aur subah unse maafi maang li.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["babuji", "zameen girvi", "authoritarian control", "joint family", "kalesh", "izzat"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Bete ke career ko lekar kal raat babuji ne jo faisla sunaya usse main sehmat nahi tha, par unhone khandaan ki maryada ka waasta dekar mujhe chup kara diya. Main 45 ka ho gaya hoon par aaj bhi unke samne sar uthane ki himmat nahi hoti kyunki 'log kya kahenge' agar baap-bete me anban hui. Unki zidd ke aage maine apne bete ke sapne qurban kar diye taaki parivaar me darar na aaye aur meri duty bani rahe.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["babuji", "khandaan ki maryada", "log kya kahenge", "parivaar me darar"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Kal raat ki behes ke baad babuji ne mujhse baat karna band kar diya hai kyunki maine unke bataye huye nuksaandayak business deal ke khilaf bolne ki himmat ki thi. Ghar ka breadwinner hone ke bawajood unka dabdaba itna hai ki main apna point of view rakh hi nahi sakta bina unki 'izzat' mitti me milaye. Joint family ki parampara aur bado ka lihaz karte huye maine aaj subah unke papers par sign kar diye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "powerlessness",
+    "intensity_seed": 5,
+    "cultural markers": ["babuji", "breadwinner", "dabdaba", "izzat", "joint family", "parampara"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Meri beti ke rishte ko lekar kal raat babuji ne jo halla machaya usse ghar ka mahol bohot kharab ho gaya hai aur behes bina nateeje ke khatam hui. Main janta hoon ki beti ki marzi bhi honi chahiye par babuji ki authoritarian zidd ke samne main kuch nahi bol paya kyunki rishtedaaro me badnami ka darr tha. Unka maan rakhne ke liye maine beti ko hi samjha diya ki bado ka faisla hi sahi hota hai, chahe andar se mera dum ghut raha ho.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["rishta", "babuji", "authoritarian zidd", "rishtedaaro me badnami"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Shaam ko office se thak kar aane ke baad babuji ne fir wahi purane kisse ched diye ki unhone kaise joint family ko sambhala aur main kitna nakara hoon. Kal raat isi baat par hamara jhagda hua par maine beech me hi haan me haan mila di taaki baat aage na badhe. Unka ashirwad khone se darr lagta hai isliye main apna self-respect side me rakh kar unke har authoritarian control ko bardasht kar leta hoon taaki ghar ki shanti bani rahe.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "resentment",
+    "intensity_seed": 3,
+    "cultural markers": ["joint family", "ashirwad", "authoritarian control", "ghar ki shanti"]
+  }
+]

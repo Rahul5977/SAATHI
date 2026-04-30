@@ -1,0 +1,79 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Jab college ke dost ka IT mein placement ho gaya aur main unplaced reh gaya, toh mujhe apni is forced B.Tech aur ab thopi hui UPSC coaching par bohot gussa aaya. Par maine Bapuji se kuch nahi kaha kyunki unhone Mukherjee Nagar bhejkar 'sarkari babu' banne ka sapna dekha hai aur main unki 'izzat' mitti mein nahi milana chahta. Apni frustration ko daba kar main bas muskurata hoon taaki joint family mein koi kalesh na ho.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "Mukherjee Nagar",
+      "sarkari babu",
+      "izzat",
+      "joint family",
+      "forced B.Tech",
+      "UPSC coaching"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Mere batchmate ka on-campus offer aa gaya jabki main is zabardasti ki engineering mein lowest rank par hoon jisme mera zero interest hai. Pehle Kota mein dropper banke torture saha aur ab ye, par main ghar walo ko blame nahi kar sakta kyunki Sharma ji ke bete ko piche chhodne ke chakkar mein unhone apni poori savings laga di. Parivaar ka garv bachane ke liye main apni ghutan chup-chap sehta hoon aur unke samne sab theek hone ka natak karta hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "on-campus offer",
+      "rank",
+      "Kota",
+      "dropper",
+      "Sharma ji ka beta"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Dost ki placement news sunkar mujhe laga main is forced civil engineering ko abhi chhod doon jisme mere do back paper aaye hain. Lekin main janta hoon ki agar maine protest kiya toh Tauji aur joint family bolegi ki itni family investment ke baad ladka haath se nikal gaya. Apne career ke sapne marne ka dard main akele jhelta hoon taaki ghar ki shanti bani rahe aur Bapuji ka sir na jhuke.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "back paper",
+      "Tauji",
+      "joint family",
+      "family investment",
+      "ghar ki shanti"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Mere college ke dost corporate mein settle ho gaye hain aur main yahan ghar walon ke forced decision ki wajah se PSC ki multi-year prep mein sad raha hoon. Mera aaj backup placement ka cutoff bhi clear nahi hua, par main apni nafrat zahir nahi karta kyunki maa ne mere naam par bohot taane sahe hain. Unki khushi aur parivaar ki 'izzat' ke liye main apna gussa daba leta hoon aur chupchap agle saal ka form bhar deta hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "inadequacy",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "PSC",
+      "multi-year prep",
+      "cutoff",
+      "backup placement",
+      "izzat",
+      "taane"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Classmate ko badi MNC mein job mil gayi aur main is coaching institute ke chhote se kamre mein forced UPSC prep ka bojh dho raha hoon jahan mera bilkul mann nahi lagta. Main apne parents par is zabardasti thopi hui life ke liye chillana chahta hoon, par unki saari zindagi ki kamai isme lagi hai. Unka 'sarkari babu' wala sapna tootne aur ghar mein hungama hone ke darr se, main apne saare aansu pee jata hoon.",
+    "context_category": "Academic & Competitive Achievement",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "coaching institute",
+      "forced UPSC prep",
+      "sarkari babu",
+      "zindagi ki kamai",
+      "hungama"
+    ]
+  }
+]

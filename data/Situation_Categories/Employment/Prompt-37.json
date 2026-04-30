@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Papa ki kirana shop band hone ke baad ab ye medical bill dekh kar mera dimaag ekdum sunn ho gaya hai, bas rone ka mann kar raha hai. UPSC coaching ki fees aur dropper stigma ka bojh pehle hi tha, aur ab ye financial crisis dekh kar main poori tarah flood ho gaya hoon. Is waqt main koi career solution ya backup plan nahi soch pa raha, bas ek gehra sadma mehsus ho raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["kirana shop", "UPSC coaching", "dropper stigma", "medical bill"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Neighborhood shame ki wajah se pehle hi ghar se nikalna mushkil tha, aur aaj medical bill ne saari savings saaf kar di toh main bilkul toot gaya hoon. Dimaag mein bas wahi purane taane goonj rahe hain aur main bas ek kone mein baith kar roye ja raha hoon. Is emotional flooding mein mujhe kuch bhi sujh nahi raha, lag raha hai ki mera dum ghut jayega.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["neighborhood shame", "savings wiped", "medical bill", "taane"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Medical bill bharne ke baad jab bank balance zero dekha, toh mere hosh ud gaye aur main bas sunn hokar library mein baitha raha. Papa ne kisan hokar jo umeed mujh par lagayi thi, wo ab is debt spiral mein bikhar gayi hai aur main bas rone ka control nahi kar pa raha. Is waqt main UPSC Prelims ya sarkari naukri ke baare mein soch hi nahi sakta, bas ye darr mujhe duba raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["kisan", "debt spiral", "sarkari naukri", "UPSC Prelims"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Kirana shop ke loss ke baad parivaar ki 'izzat' bachane ka jo pressure tha, aaj is medical bill ne usse ek extreme panic attack mein badal diya hai. Main kuch bhi logically nahi soch pa raha, bas aankhon ke aage andhera aa raha hai aur dimaag blank ho gaya hai. Mujhe lag raha hai ki main sabka gunehgaar hoon aur ye flood of emotions mujhe saans lene bhi nahi de raha.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["kirana shop", "izzat", "medical bill", "panic attack"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Multi-year prep ke baad socha tha is saal PSC nikal loonga, par ghar ki halat aur ye medical bill dekh kar main poori tarah emotional breakdown ka shikar hoon. Saari savings khatam ho gayi hain aur dukaan ki EMI ka darr mujhe sunn kar raha hai. Main koi career strategy ya solution sochnay ke layak hi nahi bacha hoon, bas ek gehra sannata aur dukh mehsus ho raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["PSC", "multi-year prep", "EMI", "medical bill"]
+  }
+]

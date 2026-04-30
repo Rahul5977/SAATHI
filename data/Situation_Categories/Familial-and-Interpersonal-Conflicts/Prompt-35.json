@@ -1,0 +1,77 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj dadi ne phir sabke samne meri comparison apni beti se ki aur taana maara ki main bas 'shahar wali life' jee rahi hoon. Uske baad se mere sir mein itna bhayanak dard hai jaise nasein phat jayengi aur aankhon ke aage andhera chha gaya hai. Badan itna toot raha hai ki mujhse ek panna bhi nahi pada ja raha, bas thakan se bura haal hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "dadi",
+      "taana",
+      "sir dard",
+      "shahar wali life",
+      "joint family"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Jab dadi ne kaha ki unki beti ne 22 ki umar mein rishta pakka kar liya tha aur meri 'fitrat' par shak jataya, mere pet mein ajeeb si jalan shuru ho gayi. Kal raat se kuch bhi hazam nahi ho raha aur seene mein aisi bhari-pan hai jaise koi aag lagi ho. Is ghar ki ghutan mein meri tabiyat itni gir gayi hai ki haath-pair bilkul thande pad gaye hain.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "fear",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "rishta pakka",
+      "pet mein jalan",
+      "ghutan",
+      "haath-pair thande",
+      "hidden identity"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Har waqt dadi ka domination aur meri comparison unki 'perfect' beti se sunte-sunte mera gala ghutne lagta hai. Aaj phir wahi behes hui aur tabse meri saans phool rahi hai aur seene mein ajeeb si chubhan ho rahi hai. Itni kamzori aa gayi hai ki laptop par ungliyan chalte waqt bhi kaanp rahi hain aur sir chakkar kha raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "domination",
+      "gala ghutna",
+      "seene mein bhari-pan",
+      "kamzori",
+      "urban isolation"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Privacy toh zero hai is ghar mein, upar se dadi ne aaj phir mere 'kapdo' par chot ki aur nanad ki tareefo ke pull baandh diye. Us argument ke baad se meri pith aur kandhon mein aisi jakdan ho rahi hai ki main seedha khada bhi nahi ho pa raha hoon. Pura sharir jaise toot raha hai aur ajeeb si bechaini ho rahi hai jisse neend hi nahi aa rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "resentment",
+    "intensity_seed": 3,
+    "cultural markers": [
+      "privacy loss",
+      "pith mein jakdan",
+      "nanad",
+      "badan tootna",
+      "autonomy loss"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Jab bhi dadi meri 'shaadi' ko lekar izzat ka waasta deti hain aur apni beti ki tareef karti hain, mere kaano mein seetiyaan bajne lagti hain. Aaj subah se itni thakan hai ki lagta hai bukhar chadh jayega aur pura badan dukh raha hai. Mujhse ab ye roz-roz ki kheecha-taani bardaasht nahi ho rahi, sharir jawab de raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Somatization",
+    "emotion seed": "shame",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "izzat",
+      "kaano mein seetiyaan",
+      "sir chakkar khana",
+      "thakan",
+      "log kya kahenge"
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Aaj meri beti ke liye rishtey wale aaye aur unhone humein thukra diya, upar se bapu ne sabke samne keh diya ki main nikamma hoon isliye ye din dekhne pad rahe hain. Sharma ji ke bete ki kismat dekho jisne shehar mein ghar le liya, par meri toh fasal aur izzat dono mitti mein mil gayi. Mera dimaag ekdum sunn hai aur bas rona nikal raha hai, karze ki baat toh abhi dimaag mein aa hi nahi rahi.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["rishta", "nikamma", "Sharma ji ka beta", "fasal", "izzat"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Rishta party ke jane ke baad bapu ne padosi ke khet ka example dekar mujhe zaleel kiya ki main unke samne kuch nahi hoon. Main itna toot gaya hoon ki khet jaane ki himmat nahi ho rahi, bas kone mein baith kar sisak raha hoon. Abhi sahukar ke karze ya agli fasal ke baare mein sochne ki taqat hi nahi bachi, bas andhera dikh raha hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["padosi", "zaleel", "sahukar", "karza", "siskiyaan"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Aaj ki rejection ke baad ghar mein kalesh shuru ho gaya aur bapu ne bola ki Sharma ji ka beta bank mein hai isliye unki izzat hai, aur main sirf dhool chaat raha hoon. Mera gala rone se bhara hua hai aur itne saare emotions ek saath aa rahe hain ki main unhe jawab bhi nahi de pa raha. Pura dimaag khali lag raha hai, bas rona aa raha hai aur kuch sujhayi nahi de raha.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "resentment",
+    "intensity_seed": 4,
+    "cultural markers": ["kalesh", "izzat", "dhool chaatna", "comparison"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Rishtey walo ne mere 'kisan identity' aur karze par sawal uthaye toh bapu ne unke samne hi mujhe nicha dikhaya, ab mera dimaag kaam karna band kar gaya hai. Bas akele baith kar rona nikal raha hai aur lag raha hai ki sab meri hi galti hai ki fasal barbaad hui. Moneylender ko kya bolunga ye toh bahut door ki baat hai, abhi toh bas rone ka mann hai.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan identity", "karza", "moneylender", "fasal barbaad"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Rishta party ne jabse mana kiya hai, bapu ne Sharma ji ke bete ki naukri aur meri nakaami ke pull baandh diye hain, mera dimaag fatne ko hai. Main itna zyada overwhelm ho gaya hoon ki bas rona aa raha hai aur lag raha hai ki 'log kya kahenge' hamari haalat par. Solution kya hoga ye toh chhodo, mujhe toh bas is waqt rone ke liye thodi tanhayi chahiye.",
+    "context_category": "Joint family tensions & Parental Authority",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": ["log kya kahenge", "overwhelm", "nakaami", "rishta party"]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Kal raat pata chala ki Papa ne sari property bhai ke naam kar di kyunki main ek 'talaqshuda' beti hoon jo ghar par bojh hai. Main subah se bas roye ja rahi hoon, dimaag ekdum sunn pad gaya hai aur samajh nahi aa raha ki apni padhai kaise poori karungi. Itna bura lag raha hai ki lagta hai meri koi aukat hi nahi bachi hai, bas rone ka mann kar raha hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "talaqshuda",
+      "bojh",
+      "property share",
+      "family betrayal"
+    ]
+  },
+  {
+    "situation id": "S002",
+    "text": "Brother ko business ke liye bada hissa mila aur mujhe sirf taane, kyunki unhe lagta hai divorcee hokar maine khandaan ki 'izzat' mitti mein mila di. Main itni zyada overwhelmed hoon ki bas ek kone mein baithi hoon, na college ka kaam ho raha hai na kisi se baat karne ka mann hai. Flood of emotions itna zyada hai ki mujhe lag raha hai meri saari koshish aur meri asliyat sab mitti mein mil gayi.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "izzat",
+      "divorcee",
+      "khandaan",
+      "property dispute"
+    ]
+  },
+  {
+    "situation id": "S003",
+    "text": "Mummy ne kaha ki 'log kya kahenge' agar ek chhori hui beti property maangne lage, isliye sab kuch bhai ko de diya gaya. Meri asli takleef koi nahi samajh raha, main bas ghut rahi hoon aur dimaag bilkul blank ho chuka hai. Kuch bhi sochna namumkin lag raha hai, bas ek ajeeb sa darr baith gaya hai dimaag mein aur saans phool rahi hai.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "anxiety",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "log kya kahenge",
+      "chhori hui beti",
+      "property",
+      "restricted mobility"
+    ]
+  },
+  {
+    "situation id": "S004",
+    "text": "Raat ko ladaai khatam hi nahi hui aur Bhai ne bol diya ki sasural se nikalne ke baad ab mera is ghar par koi haq nahi bacha. Main itni toot chuki hoon ki bas sunn hokar leti hoon, na bhook lag rahi hai na pyaas, bas ek gehra dard mehsus ho raha hai. Is waqt main koi solution dhoondne ke layak hi nahi bachi, bas lag raha hai ki main sabke liye ek bojh ban gayi hoon.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "worthlessness",
+    "intensity_seed": 5,
+    "cultural markers": [
+      "sasural",
+      "haq",
+      "bojh",
+      "divorce stigma"
+    ]
+  },
+  {
+    "situation id": "S005",
+    "text": "Papa ne sari registry bhai ke naam kar di aur mujhe bola ki meri shadi mein pehle hi itna dowry diya tha jo ab barbaad ho gaya. Mera dil itni buri tarah toot gaya hai ki bed se uthne ki himmat nahi ho rahi, dimaag mein bas wahi taane goonj rahe hain. Main poori tarah emotional flooding ka shikar hoon, samajh hi nahi aa raha ki is urban isolation mein kahan jaun.",
+    "context_category": "Marriage & Rishta Pressure",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": [
+      "dowry",
+      "registry",
+      "urban isolation",
+      "emotional flooding"
+    ]
+  }
+]

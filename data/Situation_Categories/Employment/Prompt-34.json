@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Mera main client chala gaya aur business band hone ki kagar par hai, par main thak kar baith nahi sakta kyunki ghar par 4 mahine ka beta aur gaon mein kisan baap ka remittance baki hai. Language gap ki wajah se metro city mein mera koi dost nahi hai jo dukh sun sake, isliye main bas ek machine ki tarah 16 ghante kaam kar raha hoon. Mere paas girne ka rasta nahi hai kyunki main hi khandaan ki aakhri umeed hoon.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 5,
+    "cultural markers": ["kisan", "remittance burden", "metro isolation", "first-gen urban migrant"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Contract cancel hone se startup doob raha hai aur bache ko time na de pane ka guilt bohot hai, par main rukna afford nahi kar sakta kyunki MNC ki naukri pehle hi chhoot chuki hai. Gaon mein sabko lagta hai ki beta shehar mein bohot bada aadmi ban gaya hai, aur unki ye 'izzat' bachane ke liye mujhe bina soye kaam karte rehna hai. Shareer jawab de raha hai par structural endurance hi mera ekmatra vikalp hai kyunki failure mere liye paap jaisa hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 4,
+    "cultural markers": ["startup", "MNC", "izzat", "paap", "structural endurance"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Sarkari naukri toh mili nahi, ab is business loss ke baad bache ki fees aur home loan ki EMI mujhe sone nahi deti. Main apni mental health ke baare mein soch bhi nahi sakta kyunki first-gen earner hone ka matlab hi ye hai ki aapko pathar ban kar khade rehna hai. Thakan itni hai ki saans lena bhari hai par mera farz mere personal sukoon se bohot bada hai, isliye main bas endure kar raha hoon.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "pressure",
+    "intensity_seed": 5,
+    "cultural markers": ["sarkari naukri", "EMI", "first-gen earner", "farz"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Client ke contract loss ke baad main metro isolation mein ghut raha hoon, par bache ke liye naye projects dhoondna meri majboori hai kyunki kirana shop ka udhaar chukana hai. Mere paas thakne ka waqt nahi hai kyunki family investment mujh par itni zyada hai ki mujhe har haal mein result dena hi hoga. Ye structural endurance hi meri reality hai jahan mujhe bache ki muskurahat se zyada remittance ki chinta hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "fatigue",
+    "intensity_seed": 5,
+    "cultural markers": ["metro isolation", "kirana shop", "family investment", "remittance"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Aaj business loss ke baad meri himmat jawab de gayi hai, par bache ki zimmedari aur metro city ke kharche mujhe rukne nahi dete. Papa ne gaon mein khet girvi rakh kar mujhe padhaya tha, isliye main thakan mein bhi extra hours laga raha hoon taaki unka bharosa na toote. Main bas ek structural loop mein fasa hoon jahan thakna ek luxury hai jo main afford nahi kar sakta.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Duty-Based Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 4,
+    "cultural markers": ["khet girvi", "metro city", "luxury", "structural endurance"]
+  }
+]

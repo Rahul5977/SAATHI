@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Bimar mummy ki caregiving mein itni thak gayi thi ki apni partner ki shaadi tak attend nahi kar paayi, par ghar walon ke samne bas 'thakan' ka bahana banaya. Divorcee hone ke naate pehle hi 'log kya kahenge' wala darr hai, ab LGBTQ identity bata kar main parivaar ki bachi-kuchi izzat mitti mein nahi mila sakti. Unka sar samaj mein uncha rahe, isliye main apni sacchai hamesha daba kar rakhti hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["izzat", "log kya kahenge", "divorce stigma", "sar uncha rakhna", "identity hiding"]
+  },
+  {
+    "situation id": "S002",
+    "text": "Caregiving ki exhaustion ki wajah se main us wedding mein nahi ja saki jahan mujhe thoda sukoon milta, aur ab samaj mujh par dusri shaadi ka pressure daal raha hai. Main unhe mana nahi kar sakti kyunki ek 'achi beti' ka farz hai ki wo khandaan ki maryada bachaye, isliye main apni LGBTQ identity reveal karne ka soch bhi nahi sakti. Bacchon ke future aur ghar ki shanti ke liye main har rishte ko haan bol deti hoon taaki koi kalesh na ho.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "fear",
+    "intensity_seed": 4,
+    "cultural markers": ["achi beti", "maryada", "kalesh", "marriage pressure", "community exclusion"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Bacchon ki zimmedari aur bimar bade-buzurgon ki seva ne mujhe itna nichod diya hai ki main apne partner se milne tak nahi ja saki, par dukh chhupakar bas Mummy ke samne muskurati rehti hoon. Main apni sacchai reveal karke unki 'parvarish' par sawal nahi uthne dena chahti, isliye unki nazron mein ek ideal single mother bani rehti hoon. Samaj mein humare ghar ka naam kharab na ho, bas isi liye main apni asliyat ka gala har din ghot-ti hoon.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["parvarish", "ideal mother", "samaj", "naam kharab hona", "suppressed identity"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Wedding miss hone ka gham toh hai par usse bada bojh ye hai ki main kabhi apne asli roop mein samaj ke samne nahi aa sakti. Divorce stigma ki wajah se pehle hi log humein alag nazar se dekhte hain, isliye main chup-chap wahi karti hoon jo ghar wale chahte hain taaki aur kalesh na ho. Unki khushi ke liye maine apni feelings ko ek kone mein dafan kar diya hai kyunki mere liye unka samman meri khushi se zyada zaroori hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "exhaustion",
+    "intensity_seed": 4,
+    "cultural markers": ["divorce stigma", "kalesh", "samman", "identity hiding", "caregiving"]
+  },
+  {
+    "situation id": "S005",
+    "text": "Main is community exclusion mein isolated hoon par parivaar ke sanskaro ne mujhe bandh rakha hai, isliye wedding miss hone par bhi main chup-chap ghar ki seva mein lagi hoon. Agar maine apni LGBTQ identity batayi toh khandaan ki shaan mitti mein mil jayegi, isliye main ek ideal 'bahu' ki tarah hi ghar sambhalti hoon chahe ab main divorced hoon. Unki khushi ke liye main poori zindagi ek silent sufferer bani rahungi, kyunki rishta bachana hi mera asli 'farz' hai.",
+    "context_category": "Gender Role & Identity Conflict",
+    "coping_mechanism": "Relational Preservation",
+    "emotion seed": "suffocation",
+    "intensity_seed": 5,
+    "cultural markers": ["khandaan ki shaan", "farz", "silent sufferer", "rishta bachana", "sanskar"]
+  }
+]

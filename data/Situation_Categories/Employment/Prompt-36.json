@@ -1,0 +1,47 @@
+[
+  {
+    "situation id": "S001",
+    "text": "Papa ki kirana shop band hone ke baad ab ye hospital ka bill dekh kar mera dimaag sunn ho gaya hai, bas rona ruk hi nahi raha. Placement ka pressure toh door ki baat hai, mujhe hostel ke kamre mein baith kar lag raha hai ki mera dum ghut jayega aur main sab khatam kar loon. Is waqt mujhe koi solution nahi dikh raha, bas ek gehra sadma aur panic hai jo mujhe duba raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "panic",
+    "intensity_seed": 5,
+    "cultural markers": ["kirana shop", "placement pressure", "hostel", "hospital bill"]
+  },
+  {
+    "situation id": "S002",
+    "text": "JEE dropout hone ka dukh kam nahi tha aur ab ghar ki saari savings medical bill mein chali gayi, main poori tarah toot chuka hoon. Dimaag bilkul blank ho gaya hai aur bas wahi neighborhood shame wali baatein yaad aa rahi hain jo log Papa ki dukaan doobne par karte thay. Main kuch bhi logically nahi soch pa raha, bas ek ajeeb sa darr hai jisne mujhe jhakad liya hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "shame",
+    "intensity_seed": 5,
+    "cultural markers": ["JEE dropout", "neighborhood shame", "savings wiped", "medical bill"]
+  },
+  {
+    "situation id": "S003",
+    "text": "Medical bill bharne ke baad mess fees ke bhi paise nahi bache, aur ye soch kar main hostel mein bas sunn hokar leta hoon. Papa ne kisan hokar jo umeed mujh par lagayi thi, wo ab is debt spiral mein bikhar gayi hai aur mujhe bas rona aa raha hai. Is waqt main aage ka career ya internship ke baare mein soch hi nahi sakta, bas ye flood of emotions mujhe sunn kar raha hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "despair",
+    "intensity_seed": 4,
+    "cultural markers": ["kisan", "mess fees", "debt spiral", "hostel"]
+  },
+  {
+    "situation id": "S004",
+    "text": "Kirana shop ke loss ke baad ghar walon ki umeedon ka bojh itna badh gaya hai ki aaj medical bill dekh kar main cheekh kar rona chahta hoon. Har koi mujhse placement ki umeed kar raha hai par main is emotional flooding mein dooba hoon jahan sirf nakami mehsus ho rahi hai. Dimaag mein koi raasta nahi dikh raha, bas lag raha hai ki main sabka gunehgaar hoon aur saans lena bhi bhari ho gaya hai.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "guilt",
+    "intensity_seed": 5,
+    "cultural markers": ["kirana shop", "placement", "aspirational family", "medical bill"]
+  },
+  {
+    "situation id": "S005",
+    "text": "MNC ka sapna dekha tha par ab ghar ki halat dekh kar dimaag kaam karna band kar gaya hai, bas aankhon ke aage andhera hai. Saari savings medical bill mein khatam ho gayi aur ab dukaan ki EMI ka darr mujhe flood kar raha hai. Main koi backup plan ya solution sochnay ke layak hi nahi bacha hoon, bas ek gehra sannata mehsus ho raha hai jisme main khota ja raha hoon.",
+    "context_category": "Employment & Livelihood",
+    "coping_mechanism": "Sequential Coping",
+    "emotion seed": "numbness",
+    "intensity_seed": 5,
+    "cultural markers": ["MNC", "EMI", "savings wiped", "medical bill"]
+  }
+]
