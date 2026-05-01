@@ -391,6 +391,8 @@ def parse_all(dataset_dir: Path, mapping: dict) -> list[dict]:
 
     files_skipped = 0
     convs_skipped = 0
+    invalid_conversation_files: list[str] = []
+    files_with_no_supporter_turns: list[str] = []
 
     for fp in files:
         category = _category_for(fp, dataset_dir)
@@ -414,9 +416,16 @@ def parse_all(dataset_dir: Path, mapping: dict) -> list[dict]:
 
             conv_id = f"{category}_{fp.stem}_{conv_idx}"
             supporter_turn_count = 0
+            seen_turn_like_object = False
 
             for t_idx, turn in enumerate(turns):
                 if not isinstance(turn, dict):
+                    continue
+                seen_turn_like_object = True
+
+                # Some source files may contain generator error payloads instead of chat turns.
+                # Example: {"error": "COMPAT_FAIL", "reason": "..."}.
+                if "error" in turn and mapping.get("speaker_key") not in turn:
                     continue
                 speaker_val = turn.get(speaker_key) if speaker_key else turn.get("role")
                 speaker = _normalize_speaker(speaker_val)
@@ -448,10 +457,32 @@ def parse_all(dataset_dir: Path, mapping: dict) -> list[dict]:
                 records.append(rec)
                 supporter_turn_count += 1
 
+            if supporter_turn_count == 0 and seen_turn_like_object:
+                files_with_no_supporter_turns.append(str(fp))
+                # Mark as invalid when it looks like a non-conversation payload file.
+                # (all turn-like dicts missing speaker key)
+                speaker_key_name = mapping.get("speaker_key")
+                all_missing_speaker = all(
+                    isinstance(t, dict) and (not speaker_key_name or speaker_key_name not in t)
+                    for t in turns
+                    if isinstance(t, dict)
+                )
+                if all_missing_speaker:
+                    invalid_conversation_files.append(str(fp))
+
     if files_skipped:
         logger.warning(f"{files_skipped} file(s) were skipped due to read errors.")
     if convs_skipped:
         logger.warning(f"{convs_skipped} file(s) had no recognizable conversations list.")
+    if files_with_no_supporter_turns:
+        logger.warning(
+            f"{len(files_with_no_supporter_turns)} file(s) had zero Supporter turns "
+            "(likely incomplete/invalid conversation outputs)."
+        )
+    if invalid_conversation_files:
+        logger.warning("Invalid conversation payload files detected (showing up to 10):")
+        for p in invalid_conversation_files[:10]:
+            logger.warning(f"  - {p}")
 
     return records
 
