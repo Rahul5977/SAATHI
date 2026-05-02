@@ -319,6 +319,12 @@ class AnalyzerState(BaseModel):
     is_new_problem: bool
     stigma_cue: bool
     risk_signal: Optional[str] = None  # EXACT crisis phrase if detected, else None
+    # Concrete details the seeker mentioned this turn — short noun-phrases
+    # the Generator can reference back to ("PPT presentation", "exam in 1 day",
+    # "papa retired last month"). Lets SAATHI sound like it actually heard
+    # them, instead of speaking only in abstractions ("academics ka pressure").
+    # Max 5 items, each <= 12 words.
+    concrete_facts: list[str] = Field(default_factory=list)
 
     @field_validator("emotion_intensity")
     @classmethod
@@ -463,8 +469,19 @@ class SessionState(BaseModel):
     latest_analyzer_state: Optional[AnalyzerState] = None
     latest_strategy_decision: Optional[StrategyDecision] = None
     latest_safety_flags: Optional[SafetyFlags] = None
+    # Human-readable explanation of why the most recent phase came out as it
+    # did (e.g. "R3b high recept (help-seeking) + int≤4 → Insight"). Surfaced
+    # in the dev UI debug panel; not used by any agent logic.
+    latest_phase_decision_reason: Optional[str] = None
     turn_history: list[TurnRecord] = Field(default_factory=list)
     hitl_escalated: bool = False
+    # Rolling de-duplicated log of concrete facts mentioned across the whole
+    # session. Generator pulls the most recent ~8 here so it can reference
+    # things from earlier turns even after they fall out of `turn_history`.
+    facts_log: list[str] = Field(default_factory=list)
+    # Last care-tag turn — used by the care-gesture rotation in the Generator
+    # so we don't ask "khaana khaya?" twice in a row.
+    last_care_tag_turn: int = 0
 
     def get_recent_history(self, n: int = 6) -> list[TurnRecord]:
         """Return last n turns of conversation history."""

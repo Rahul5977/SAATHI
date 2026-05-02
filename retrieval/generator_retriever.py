@@ -308,6 +308,11 @@ class GeneratorRetriever:
         # ---- STEP 5: enforce conversation_id diversity ----
         selected = self._dedupe_by_conversation(selected, pool, top_k=top_k)
 
+        # ---- STEP 5b: cap single-emotion dominance for behavioral variety ----
+        # Prevents "5 fear examples in a row" tunnel vision where the
+        # generator keys on one emotion vocabulary and ignores the rest.
+        selected = self._cap_emotion_dominance(selected, pool, top_k=top_k)
+
         # ---- STEP 6: project to plain record dicts (plus debug score) ----
         out: list[dict] = []
         for c in selected[:top_k]:
@@ -475,6 +480,71 @@ class GeneratorRetriever:
                 seen_idx.add(c["idx"])
                 if len(kept) >= top_k:
                     break
+
+        return kept
+
+    # ---------- step 5b: emotion-diversity cap ----------
+    @staticmethod
+    def _cap_emotion_dominance(
+        selected: list[dict],
+        pool: list[dict],
+        top_k: int,
+        max_share_pct: int = 50,
+    ) -> list[dict]:
+        """If more than `max_share_pct`% of selected records share the same
+        `seeker_emotion`, swap excess entries for the next non-dominant
+        candidates from `pool`. Preserves overall ordering otherwise."""
+        if top_k <= 2 or not selected:
+            return selected
+
+        # Compute the cap (e.g. top_k=6, 50% → max 3 of any emotion).
+        cap = max(1, (top_k * max_share_pct) // 100)
+
+        counts: dict[str, int] = {}
+        for c in selected:
+            emo = (c["record"].get("seeker_emotion") or "").lower().strip()
+            if not emo:
+                continue
+            counts[emo] = counts.get(emo, 0) + 1
+
+        # Find which emotion(s) exceed the cap.
+        over = {emo for emo, n in counts.items() if n > cap}
+        if not over:
+            return selected
+
+        # Walk the selected list keeping at most `cap` of each over-represented
+        # emotion; mark the rest for replacement.
+        kept: list[dict] = []
+        kept_idx: set[int] = set()
+        kept_counts: dict[str, int] = {}
+        excess_slots = 0
+        for c in selected:
+            emo = (c["record"].get("seeker_emotion") or "").lower().strip()
+            if emo in over and kept_counts.get(emo, 0) >= cap:
+                excess_slots += 1
+                continue
+            kept.append(c)
+            kept_idx.add(c["idx"])
+            if emo:
+                kept_counts[emo] = kept_counts.get(emo, 0) + 1
+
+        if excess_slots == 0:
+            return selected
+
+        # Pull replacements from the pool that don't worsen emotion balance.
+        for c in sorted(pool, key=lambda x: x["score"], reverse=True):
+            if excess_slots <= 0:
+                break
+            if c["idx"] in kept_idx:
+                continue
+            emo = (c["record"].get("seeker_emotion") or "").lower().strip()
+            if emo in over and kept_counts.get(emo, 0) >= cap:
+                continue
+            kept.append(c)
+            kept_idx.add(c["idx"])
+            if emo:
+                kept_counts[emo] = kept_counts.get(emo, 0) + 1
+            excess_slots -= 1
 
         return kept
 

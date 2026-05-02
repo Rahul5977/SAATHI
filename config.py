@@ -34,6 +34,16 @@ ANALYZER_TEMPERATURE = 0.1
 GENERATOR_TEMPERATURE = 0.75
 SAFETY_TEMPERATURE = 0.0
 
+# ---- Voice / "feel" knobs --------------------------------------------------
+# How often (in turns) SAATHI may slip in a one-line care gesture
+# ("khaana khaya?", "neend ho rahi?", "pani le pehle"). Set to 0 to disable.
+SAATHI_CARE_TAG_FREQ = int(os.getenv("SAATHI_CARE_TAG_FREQ", "4"))
+# Allow occasional emoji at emotional peaks. Off by default — too many
+# emojis make the bot feel performative. When enabled, max ~1 per 5 turns.
+SAATHI_EMOJI_ENABLED = os.getenv("SAATHI_EMOJI_ENABLED", "false").lower() == "true"
+# How many recent facts from session.facts_log to surface to the Generator.
+SAATHI_FACTS_WINDOW = int(os.getenv("SAATHI_FACTS_WINDOW", "8"))
+
 # Redis
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 

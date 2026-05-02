@@ -83,8 +83,24 @@ OUTPUT FORMAT — Return ONLY a valid JSON object matching this schema:
     "user_receptiveness": {recept_pipe},
     "is_new_problem": true | false,
     "stigma_cue": true | false,
-    "risk_signal": "<exact crisis phrase>" or null
+    "risk_signal": "<exact crisis phrase>" or null,
+    "concrete_facts": ["<short fact 1>", "<short fact 2>", ...]
 }}
+
+CONCRETE_FACTS — extract specific, hard details the seeker mentions THIS turn, so the next reply can reference them by name instead of speaking abstractly. Examples of good facts:
+  - "PPT presentation pending"
+  - "exam in 1 day"
+  - "papa retired last month"
+  - "mummy's surgery next week"
+  - "interview at TCS Tuesday"
+  - "Bangalore se shift hua 2 mahine pehle"
+  - "girlfriend with whom 4 years relationship"
+Rules:
+  - 0 to 5 facts per turn (most turns will have 0-2).
+  - Each fact: ≤12 words, in English or Hinglish, noun-phrase style, no full sentences.
+  - Only extract facts that are NEW or CLARIFYING. Don't repeat facts from previous turns.
+  - Skip emotional descriptions ("dar lag raha") — those go in coping_shade_signal, not here.
+  - If nothing concrete, return [].
 
 INTENSITY CALIBRATION:
 - 6 (crisis):   Active suicidal ideation, self-harm, "I want to end it", "sab khatam kar doon"
@@ -94,10 +110,15 @@ INTENSITY CALIBRATION:
 - 2 (mild):     Low distress, reflecting, some hope, "thoda better hai"
 - 1 (resolved): Calm, forward-looking, "ab soch raha hoon"
 
+ANTI-INFLATION RULES (very important — common mistake):
+- Brief acknowledgements like "Sach me", "Haan", "Theek hai", "Ok", "Sahi kaha" are NOT high-intensity. They are de-escalation signals — usually intensity 2-3, NOT 4. Intensity must DROP after the seeker accepts a reflection.
+- Do not just carry forward the previous intensity. Re-read the new message in isolation first, then check whether the new content contains escalation words (more body symptoms, more catastrophising, more hopelessness) or settling words (agreement, partial insight, calmer tone). Adjust accordingly.
+- A 1-3 word reply is rarely intensity 4+. Reserve intensity 4 for messages that contain new distressing content.
+
 RECEPTIVENESS CALIBRATION:
 - low:    Flooded, shut down, venting, not ready for any input
 - medium: Processing, somewhat open to reflection but not advice
-- high:   Asking for help, seeking input, "kya karun?"
+- high:   Asking for help, seeking input. Triggers: "kya karu(n)?", "solution batao", "tum batao na", "help karo", "advice do", "what should I do?", "kaise karu", "raasta dikhao", "samjhao". When ANY of these appear, you MUST set user_receptiveness="high" — it overrides any other read.
 
 COPING MECHANISM SIGNALS:
 - Duty_Based:               "karna hi padega", "machine ki tarah", role/obligation framing
@@ -138,7 +159,8 @@ _FEW_SHOTS: list[dict[str, str]] = [
             '"current_coping_mech": "Duty_Based", '
             '"coping_shade_signal": "machine ki tarah chal raha hoon", '
             '"user_receptiveness": "low", "is_new_problem": false, '
-            '"stigma_cue": false, "risk_signal": null}'
+            '"stigma_cue": false, "risk_signal": null, '
+            '"concrete_facts": ["EMI bharna hai", "papa ki zameen ka masla"]}'
         ),
     },
     # Example 2 — Relational_Preservation + shame (Academic_Pressure)
@@ -165,7 +187,8 @@ _FEW_SHOTS: list[dict[str, str]] = [
             '"current_coping_mech": "Relational_Preservation", '
             '"coping_shade_signal": "papa ko kya bataunga", '
             '"user_receptiveness": "low", "is_new_problem": false, '
-            '"stigma_cue": true, "risk_signal": null}'
+            '"stigma_cue": true, "risk_signal": null, '
+            '"concrete_facts": ["marks bahut kharab is baar"]}'
         ),
     },
     # Example 3 — Somatization + overwhelm (Employment_Livelihood, mid-conv)
@@ -193,7 +216,8 @@ _FEW_SHOTS: list[dict[str, str]] = [
             '"current_coping_mech": "Somatization", '
             '"coping_shade_signal": "sir mein subah se dard ho raha hai", '
             '"user_receptiveness": "low", "is_new_problem": false, '
-            '"stigma_cue": false, "risk_signal": null}'
+            '"stigma_cue": false, "risk_signal": null, '
+            '"concrete_facts": ["sir aur pet mein dard", "deadline aane wali"]}'
         ),
     },
     # Example 4 — Sequential + despair WITH risk signal (Academic_Pressure)
@@ -221,7 +245,70 @@ _FEW_SHOTS: list[dict[str, str]] = [
             '"coping_shade_signal": "teen saal barbaad kar diye", '
             '"user_receptiveness": "low", "is_new_problem": false, '
             '"stigma_cue": true, '
-            '"risk_signal": "sab khatam kar doon, koi fayda nahi raha"}'
+            '"risk_signal": "sab khatam kar doon, koi fayda nahi raha", '
+            '"concrete_facts": ["UPSC fail second time", "3 saal preparation", "no job"]}'
+        ),
+    },
+    # Example 5 — LOW intensity / brief agreement after rapport
+    # Critical calibration: short Hinglish acknowledgements like "Sach me",
+    # "Haan thoda samajh aaya" should NOT be scored as intensity 4. They
+    # signal de-escalation — the seeker is settling, not flooding.
+    {
+        "user": (
+            "CONVERSATION HISTORY:\n"
+            "Seeker: Results ka bahut dar hai.\n"
+            "Supporter: Results ka dar tumhe andar se itna ghabrata hai na — "
+            "jaise har waqt yeh soch chal rahi hai. "
+            "[strategy=RESTATEMENT_OR_PARAPHRASING]\n\n"
+            "PREVIOUS STATE: {\"emotion_type\": \"fear\", "
+            "\"emotion_intensity\": 4, \"problem_type\": \"Academic_Pressure\", "
+            "\"current_coping_mech\": \"Sequential\", "
+            "\"coping_shade_signal\": \"results ka dar\", "
+            "\"user_receptiveness\": \"medium\", \"is_new_problem\": false, "
+            "\"stigma_cue\": false, \"risk_signal\": null}\n\n"
+            "NEW SEEKER MESSAGE:\n"
+            "\"Sach me. Haan thoda samajh aa raha hai.\""
+        ),
+        "assistant": (
+            '{"emotion_type": "acceptance", "emotion_intensity": 2, '
+            '"problem_type": "Academic_Pressure", '
+            '"current_coping_mech": "Sequential", '
+            '"coping_shade_signal": "thoda samajh aa raha hai", '
+            '"user_receptiveness": "medium", "is_new_problem": false, '
+            '"stigma_cue": false, "risk_signal": null, '
+            '"concrete_facts": []}'
+        ),
+    },
+    # Example 6 — EXPLICIT help-seeking → user_receptiveness MUST be "high"
+    # Critical calibration: phrases like "Solution kya h?", "Tum batao na",
+    # "Kya karu yaar?" are textbook receptiveness=high. The seeker is
+    # actively opening the door for guidance. Intensity is moderate (3),
+    # not high — the help-seeking itself shows some self-regulation.
+    {
+        "user": (
+            "CONVERSATION HISTORY:\n"
+            "Seeker: Results aane wale hain, neend nahi aati.\n"
+            "Supporter: Results ka itna pressure hai ki neend bhi cheen le "
+            "raha hai — yeh boojh sach mein bahut bhaari hai. "
+            "[strategy=REFLECTION_OF_FEELINGS]\n"
+            "Seeker: Haan exactly.\n\n"
+            "PREVIOUS STATE: {\"emotion_type\": \"fear\", "
+            "\"emotion_intensity\": 3, \"problem_type\": \"Academic_Pressure\", "
+            "\"current_coping_mech\": \"Sequential\", "
+            "\"coping_shade_signal\": \"neend nahi aati\", "
+            "\"user_receptiveness\": \"medium\", \"is_new_problem\": false, "
+            "\"stigma_cue\": false, \"risk_signal\": null}\n\n"
+            "NEW SEEKER MESSAGE:\n"
+            "\"Yaar tum batao na, ab main kya karoon? Koi solution batao iska.\""
+        ),
+        "assistant": (
+            '{"emotion_type": "fear", "emotion_intensity": 3, '
+            '"problem_type": "Academic_Pressure", '
+            '"current_coping_mech": "Sequential", '
+            '"coping_shade_signal": "ab main kya karoon", '
+            '"user_receptiveness": "high", "is_new_problem": false, '
+            '"stigma_cue": false, "risk_signal": null, '
+            '"concrete_facts": ["results aane wale", "neend nahi aati"]}'
         ),
     },
 ]

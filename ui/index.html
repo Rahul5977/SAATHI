@@ -1,0 +1,919 @@
+<!-- SAATHI Dev Testing Interface — internal tool, not for end users -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAATHI · Dev Console</title>
+  <style>
+    /* =============================================================
+       RESET + BASE TOKENS
+       ============================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; height: 100%; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      color: #1f2937;
+      background: #fafbfc;
+      overflow: hidden;
+    }
+    :root {
+      --c-saathi:        #2e7d32;        /* warm forest green for SAATHI brand */
+      --c-saathi-soft:   #e8f5e9;
+      --c-seeker:        #ffffff;
+      --c-border:        #e5e7eb;
+      --c-muted:         #6b7280;
+      --c-bg-debug:      #f4f6f8;
+      --c-shade-bg:      #fff59d;        /* highlighted coping shade */
+      --c-phase-explore: #1976d2;
+      --c-phase-insight: #f57c00;
+      --c-phase-action:  #388e3c;
+      --c-risk-none:     #6b7280;
+      --c-risk-low:      #ffc107;
+      --c-risk-med:      #ff9800;
+      --c-risk-high:     #f44336;
+      --c-int-low:       #4caf50;
+      --c-int-mid:       #ffc107;
+      --c-int-high:      #f44336;
+      --mono: "JetBrains Mono", "Fira Code", "SF Mono", Consolas, monospace;
+    }
+
+    /* =============================================================
+       LAYOUT
+       ============================================================= */
+    .layout {
+      display: grid;
+      grid-template-columns: 58fr 42fr;
+      height: 100vh;
+      width: 100vw;
+    }
+    .chat-panel  {
+      display: flex; flex-direction: column;
+      background: #fff; border-right: 1px solid var(--c-border);
+      min-width: 0;
+    }
+    .debug-panel {
+      background: var(--c-bg-debug);
+      overflow-y: scroll; /* always show scrollbar, not just on hover */
+      padding: 16px 18px;
+      font-family: var(--mono);
+      scrollbar-gutter: stable;
+      scrollbar-width: thin;
+      scrollbar-color: #9ca3af #e5e7eb;
+    }
+    .debug-panel::-webkit-scrollbar {
+      width: 10px;
+      background: #e5e7eb;
+    }
+    .debug-panel::-webkit-scrollbar-track {
+      background: #e5e7eb;
+      border-left: 1px solid #d1d5db;
+    }
+    .debug-panel::-webkit-scrollbar-thumb {
+      background: #9ca3af;
+      border-radius: 5px;
+      border: 2px solid #e5e7eb;
+      min-height: 40px;
+    }
+    .debug-panel::-webkit-scrollbar-thumb:hover {
+      background: #6b7280;
+    }
+    .debug-panel::-webkit-scrollbar-thumb:active {
+      background: #4b5563;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; grid-template-rows: 60vh 40vh; }
+      .chat-panel { border-right: none; border-bottom: 1px solid var(--c-border); }
+    }
+
+    /* =============================================================
+       CHAT HEADER
+       ============================================================= */
+    .chat-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--c-border);
+      background: #fff;
+    }
+    .brand-title {
+      font-size: 18px; font-weight: 700;
+      color: var(--c-saathi); letter-spacing: 0.3px;
+    }
+    .brand-sub {
+      font-size: 12px; color: var(--c-muted); margin-left: -4px;
+      text-transform: uppercase; letter-spacing: 1.2px;
+    }
+    .session-pill {
+      margin-left: auto;
+      font-family: var(--mono); font-size: 12px;
+      background: #f3f4f6; padding: 4px 10px; border-radius: 8px;
+      color: #374151; user-select: all;
+    }
+    .new-session-btn {
+      font-size: 12px; padding: 6px 12px;
+      background: var(--c-saathi); color: #fff;
+      border: none; border-radius: 8px; cursor: pointer;
+      font-weight: 500;
+    }
+    .new-session-btn:hover { background: #1b5e20; }
+
+    /* =============================================================
+       CONNECTION BANNER
+       ============================================================= */
+    .conn-banner {
+      padding: 8px 16px; font-size: 12px;
+      text-align: center; background: #fff3cd; color: #856404;
+      border-bottom: 1px solid #ffeeba;
+      display: none;
+    }
+    .conn-banner.error    { background: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+    .conn-banner.visible  { display: block; }
+
+    /* =============================================================
+       MESSAGE LIST
+       ============================================================= */
+    .messages {
+      flex: 1 1 auto;
+      overflow-y: scroll; /* force scrollbar to always render */
+      padding: 20px;
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable;
+      /* Firefox */
+      scrollbar-width: auto;
+      scrollbar-color: #6b7280 #f3f4f6;
+    }
+    /* WebKit (Chrome / Safari) — chunky 12px scrollbar that is impossible
+       to miss. macOS auto-hides "overlay" scrollbars by default, so we
+       force a classic scrollbar here with `overflow-y: scroll`. */
+    .messages::-webkit-scrollbar {
+      width: 12px;
+      background: #f3f4f6;
+    }
+    .messages::-webkit-scrollbar-track {
+      background: #f3f4f6;
+      border-left: 1px solid #d1d5db;
+    }
+    .messages::-webkit-scrollbar-thumb {
+      background: #6b7280;
+      border-radius: 6px;
+      border: 2px solid #f3f4f6;
+      min-height: 50px;
+    }
+    .messages::-webkit-scrollbar-thumb:hover {
+      background: #4b5563;
+    }
+    .messages::-webkit-scrollbar-thumb:active {
+      background: #1f2937;
+    }
+
+    .message-row { display: flex; margin-bottom: 14px; }
+    .message-row.seeker { justify-content: flex-end; }
+    .message-row.saathi { justify-content: flex-start; flex-direction: column; align-items: flex-start; }
+
+    .bubble {
+      max-width: 75%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      line-height: 1.5;
+      word-wrap: break-word;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .seeker .bubble {
+      background: var(--c-seeker);
+      border: 1px solid var(--c-border);
+      color: #1f2937;
+    }
+    .saathi .bubble {
+      background: var(--c-saathi-soft);
+      color: #1b3a1f;
+    }
+
+    .meta-strip {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 4px; padding-left: 4px;
+      font-family: var(--mono); font-size: 11px;
+      color: var(--c-muted);
+      max-width: 75%;
+    }
+    .pill {
+      display: inline-flex; align-items: center;
+      padding: 2px 8px; border-radius: 8px;
+      color: #fff; font-weight: 600; font-size: 10.5px;
+      letter-spacing: 0.4px;
+    }
+    .pill.phase-Exploration { background: var(--c-phase-explore); }
+    .pill.phase-Insight     { background: var(--c-phase-insight); }
+    .pill.phase-Action      { background: var(--c-phase-action); }
+
+    /* Typing indicator (3 dots) */
+    .typing-bubble { display: inline-flex; gap: 4px; padding: 12px 16px; }
+    .typing-bubble span {
+      width: 6px; height: 6px; background: #6b7280; border-radius: 50%;
+      animation: typing 1.4s infinite ease-in-out;
+    }
+    .typing-bubble span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-bubble span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40%           { transform: scale(1.0); opacity: 1.0; }
+    }
+
+    /* =============================================================
+       INPUT AREA
+       ============================================================= */
+    .input-area {
+      display: flex; gap: 10px;
+      padding: 14px 18px;
+      border-top: 1px solid var(--c-border);
+      background: #fff;
+    }
+    .input-area input {
+      flex: 1; height: 48px;
+      padding: 0 16px;
+      border: 1px solid var(--c-border);
+      border-radius: 12px;
+      font-size: 14px; font-family: inherit;
+      outline: none;
+      transition: border-color 120ms ease;
+    }
+    .input-area input:focus { border-color: var(--c-saathi); }
+    .input-area input:disabled {
+      background: #f9fafb; color: #9ca3af; cursor: not-allowed;
+    }
+    .send-btn {
+      height: 48px; padding: 0 20px;
+      background: var(--c-saathi); color: #fff;
+      border: none; border-radius: 12px;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    .send-btn:hover:not(:disabled) { background: #1b5e20; }
+    .send-btn:disabled { background: #c0c0c0; cursor: not-allowed; }
+
+    /* =============================================================
+       DEBUG PANEL
+       ============================================================= */
+    .debug-section {
+      margin-bottom: 14px;
+      background: #fff;
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .debug-section summary {
+      padding: 10px 12px;
+      font-weight: 600; font-size: 12px;
+      text-transform: uppercase; letter-spacing: 0.8px;
+      color: #374151;
+      cursor: pointer;
+      list-style: none;
+      background: #fafbfc;
+      border-bottom: 1px solid var(--c-border);
+      user-select: none;
+    }
+    .debug-section summary::-webkit-details-marker { display: none; }
+    .debug-section summary::after {
+      content: "▾"; float: right; color: var(--c-muted);
+    }
+    .debug-section[open] summary { border-bottom: 1px solid var(--c-border); }
+    .debug-body { padding: 12px; font-size: 12px; }
+
+    .row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .row:last-child { margin-bottom: 0; }
+    .label { color: var(--c-muted); min-width: 90px; font-size: 11px; }
+    .value { color: #111827; }
+
+    /* Phase pill — large variant for Section 1 */
+    .pill.phase-large {
+      padding: 6px 14px; font-size: 12px; border-radius: 8px;
+    }
+
+    /* Intensity bar */
+    .intensity-bar { display: inline-flex; gap: 3px; }
+    .intensity-bar .seg {
+      width: 18px; height: 16px;
+      background: #e5e7eb; border-radius: 3px;
+    }
+    .intensity-bar .seg.filled-low  { background: var(--c-int-low);  }
+    .intensity-bar .seg.filled-mid  { background: var(--c-int-mid);  }
+    .intensity-bar .seg.filled-high { background: var(--c-int-high); }
+
+    .coping-shade {
+      display: inline-block;
+      padding: 6px 10px; border-radius: 6px;
+      background: var(--c-shade-bg);
+      color: #5d4e00;
+      font-style: italic;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    .recept.low    { color: var(--c-risk-high); font-weight: 600; }
+    .recept.medium { color: #d97706;            font-weight: 600; }
+    .recept.high   { color: var(--c-saathi);    font-weight: 600; }
+
+    .yes-no.yes { color: var(--c-risk-high); font-weight: 600; }
+    .yes-no.no  { color: var(--c-saathi);    font-weight: 600; }
+
+    .risk-signal { color: var(--c-risk-high); font-weight: 600; word-break: break-word; }
+    .risk-signal.empty { color: #9ca3af; font-weight: 400; font-style: italic; }
+
+    /* Section 3 — trajectory */
+    .sparkline { display: block; margin: 4px 0; }
+    .phase-timeline {
+      display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px;
+    }
+    .phase-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    }
+    .phase-dot.phase-Exploration { background: var(--c-phase-explore); }
+    .phase-dot.phase-Insight     { background: var(--c-phase-insight); }
+    .phase-dot.phase-Action      { background: var(--c-phase-action);  }
+
+    .strategy-history { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+    .strategy-history .pill {
+      background: #4b5563; color: #fff; font-size: 9.5px; padding: 2px 6px;
+    }
+    .coping-history {
+      margin-top: 4px;
+      color: #1f2937;
+      word-break: break-word;
+    }
+
+    /* Section 4 — Safety */
+    .risk-level-large {
+      font-size: 16px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .risk-level-large.none   { color: var(--c-risk-none); }
+    .risk-level-large.low    { color: var(--c-risk-low);  }
+    .risk-level-large.medium { color: var(--c-risk-med);  }
+    .risk-level-large.high   { color: var(--c-risk-high); }
+
+    .hitl-ok    { color: var(--c-saathi); font-weight: 600; }
+    .hitl-fired {
+      color: var(--c-risk-high); font-weight: 700; letter-spacing: 1px;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 50% { opacity: 0.35; } }
+
+    .empty-state { color: #9ca3af; font-style: italic; font-size: 11px; }
+  </style>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ============================================================
+         LEFT COLUMN — Chat
+         ============================================================ -->
+    <main class="chat-panel">
+      <div class="chat-header">
+        <span class="brand-title">SAATHI</span>
+        <span class="brand-sub">Dev Console</span>
+        <span class="session-pill" id="session-pill" title="full session id"></span>
+        <button class="new-session-btn" id="new-session-btn">New Session</button>
+      </div>
+
+      <div class="conn-banner" id="conn-banner"></div>
+
+      <div class="messages" id="messages">
+        <!-- Initial placeholder hint -->
+        <div class="message-row saathi">
+          <div class="bubble">
+            Bhai, kya chal raha hai? Bata, kya feel ho raha hai aaj?
+          </div>
+          <div class="meta-strip">
+            <span class="pill phase-Exploration">Exploration</span>
+            <span>greeting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input
+          id="input-field" type="text" autocomplete="off" autofocus
+          placeholder="Type as a seeker... (Hinglish works best)"
+        />
+        <button class="send-btn" id="send-btn">Send</button>
+      </div>
+    </main>
+
+    <!-- ============================================================
+         RIGHT COLUMN — Debug Panel
+         ============================================================ -->
+    <aside class="debug-panel">
+
+      <!-- SECTION 1 -->
+      <details class="debug-section" open>
+        <summary>Pipeline State</summary>
+        <div class="debug-body">
+          <div class="row">
+            <span class="label">Phase</span>
+            <span id="dbg-phase" class="empty-state">no data</span>
+          </div>
+          <div class="row">
+            <span class="label">Strategy</span>
+            <span class="value" id="dbg-strategy" style="font-weight:600;"></span>
+          </div>
+          <div class="row" id="dbg-lens-row" style="display:none;">
+            <span class="label">Lens</span>
+            <span class="value" id="dbg-lens"></span>
+          </div>
+          <div class="row">
+            <span class="label">Turn</span>
+            <span class="value" id="dbg-turn">0</span>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label" title="Why this phase was chosen this turn (from explain_phase_decision)">Decision</span>
+            <span
+              class="value"
+              id="dbg-decision"
+              style="font-size:11px; line-height:1.35; color:#374151; max-width: 220px; word-break: break-word;"
+              title="Pure-Python rule that fired in core.phase_gate.compute_phase">—</span>
+          </div>
+        </div>
+      </details>
+
+      <!-- SECTION 2 -->
+      <details class="debug-section" open>
+        <summary>Analyzer Output</summary>
+        <div class="debug-body">
+          <div class="row">
+            <span class="label">Emotion</span>
+            <span class="value" id="dbg-emotion">—</span>
+          </div>
+          <div class="row">
+            <span class="label">Intensity</span>
+            <span class="intensity-bar" id="dbg-intensity"></span>
+            <span class="value" id="dbg-intensity-num"></span>
+          </div>
+          <div class="row">
+            <span class="label">Coping</span>
+            <span class="value" id="dbg-coping">—</span>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Coping shade</span>
+            <span class="coping-shade" id="dbg-shade">—</span>
+          </div>
+          <div class="row">
+            <span class="label">Receptiveness</span>
+            <span id="dbg-recept">—</span>
+          </div>
+          <div class="row">
+            <span class="label">Stigma cue</span>
+            <span id="dbg-stigma">—</span>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Risk signal</span>
+            <span id="dbg-risk-signal" class="risk-signal empty">none</span>
+          </div>
+        </div>
+      </details>
+
+      <!-- SECTION 3 -->
+      <details class="debug-section" open>
+        <summary>Trajectory</summary>
+        <div class="debug-body">
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Intensity</span>
+            <svg class="sparkline" id="dbg-sparkline"
+                 width="200" height="60" viewBox="0 0 200 60">
+              <defs>
+                <linearGradient id="grad-int" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%"   stop-color="#4caf50"/>
+                  <stop offset="50%"  stop-color="#ffc107"/>
+                  <stop offset="100%" stop-color="#f44336"/>
+                </linearGradient>
+              </defs>
+              <polyline id="spark-line" fill="none"
+                        stroke="url(#grad-int)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Phases</span>
+            <div class="phase-timeline" id="dbg-phase-timeline"></div>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Strategies</span>
+            <div class="strategy-history" id="dbg-strategy-history"></div>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Coping</span>
+            <div class="coping-history" id="dbg-coping-history"></div>
+          </div>
+        </div>
+      </details>
+
+      <!-- SECTION 4 -->
+      <details class="debug-section" open>
+        <summary>Safety</summary>
+        <div class="debug-body">
+          <div class="row">
+            <span class="label">Risk level</span>
+            <span class="risk-level-large none" id="dbg-risk-level">NONE</span>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Trigger</span>
+            <span id="dbg-trigger" class="empty-state">—</span>
+          </div>
+          <div class="row">
+            <span class="label">HITL</span>
+            <span id="dbg-hitl" class="hitl-ok">Not escalated</span>
+          </div>
+        </div>
+      </details>
+
+    </aside>
+  </div>
+
+  <script>
+    /* ===============================================================
+       SAATHI Dev Console — vanilla JS WebSocket client
+       --------------------------------------------------------------- */
+
+    // -------- Config --------
+    const HISTORY_DOTS = 12;     // max dots in phase timeline / strategy pills
+    const RECONNECT_MS = 3000;   // auto-retry interval
+
+    // -------- Mutable state --------
+    const state = {
+      sessionId:           null,
+      ws:                  null,
+      reconnectTimer:      null,
+      manualClose:         false,
+      currentSaathiBubble: null,        // the <div class="bubble"> being streamed into
+      currentSaathiRow:    null,        // the parent message-row, where meta-strip is appended
+      typingRow:           null,        // typing-indicator placeholder row
+      inputDisabled:       false,
+    };
+
+    // -------- DOM shortcuts --------
+    const $ = (id) => document.getElementById(id);
+    const els = {
+      input:     $("input-field"),
+      send:      $("send-btn"),
+      messages:  $("messages"),
+      banner:    $("conn-banner"),
+      sessPill:  $("session-pill"),
+      newBtn:    $("new-session-btn"),
+    };
+
+    // -------- Init --------
+    function init() {
+      state.sessionId = getOrCreateSessionId();
+      els.sessPill.textContent = state.sessionId.slice(0, 8);
+      els.sessPill.title       = state.sessionId;
+      bindEvents();
+      connect();
+    }
+
+    // Read session id from URL hash, or generate a fresh UUID v4 and persist
+    // it back into the hash so a refresh keeps the same session.
+    function getOrCreateSessionId() {
+      const hash = window.location.hash.replace(/^#/, "").trim();
+      const isUuid = /^[0-9a-f-]{8,}$/i.test(hash);
+      if (isUuid) return hash;
+      const fresh = crypto.randomUUID();
+      window.location.hash = fresh;
+      return fresh;
+    }
+
+    function bindEvents() {
+      els.send.addEventListener("click", sendMessage);
+      els.input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+      els.newBtn.addEventListener("click", () => {
+        window.location.hash = crypto.randomUUID();
+        window.location.reload();
+      });
+    }
+
+    // -------- WebSocket lifecycle --------
+    function connect() {
+      hideBanner();
+      // Works whether opened via `file://` or served from /ui/ on FastAPI.
+      const host = window.location.host || "localhost:8000";
+      const proto = (window.location.protocol === "https:") ? "wss:" : "ws:";
+      const url = `${proto}//${host}/ws/${state.sessionId}`;
+
+      state.ws = new WebSocket(url);
+
+      state.ws.onopen = () => {
+        hideBanner();
+        if (state.reconnectTimer) {
+          clearTimeout(state.reconnectTimer);
+          state.reconnectTimer = null;
+        }
+      };
+
+      state.ws.onmessage = (event) => {
+        let msg;
+        try { msg = JSON.parse(event.data); }
+        catch (e) { console.warn("Bad WS payload:", event.data); return; }
+        handleMessage(msg);
+      };
+
+      state.ws.onclose = () => {
+        if (state.manualClose) return;
+        showBanner("Disconnected — reconnecting…", false);
+        scheduleReconnect();
+      };
+
+      state.ws.onerror = () => {
+        showBanner("WebSocket error — retrying…", true);
+      };
+    }
+
+    function scheduleReconnect() {
+      if (state.reconnectTimer) return;
+      state.reconnectTimer = setTimeout(() => {
+        state.reconnectTimer = null;
+        connect();
+      }, RECONNECT_MS);
+    }
+
+    function showBanner(text, error) {
+      els.banner.textContent = text;
+      els.banner.classList.toggle("error", !!error);
+      els.banner.classList.add("visible");
+    }
+    function hideBanner() { els.banner.classList.remove("visible"); }
+
+    // -------- Server → client message router --------
+    function handleMessage(msg) {
+      switch (msg.type) {
+        case "typing": showTypingIndicator(); break;
+        case "token":  appendToken(msg.content); break;
+        case "done":   finalizeMessage(msg.meta || {}); break;
+        case "error":
+          finalizeMessage({});
+          showBanner(`Error: ${msg.content}`, true);
+          setTimeout(hideBanner, 4000);
+          break;
+        default:
+          console.warn("Unknown WS message type:", msg);
+      }
+    }
+
+    // -------- Outbound: send a seeker turn --------
+    function sendMessage() {
+      const text = els.input.value.trim();
+      if (!text || state.inputDisabled) return;
+      if (!state.ws || state.ws.readyState !== WebSocket.OPEN) {
+        showBanner("Not connected — try again in a moment", true);
+        return;
+      }
+      appendSeekerMessage(text);
+      state.ws.send(JSON.stringify({ message: text }));
+      els.input.value = "";
+      setInputDisabled(true);
+    }
+
+    function setInputDisabled(disabled) {
+      state.inputDisabled = disabled;
+      els.input.disabled = disabled;
+      els.send.disabled  = disabled;
+      if (!disabled) els.input.focus();
+    }
+
+    // -------- Chat rendering --------
+    function appendSeekerMessage(text) {
+      const row = document.createElement("div");
+      row.className = "message-row seeker";
+      row.innerHTML = `<div class="bubble"></div>`;
+      row.querySelector(".bubble").textContent = text;
+      els.messages.appendChild(row);
+      scrollToBottom();
+    }
+
+    function showTypingIndicator() {
+      removeTypingIndicator();
+      const row = document.createElement("div");
+      row.className = "message-row saathi";
+      row.innerHTML = `
+        <div class="bubble typing-bubble">
+          <span></span><span></span><span></span>
+        </div>`;
+      state.typingRow = row;
+      els.messages.appendChild(row);
+      scrollToBottom();
+    }
+
+    function removeTypingIndicator() {
+      if (state.typingRow && state.typingRow.parentNode) {
+        state.typingRow.parentNode.removeChild(state.typingRow);
+      }
+      state.typingRow = null;
+    }
+
+    function ensureSaathiBubble() {
+      if (state.currentSaathiBubble) return;
+      removeTypingIndicator();
+      const row = document.createElement("div");
+      row.className = "message-row saathi";
+      row.innerHTML = `<div class="bubble"></div>`;
+      els.messages.appendChild(row);
+      state.currentSaathiRow    = row;
+      state.currentSaathiBubble = row.querySelector(".bubble");
+    }
+
+    function appendToken(token) {
+      ensureSaathiBubble();
+      state.currentSaathiBubble.textContent += token;
+      scrollToBottom();
+    }
+
+    function finalizeMessage(meta) {
+      removeTypingIndicator();
+      // If we got a "done" with no preceding tokens (e.g. server error), still
+      // create an empty row so the meta-strip has somewhere to attach.
+      if (state.currentSaathiRow) {
+        attachMetaStrip(state.currentSaathiRow, meta);
+      }
+      state.currentSaathiRow    = null;
+      state.currentSaathiBubble = null;
+      updateDebugPanel(meta);
+      setInputDisabled(false);
+      scrollToBottom();
+    }
+
+    function attachMetaStrip(row, meta) {
+      if (!meta || (!meta.phase && !meta.strategy && !meta.emotion)) return;
+      const strip = document.createElement("div");
+      strip.className = "meta-strip";
+
+      if (meta.phase) {
+        strip.innerHTML += `<span class="pill phase-${meta.phase}">${meta.phase}</span>`;
+      }
+      if (meta.strategy) {
+        strip.innerHTML += `<span>${meta.strategy}</span>`;
+      }
+      if (meta.emotion) {
+        const intDots = renderIntensityDots(meta.intensity);
+        strip.innerHTML += `<span>${meta.emotion} ${intDots}</span>`;
+      }
+      row.appendChild(strip);
+    }
+
+    function renderIntensityDots(intensity) {
+      const n = Math.max(0, Math.min(6, parseInt(intensity, 10) || 0));
+      return "●".repeat(n) + "○".repeat(6 - n);
+    }
+
+    function scrollToBottom() {
+      els.messages.scrollTop = els.messages.scrollHeight;
+    }
+
+    // -------- Debug panel updates --------
+    function updateDebugPanel(meta) {
+      // Section 1 — Pipeline State
+      if (meta.phase) {
+        const el = $("dbg-phase");
+        el.className = `pill phase-large phase-${meta.phase}`;
+        el.textContent = meta.phase;
+      }
+      $("dbg-strategy").textContent = meta.strategy || "—";
+
+      const lensRow = $("dbg-lens-row");
+      if (meta.lens) {
+        lensRow.style.display = "flex";
+        $("dbg-lens").textContent = `Lens ${meta.lens}`;
+      } else {
+        lensRow.style.display = "none";
+      }
+      $("dbg-turn").textContent = meta.turn_count != null ? meta.turn_count : "0";
+      $("dbg-decision").textContent = meta.phase_decision || "—";
+
+      // Section 2 — Analyzer Output
+      $("dbg-emotion").textContent = meta.emotion || "—";
+      renderIntensityBar(meta.intensity);
+      $("dbg-intensity-num").textContent =
+        meta.intensity != null ? `${meta.intensity}/6` : "";
+      $("dbg-coping").textContent = meta.coping || "—";
+      $("dbg-shade").textContent  = meta.coping_shade || "—";
+
+      const recEl = $("dbg-recept");
+      recEl.textContent = meta.receptiveness || "—";
+      recEl.className = meta.receptiveness ? `recept ${meta.receptiveness}` : "";
+
+      const stigmaEl = $("dbg-stigma");
+      if (meta.stigma_cue === true)  { stigmaEl.textContent = "Yes"; stigmaEl.className = "yes-no yes"; }
+      else if (meta.stigma_cue === false) { stigmaEl.textContent = "No"; stigmaEl.className = "yes-no no"; }
+      else                                 { stigmaEl.textContent = "—"; stigmaEl.className = ""; }
+
+      const riskEl = $("dbg-risk-signal");
+      if (meta.risk_signal) {
+        riskEl.textContent = meta.risk_signal;
+        riskEl.className = "risk-signal";
+      } else {
+        riskEl.textContent = "none";
+        riskEl.className = "risk-signal empty";
+      }
+
+      // Section 3 — Trajectory
+      renderSparkline(meta.intensity_trajectory || []);
+      renderPhaseTimeline(meta.phase_history || []);
+      renderStrategyHistory(meta.strategy_history || []);
+      $("dbg-coping-history").textContent =
+        meta.coping ? meta.coping : "—";
+
+      // Section 4 — Safety
+      const lvl = (meta.safety_risk || "none").toLowerCase();
+      const lvlEl = $("dbg-risk-level");
+      lvlEl.textContent = lvl.toUpperCase();
+      lvlEl.className   = `risk-level-large ${lvl}`;
+
+      const trigEl = $("dbg-trigger");
+      if (meta.safety_trigger) {
+        trigEl.textContent = meta.safety_trigger;
+        trigEl.className   = "value";
+      } else {
+        trigEl.textContent = "—";
+        trigEl.className   = "empty-state";
+      }
+
+      const hitlEl = $("dbg-hitl");
+      if (lvl === "high") {
+        hitlEl.textContent = "ESCALATED";
+        hitlEl.className   = "hitl-fired";
+      } else {
+        hitlEl.textContent = "Not escalated";
+        hitlEl.className   = "hitl-ok";
+      }
+    }
+
+    // 6-segment intensity bar; per-segment color = its own threshold band.
+    function renderIntensityBar(intensity) {
+      const n = Math.max(0, Math.min(6, parseInt(intensity, 10) || 0));
+      const wrap = $("dbg-intensity");
+      wrap.innerHTML = "";
+      for (let i = 1; i <= 6; i++) {
+        const seg = document.createElement("span");
+        seg.className = "seg";
+        if (i <= n) {
+          if      (i <= 2) seg.classList.add("filled-low");
+          else if (i <= 4) seg.classList.add("filled-mid");
+          else             seg.classList.add("filled-high");
+        }
+        wrap.appendChild(seg);
+      }
+    }
+
+    // SVG sparkline of intensity over turns.
+    function renderSparkline(values) {
+      const line = $("spark-line");
+      const W = 200, H = 60, PAD = 4;
+      if (!values.length) { line.setAttribute("points", ""); return; }
+      const n = values.length;
+      const pts = values.map((v, i) => {
+        const clamped = Math.max(1, Math.min(6, v));
+        const x = (n === 1)
+          ? W / 2
+          : PAD + (i / (n - 1)) * (W - 2 * PAD);
+        const y = H - PAD - ((clamped - 1) / 5) * (H - 2 * PAD);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+      });
+      line.setAttribute("points", pts.join(" "));
+    }
+
+    function renderPhaseTimeline(phases) {
+      const wrap = $("dbg-phase-timeline");
+      wrap.innerHTML = "";
+      phases.slice(-HISTORY_DOTS).forEach((p) => {
+        const dot = document.createElement("div");
+        dot.className = `phase-dot phase-${p}`;
+        dot.title = p;
+        wrap.appendChild(dot);
+      });
+      if (!phases.length) {
+        const e = document.createElement("span");
+        e.className = "empty-state"; e.textContent = "no turns yet";
+        wrap.appendChild(e);
+      }
+    }
+
+    function renderStrategyHistory(strategies) {
+      const wrap = $("dbg-strategy-history");
+      wrap.innerHTML = "";
+      strategies.slice(-HISTORY_DOTS).forEach((s) => {
+        const pill = document.createElement("span");
+        pill.className = "pill"; pill.textContent = s;
+        wrap.appendChild(pill);
+      });
+      if (!strategies.length) {
+        const e = document.createElement("span");
+        e.className = "empty-state"; e.textContent = "no turns yet";
+        wrap.appendChild(e);
+      }
+    }
+
+    // -------- boot --------
+    init();
+  </script>
+</body>
+</html>
