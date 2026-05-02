@@ -311,4 +311,8 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
+# Generated vector index (large binaries; rebuild with indexing/build_index.py)
+data/faiss_index/*.npy
+data/faiss_index/*.faiss
+
 # End of https://www.toptal.com/developers/gitignore/api/python,node
