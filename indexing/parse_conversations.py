@@ -44,7 +44,7 @@ CANDIDATES = {
     "text_key": ["content", "text", "utterance", "message", "value"],
     "strategy_key": ["strategy", "support_strategy", "response_strategy"],
     "phase_key": ["phase", "stage", "conversation_phase", "support_phase"],
-    "coping_key": ["coping_mechanism", "coping", "coping_style"],
+    "coping_key": ["coping_mechanism_active", "coping_mechanism", "coping", "coping_style"],
     "emotion_key": ["emotion_type", "emotion", "seeker_emotion"],
     "intensity_key": ["emotion_intensity", "intensity", "emotion_level"],
     "lens_key": ["lens", "cultural_lens", "frame"],
