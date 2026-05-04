@@ -1,0 +1,52 @@
+name: memory_continuity_within_session
+description: |
+  Long sessions: facts mentioned on turn 1 must still influence the bot's
+  reply on turn 6+ via the SessionSummary. The Summarizer fires around
+  turn 4, after which `summary.key_facts` should retain the early concrete
+  fact (JEE Advanced) even though it falls out of the rolling
+  history window cap.
+
+user_id: u_memory_within
+persona_code: P2
+
+turns:
+  - say: "Bhai 1 hafte me JEE advanced hai, bahut tension ho rahi hai"
+    expect:
+      phase: Exploration
+      analyzer:
+        intensity: { ge: 3 }
+        concrete_facts_contains_any: ["JEE"]
+
+  - say: "Padhne ka mann nahi lag raha aaj kal"
+    expect:
+      phase_in: [Exploration, Insight]
+
+  - say: "Yaar koi tareeka batao please, kya karu"
+    expect:
+      phase_in: [Insight, Action]
+      decision_reason_matches: "^R(2|2b|3)"
+
+  - say: "Achha note kar liya, aur kya"
+    expect:
+      phase_in: [Insight, Action]
+      memory:
+        # Summarizer should have fired by now (turn 4).
+        summary_present: true
+        key_facts_contains_any: ["JEE"]
+        seeker_goal_contains: ["JEE", "exam", "padh"]
+
+  - say: "Mom ko bhi tension de raha hoon mai"
+    expect:
+      memory:
+        summary_present: true
+        # Old fact must still be retained even with new topic injected.
+        key_facts_contains_any: ["JEE"]
+
+  - say: "Anyway tum batao kal kya kar sakta hoon"
+    expect:
+      memory:
+        summary_present: true
+        # JEE fact must SURVIVE through turn 6 — this is the regression
+        # test for "long-session memory drift" described in the user's bug.
+        key_facts_contains_any: ["JEE"]
+      response_no_phrases: ["bohot overwhelming", "saans lene ki bhi fursat"]

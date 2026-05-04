@@ -168,6 +168,67 @@ def _format_facts_block(
     )
 
 
+def _format_session_memory_block(session: SessionState) -> Optional[str]:
+    """Render the SESSION MEMORY block from `session.summary`, or None if
+    there's no summary yet. This is the "what's happened so far" briefing
+    that lets the Generator stay coherent past the 16-turn history cap.
+    """
+    if session.summary is None:
+        return None
+    s = session.summary
+    parts: list[str] = ["SESSION MEMORY (the journey so far — keep it consistent):"]
+    if s.narrative:
+        parts.append(f"  Narrative: {s.narrative}")
+    if s.seeker_goal:
+        parts.append(
+            f"  Seeker's goal: {s.seeker_goal}"
+        )
+    if s.emotional_arc:
+        parts.append(f"  Emotional arc: {s.emotional_arc}")
+    if s.phase_journey:
+        parts.append(f"  Phase journey: {s.phase_journey}")
+    if s.open_threads:
+        threads = "\n".join(f"    • {t}" for t in s.open_threads[:5])
+        parts.append(f"  Open threads (THINGS YOU OWE A FOLLOW-UP ON):\n{threads}")
+    # If nothing other than the header survived, return None.
+    if len(parts) == 1:
+        return None
+    return "\n".join(parts)
+
+
+def _format_continuity_block(session: SessionState) -> Optional[str]:
+    """Render the CROSS-SESSION CONTINUITY block from
+    `session.user_profile_snapshot`, or None if there's no prior history.
+    Only fires on turns 1-2 of a NEW session — once the in-session summary
+    takes over, that's the stronger signal.
+    """
+    profile = session.user_profile_snapshot
+    if profile is None or profile.sessions_count <= 1:
+        return None
+    # Only show continuity in the first ~2 turns of a session.
+    if session.turn_count > 2:
+        return None
+    parts: list[str] = [
+        "CROSS-SESSION CONTINUITY (the user has talked to you before — "
+        "acknowledge naturally if it fits, but don't force it):"
+    ]
+    if profile.display_name:
+        parts.append(f"  Name: {profile.display_name}")
+    if profile.last_session_summary:
+        parts.append(f"  Last session: {profile.last_session_summary}")
+    if profile.last_session_goal:
+        parts.append(f"  Last session's goal: {profile.last_session_goal}")
+    if profile.recurring_themes:
+        themes = ", ".join(profile.recurring_themes[:5])
+        parts.append(f"  Recurring topics: {themes}")
+    if profile.key_life_facts:
+        facts = "\n".join(f"    • {f}" for f in profile.key_life_facts[:6])
+        parts.append(f"  Things they've shared in past sessions:\n{facts}")
+    if len(parts) == 1:
+        return None
+    return "\n".join(parts)
+
+
 def _length_hint(seeker_text: str) -> str:
     """Tell the Generator how long the reply should be, based on seeker
     input length. This is the single biggest 'feels like a bot' tell."""
@@ -243,6 +304,12 @@ def build_generator_prompt(
     last_care_turn: int = session.last_care_tag_turn if session else 0
 
     facts_block = _format_facts_block(analyzer_state.concrete_facts, facts_log)
+    session_memory_block = (
+        _format_session_memory_block(session) if session is not None else None
+    )
+    continuity_block = (
+        _format_continuity_block(session) if session is not None else None
+    )
     care_tag = _select_care_tag(
         turn_count=turn_count,
         last_care_turn=last_care_turn,
@@ -292,6 +359,12 @@ def build_generator_prompt(
             else "No — Normal warmth."
         ),
     ])
+
+    if continuity_block is not None:
+        system_parts.extend(["", continuity_block])
+
+    if session_memory_block is not None:
+        system_parts.extend(["", session_memory_block])
 
     if facts_block is not None:
         system_parts.extend(["", facts_block])
@@ -354,6 +427,8 @@ def build_generator_prompt(
         f"• Strategy: {strategy}",
         f"• {gen_hint}",
         "• Reference at least one CONCRETE FACT by name if any are listed above",
+        "• If SESSION MEMORY shows an open_thread you started, FOLLOW UP on it now "
+        "before changing topic (\"Pehle wala maths plan kaisa laga?\")",
         "• Open with a one-line VALIDATION before reflecting (\"Haan yaar...\", "
         "\"Bhai, this is tough.\", \"Oof.\")",
         "• If the seeker brought a positive frame, AMPLIFY it — don't reflect on it",
@@ -540,5 +615,72 @@ if __name__ == "__main__":
     assert "Hindi word ratio target: 60%" in msgs4[0]["content"]
     assert "CONVERSATION HISTORY (last 0 turns):" in msgs4[1]["content"]
     print("CASE 4 — Unknown persona falls back to P0, empty history OK     ✓")
+
+    # ---- Case 5: SESSION MEMORY + CROSS-SESSION CONTINUITY blocks ----
+    from core.schemas import SessionState, SessionSummary, UserProfile
+    profile_returning = UserProfile(
+        user_id="u_returning",
+        sessions_count=3,
+        last_session_summary="Last time you were 1 week before JEE Advanced, tried a 5-min breathing pause that helped slightly.",
+        last_session_goal="Calm down enough to revise maths.",
+        recurring_themes=["Academic_Pressure"],
+        key_life_facts=["JEE Advanced aspirant", "studying in Kota"],
+    )
+    session_with_memory = SessionState(
+        session_id="s_mem", user_id="u_returning", turn_count=1,
+        user_profile_snapshot=profile_returning,
+        facts_log=["JEE Advanced aspirant", "studying in Kota"],
+        summary=SessionSummary(
+            narrative="Seeker mentioned JEE Adv result is out — got AIR 4500. Disappointed.",
+            seeker_goal="Decide whether to drop a year or take admission with current rank.",
+            key_facts=["JEE Advanced AIR 4500", "drop year option on the table"],
+            emotional_arc="disappointed and uncertain",
+            phase_journey="Exploration",
+            open_threads=["asked seeker what their parents said about the result"],
+            generated_at_turn=1,
+        ),
+    )
+    msgs5 = build_generator_prompt(
+        seeker_text="Bahut difficult lag raha hai decide karna",
+        analyzer_state=analyzer_state.model_copy(update={"emotion_intensity": 4}),
+        strategy_decision=StrategyDecision(
+            current_phase="Exploration", selected_strategy="REFLECTION_OF_FEELINGS",
+        ),
+        conversation_history=history,
+        retrieved_examples=retrieved,
+        negative_example=negative,
+        persona_code="P2",
+        session=session_with_memory,
+    )
+    s5 = msgs5[0]["content"]
+    u5 = msgs5[1]["content"]
+    assert "CROSS-SESSION CONTINUITY" in s5
+    assert "JEE Advanced aspirant" in s5
+    assert "Last session: Last time you were 1 week before JEE Advanced" in s5
+    assert "SESSION MEMORY" in s5
+    assert "Decide whether to drop a year" in s5
+    assert "asked seeker what their parents said" in s5
+    assert "FOLLOW UP" in u5  # checklist hint
+    print("CASE 5 — SESSION MEMORY + CROSS-SESSION CONTINUITY injected      ✓")
+
+    # ---- Case 6: 1st-time user — no continuity block ----
+    profile_new = UserProfile(user_id="u_new", sessions_count=1)
+    session_new = SessionState(
+        session_id="s_new", user_id="u_new", turn_count=1,
+        user_profile_snapshot=profile_new,
+    )
+    msgs6 = build_generator_prompt(
+        seeker_text="Hi",
+        analyzer_state=analyzer_state,
+        strategy_decision=strategy_decision,
+        conversation_history=[],
+        retrieved_examples=retrieved,
+        negative_example=negative,
+        persona_code="P0",
+        session=session_new,
+    )
+    assert "CROSS-SESSION CONTINUITY" not in msgs6[0]["content"]
+    assert "SESSION MEMORY" not in msgs6[0]["content"]
+    print("CASE 6 — first-time user gets no continuity/memory block         ✓")
 
     print("\ngenerator_prompt.py — all checks passed ✓")

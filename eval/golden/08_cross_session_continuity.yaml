@@ -1,0 +1,40 @@
+name: cross_session_continuity
+description: |
+  A returning user with a previous session in their UserProfile. The bot's
+  first reply should naturally acknowledge continuity (without forcing it)
+  and `facts_log` should be pre-seeded with prior key_life_facts.
+
+user_id: u_returning
+persona_code: P2
+
+# Pre-seed: as if the user has had 2 prior sessions about JEE prep.
+seed_profile:
+  sessions_count: 2
+  total_turns: 14
+  last_session_summary: "Last session, seeker was 1 week before JEE Advanced. Tried a 5-min breathing pause that helped slightly. Agreed to a 1-day maths revision plan."
+  last_session_goal: "Calm down enough to revise maths."
+  recurring_themes:
+    - "Academic_Pressure"
+  key_life_facts:
+    - "JEE Advanced aspirant"
+    - "studying in Kota"
+
+turns:
+  - say: "Bhai wapas aaya hoon. Result aa gaya, AIR 4500 mila"
+    expect:
+      # First turn of new session — CROSS-SESSION CONTINUITY block fires.
+      # facts_log should already contain the seeded life facts.
+      memory:
+        facts_log_contains_any: ["JEE", "Kota"]
+      # The reply should NOT pretend to be meeting them for the first time.
+      # We can't pin exact wording but it shouldn't start with a generic
+      # opener. Soft check: response is non-empty and within budget.
+      response_min_words: 3
+      response_max_words: 60
+      response_no_phrases: ["bohot overwhelming"]
+
+  - say: "Drop year ya admission le lu current rank pe?"
+    expect:
+      analyzer:
+        concrete_facts_contains_any: ["drop", "rank", "AIR"]
+      response_no_phrases: ["bohot overwhelming"]

@@ -16,6 +16,7 @@ Key design choices:
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from typing import Literal, Optional
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -448,6 +449,173 @@ class TurnRecord(BaseModel):
 
 
 # ---------------------------------------------------------------------------
+# SessionSummary — periodic compressed view of the session
+# ---------------------------------------------------------------------------
+class SessionSummary(BaseModel):
+    """Structured running summary of the session, written by the Summarizer
+    agent every few turns. Lets the Generator stay coherent past the 16-turn
+    history cap WITHOUT carrying the full history forward each call.
+
+    The fields here are intentionally short — the goal is "what would a friend
+    remember about this conversation if they zoned out for a minute and then
+    rejoined?", NOT "transcribe everything verbatim".
+    """
+
+    model_config = ConfigDict(extra="ignore", str_strip_whitespace=True)
+
+    # ≤ ~80 words. Past tense, third-person about the seeker. Captures the
+    # arc of the conversation so far. e.g. "Seeker is preparing for JEE
+    # Advanced, exam in 1 week. Started panicked, asked for help around turn
+    # 3 ('kya karu?'), tried a 5-min breathing pause and reported it helped
+    # slightly. Currently working through study-plan options."
+    narrative: str = Field(default="", max_length=800)
+
+    # The single most pressing thing the seeker is trying to resolve. Stays
+    # pinned across turns so the bot never loses the thread. Can be None on
+    # turn 1 before there's enough signal.
+    seeker_goal: Optional[str] = Field(default=None, max_length=200)
+
+    # Hard, persistent details from the session — used to seed `facts_log` if
+    # it gets pruned. e.g. ["JEE Advanced in 1 week", "from Bangalore",
+    # "papa retired last month"].
+    key_facts: list[str] = Field(default_factory=list)
+
+    # One-phrase emotional arc. e.g. "panicked → settling" or
+    # "ashamed and closed → opening up cautiously".
+    emotional_arc: str = Field(default="", max_length=160)
+
+    # One-phrase phase journey. e.g. "Exploration→Insight by turn 4" or
+    # "still in Exploration, intensity dropping".
+    phase_journey: str = Field(default="", max_length=160)
+
+    # Threads the bot has opened but not yet closed — questions asked,
+    # suggestions offered awaiting feedback, etc. Lets the bot follow up
+    # naturally instead of jumping topic.
+    open_threads: list[str] = Field(default_factory=list)
+
+    # Bookkeeping — which turn this summary was generated at. Used by the
+    # orchestrator to decide whether the summary is stale.
+    generated_at_turn: int = 0
+
+    @field_validator("key_facts")
+    @classmethod
+    def _cap_facts(cls, v: list[str]) -> list[str]:
+        seen: set[str] = set()
+        ordered: list[str] = []
+        for f in v or []:
+            if not f:
+                continue
+            key = f.strip().lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            ordered.append(f.strip())
+        return ordered[:12]
+
+    @field_validator("open_threads")
+    @classmethod
+    def _cap_threads(cls, v: list[str]) -> list[str]:
+        seen: set[str] = set()
+        ordered: list[str] = []
+        for t in v or []:
+            if not t:
+                continue
+            key = t.strip().lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            ordered.append(t.strip())
+        return ordered[:5]
+
+
+# ---------------------------------------------------------------------------
+# UserProfile — cross-session memory keyed by user_id
+# ---------------------------------------------------------------------------
+class UserProfile(BaseModel):
+    """Persistent, cross-session memory for a single user. Stored in Redis
+    under `user_profile:{user_id}` independently of any session.
+
+    On session creation, the orchestrator hydrates `facts_log` from the
+    profile's `key_life_facts` so the bot can say "JEE Advanced ke baad
+    ka kya plan banaya tha pichli baar?" on day 2 — that's the difference
+    between a chatbot and a friend.
+    """
+
+    model_config = ConfigDict(extra="ignore", str_strip_whitespace=True)
+
+    user_id: str
+
+    # Persona that the bot has settled on for this user across sessions.
+    # Once `persona_locked=True` for a session, the bot stops re-evaluating it.
+    persona_code: str = "P0"
+
+    # Optional — the user's name if they ever shared it. Keeps the bot from
+    # asking "tumhara naam kya hai?" every session.
+    display_name: Optional[str] = None
+
+    # Recurring topic threads across sessions, e.g. ["academic stress",
+    # "father's pressure", "Hostel loneliness"]. Updated incrementally —
+    # never overwritten in full.
+    recurring_themes: list[str] = Field(default_factory=list)
+
+    # Hard life facts the bot should never forget. e.g. ["IIT JEE aspirant",
+    # "studying in Kota since 2024", "family in Patna"]. Higher bar than
+    # session facts_log — these survive a session ending.
+    key_life_facts: list[str] = Field(default_factory=list)
+
+    # Compressed summary of the LAST completed session. Lets the bot open
+    # session N+1 with continuity. e.g. "Last time we talked, you were 1 week
+    # before JEE Advanced. You tried a 5-min breathing pause that helped a
+    # bit. You said you'd revise maths the next day. Kya hua?"
+    last_session_summary: Optional[str] = Field(default=None, max_length=800)
+
+    # The goal of the previous session (for follow-up).
+    last_session_goal: Optional[str] = Field(default=None, max_length=200)
+
+    # When the user last interacted (UTC ISO string). String is used (not
+    # datetime) so the JSON serialization stays trivial across redis.
+    last_seen_at: Optional[str] = None
+
+    # Counters.
+    sessions_count: int = 0
+    total_turns: int = 0
+
+    @field_validator("recurring_themes")
+    @classmethod
+    def _cap_themes(cls, v: list[str]) -> list[str]:
+        seen: set[str] = set()
+        ordered: list[str] = []
+        for t in v:
+            if not t:
+                continue
+            key = t.strip().lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            ordered.append(t.strip())
+        return ordered[:20]
+
+    @field_validator("key_life_facts")
+    @classmethod
+    def _cap_life_facts(cls, v: list[str]) -> list[str]:
+        seen: set[str] = set()
+        ordered: list[str] = []
+        for f in v:
+            if not f:
+                continue
+            key = f.strip().lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            ordered.append(f.strip())
+        return ordered[:30]
+
+    def touch(self) -> None:
+        """Refresh `last_seen_at` to now (UTC ISO)."""
+        self.last_seen_at = datetime.now(timezone.utc).isoformat()
+
+
+# ---------------------------------------------------------------------------
 # SessionState — persisted in Redis between turns
 # ---------------------------------------------------------------------------
 class SessionState(BaseModel):
@@ -483,6 +651,30 @@ class SessionState(BaseModel):
     # so we don't ask "khaana khaya?" twice in a row.
     last_care_tag_turn: int = 0
 
+    # ---- Memory layer (added in P-MEM) ------------------------------------
+    # Periodic compressed view written by the Summarizer agent. Lets the
+    # Generator reason about turns 1-N even after they fall out of the
+    # 16-turn history cap. None until the first summarization fires (around
+    # turn 4).
+    summary: Optional[SessionSummary] = None
+
+    # The turn at which the bot first reached each phase. Helps phase_gate
+    # answer "have we ever reached Insight in this session?" without
+    # walking the entire history. Maintained incrementally in
+    # `SessionManager.update_after_turn`.
+    phase_first_reached: dict[str, int] = Field(default_factory=dict)
+
+    # How many consecutive turns we've spent in the current phase. Used by
+    # the anti-stuck heuristic in `core.phase_gate`.
+    turns_in_current_phase: int = 0
+
+    # Snapshot of the cross-session profile that was hydrated when this
+    # session was created. The orchestrator reads this when building the
+    # Generator prompt so cross-session continuity ("pichli baar tum yeh
+    # bata rahe the...") is possible. Live profile updates go through
+    # `MemoryManager`, not here.
+    user_profile_snapshot: Optional[UserProfile] = None
+
     def get_recent_history(self, n: int = 6) -> list[TurnRecord]:
         """Return last n turns of conversation history."""
         if n <= 0:
@@ -494,3 +686,7 @@ class SessionState(BaseModel):
         if n <= 0:
             return []
         return self.strategy_history[-n:]
+
+    def has_reached_phase(self, phase: str) -> bool:
+        """True if the conversation has ever reached `phase` so far."""
+        return phase in self.phase_first_reached

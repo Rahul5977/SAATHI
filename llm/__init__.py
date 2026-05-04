@@ -1,4 +1,10 @@
-from config import LLM_BACKEND, ANALYZER_MODEL, GENERATOR_MODEL, SAFETY_MODEL
+from config import (
+    ANALYZER_MODEL,
+    GENERATOR_MODEL,
+    LLM_BACKEND,
+    SAFETY_MODEL,
+    SUMMARIZER_MODEL,
+)
 from llm.base_llm import BaseLLM
 
 
@@ -6,7 +12,7 @@ def get_llm(role: str) -> BaseLLM:
     """
     Factory that returns the correct LLM instance based on config.
 
-    role: "analyzer" | "generator" | "safety"
+    role: "analyzer" | "generator" | "safety" | "summarizer"
 
     When LLM_BACKEND="openai", uses OpenAI API with role-specific models.
     When LLM_BACKEND="local", uses local vLLM/Ollama server (same model for all roles).
@@ -17,6 +23,7 @@ def get_llm(role: str) -> BaseLLM:
             "analyzer": ANALYZER_MODEL,
             "generator": GENERATOR_MODEL,
             "safety": SAFETY_MODEL,
+            "summarizer": SUMMARIZER_MODEL,
         }
         return OpenAILLM(model=model_map.get(role, GENERATOR_MODEL))
     elif LLM_BACKEND == "local":

@@ -3,7 +3,9 @@ Pipeline orchestrator — single entry point per seeker turn.
 
 Per-turn flow:
 
-  1. Load (or create) the SessionState for `session_id`.
+  1. Load (or create) the SessionState for `session_id`. On creation, hydrate
+     cross-session memory from MemoryManager so the bot has continuity from
+     prior conversations.
   2. Run SafetyChecker.check(...) and Analyzer.analyze(...) IN PARALLEL.
      They share no state, so this is ~free latency reduction.
   3. If the safety checker requires HITL escalation, yield the static
@@ -13,6 +15,9 @@ Per-turn flow:
      `core.phase_gate.compute_full_strategy` (zero LLM calls).
   5. Stream tokens from the Generator, accumulating the full text.
   6. Persist the completed turn to the session store.
+  7. Update cross-session profile with any newly extracted concrete facts.
+  8. Run the Summarizer (in the background) if the cadence triggers, and
+     fold the resulting SessionSummary back into session state.
 
 This module is the ONLY place that knows how the agents wire together.
 The FastAPI / WebSocket layer just calls `orchestrator.run(...)` and
@@ -23,13 +28,20 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Optional
 
 from agents.analyzer import Analyzer
 from agents.generator import Generator
 from agents.safety import CRISIS_RESPONSE, SafetyChecker
+from agents.summarizer import Summarizer
+from config import (
+    SAATHI_SUMMARY_EVERY_N_TURNS,
+    SAATHI_SUMMARY_HISTORY_TRIGGER,
+    SAATHI_SUMMARY_INCREMENTAL_WINDOW,
+)
 from core.phase_gate import compute_full_strategy, explain_phase_decision
-from core.schemas import StrategyDecision
+from core.schemas import SessionState, StrategyDecision, UserProfile
+from pipeline.memory import MemoryManager
 from pipeline.session import SessionManager
 
 
@@ -53,7 +65,120 @@ class PipelineOrchestrator:
         self.analyzer = Analyzer()
         self.generator = Generator()
         self.safety_checker = SafetyChecker()
+        self.summarizer = Summarizer()
         self.session_manager = SessionManager()
+        self.memory_manager = MemoryManager()
+
+    # ------------------------------------------------------------------
+    # Internal helpers
+    # ------------------------------------------------------------------
+    async def _hydrate_new_session(
+        self, session: SessionState
+    ) -> tuple[SessionState, UserProfile]:
+        """Brand-new session — pull the user's cross-session profile and
+        seed the session with continuity hints. Always returns a profile
+        (creating it if absent). Mutates `session` in place + persists it.
+        """
+        profile = await self.memory_manager.get_or_create(session.user_id)
+        await self.memory_manager.register_session_start(profile)
+
+        # Snapshot the profile onto the session so the Generator prompt can
+        # reach it without an extra Redis call per turn.
+        session.user_profile_snapshot = profile
+
+        # Seed facts_log with the user's persistent life facts so even the
+        # FIRST turn of session N+1 can reference "JEE Advanced ke baad ka
+        # plan" without waiting for the Analyzer to re-extract them.
+        if profile.key_life_facts:
+            seed = list(profile.key_life_facts)
+            seen = {f.lower() for f in session.facts_log}
+            for f in seed:
+                if f.lower() not in seen:
+                    session.facts_log.append(f)
+                    seen.add(f.lower())
+
+        # Persona continuity — adopt the locked persona from prior sessions
+        # if we haven't decided one yet for this fresh session.
+        if profile.persona_code and session.persona_code == "P0":
+            session.persona_code = profile.persona_code
+
+        await self.session_manager.save_session(session)
+        return session, profile
+
+    async def _maybe_summarize(
+        self,
+        session: SessionState,
+        profile: Optional[UserProfile],
+    ) -> None:
+        """Decide whether the Summarizer should run this turn and, if so,
+        run it and fold the result back into `session`. Best-effort: any
+        failure is logged but never raises.
+
+        Cadence:
+          - Run every `SAATHI_SUMMARY_EVERY_N_TURNS` turns starting at turn 4.
+          - OR run if the rolling history exceeds
+            `SAATHI_SUMMARY_HISTORY_TRIGGER` AND we haven't summarized in
+            the last 2 turns.
+          - Skip turn 1 entirely — there's nothing meaningful to summarize.
+        """
+        if SAATHI_SUMMARY_EVERY_N_TURNS <= 0:
+            return  # disabled
+        if session.turn_count < 2:
+            return
+
+        last_summary_turn = (
+            session.summary.generated_at_turn if session.summary else 0
+        )
+        turns_since = session.turn_count - last_summary_turn
+        cadence_due = (
+            session.turn_count >= SAATHI_SUMMARY_EVERY_N_TURNS
+            and turns_since >= SAATHI_SUMMARY_EVERY_N_TURNS
+        )
+        history_overflow = (
+            len(session.turn_history) >= SAATHI_SUMMARY_HISTORY_TRIGGER
+            and turns_since >= 2
+        )
+        if not (cadence_due or history_overflow):
+            return
+
+        try:
+            # Incremental when we already have a summary; full re-summarize
+            # otherwise (cheaper than full every time on long sessions).
+            if session.summary is not None:
+                window = SAATHI_SUMMARY_INCREMENTAL_WINDOW
+                turns_since_last = session.turn_history[-window:]
+                summary = await self.summarizer.summarize(
+                    session=session,
+                    profile=profile,
+                    turns_since_last_summary=turns_since_last,
+                )
+            else:
+                summary = await self.summarizer.summarize(
+                    session=session,
+                    profile=profile,
+                    turns_since_last_summary=None,
+                )
+
+            session.summary = summary
+            await self.session_manager.save_session(session)
+            logger.info(
+                "Summarizer fired at turn=%s (incremental=%s, facts=%s)",
+                session.turn_count,
+                session.summary is not None and last_summary_turn > 0,
+                len(summary.key_facts),
+            )
+
+            # Fold the freshly extracted key_facts into the user's persistent
+            # profile so they survive across sessions.
+            if profile is not None and summary.key_facts:
+                await self.memory_manager.merge_session_facts(
+                    profile, summary.key_facts,
+                )
+        except Exception as e:
+            logger.error(
+                "Summarizer pass failed at turn=%s: %s",
+                session.turn_count, e, exc_info=True,
+            )
 
     # ------------------------------------------------------------------
     # Main entry point
@@ -67,8 +192,21 @@ class PipelineOrchestrator:
         """Run a single seeker turn end-to-end. Yields response tokens as
         they arrive (or one full crisis response in the safety-trip case)."""
 
-        # ---- 1. Load / create session ----
-        session = await self.session_manager.get_or_create(session_id, user_id)
+        # ---- 1. Load / create session (hydrate cross-session profile on creation) ----
+        existing = await self.session_manager.get_session(session_id)
+        if existing is None:
+            session = await self.session_manager.create_session(session_id, user_id)
+            session, profile = await self._hydrate_new_session(session)
+        else:
+            session = existing
+            # Ongoing session — load the (possibly-updated) profile but do NOT
+            # bump session counters or reseed facts_log. We just want the
+            # current snapshot in case the bot already handled a partial turn.
+            profile = await self.memory_manager.get(session.user_id)
+            if profile is None:
+                # Race condition or stale state — recreate and snapshot.
+                profile = await self.memory_manager.get_or_create(session.user_id)
+                session.user_profile_snapshot = profile
 
         # ---- 2. Safety + Analyzer in parallel ----
         # `gather` propagates the FIRST exception. Both agents already swallow
@@ -184,6 +322,29 @@ class PipelineOrchestrator:
                 session_id, e, exc_info=True,
             )
 
+        # ---- 7. Cross-session profile update (best-effort) ----
+        # Fold this turn's concrete facts straight into the long-term profile
+        # so even if the user ghosts mid-session, hard facts persist.
+        try:
+            if profile is not None and analyzer_state.concrete_facts:
+                await self.memory_manager.merge_session_facts(
+                    profile, analyzer_state.concrete_facts,
+                )
+            # Also tag the recurring theme by problem_type so we can answer
+            # "is this a returning topic for them?" later.
+            if profile is not None:
+                await self.memory_manager.update_recurring_themes(
+                    profile, [analyzer_state.problem_type],
+                )
+        except Exception as e:
+            logger.error(
+                "Profile fact-merge crashed for user=%s: %s",
+                user_id, e, exc_info=True,
+            )
+
+        # ---- 8. Maybe summarize (in-thread; small model, ~1s) ----
+        await self._maybe_summarize(session, profile)
+
         logger.info(
             "Turn %s complete on session=%s | response_len=%s chars",
             session.turn_count, session_id, len(full_response),
@@ -192,6 +353,31 @@ class PipelineOrchestrator:
     # ------------------------------------------------------------------
     # Lifecycle
     # ------------------------------------------------------------------
+    async def close_session(self, session_id: str) -> None:
+        """Roll a session into the user's long-term profile and unlink it.
+
+        The API layer SHOULD call this on explicit session-end (e.g. user
+        clicks "End conversation" in the UI). It's safe to omit; profiles
+        will still be incrementally updated each turn — this just gives a
+        clean point to fold the final SessionSummary into the profile.
+        """
+        sess = await self.session_manager.get_session(session_id)
+        if sess is None:
+            return
+        profile = await self.memory_manager.get(sess.user_id)
+        if profile is None:
+            return
+        # Make absolutely sure we have a current summary before folding.
+        if sess.summary is None and sess.turn_count > 0:
+            await self._maybe_summarize(sess, profile)
+            sess = await self.session_manager.get_session(session_id) or sess
+        await self.memory_manager.apply_session_close(profile, sess)
+        logger.info(
+            "Closed session=%s | folded %s turns into user=%s profile",
+            session_id, sess.turn_count, sess.user_id,
+        )
+
     async def close(self) -> None:
-        """Release Redis connection. Call on application shutdown."""
+        """Release all Redis connections. Call on application shutdown."""
         await self.session_manager.close()
+        await self.memory_manager.close()

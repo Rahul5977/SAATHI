@@ -1,0 +1,34 @@
+name: anti_stuck_exploration
+description: |
+  Tests R2 (anti-stuck Exploration). Seeker stays at moderate intensity
+  for 4+ turns without explicitly asking for help; bot must STILL advance
+  out of Exploration eventually instead of mirroring forever.
+
+user_id: u_stuck_exp
+persona_code: P0
+
+turns:
+  - say: "Aaj kal kuch theek nahi lag raha office me"
+    expect:
+      phase: Exploration
+
+  - say: "Manager ke saath thodi adjustment problem ho rahi hai"
+    expect:
+      phase: Exploration
+
+  - say: "Roz subah uthkar bahut bhaari lagta hai"
+    expect:
+      phase: Exploration
+
+  - say: "Chhutiyan bhi nahi mil rahi project deadline ki vajah se"
+    expect:
+      # By the 4th Exploration turn, anti-stuck (R2) should fire IF
+      # intensity has not climbed to 5+. Phase advances to Insight even
+      # without help-seeking phrases.
+      phase_in: [Insight, Exploration]   # Insight preferred; Exploration is acceptable if Analyzer rates int=5+
+
+  - say: "Bas ek normal weekend chahiye yaar"
+    expect:
+      # By turn 5, we MUST be out of pure Exploration.
+      phase_in: [Insight, Action]
+      response_no_phrases: ["bohot overwhelming"]

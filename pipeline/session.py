@@ -156,6 +156,22 @@ class SessionManager:
         session.intensity_trajectory.append(analyzer_state.emotion_intensity)
         session.coping_trajectory.append(analyzer_state.current_coping_mech)
 
+        # ---- phase-journey markers (memory layer) ----
+        # First time we touch a phase, stamp the turn count. phase_gate uses
+        # `session.has_reached_phase("Insight")` to bias post-Action follow-up
+        # rules and detect "stuck in Action" loops.
+        new_phase = strategy_decision.current_phase
+        if new_phase not in session.phase_first_reached:
+            session.phase_first_reached[new_phase] = session.turn_count
+        # Maintain `turns_in_current_phase` — used by anti-stuck heuristics.
+        if (
+            len(session.phase_history) >= 2
+            and session.phase_history[-2] == new_phase
+        ):
+            session.turns_in_current_phase += 1
+        else:
+            session.turns_in_current_phase = 1
+
         # ---- turn history (append both turns, then cap) ----
         seeker_turn = TurnRecord(
             turn_id=session.turn_count * 2 - 1,

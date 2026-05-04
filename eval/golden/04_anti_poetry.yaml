@@ -1,0 +1,36 @@
+name: anti_poetry_voice
+description: |
+  Voice surgery checks: bot must not stack metaphors, not use the
+  banned poetic stock phrases, and must keep replies short when seeker
+  sends short messages.
+
+user_id: u_voice
+persona_code: P0
+
+turns:
+  - say: "Hmm"
+    expect:
+      # 1-word seeker message → reply must stay tight.
+      response_max_words: 18
+      response_no_phrases:
+        - "bohot overwhelming"
+        - "saans lene ki bhi fursat"
+        - "jaise sab kuch ek saath"
+        - "ek chhupi hui umeed"
+        - "lagta hai tumhare andar"
+
+  - say: "Acha hai"
+    expect:
+      response_max_words: 18
+      response_no_phrases:
+        - "bohot overwhelming"
+        - "saans lene ki bhi fursat"
+
+  - say: "Aaj bahut thaka hua hoon, work se nahi laut paya jaldi"
+    expect:
+      # Medium message → max ~30 words.
+      response_max_words: 50
+      response_no_phrases:
+        - "bohot overwhelming"
+        - "saans lene ki bhi fursat"
+        - "ek chhupi hui umeed"

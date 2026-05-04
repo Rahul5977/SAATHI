@@ -1,0 +1,39 @@
+name: anti_stuck_insight
+description: |
+  Tests R2b (anti-stuck Insight). Once we reach Insight, the bot should
+  graduate to Action by ~turn 5-6 instead of producing endless reflections.
+  This is the second half of the user's bug report ("the model don't know
+  when actually to move to Action").
+
+user_id: u_stuck_ins
+persona_code: P2
+
+turns:
+  - say: "Aaj kal kuch theek nahi lag raha"
+    expect:
+      phase: Exploration
+
+  - say: "Bas thoda sa thaka hua, par managing"
+    expect:
+      phase_in: [Exploration, Insight]
+
+  - say: "Pata nahi kya karu, kuch decide nahi ho pata"
+    expect:
+      phase_in: [Insight, Action]
+
+  - say: "Haan thoda confusing toh hai"
+    expect:
+      phase_in: [Insight, Action]
+
+  - say: "Tum kya sochte ho?"
+    expect:
+      # By turn 5 with help-seeking phrasing, MUST be at least Insight,
+      # ideally Action via R2b or R3a.
+      phase_in: [Insight, Action]
+      decision_reason_matches: "R(2b|3)"
+
+  - say: "Theek hai phir"
+    expect:
+      # 6th turn after the Insight chain → R2b should have fired by now.
+      # Action OR Insight is acceptable; but never back to Exploration.
+      phase_in: [Insight, Action]

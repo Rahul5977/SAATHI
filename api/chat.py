@@ -77,6 +77,22 @@ def _session_to_meta(session) -> dict[str, Any]:
     meta["intensity_trajectory"] = session.intensity_trajectory[-10:]
     meta["phase_history"]        = session.phase_history[-10:]
     meta["strategy_history"]     = session.strategy_history[-10:]
+
+    # ---- memory layer surfaces (debug panel) ------------------------------
+    meta["turns_in_current_phase"] = session.turns_in_current_phase
+    meta["phase_first_reached"]    = session.phase_first_reached
+    meta["facts_log_count"]        = len(session.facts_log)
+    meta["facts_log_recent"]       = session.facts_log[-6:]
+    if session.summary is not None:
+        meta["summary_at_turn"] = session.summary.generated_at_turn
+        meta["seeker_goal"]     = session.summary.seeker_goal
+        meta["emotional_arc"]   = session.summary.emotional_arc
+        meta["phase_journey"]   = session.summary.phase_journey
+        meta["open_threads"]    = session.summary.open_threads
+    if session.user_profile_snapshot is not None:
+        prof = session.user_profile_snapshot
+        meta["user_sessions_count"] = prof.sessions_count
+        meta["user_key_life_facts_count"] = len(prof.key_life_facts)
     return meta
 
 

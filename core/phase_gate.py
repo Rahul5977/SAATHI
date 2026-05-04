@@ -151,6 +151,37 @@ def _is_stuck_in_exploration(session: SessionState, intensity: int) -> bool:
     )
 
 
+# After 3 consecutive Insight turns at moderate-or-better intensity, we
+# graduate to Action. Without this rule the bot stays in "reflection of
+# feelings" mode and the user's "kya karu?" is met with another mirror
+# instead of a concrete suggestion. This is the symptom the user
+# described directly: "the model don't know when actually to move to Action".
+_INSIGHT_STUCK_THRESHOLD = 3
+
+
+def _is_stuck_in_insight(session: SessionState, intensity: int) -> bool:
+    """True if we've been in Insight long enough at moderate intensity that
+    the seeker is ready for Action. Uses both `phase_history` (last N) AND
+    the new `turns_in_current_phase` journey marker so the rule fires even
+    if there were brief Exploration interludes inside an Insight stretch."""
+    if intensity >= 4:
+        # Still too distressed for Action — Insight is the right place.
+        return False
+    last_phase = session.phase_history[-1] if session.phase_history else None
+    if last_phase != "Insight":
+        return False
+    # Path A: hard signal from journey marker.
+    if session.turns_in_current_phase >= _INSIGHT_STUCK_THRESHOLD:
+        return True
+    # Path B: legacy phase_history check (still useful for sessions
+    # restored from before the journey markers existed).
+    last_n = session.phase_history[-_INSIGHT_STUCK_THRESHOLD:]
+    return (
+        len(last_n) >= _INSIGHT_STUCK_THRESHOLD
+        and all(p == "Insight" for p in last_n)
+    )
+
+
 
 # FUNCTION 1: compute_phase
 
@@ -170,18 +201,21 @@ def compute_phase(
     matches the original receptiveness-blind logic.
 
     Rules (evaluated in order, first match wins):
-      0. risk_signal active                              → "Exploration"
-      1. New problem detected                            → "Exploration"
-      2. Anti-stuck: 4× Exploration AND intensity ≤ 4    → "Insight"  (force advance)
-      3. effective_receptiveness == "high":
-         3a. Insight in last 2 phases AND intensity ≤ 3  → "Action"
-         3b. intensity ≤ 4                               → "Insight"
-      4. Intensity >= 4                                  → "Exploration"
-      5. Intensity == 3 AND last phase was "Exploration" → "Insight"
-      6. Intensity == 3 AND last phase was NOT "Exploration" → "Exploration"
-      7. Intensity <= 2 AND "Insight" in last 2 phases   → "Action"
-      8. Intensity <= 2 AND "Insight" NOT in last 2 phases → "Insight"
-      9. Default                                         → "Exploration"
+      0.  risk_signal active                              → "Exploration"
+      1.  New problem detected                            → "Exploration"
+      2.  Anti-stuck (Exploration): 4× Exploration AND
+          intensity ≤ 4                                   → "Insight"  (force advance)
+      2b. Anti-stuck (Insight): 3× Insight AND
+          intensity ≤ 3                                   → "Action"   (force advance)
+      3.  effective_receptiveness == "high":
+          3a. Insight in last 2 phases AND intensity ≤ 3  → "Action"
+          3b. intensity ≤ 4                               → "Insight"
+      4.  Intensity >= 4                                  → "Exploration"
+      5.  Intensity == 3 AND last phase was "Exploration" → "Insight"
+      6.  Intensity == 3 AND last phase was NOT "Exploration" → "Exploration"
+      7.  Intensity <= 2 AND "Insight" in last 2 phases   → "Action"
+      8.  Intensity <= 2 AND "Insight" NOT in last 2 phases → "Insight"
+      9.  Default                                         → "Exploration"
     """
     intensity = analyzer_state.emotion_intensity
     last_phase: Optional[str] = session.phase_history[-1] if session.phase_history else None
@@ -201,6 +235,12 @@ def compute_phase(
     # if the Analyzer keeps reading intensity=4 (very common bias).
     if _is_stuck_in_exploration(session, intensity):
         return "Insight"
+
+    # Rule 2b (NEW): anti-stuck for Insight — graduate to Action once we've
+    # spent enough time reflecting at moderate intensity. Symmetric counterpart
+    # to Rule 2; together they prevent both "endless mirroring" pathologies.
+    if _is_stuck_in_insight(session, intensity):
+        return "Action"
 
     # Rule 3 (NEW): high receptiveness wins — the seeker has clearly opened up
     # ("Solution kya h?", "Tum batao na", "Kya karu?"). Don't keep mirroring;
@@ -260,6 +300,11 @@ def explain_phase_decision(
         return (
             f"R2 anti-stuck ({_STUCK_THRESHOLD}× Exploration, int={intensity}) "
             "→ forced Insight"
+        )
+    if _is_stuck_in_insight(session, intensity):
+        return (
+            f"R2b anti-stuck ({_INSIGHT_STUCK_THRESHOLD}× Insight, "
+            f"int={intensity}) → forced Action"
         )
     if receptiveness == "high" and intensity <= 4:
         tag = " (help-seeking)" if help_seeking else ""
@@ -1108,5 +1153,64 @@ if __name__ == "__main__":
     assert res_followup.selected_strategy == "EXECUTION", (
         f"expected EXECUTION follow-up, got {res_followup.selected_strategy}"
     )
+
+    # ---- R2b: stuck-in-Insight anti-stuck → force Action ----------------
+    # Scenario: 3 consecutive Insight turns at int=3 with low receptiveness
+    # (so R3 wouldn't fire). Without R2b, the bot would stay in Insight
+    # for a 4th time and the user gets another reflection instead of help.
+    state_stuck_insight = AnalyzerState(
+        emotion_type="confusion",
+        emotion_intensity=3,
+        problem_type="Academic_Pressure",
+        current_coping_mech="Sequential",
+        coping_shade_signal="kya karu",
+        user_receptiveness="low",   # so R3 doesn't fire
+        is_new_problem=False,
+        stigma_cue=False,
+        risk_signal=None,
+    )
+    session_stuck_insight = SessionState(
+        session_id="t_r2b",
+        user_id="u_r2b",
+        phase_history=["Exploration", "Insight", "Insight", "Insight"],
+        strategy_history=[
+            "RESTATEMENT_OR_PARAPHRASING",
+            "REFLECTION_OF_FEELINGS",
+            "REFLECTION_OF_FEELINGS",
+            "REFLECTION_OF_FEELINGS",
+        ],
+        intensity_trajectory=[4, 3, 3, 3],
+        coping_trajectory=["Sequential"] * 4,
+        turn_count=4,
+        # Journey markers as set by SessionManager.update_after_turn:
+        phase_first_reached={"Exploration": 1, "Insight": 2},
+        turns_in_current_phase=3,
+    )
+    res_stuck_ins = compute_full_strategy(state_stuck_insight, session_stuck_insight)
+    print(
+        f"R2b stuck-in-Insight (3× Insight, int=3, low recept): {res_stuck_ins}"
+    )
+    assert res_stuck_ins.current_phase == "Action", (
+        f"expected forced Action, got {res_stuck_ins.current_phase}"
+    )
+
+    # Same setup but intensity=5 — should NOT fire (genuine high distress).
+    state_stuck_insight_hot = state_stuck_insight.model_copy(
+        update={"emotion_intensity": 5}
+    )
+    res_stuck_ins_hot = compute_full_strategy(
+        state_stuck_insight_hot, session_stuck_insight
+    )
+    print(
+        f"R2b does NOT fire at int=5 (still distressed): {res_stuck_ins_hot}"
+    )
+    assert res_stuck_ins_hot.current_phase != "Action", (
+        f"R2b mis-fired at high intensity → got {res_stuck_ins_hot.current_phase}"
+    )
+
+    # explain_phase_decision should surface R2b cleanly.
+    reason_r2b = explain_phase_decision(state_stuck_insight, session_stuck_insight)
+    print(f"explain_phase_decision (R2b): {reason_r2b}")
+    assert reason_r2b.startswith("R2b "), f"R2b explainer missing: {reason_r2b!r}"
 
     print("\nAll phase gate tests passed!")

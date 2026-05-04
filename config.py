@@ -19,6 +19,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 ANALYZER_MODEL = "gpt-4o"
 GENERATOR_MODEL = "gpt-4o"
 SAFETY_MODEL = "gpt-4o-mini"
+# Summarizer is mechanical compression — gpt-4o-mini is plenty and ~10x cheaper.
+SUMMARIZER_MODEL = os.getenv("SUMMARIZER_MODEL", "gpt-4o-mini")
 
 # Local LLM settings (future — vLLM or Ollama serving OpenAI-compatible endpoint)
 LOCAL_LLM_BASE_URL = os.getenv("LOCAL_LLM_BASE_URL", "http://localhost:8001/v1")
@@ -33,6 +35,20 @@ LOCAL_EMBEDDING_MODEL = os.getenv("LOCAL_EMBEDDING_MODEL", "paraphrase-multiling
 ANALYZER_TEMPERATURE = 0.1
 GENERATOR_TEMPERATURE = 0.75
 SAFETY_TEMPERATURE = 0.0
+SUMMARIZER_TEMPERATURE = 0.1  # Mechanical compression; deterministic-ish.
+
+# ---- Memory layer knobs ---------------------------------------------------
+# Run the Summarizer every N turns. Lower = more up-to-date memory but more
+# LLM cost. 4 hits the sweet spot for short Hinglish sessions.
+SAATHI_SUMMARY_EVERY_N_TURNS = int(os.getenv("SAATHI_SUMMARY_EVERY_N_TURNS", "4"))
+# Force a fresh summary as soon as turn_history grows beyond this many turns,
+# even if the cadence above hasn't been reached yet. Prevents memory loss
+# when a user ghosts the bot mid-session and comes back hours later with
+# a long unread queue.
+SAATHI_SUMMARY_HISTORY_TRIGGER = int(os.getenv("SAATHI_SUMMARY_HISTORY_TRIGGER", "12"))
+# When summarizing incrementally, how many recent turns to show the
+# Summarizer in addition to the previous summary blob.
+SAATHI_SUMMARY_INCREMENTAL_WINDOW = int(os.getenv("SAATHI_SUMMARY_INCREMENTAL_WINDOW", "8"))
 
 # ---- Voice / "feel" knobs --------------------------------------------------
 # How often (in turns) SAATHI may slip in a one-line care gesture

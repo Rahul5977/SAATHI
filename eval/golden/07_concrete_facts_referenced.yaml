@@ -1,0 +1,25 @@
+name: concrete_facts_referenced
+description: |
+  When the seeker mentions a specific concrete detail (PPT presentation,
+  exam date, family member), the Generator should reference it back by
+  name in its reply rather than speaking only in abstractions.
+
+user_id: u_facts
+persona_code: P2
+
+turns:
+  - say: "Kal subah 10 baje PPT presentation hai client ke saamne"
+    expect:
+      analyzer:
+        concrete_facts_contains_any: ["PPT", "presentation", "10 baje"]
+      # The bot SHOULD echo at least one of these specifics. We can't be
+      # sure WHICH word it'll use, so we accept any of the related terms.
+      response_contains_any: ["PPT", "presentation", "client", "kal", "10 baje"]
+      response_no_phrases: ["bohot overwhelming"]
+
+  - say: "Slides bhi adhoore hain abhi"
+    expect:
+      analyzer:
+        concrete_facts_contains_any: ["slides"]
+      # Bot should reference slides OR the prior PPT in the response.
+      response_contains_any: ["slide", "PPT", "presentation"]

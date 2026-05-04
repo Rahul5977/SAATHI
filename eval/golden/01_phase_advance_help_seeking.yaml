@@ -1,0 +1,38 @@
+name: phase_advance_on_help_seeking
+description: |
+  Reproduces the screenshot scenario. When the seeker explicitly asks for
+  help ("kya karu?"), the deterministic phase_gate must advance phases via
+  R3a/R3b — not stay locked in Exploration. This is the bug the user
+  reported on 2026-05-02.
+
+user_id: u_help_seeking
+persona_code: P2
+
+turns:
+  - say: "Sab theek hai, bas JEE advanced 1 hafte me hai or padhne ka mann ni ho rha"
+    expect:
+      phase: Exploration
+      strategy_in: [RESTATEMENT_OR_PARAPHRASING, QUESTION]
+      decision_reason_matches: "^R[4-9]"
+      response_no_phrases: ["bohot overwhelming"]
+      response_max_words: 50
+      analyzer:
+        emotion: [fear, anxiety, exhaustion, overwhelm, confusion, resignation, pressure, fatigue]
+        risk_signal_set: false
+
+  - say: "1 hafte me paper hai yaar, break kaise lunga"
+    expect:
+      phase_in: [Exploration, Insight]
+      response_no_phrases: ["bohot overwhelming"]
+      analyzer:
+        intensity: { ge: 2, le: 5 }
+
+  - say: "Ha aisa hi lagta hai...par karu kya 1 hafte me?"
+    expect:
+      # Help-seeking phrase "karu kya" must trigger R3 → at least Insight,
+      # ideally Action since prior phases include some Exploration.
+      phase_in: [Insight, Action]
+      decision_reason_matches: "^R(2|2b|3)"
+      response_no_phrases: ["bohot overwhelming", "saans lene ki bhi fursat"]
+      analyzer:
+        receptiveness: high
