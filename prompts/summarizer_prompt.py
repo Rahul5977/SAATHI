@@ -1,25 +1,4 @@
-"""
-Summarizer (Agent 4) prompt builder.
-
-The Summarizer's job is structured compression: read the conversation so far
-+ the previous summary (if any) and emit a fresh `SessionSummary` JSON.
-
-It is called every N turns (or when history exceeds a soft cap) so that the
-Generator and phase_gate can reason about turns 1..K even after they fall
-out of the 16-turn rolling window.
-
-Like the Analyzer, this module emits NO seeker-facing text. Pure structured
-extraction.
-
-Why structured (vs free-form running summary)?
-  - The Generator prompt template needs deterministic slots
-    (`seeker_goal`, `key_facts`, `emotional_arc`) — free-text would force
-    extra parsing.
-  - Structured fields make it trivial for the eval harness to assert
-    "the summary remembered fact X by turn N".
-  - Field-level caps prevent runaway summaries from blowing the prompt
-    budget.
-"""
+"""Messages for the summarizer LLM (structured `SessionSummary` JSON)."""
 
 from __future__ import annotations
 
@@ -35,9 +14,6 @@ from core.schemas import (
 from prompts.analyzer_prompt import format_history
 
 
-# ---------------------------------------------------------------------------
-# System prompt — composed at import time
-# ---------------------------------------------------------------------------
 SUMMARIZER_SYSTEM_PROMPT = """\
 You are the Summarizer module of SAATHI. Your ONLY job is structured compression of an ongoing conversation.
 
@@ -68,9 +44,7 @@ HARD RULES (violations cause failure):
 """
 
 
-# ---------------------------------------------------------------------------
 # Few-shot examples — keep tiny; this agent is mechanical
-# ---------------------------------------------------------------------------
 _FEW_SHOTS: list[dict] = [
     {
         "role": "user",
@@ -131,9 +105,7 @@ _FEW_SHOTS: list[dict] = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Public API
-# ---------------------------------------------------------------------------
 def build_summarizer_prompt(
     session: SessionState,
     profile: Optional[UserProfile] = None,
@@ -212,9 +184,7 @@ def build_summarizer_prompt(
     return messages
 
 
-# ---------------------------------------------------------------------------
 # Smoke test
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     sess = SessionState(session_id="s1", user_id="u1", turn_count=4)
     sess.turn_history = [

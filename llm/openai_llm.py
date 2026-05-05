@@ -1,3 +1,5 @@
+"""OpenAI Async API wrapper implementing `BaseLLM`."""
+
 from openai import AsyncOpenAI
 import json
 import logging

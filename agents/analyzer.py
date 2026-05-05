@@ -1,20 +1,4 @@
-"""
-Agent 1 — Analyzer.
-
-Reads (new seeker turn + history + previous AnalyzerState) and returns a
-fresh `AnalyzerState`. NO response generation happens here — that's the
-Generator's job.
-
-Backend-agnostic: speaks only to `llm.get_llm("analyzer")`. Switching
-LLM_BACKEND from "openai" to "local" requires no changes here.
-
-Failure policy:
-  - LLM/parse errors NEVER crash the pipeline. We log and return a
-    conservative default state so the rest of the turn can proceed.
-  - The default uses a moderate-distress profile (intensity=3, receptiveness=
-    medium) so phase_gate stays in Exploration and the Generator stays in
-    safe territory.
-"""
+"""Runs Agent 1: infers AnalyzerState from the latest seeker turn and history (no reply text)."""
 
 from __future__ import annotations
 
@@ -75,9 +59,7 @@ class Analyzer:
                          e, exc_info=True)
             return self._safe_default(new_seeker_text, previous_analyzer_state)
 
-    # ---------------------------------------------------------------------
     # Internals
-    # ---------------------------------------------------------------------
     @staticmethod
     def _safe_default(
         new_seeker_text: str,
@@ -108,4 +90,5 @@ class Analyzer:
             is_new_problem=False,
             stigma_cue=False,
             risk_signal=None,
+            concrete_facts=[],
         )

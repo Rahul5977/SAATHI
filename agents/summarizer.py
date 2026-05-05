@@ -1,25 +1,4 @@
-"""
-Agent 4 — Summarizer.
-
-Compresses the running conversation into a structured `SessionSummary`. The
-orchestrator calls this every `SAATHI_SUMMARY_EVERY_N_TURNS` (default 4) so
-that the Generator and phase_gate can reason about the entire session even
-after early turns fall out of the 16-turn rolling history window.
-
-Failure policy:
-  - Identical to Analyzer / Safety: LLM/parse failures NEVER crash the
-    pipeline. We log and return a "carry-forward" default that reuses the
-    previous summary (or builds a minimal stub if there isn't one yet).
-  - The whole memory layer is best-effort. If summarization fails for 5
-    turns straight, the bot falls back to its old behavior of leaning on
-    the 16-turn window. No crash, no missing reply.
-
-When to call (decided by the orchestrator, not here):
-  1. Every Nth turn (config: SAATHI_SUMMARY_EVERY_N_TURNS).
-  2. OR when turn_history grows past SAATHI_SUMMARY_HISTORY_TRIGGER.
-  3. OR when phase advances out of "Exploration" for the first time
-     (we want the seeker_goal pinned the moment they start working).
-"""
+"""Periodic session summarization for long-running chats (Agent 4)."""
 
 from __future__ import annotations
 
@@ -89,9 +68,7 @@ class Summarizer:
             )
             return self._safe_default(session, profile)
 
-    # ---------------------------------------------------------------------
     # Internals
-    # ---------------------------------------------------------------------
     @staticmethod
     def _safe_default(
         session: SessionState,
@@ -145,9 +122,7 @@ class Summarizer:
         )
 
 
-# ---------------------------------------------------------------------------
 # Smoke test
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import asyncio
 

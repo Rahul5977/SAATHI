@@ -1,15 +1,4 @@
-"""
-SAATHI dataset parser.
-
-Two-stage workflow:
-  1. Auto-detect the JSON structure of the dataset (run with --detect-only first).
-  2. Parse every Supporter turn into a flat record list saved to data/parsed_records.json.
-
-Usage:
-    python -m indexing.parse_conversations --detect-only
-    python -m indexing.parse_conversations
-    python -m indexing.parse_conversations --sample 3
-"""
+"""Parses dataset JSON into flat seeker-turn records for indexing."""
 
 from __future__ import annotations
 
@@ -33,10 +22,6 @@ logging.basicConfig(
 logger = logging.getLogger("parse_conversations")
 
 
-
-# Candidate field names — used by both the detector and the parser.
-# Order matters: the first match wins.
-
 CANDIDATES = {
     "conversations_key": ["conversations", "dialogues", "data", "examples", "samples"],
     "turns_key": ["turns", "dialogue", "messages", "utterances", "conversation"],
@@ -58,8 +43,6 @@ SEEKER_LABELS = {"seeker", "user", "client", "human", "patient", "student"}
 SUPPORTER_LABELS = {"supporter", "assistant", "counselor", "therapist", "helper", "saathi", "bot"}
 
 
-
-# Helpers
 def _find_first_key(d: dict, candidates: list[str]) -> Optional[str]:
     """Return the first candidate name present in dict d (case-insensitive)."""
     if not isinstance(d, dict):
@@ -283,7 +266,6 @@ def detect_structure(dataset_dir: Path) -> dict:
     return mapping
 
 
-
 # Stage 2: parse_all
 
 def _extract_conversations(data: Any, mapping: dict) -> list:
@@ -487,7 +469,6 @@ def parse_all(dataset_dir: Path, mapping: dict) -> list[dict]:
     return records
 
 
-
 # Reporting
 
 def print_summary(records: list[dict]) -> None:
@@ -540,7 +521,6 @@ def print_samples(records: list[dict], n: int) -> None:
         print(f"\n--- Sample {i}/{len(chosen)} ---")
         print(json.dumps(r, indent=2, ensure_ascii=False))
     print("=" * 78)
-
 
 
 # CLI

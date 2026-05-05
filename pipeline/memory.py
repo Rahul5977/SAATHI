@@ -1,31 +1,4 @@
-"""
-Cross-session memory layer.
-
-`MemoryManager` is the persistent, user-keyed counterpart to `SessionManager`.
-Where SessionManager tracks one conversation, MemoryManager tracks the
-*user* — facts, themes, summaries — across every conversation they've ever
-had with SAATHI.
-
-Storage:
-  - Redis key `user_profile:{user_id}` (string, JSON-serialized UserProfile).
-  - 90-day TTL refreshed on every write. (We don't want indefinite retention
-    — a stale 8-month-old profile is more harmful than helpful.)
-  - In-memory fallback when Redis is unavailable (mirrors `SessionManager`).
-
-API surface kept narrow on purpose:
-  - `get_or_create(user_id)`           — hydrate at session start
-  - `save(profile)`                    — persist after any update
-  - `register_session_start(profile)`  — bump counters, refresh `last_seen_at`
-  - `apply_session_close(...)`         — fold a finished session's summary
-                                         into the long-term profile
-  - `merge_session_facts(profile,
-                         new_facts)`   — incremental fact accumulation
-                                         (called every turn from orchestrator)
-
-This module has zero LLM dependencies. The decision of WHAT to remember is
-made by the Summarizer agent (`agents/summarizer.py`); MemoryManager just
-holds the bytes.
-"""
+"""Redis-backed `UserProfile` store for cross-session facts and themes."""
 
 from __future__ import annotations
 
@@ -60,9 +33,7 @@ class MemoryManager:
         self._use_redis: bool = True
         self.ttl: int = _PROFILE_TTL_SECONDS
 
-    # ------------------------------------------------------------------
     # Internal: lazy Redis connection (mirrors SessionManager)
-    # ------------------------------------------------------------------
     async def _get_redis(self) -> Optional[redis.Redis]:
         if not self._use_redis:
             return None
@@ -91,9 +62,7 @@ class MemoryManager:
     def _key(user_id: str) -> str:
         return f"user_profile:{user_id}"
 
-    # ------------------------------------------------------------------
     # Public API: load / save
-    # ------------------------------------------------------------------
     async def get(self, user_id: str) -> Optional[UserProfile]:
         """Fetch an existing profile. Returns None on miss or corruption."""
         key = self._key(user_id)
@@ -138,9 +107,7 @@ class MemoryManager:
         fresh.touch()
         return fresh
 
-    # ------------------------------------------------------------------
     # Public API: lifecycle hooks called from the orchestrator
-    # ------------------------------------------------------------------
     async def register_session_start(self, profile: UserProfile) -> UserProfile:
         """Called when a new session opens for this user. Bumps the session
         counter, refreshes `last_seen_at`, persists. Idempotent enough — if
@@ -227,9 +194,7 @@ class MemoryManager:
             await self.save(profile)
         return profile
 
-    # ------------------------------------------------------------------
     # Lifecycle
-    # ------------------------------------------------------------------
     async def close(self) -> None:
         """Release the Redis connection. Safe to call multiple times."""
         if self._redis is not None:
@@ -241,9 +206,7 @@ class MemoryManager:
                 self._redis = None
 
 
-# ---------------------------------------------------------------------------
 # Helpers
-# ---------------------------------------------------------------------------
 def _dedupe_extend(
     existing: list[str],
     incoming: list[str],
@@ -266,9 +229,7 @@ def _dedupe_extend(
     return out
 
 
-# ---------------------------------------------------------------------------
 # Smoke test
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import asyncio
 

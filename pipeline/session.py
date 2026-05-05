@@ -1,15 +1,4 @@
-"""
-Redis-backed session persistence with in-memory fallback.
-
-Each session is stored as a JSON-serialized `SessionState` under the key
-``session:{session_id}`` with a 24h TTL. If Redis cannot be reached on the
-first call, we transparently degrade to a per-process in-memory dict so dev
-loops, tests, and demo runs work without a Redis server.
-
-Concurrency note: a single SessionManager instance is safe to share across
-async tasks within one process. The Redis client is built lazily on first
-use to avoid event-loop-binding issues.
-"""
+"""Loads and saves `SessionState` in Redis (in-process fallback when Redis is down)."""
 
 from __future__ import annotations
 
@@ -31,11 +20,8 @@ from core.schemas import (
 logger = logging.getLogger(__name__)
 
 
-# Hard cap on stored conversation history (8 exchanges = 16 turns). Older
-# turns are summarized via the rolling AnalyzerState carried on SessionState.
 _HISTORY_CAP = 16
 
-# Session TTL in Redis: 24 hours of inactivity = fresh start next time.
 _SESSION_TTL_SECONDS = 86_400
 
 
@@ -48,9 +34,6 @@ class SessionManager:
         self._use_redis: bool = True
         self.ttl: int = _SESSION_TTL_SECONDS
 
-    # ------------------------------------------------------------------
-    # Internal: lazy Redis connection with one-shot fallback flip
-    # ------------------------------------------------------------------
     async def _get_redis(self) -> Optional[redis.Redis]:
         if not self._use_redis:
             return None
@@ -78,9 +61,7 @@ class SessionManager:
     def _key(session_id: str) -> str:
         return f"session:{session_id}"
 
-    # ------------------------------------------------------------------
     # Public API
-    # ------------------------------------------------------------------
     async def get_session(self, session_id: str) -> Optional[SessionState]:
         """Fetch an existing session or return None."""
         key = self._key(session_id)

@@ -1,8 +1,4 @@
-"""
-python calculate_report_metrics.py --root /path/to/dataset/dataset
-python calculate_report_metrics.py --root /path/to/dataset/dataset --output metrics.json
-python calculate_report_metrics.py --root /path/to/dataset/dataset --debug
-"""
+"""Report metrics over conversation JSON trees (CLI: pass --root)."""
 
 import json
 import re
@@ -11,8 +7,7 @@ from collections import defaultdict, Counter
 from pathlib import Path
 
 
-# Exact field names in the files 
-T_TURN_ID          = "turn_id"
+T_TURN_ID = "turn_id"
 T_SPEAKER          = "speaker"
 T_TEXT             = "text"
 T_STAGE            = "stage"
@@ -34,8 +29,6 @@ S_EMOTION_SEED     = "emotion seed"
 S_INTENSITY_SEED   = "intensity_seed"
 S_CULTURAL_MARKERS = "cultural markers"    
 
-
-# Normalisation helpers (NEW)
 
 def normalise_folder_name(name: str) -> str:
     s = name.lower().strip()
@@ -349,7 +342,6 @@ def compute_cultural(situations, dialogues):
         "pct_supporter_turns_with_stigma_response": round(100*stig_r/sup,2) if sup else 0,
         "crisis_flag_distribution_pct": pct_dist(Counter(risks), len(risks)),
     }
-
 
 
 def compute_all_metrics(root: Path, debug: bool = False) -> dict:

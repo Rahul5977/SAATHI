@@ -1,70 +1,62 @@
+"""Paths, LLM/embedding settings, and SAATHI feature tunables from the environment."""
+
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Project paths
 PROJECT_ROOT = Path(__file__).parent
 DATASET_DIR = PROJECT_ROOT / os.getenv("DATASET_DIR", "dataset")
 DATA_DIR = PROJECT_ROOT / "data"
 INDEX_PATH = DATA_DIR / "faiss_index"
 PARSED_RECORDS_PATH = DATA_DIR / "parsed_records.json"
 
-# LLM configuration
-LLM_BACKEND = os.getenv("LLM_BACKEND", "openai")  # "openai" or "local"
+LLM_BACKEND = os.getenv("LLM_BACKEND", "openai")
 
-# OpenAI settings
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 ANALYZER_MODEL = "gpt-4o"
 GENERATOR_MODEL = "gpt-4o"
 SAFETY_MODEL = "gpt-4o-mini"
-# Summarizer is mechanical compression — gpt-4o-mini is plenty and ~10x cheaper.
 SUMMARIZER_MODEL = os.getenv("SUMMARIZER_MODEL", "gpt-4o-mini")
 
-# Local LLM settings (future — vLLM or Ollama serving OpenAI-compatible endpoint)
 LOCAL_LLM_BASE_URL = os.getenv("LOCAL_LLM_BASE_URL", "http://localhost:8001/v1")
 LOCAL_LLM_MODEL = os.getenv("LOCAL_LLM_MODEL", "saathi-7b")
 
-# Embedding configuration
-EMBEDDING_BACKEND = os.getenv("EMBEDDING_BACKEND", "openai")  # "openai" or "local"
+EMBEDDING_BACKEND = os.getenv("EMBEDDING_BACKEND", "openai")
 OPENAI_EMBEDDING_MODEL = "text-embedding-3-small"
-LOCAL_EMBEDDING_MODEL = os.getenv("LOCAL_EMBEDDING_MODEL", "paraphrase-multilingual-MiniLM-L12-v2")
+LOCAL_EMBEDDING_MODEL = os.getenv(
+    "LOCAL_EMBEDDING_MODEL",
+    "paraphrase-multilingual-MiniLM-L12-v2",
+)
 
-# Temperature settings
 ANALYZER_TEMPERATURE = 0.1
 GENERATOR_TEMPERATURE = 0.75
 SAFETY_TEMPERATURE = 0.0
-SUMMARIZER_TEMPERATURE = 0.1  # Mechanical compression; deterministic-ish.
+SUMMARIZER_TEMPERATURE = 0.1
 
-# ---- Memory layer knobs ---------------------------------------------------
-# Run the Summarizer every N turns. Lower = more up-to-date memory but more
-# LLM cost. 4 hits the sweet spot for short Hinglish sessions.
 SAATHI_SUMMARY_EVERY_N_TURNS = int(os.getenv("SAATHI_SUMMARY_EVERY_N_TURNS", "4"))
-# Force a fresh summary as soon as turn_history grows beyond this many turns,
-# even if the cadence above hasn't been reached yet. Prevents memory loss
-# when a user ghosts the bot mid-session and comes back hours later with
-# a long unread queue.
-SAATHI_SUMMARY_HISTORY_TRIGGER = int(os.getenv("SAATHI_SUMMARY_HISTORY_TRIGGER", "12"))
-# When summarizing incrementally, how many recent turns to show the
-# Summarizer in addition to the previous summary blob.
-SAATHI_SUMMARY_INCREMENTAL_WINDOW = int(os.getenv("SAATHI_SUMMARY_INCREMENTAL_WINDOW", "8"))
+SAATHI_SUMMARY_HISTORY_TRIGGER = int(
+    os.getenv("SAATHI_SUMMARY_HISTORY_TRIGGER", "12")
+)
+SAATHI_SUMMARY_INCREMENTAL_WINDOW = int(
+    os.getenv("SAATHI_SUMMARY_INCREMENTAL_WINDOW", "8")
+)
 
-# ---- Voice / "feel" knobs --------------------------------------------------
-# How often (in turns) SAATHI may slip in a one-line care gesture
-# ("khaana khaya?", "neend ho rahi?", "pani le pehle"). Set to 0 to disable.
 SAATHI_CARE_TAG_FREQ = int(os.getenv("SAATHI_CARE_TAG_FREQ", "4"))
-# Allow occasional emoji at emotional peaks. Off by default — too many
-# emojis make the bot feel performative. When enabled, max ~1 per 5 turns.
 SAATHI_EMOJI_ENABLED = os.getenv("SAATHI_EMOJI_ENABLED", "false").lower() == "true"
-# How many recent facts from session.facts_log to surface to the Generator.
 SAATHI_FACTS_WINDOW = int(os.getenv("SAATHI_FACTS_WINDOW", "8"))
 
-# Redis
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 
-# Categories in the dataset
 CATEGORIES = [
-    "Academic", "Employment", "Financial", "Family_Conflict",
-    "Marriage_Pressure", "Health", "Gender_Identity", "Migration"
+    "Academic",
+    "Employment",
+    "Financial",
+    "Family_Conflict",
+    "Marriage_Pressure",
+    "Health",
+    "Gender_Identity",
+    "Migration",
 ]

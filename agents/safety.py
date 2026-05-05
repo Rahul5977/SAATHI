@@ -1,23 +1,4 @@
-"""
-Agent 3 — Safety checker.
-
-Three-stage cascading risk classifier. Designed to run IN PARALLEL with the
-Analyzer so it never adds wall-clock latency on the happy path.
-
-Stage 1: Compiled regex over Hindi/Hinglish/English crisis idioms.
-         Cost: <1 ms. Recall priority — this is our safety net.
-Stage 2: Session-level escalation heuristics (sustained intensity, prior
-         risk signals).  Cost: <1 ms.
-Stage 3: LLM classifier — only invoked when Stages 1+2 are CLEAN. Catches
-         paraphrased/idiomatic risk that the regex missed (~300 ms).
-
-Failure policy:
-  - Stages 1-2 are pure Python and cannot fail.
-  - Stage 3 LLM errors fall back to "no flag" (does NOT escalate on a
-    classifier crash). The reasoning: Stages 1+2 are the primary safety net;
-    Stage 3 is a precision-bumper, and a crashing classifier shouldn't lock
-    the user out of their conversation.
-"""
+"""Regex-first crisis detection with optional LLM backup (Agent 3)."""
 
 from __future__ import annotations
 
@@ -33,9 +14,7 @@ from llm import get_llm
 logger = logging.getLogger(__name__)
 
 
-# ---------------------------------------------------------------------------
 # Stage 1 — regex patterns (compiled once at import)
-# ---------------------------------------------------------------------------
 CRISIS_PATTERNS: dict[str, list[str]] = {
     "suicidal_ideation": [
         r"mar\s*jaana", r"marna\s*chahta", r"marna\s*chahti",
@@ -66,9 +45,7 @@ COMPILED_PATTERNS: dict[str, list[re.Pattern[str]]] = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Static crisis response (validated copy)
-# ---------------------------------------------------------------------------
 CRISIS_RESPONSE = (
     "Tum jo share kar rahe ho, woh bahut important hai aur main sunta hoon. "
     "Main chahta hoon ki tum safe raho. Please abhi iVARS helpline pe call karo: "
@@ -77,9 +54,7 @@ CRISIS_RESPONSE = (
 )
 
 
-# ---------------------------------------------------------------------------
 # SafetyChecker
-# ---------------------------------------------------------------------------
 class SafetyChecker:
     """Cascading risk classifier."""
 
@@ -103,9 +78,7 @@ class SafetyChecker:
         # ---- Stage 3: LLM classifier ----
         return await self._stage3_llm(text or "")
 
-    # ------------------------------------------------------------------
     # Stage 1
-    # ------------------------------------------------------------------
     @staticmethod
     def _stage1_regex(text: str) -> SafetyFlags | None:
         for category, compiled_list in COMPILED_PATTERNS.items():
@@ -124,9 +97,7 @@ class SafetyChecker:
                     )
         return None
 
-    # ------------------------------------------------------------------
     # Stage 2
-    # ------------------------------------------------------------------
     @staticmethod
     def _stage2_history(session: SessionState) -> SafetyFlags | None:
         # Sustained high intensity across the last 2+ turns.
@@ -168,9 +139,7 @@ class SafetyChecker:
 
         return None
 
-    # ------------------------------------------------------------------
     # Stage 3
-    # ------------------------------------------------------------------
     async def _stage3_llm(self, text: str) -> SafetyFlags:
         if not text.strip():
             return SafetyFlags(
@@ -234,9 +203,7 @@ class SafetyChecker:
                 requires_hitl=False, risk_level="none", trigger_phrase=None,
             )
 
-    # ------------------------------------------------------------------
     # JSON parser tolerant of ```json fences
-    # ------------------------------------------------------------------
     @staticmethod
     def _parse_classifier_json(response_text: str) -> dict:
         cleaned = (response_text or "").strip()

@@ -362,6 +362,101 @@
     @keyframes blink { 50% { opacity: 0.35; } }
 
     .empty-state { color: #9ca3af; font-style: italic; font-size: 11px; }
+
+    /* Analyzer — concrete facts chips */
+    .fact-chips {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      flex: 1; min-width: 0;
+    }
+    .fact-chip {
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: #e0e7ff;
+      color: #3730a3;
+      border: 1px solid #c7d2fe;
+      max-width: 100%;
+      word-break: break-word;
+    }
+
+    /* Retrieval section */
+    .nested-details {
+      margin: 10px 0;
+      border: 1px dashed #d1d5db;
+      border-radius: 6px;
+      background: #f9fafb;
+    }
+    .nested-details summary {
+      padding: 8px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #4b5563;
+      cursor: pointer;
+      list-style: none;
+    }
+    .nested-details summary::-webkit-details-marker { display: none; }
+    .query-pre {
+      margin: 0;
+      padding: 8px 10px 10px;
+      font-size: 10px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #1f2937;
+      border-top: 1px solid #e5e7eb;
+      max-height: 120px;
+      overflow-y: auto;
+    }
+    .retrieval-card {
+      border: 1px solid var(--c-border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+    .retrieval-card:last-child { margin-bottom: 0; }
+    .retrieval-card-head {
+      display: flex; flex-wrap: wrap; align-items: baseline;
+      gap: 6px 10px;
+      font-size: 10px;
+      margin-bottom: 6px;
+    }
+    .retrieval-idx {
+      font-weight: 700;
+      color: var(--c-saathi);
+    }
+    .retrieval-cid {
+      font-family: var(--mono);
+      color: #6b7280;
+    }
+    .retrieval-scores {
+      margin-left: auto;
+      font-family: var(--mono);
+      color: #374151;
+    }
+    .retrieval-tags {
+      display: flex; flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .tag-mini {
+      font-size: 9px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #f3f4f6;
+      color: #374151;
+      max-width: 100%;
+      word-break: break-word;
+    }
+    .tag-mini.phase { background: #dbeafe; color: #1e40af; }
+    .tag-mini.emo   { background: #fef3c7; color: #92400e; }
+    .retrieval-preview {
+      font-size: 11px;
+      line-height: 1.4;
+      color: #1f2937;
+      padding-top: 4px;
+      border-top: 1px solid #f3f4f6;
+    }
   </style>
 </head>
 <body>
@@ -471,6 +566,33 @@
             <span class="label">Risk signal</span>
             <span id="dbg-risk-signal" class="risk-signal empty">none</span>
           </div>
+          <div class="row">
+            <span class="label">Problem</span>
+            <span class="value" id="dbg-problem" style="font-size:11px;word-break:break-word;">—</span>
+          </div>
+          <div class="row">
+            <span class="label">New problem</span>
+            <span id="dbg-new-problem">—</span>
+          </div>
+          <div class="row" style="align-items: flex-start;">
+            <span class="label">Concrete facts</span>
+            <div class="fact-chips empty-state" id="dbg-facts">—</div>
+          </div>
+        </div>
+      </details>
+
+      <details class="debug-section" open>
+        <summary>Retrieval (few-shot)</summary>
+        <div class="debug-body">
+          <div class="row">
+            <span class="label">Filter cascade</span>
+            <span class="value" id="dbg-retrieval-filter" style="font-size:11px;">—</span>
+          </div>
+          <details class="nested-details">
+            <summary>Composite query (advanced)</summary>
+            <pre id="dbg-retrieval-query" class="query-pre empty-state">—</pre>
+          </details>
+          <div id="dbg-retrieval-cards"></div>
         </div>
       </details>
 
@@ -768,6 +890,62 @@
       return "●".repeat(n) + "○".repeat(6 - n);
     }
 
+    function escapeHtml(s) {
+      if (s == null || s === "") return "";
+      const d = document.createElement("div");
+      d.textContent = s;
+      return d.innerHTML;
+    }
+
+    function renderRetrieval(meta) {
+      const filterEl = $("dbg-retrieval-filter");
+      const queryEl = $("dbg-retrieval-query");
+      const cardsEl = $("dbg-retrieval-cards");
+      if (!filterEl || !queryEl || !cardsEl) return;
+
+      filterEl.textContent = meta.retrieval_filter_level || "—";
+
+      if (meta.retrieval_query) {
+        queryEl.textContent = meta.retrieval_query;
+        queryEl.classList.remove("empty-state");
+      } else {
+        queryEl.textContent = "—";
+        queryEl.classList.add("empty-state");
+      }
+
+      const items = meta.retrieval_items || [];
+      cardsEl.innerHTML = "";
+      if (!items.length) {
+        cardsEl.innerHTML =
+          '<div class="empty-state">No examples (crisis turn, retrieval error, or index empty).</div>';
+        return;
+      }
+      items.forEach((it, i) => {
+        const card = document.createElement("div");
+        card.className = "retrieval-card";
+        const cid = it.conversation_id || "";
+        const idShort = cid.length > 18 ? cid.slice(0, 18) + "…" : cid || "—";
+        const fs = it.faiss_score != null ? it.faiss_score : "—";
+        const fin = it.final_score != null ? it.final_score : "—";
+        card.innerHTML =
+          '<div class="retrieval-card-head">' +
+            '<span class="retrieval-idx">#' + (i + 1) + "</span>" +
+            '<span class="retrieval-cid" title="' + escapeHtml(cid) + '">' +
+              escapeHtml(idShort) +
+            "</span>" +
+            '<span class="retrieval-scores">FAISS ' + escapeHtml(String(fs)) +
+            " · final " + escapeHtml(String(fin)) + "</span>" +
+          "</div>" +
+          '<div class="retrieval-tags">' +
+            '<span class="tag-mini">' + escapeHtml(it.strategy || "—") + "</span>" +
+            '<span class="tag-mini phase">' + escapeHtml(it.phase || "—") + "</span>" +
+            '<span class="tag-mini emo">' + escapeHtml(it.emotion || "—") + "</span>" +
+          "</div>" +
+          '<div class="retrieval-preview">' + escapeHtml(it.seeker_preview || "") + "</div>";
+        cardsEl.appendChild(card);
+      });
+    }
+
     function scrollToBottom() {
       els.messages.scrollTop = els.messages.scrollHeight;
     }
@@ -818,12 +996,40 @@
         riskEl.className = "risk-signal empty";
       }
 
+      $("dbg-problem").textContent = meta.problem_type || "—";
+
+      const npEl = $("dbg-new-problem");
+      if (meta.is_new_problem === true) {
+        npEl.textContent = "Yes";
+        npEl.className = "yes-no yes";
+      } else if (meta.is_new_problem === false) {
+        npEl.textContent = "No";
+        npEl.className = "yes-no no";
+      } else {
+        npEl.textContent = "—";
+        npEl.className = "";
+      }
+
+      const factsEl = $("dbg-facts");
+      const facts = meta.concrete_facts || [];
+      if (!facts.length) {
+        factsEl.textContent = "—";
+        factsEl.className = "fact-chips empty-state";
+      } else {
+        factsEl.className = "fact-chips";
+        factsEl.innerHTML = facts
+          .map((f) => '<span class="fact-chip">' + escapeHtml(f) + "</span>")
+          .join("");
+      }
+
       // Section 3 — Trajectory
       renderSparkline(meta.intensity_trajectory || []);
       renderPhaseTimeline(meta.phase_history || []);
       renderStrategyHistory(meta.strategy_history || []);
       $("dbg-coping-history").textContent =
         meta.coping ? meta.coping : "—";
+
+      renderRetrieval(meta);
 
       // Section 4 — Safety
       const lvl = (meta.safety_risk || "none").toLowerCase();

@@ -1,19 +1,4 @@
-"""
-Agent 2 — Generator.
-
-Streams the final Hinglish response shown to the seeker.
-
-Pipeline per turn:
-  1. Retrieve top-K conversation examples from FAISS (composite-prefix query).
-  2. Build the chat-completions messages array via `build_generator_prompt`.
-  3. Stream tokens from the LLM, yielding each chunk to the caller.
-  4. After streaming completes, run a non-blocking prohibited-vocabulary
-     audit. Currently we LOG only — we don't rewrite mid-stream because the
-     bytes are already on their way to the user. Regeneration on violation
-     is a future enhancement (see TODO below).
-
-Backend-agnostic: speaks only to `llm.get_llm("generator")`.
-"""
+"""Streams the seeker-facing Hinglish reply (Agent 2): retrieval, prompt build, LLM stream."""
 
 from __future__ import annotations
 
@@ -24,7 +9,9 @@ from typing import AsyncGenerator
 from config import GENERATOR_TEMPERATURE, INDEX_PATH, SAATHI_CARE_TAG_FREQ
 from core.prohibited_words import check_prohibited
 from core.schemas import (
+    CATEGORY_LABEL_MAP,
     AnalyzerState,
+    RetrievalDebugItem,
     SessionState,
     StrategyDecision,
     TurnRecord,
@@ -63,6 +50,44 @@ _OVERUSED_PHRASES: list[str] = [
 _OVERUSED_RE = [re.compile(p, re.IGNORECASE) for p in _OVERUSED_PHRASES]
 
 
+def _build_retrieval_session_context(
+    session: SessionState,
+    analyzer_state: AnalyzerState,
+) -> str:
+    """Dense topic line for few-shot retrieval when the current seeker line is
+    short or omits keywords from earlier turns (e.g. \"JEE\" established once,
+    later only \"haan sach me\")."""
+    chunks: list[str] = []
+
+    pt = (analyzer_state.problem_type or "").strip()
+    if pt:
+        label = CATEGORY_LABEL_MAP.get(pt, pt.replace("_", " "))
+        chunks.append(label)
+
+    seen: set[str] = set()
+    fact_parts: list[str] = []
+    for fac in list(analyzer_state.concrete_facts or []) + list(session.facts_log or [])[-12:]:
+        key = (fac or "").strip().lower()
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        fact_parts.append((fac or "").strip())
+        if len(fact_parts) >= 6:
+            break
+    if fact_parts:
+        chunks.append("; ".join(fact_parts))
+
+    summ = session.summary
+    if summ:
+        if (summ.seeker_goal or "").strip():
+            chunks.append(summ.seeker_goal.strip())
+        elif (summ.narrative or "").strip():
+            chunks.append(summ.narrative.strip()[:160])
+
+    out = " ".join(chunks)
+    return out[:240]
+
+
 def _detect_overused_phrases(text: str) -> list[str]:
     """Return the list of overused-phrase regexes that matched. Used only
     for soft-warning logging today; later we may use this to trigger a
@@ -98,7 +123,8 @@ class Generator:
 
         # ---- STEPS 1 & 2: retrieve + format examples ----
         try:
-            examples = await self.retriever.retrieve(
+            r_ctx = _build_retrieval_session_context(session, analyzer_state)
+            outcome = await self.retriever.retrieve(
                 seeker_text=seeker_text,
                 strategy=strategy_decision.selected_strategy,
                 coping_mech=analyzer_state.current_coping_mech,
@@ -107,7 +133,26 @@ class Generator:
                 persona_code=session.persona_code,
                 emotion=analyzer_state.emotion_type,
                 top_k=6,
+                session_context=r_ctx or None,
+                problem_type=analyzer_state.problem_type or None,
             )
+            examples = outcome.records
+            session.latest_retrieval_query = outcome.query_text
+            session.latest_retrieval_filter_level = outcome.filter_level
+            session.latest_retrieval_debug = [
+                RetrievalDebugItem(
+                    conversation_id=str(rec.get("conversation_id") or "")[:80],
+                    faiss_score=rec.get("_faiss_score"),
+                    final_score=rec.get("_retrieval_score"),
+                    strategy=str(rec.get("strategy") or ""),
+                    phase=str(rec.get("phase") or ""),
+                    emotion=str(rec.get("seeker_emotion") or ""),
+                    seeker_preview=(
+                        (rec.get("seeker_text") or "").strip()[:180]
+                    ),
+                )
+                for rec in examples
+            ]
             formatted_examples = self.retriever.format_for_prompt(examples)
             negative_example = self.retriever.format_negative_example()
             logger.info(
@@ -124,6 +169,9 @@ class Generator:
                 "(No examples available — generate from your training)"
             )
             negative_example = ""
+            session.latest_retrieval_debug = []
+            session.latest_retrieval_query = None
+            session.latest_retrieval_filter_level = None
 
         # ---- STEP 3: build prompt (now session-aware) ----
         messages = build_generator_prompt(

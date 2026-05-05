@@ -1,6 +1,6 @@
-import json
+"""Financial stress situation seeds (C5) for dataset generation."""
 
-# 1. PERSONAS COMPATIBLE WITH C5
+import json
 PERSONAS = {
     "P3": "P3 — UPSC/PSC aspirant (22–30, M/F), Multi-year prep, coaching institute life, family investment, dropper stigma.",
     "P4": "P4 — IT/software professional (24–35, M/F), Tier-1 or Tier-2 city, MNC or startup, EMI pressure, WFH isolation.",

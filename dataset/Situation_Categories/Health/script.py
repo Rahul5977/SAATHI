@@ -1,8 +1,6 @@
-import json
+"""Health situation seeds (C7) for dataset generation."""
 
-# ==========================================
-# 1. PERSONAS COMPATIBLE WITH C7
-# ==========================================
+import json
 PERSONAS = {
     "P5": "P5 — Married woman (25–40), homemaker, Joint family, saas conflict, career gap, child pressure, lost identity.",
     "P7": "P7 — Farmer / rural man (30–55), Kisan identity, debt, crop failure, moneylender, no help-seeking norm.",
@@ -11,9 +9,7 @@ PERSONAS = {
     "P12": "P12 — Single mother / divorced woman (28–45), Stigma, economic precarity, children's wellbeing, community exclusion."
 }
 
-# ==========================================
 # 2. TRIGGER EVENTS (Health / Identity / Isolation)
-# ==========================================
 TRIGGER_EVENTS = [
     "Doctor dismissed my symptoms as 'stress' again",
     "Couldn't attend a friend's wedding — too exhausted from caregiving",
@@ -24,9 +20,7 @@ TRIGGER_EVENTS = [
     "Realized I haven't spoken to anyone in 3 days"
 ]
 
-# ==========================================
 # 3. CATEGORY 7 STRESSORS & COPING MAPPING
-# ==========================================
 # Coping mechanisms logically assigned based on the socio-cultural context of the stressor
 STRESSORS = [
     {"SUB": "Elderly parent caregiver", "DESC": "Dementia/bedridden parent; no support system; burnout", "COP": "Duty-Based Coping"},
@@ -35,9 +29,7 @@ STRESSORS = [
     {"SUB": "Chronic pain with no diagnosis", "DESC": "Dismissed as 'natak'; somatization invalidated by doctor", "COP": "Somatization"}
 ]
 
-# ==========================================
 # 4. ELABORATE PROMPT GENERATOR
-# ==========================================
 def generate_c7_prompts(stressor_list, persona_dict, trigger_list):
     prompts = []
     for s in stressor_list:
@@ -84,9 +76,7 @@ JSON SCHEMA PER OBJECT:
             prompts.append(detailed_prompt.strip())
     return prompts
 
-# ==========================================
 # 5. EXECUTION
-# ==========================================
 all_c7_prompts = generate_c7_prompts(STRESSORS, PERSONAS, TRIGGER_EVENTS)
 
 # Example: Output the logic volume and the first combination 

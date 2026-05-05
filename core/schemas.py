@@ -1,18 +1,4 @@
-"""
-SAATHI core schemas.
-
-Pydantic v2 contracts shared across the pipeline. The taxonomy here is the
-canonical source of truth and aligns with `dataset/prompts/conversation_generation.txt`
-and `dataset/prompts/cot_generation.txt`.
-
-Key design choices:
-  - PROBLEM_TYPES uses the C1-C8 taxonomy from the dataset prompts (with a
-    parallel CATEGORY_CODE_MAP / CATEGORY_LABEL_MAP for code/label lookup).
-  - EMOTION_TYPES covers the most common canonical labels seen in the dataset
-    plus an alias map for high-frequency variants ("anxious" -> "anxiety", etc.).
-  - RESTATEMENT_LENSES includes mechanism compatibility metadata so callers
-    (e.g. phase_gate.compute_lens) can enforce dataset rules at runtime.
-"""
+"""Pydantic models and taxonomies shared across the SAATHI pipeline."""
 
 from __future__ import annotations
 
@@ -22,9 +8,7 @@ from typing import Literal, Optional
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
-# ---------------------------------------------------------------------------
 # Emotion taxonomy
-# ---------------------------------------------------------------------------
 # Canonical lowercase labels the Analyzer LLM is allowed to return.
 EMOTION_TYPES: list[str] = [
     # Core distress (per Prompt 2 base set)
@@ -87,9 +71,7 @@ EMOTION_ALIASES: dict[str, str] = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Problem (context) taxonomy — aligned with dataset CATEGORY MAP
-# ---------------------------------------------------------------------------
 PROBLEM_TYPES: list[str] = [
     "Academic_Pressure",        # C1
     "Family_Dynamics",          # C2
@@ -170,9 +152,7 @@ CATEGORY_FOLDER_MAP: dict[str, str] = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Coping mechanisms — matches dataset COPING MAP exactly
-# ---------------------------------------------------------------------------
 COPING_MECHANISMS: list[str] = [
     "Duty_Based", "Relational_Preservation", "Somatization", "Sequential",
 ]
@@ -189,9 +169,7 @@ COPING_ALIASES: dict[str, str] = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Strategies & phases (unchanged — align with dataset)
-# ---------------------------------------------------------------------------
 STRATEGIES: list[str] = [
     "RESTATEMENT_OR_PARAPHRASING", "QUESTION", "REFLECTION_OF_FEELINGS",
     "AFFIRMATION_AND_REASSURANCE", "SELF_DISCLOSURE", "PROVIDING_SUGGESTIONS",
@@ -201,10 +179,8 @@ STRATEGIES: list[str] = [
 PHASES: list[str] = ["Exploration", "Insight", "Action"]
 
 
-# ---------------------------------------------------------------------------
 # Restatement lenses — labels and mechanism compatibility (per S4 of
 # dataset/prompts/conversation_generation.txt)
-# ---------------------------------------------------------------------------
 RESTATEMENT_LENSES: dict[str, str] = {
     "A": "physical/somatic frame",
     "B": "role/duty frame",
@@ -236,9 +212,7 @@ LENS_PRIMARY_BY_MECHANISM: dict[str, str] = {
 RECEPTIVENESS_VALUES: list[str] = ["low", "medium", "high"]
 
 
-# ---------------------------------------------------------------------------
 # Helpers
-# ---------------------------------------------------------------------------
 def _fuzzy_match(value: str, allowed: list[str]) -> Optional[str]:
     """Case-insensitive substring match either direction. Returns canonical or None."""
     if not isinstance(value, str):
@@ -301,9 +275,7 @@ def normalize_coping(value: str) -> Optional[str]:
     return _fuzzy_match(v, COPING_MECHANISMS)
 
 
-# ---------------------------------------------------------------------------
 # AnalyzerState — output of Agent 1 (Analyzer)
-# ---------------------------------------------------------------------------
 class AnalyzerState(BaseModel):
     """Captures the seeker's emotional/behavioral state."""
 
@@ -380,9 +352,7 @@ class AnalyzerState(BaseModel):
         return v
 
 
-# ---------------------------------------------------------------------------
 # StrategyDecision — output of phase_gate.py (deterministic)
-# ---------------------------------------------------------------------------
 class StrategyDecision(BaseModel):
     """Output of the deterministic strategy engine. No LLM involved."""
 
@@ -418,9 +388,7 @@ class StrategyDecision(BaseModel):
         return v
 
 
-# ---------------------------------------------------------------------------
 # SafetyFlags — output of safety checker
-# ---------------------------------------------------------------------------
 class SafetyFlags(BaseModel):
     """Output of the safety checker."""
 
@@ -431,9 +399,7 @@ class SafetyFlags(BaseModel):
     trigger_phrase: Optional[str] = None
 
 
-# ---------------------------------------------------------------------------
 # TurnRecord — single turn in conversation history
-# ---------------------------------------------------------------------------
 class TurnRecord(BaseModel):
     """A single turn in conversation history."""
 
@@ -448,9 +414,23 @@ class TurnRecord(BaseModel):
     phase: Optional[str] = None
 
 
-# ---------------------------------------------------------------------------
+# RetrievalDebugItem — one few-shot row surfaced to the dev UI / meta
+class RetrievalDebugItem(BaseModel):
+    """Snapshot of a single retrieved dataset record for debugging. Filled by
+    `agents.generator` after each successful `GeneratorRetriever.retrieve`."""
+
+    model_config = ConfigDict(extra="ignore", str_strip_whitespace=True)
+
+    conversation_id: str = ""
+    faiss_score: Optional[float] = None
+    final_score: Optional[float] = None
+    strategy: str = ""
+    phase: str = ""
+    emotion: str = ""
+    seeker_preview: str = Field(default="", max_length=200)
+
+
 # SessionSummary — periodic compressed view of the session
-# ---------------------------------------------------------------------------
 class SessionSummary(BaseModel):
     """Structured running summary of the session, written by the Summarizer
     agent every few turns. Lets the Generator stay coherent past the 16-turn
@@ -528,9 +508,7 @@ class SessionSummary(BaseModel):
         return ordered[:5]
 
 
-# ---------------------------------------------------------------------------
 # UserProfile — cross-session memory keyed by user_id
-# ---------------------------------------------------------------------------
 class UserProfile(BaseModel):
     """Persistent, cross-session memory for a single user. Stored in Redis
     under `user_profile:{user_id}` independently of any session.
@@ -615,9 +593,7 @@ class UserProfile(BaseModel):
         self.last_seen_at = datetime.now(timezone.utc).isoformat()
 
 
-# ---------------------------------------------------------------------------
 # SessionState — persisted in Redis between turns
-# ---------------------------------------------------------------------------
 class SessionState(BaseModel):
     """Complete session state, persisted in Redis between turns."""
 
@@ -651,7 +627,6 @@ class SessionState(BaseModel):
     # so we don't ask "khaana khaya?" twice in a row.
     last_care_tag_turn: int = 0
 
-    # ---- Memory layer (added in P-MEM) ------------------------------------
     # Periodic compressed view written by the Summarizer agent. Lets the
     # Generator reason about turns 1-N even after they fall out of the
     # 16-turn history cap. None until the first summarization fires (around
@@ -674,6 +649,12 @@ class SessionState(BaseModel):
     # bata rahe the...") is possible. Live profile updates go through
     # `MemoryManager`, not here.
     user_profile_snapshot: Optional[UserProfile] = None
+
+    # Filled at the end of each successful Generator pass; cleared on
+    # retrieval failure or crisis short-circuit (or overwritten next turn).
+    latest_retrieval_debug: list[RetrievalDebugItem] = Field(default_factory=list)
+    latest_retrieval_query: Optional[str] = None
+    latest_retrieval_filter_level: Optional[str] = None
 
     def get_recent_history(self, n: int = 6) -> list[TurnRecord]:
         """Return last n turns of conversation history."""

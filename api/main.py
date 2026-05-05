@@ -1,17 +1,4 @@
-"""
-SAATHI API entry point.
-
-Wires up:
-  - CORS (open in dev — locked down by env in production)
-  - The chat router (`/ws/{session_id}`, `/chat/sync`, `/session/{id}/state`)
-  - Static UI mount at `/ui` (serves `ui/index.html` if present)
-  - `/health` liveness probe
-  - FastAPI lifespan that releases the orchestrator's Redis connection on
-    shutdown so we don't leak sockets in tests / hot-reload loops.
-
-Run locally:
-  uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
-"""
+"""FastAPI app: CORS, chat routes, static UI, health, lifespan hooks."""
 
 from __future__ import annotations
 

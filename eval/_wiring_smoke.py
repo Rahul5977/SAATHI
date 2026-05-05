@@ -1,18 +1,4 @@
-"""
-Hermetic wiring smoke test for the eval harness + memory layer.
-
-Replaces every LLM call with a deterministic stub so we can exercise the
-full per-turn flow without consuming any API tokens. Validates:
-  1. Orchestrator drives Analyzer/Generator/Safety/Summarizer.
-  2. SessionManager journey markers are maintained correctly.
-  3. MemoryManager profile is hydrated, updated, and cross-session
-     facts persist into facts_log on session start.
-  4. Generator prompt receives SESSION MEMORY and CROSS-SESSION
-     CONTINUITY blocks when present.
-  5. eval/runner.py builds correct TurnObservations.
-
-Run:   python -m eval._wiring_smoke
-"""
+"""Stubbed LLM end-to-end test: `python -m eval._wiring_smoke`."""
 
 from __future__ import annotations
 
@@ -33,9 +19,6 @@ from core.schemas import (
 from eval.runner import _build_observation, run_scenario
 
 
-# ---------------------------------------------------------------------------
-# Stub agents — keep the same signatures, no LLM calls.
-# ---------------------------------------------------------------------------
 class _StubAnalyzer(Analyzer):
     def __init__(self) -> None:
         # Skip get_llm — we never call it.
@@ -155,9 +138,7 @@ class _StubSummarizer(Summarizer):
         )
 
 
-# ---------------------------------------------------------------------------
 # Patch + run
-# ---------------------------------------------------------------------------
 async def _run():
     # We need to patch the agent constructors INSIDE PipelineOrchestrator.__init__.
     # The simplest path: monkey-patch the classes themselves.

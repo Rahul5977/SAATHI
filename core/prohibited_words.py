@@ -1,12 +1,4 @@
-"""
-SAATHI prohibited clinical vocabulary.
-
-The Generator must never sound like a textbook therapist or a diagnostic chatbot.
-This module provides:
-  - PROHIBITED_ALL: a flat lowercase list to scan generated text against
-  - check_prohibited(text): returns (has_violations, list_of_found_words)
-  - get_replacement_suggestions(): mapping from clinical term -> SAATHI-style alternative
-"""
+"""Clinical and therapy jargon to block in generated seeker-facing text."""
 
 from __future__ import annotations
 

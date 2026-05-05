@@ -1,3 +1,5 @@
+"""Local OpenAI-compatible HTTP API (e.g. vLLM, Ollama)."""
+
 from openai import AsyncOpenAI
 import json
 import logging

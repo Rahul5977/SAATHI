@@ -1,6 +1,4 @@
-"""
-    python count_conversations.py --root /home/suraj/Desktop/dataset/dataset
-"""
+"""Count conversations per dataset folder (CLI --root)."""
 
 import json
 import re
@@ -8,8 +6,6 @@ import argparse
 from collections import defaultdict
 from pathlib import Path
 
-
-# Folder-name normalisation + fuzzy matching
 
 def normalise_folder_name(name: str) -> str:
     """

@@ -1,20 +1,4 @@
-"""
-Analyzer (Agent 1) prompt builder.
-
-The Analyzer's ONLY job is structured extraction — it never composes a reply
-to the seeker. It reads (history + previous AnalyzerState + new seeker turn)
-and emits a JSON object that conforms to `core.schemas.AnalyzerState`.
-
-This module:
-  - Builds the messages array in OpenAI chat-completions format.
-  - Pins the schema enum lists to `core.schemas` so the prompt cannot drift
-    from the Pydantic contract.
-  - Ships 4 static few-shot exemplars covering the four canonical coping
-    mechanisms + a high-risk crisis case.
-
-Used by `agents/analyzer.py` (built later) which will:
-  llm.generate_json(messages=build_analyzer_prompt(...))
-"""
+"""Analyzer chat prompt: history + schema-bound JSON extraction to `AnalyzerState`."""
 
 from __future__ import annotations
 
@@ -30,9 +14,6 @@ from core.schemas import (
 )
 
 
-# ---------------------------------------------------------------------------
-# History formatter
-# ---------------------------------------------------------------------------
 def format_history(turns: list[TurnRecord]) -> str:
     """Render a `TurnRecord` list into a compact chat transcript with
     per-turn metadata tags the LLM can use as state-tracking hints."""
@@ -52,9 +33,7 @@ def format_history(turns: list[TurnRecord]) -> str:
     return "\n".join(lines)
 
 
-# ---------------------------------------------------------------------------
 # System prompt — built once at import time from the canonical schema lists
-# ---------------------------------------------------------------------------
 def _build_system_message() -> str:
     """Compose the Analyzer's system message. Enum lists come straight from
     `core.schemas` so adding a new emotion/category there auto-updates the
@@ -135,11 +114,9 @@ Return ONLY the JSON object. No explanation, no preamble, no markdown fencing.\
 _ANALYZER_SYSTEM_MESSAGE = _build_system_message()
 
 
-# ---------------------------------------------------------------------------
 # Static few-shot exemplars
 # Cover all 4 coping mechanisms + a high-risk crisis case. problem_type values
 # use the canonical C1-C8 names from `core.schemas.PROBLEM_TYPES`.
-# ---------------------------------------------------------------------------
 _FEW_SHOTS: list[dict[str, str]] = [
     # Example 1 — Duty_Based + exhaustion (Employment_Livelihood, first turn)
     {
@@ -314,9 +291,7 @@ _FEW_SHOTS: list[dict[str, str]] = [
 ]
 
 
-# ---------------------------------------------------------------------------
 # Public API
-# ---------------------------------------------------------------------------
 def build_analyzer_prompt(
     new_seeker_text: str,
     conversation_history: list[TurnRecord],
@@ -353,9 +328,7 @@ def build_analyzer_prompt(
     return messages
 
 
-# ---------------------------------------------------------------------------
 # Smoke test
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import json
 

@@ -1,4 +1,4 @@
-"""Allow `python -m eval` to drive the runner."""
+"""CLI entrypoint: `python -m eval`."""
 
 from eval.runner import main
 

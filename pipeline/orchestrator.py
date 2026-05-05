@@ -1,28 +1,4 @@
-"""
-Pipeline orchestrator — single entry point per seeker turn.
-
-Per-turn flow:
-
-  1. Load (or create) the SessionState for `session_id`. On creation, hydrate
-     cross-session memory from MemoryManager so the bot has continuity from
-     prior conversations.
-  2. Run SafetyChecker.check(...) and Analyzer.analyze(...) IN PARALLEL.
-     They share no state, so this is ~free latency reduction.
-  3. If the safety checker requires HITL escalation, yield the static
-     CRISIS_RESPONSE, persist the turn with a placeholder StrategyDecision,
-     and return — DO NOT call the Generator on a crisis turn.
-  4. Otherwise, compute (phase, strategy, lens) deterministically via
-     `core.phase_gate.compute_full_strategy` (zero LLM calls).
-  5. Stream tokens from the Generator, accumulating the full text.
-  6. Persist the completed turn to the session store.
-  7. Update cross-session profile with any newly extracted concrete facts.
-  8. Run the Summarizer (in the background) if the cadence triggers, and
-     fold the resulting SessionSummary back into session state.
-
-This module is the ONLY place that knows how the agents wire together.
-The FastAPI / WebSocket layer just calls `orchestrator.run(...)` and
-forwards the yielded tokens to the client.
-"""
+"""Wires safety, analyzer, phase gate, generator, session store, and memory per turn."""
 
 from __future__ import annotations
 
@@ -69,9 +45,7 @@ class PipelineOrchestrator:
         self.session_manager = SessionManager()
         self.memory_manager = MemoryManager()
 
-    # ------------------------------------------------------------------
     # Internal helpers
-    # ------------------------------------------------------------------
     async def _hydrate_new_session(
         self, session: SessionState
     ) -> tuple[SessionState, UserProfile]:
@@ -180,9 +154,7 @@ class PipelineOrchestrator:
                 session.turn_count, e, exc_info=True,
             )
 
-    # ------------------------------------------------------------------
     # Main entry point
-    # ------------------------------------------------------------------
     async def run(
         self,
         session_id: str,
@@ -233,6 +205,10 @@ class PipelineOrchestrator:
                 "CRISIS DETECTED on session=%s trigger=%r",
                 session_id, safety_flags.trigger_phrase,
             )
+            # No Generator pass — clear stale retrieval debug from prior turns.
+            session.latest_retrieval_debug = []
+            session.latest_retrieval_query = None
+            session.latest_retrieval_filter_level = None
             yield CRISIS_RESPONSE
 
             # Persist the crisis turn so it appears in trajectory + history
@@ -350,9 +326,7 @@ class PipelineOrchestrator:
             session.turn_count, session_id, len(full_response),
         )
 
-    # ------------------------------------------------------------------
     # Lifecycle
-    # ------------------------------------------------------------------
     async def close_session(self, session_id: str) -> None:
         """Roll a session into the user's long-term profile and unlink it.
 

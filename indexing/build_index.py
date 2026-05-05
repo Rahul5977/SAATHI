@@ -1,25 +1,4 @@
-"""
-SAATHI vector index builder.
-
-Embeds parsed conversation records (data/parsed_records.json) into a FAISS
-index keyed on a behavioral-context COMPOSITE string per record.
-
-Why composite embeddings?
-  Pure text embedding would match "job stress" to "job stress" regardless
-  of the strategy/phase/coping the supporter used. By prefixing each text
-  with [STRATEGY] [COPING] [PHASE] [INTENSITY] [EMOTION] tags, retrieval at
-  runtime respects the pipeline's deterministic decisions.
-
-Outputs (under data/faiss_index/):
-  index.faiss        - IndexFlatIP over L2-normalized vectors (cosine sim)
-  records.json       - records list in the SAME order as vectors in the index
-  embeddings.npy     - L2-normalized embedding matrix (for MMR at retrieval)
-
-CLI:
-  python -m indexing.build_index              build / resume
-  python -m indexing.build_index --verify     sanity-check existing index
-  python -m indexing.build_index --rebuild    delete + rebuild
-"""
+"""Builds the FAISS index and aligned `records.json` / `embeddings.npy` from parsed data."""
 
 from __future__ import annotations
 
@@ -56,9 +35,7 @@ logging.basicConfig(
 logger = logging.getLogger("build_index")
 
 
-# ---------------------------------------------------------------------------
 # Output paths
-# ---------------------------------------------------------------------------
 INDEX_FILE      = INDEX_PATH / "index.faiss"
 RECORDS_FILE    = INDEX_PATH / "records.json"
 EMBEDDINGS_FILE = INDEX_PATH / "embeddings.npy"
@@ -70,9 +47,7 @@ OPENAI_BATCH = 500
 LOCAL_BATCH  = 256
 
 
-# ---------------------------------------------------------------------------
 # Composite string builder
-# ---------------------------------------------------------------------------
 def build_composite_string(rec: dict) -> str:
     """Compose the embedding input for a single record.
 
@@ -90,9 +65,7 @@ def build_composite_string(rec: dict) -> str:
     )
 
 
-# ---------------------------------------------------------------------------
 # Checkpoint helpers (used by the OpenAI backend for resume)
-# ---------------------------------------------------------------------------
 def _save_checkpoint(arr: np.ndarray, total: int) -> None:
     INDEX_PATH.mkdir(parents=True, exist_ok=True)
     # numpy auto-appends ".npy" only if missing — so name the temp file with
@@ -132,9 +105,7 @@ def _clear_checkpoint() -> None:
     CHECKPOINT_META.unlink(missing_ok=True)
 
 
-# ---------------------------------------------------------------------------
 # Backend: OpenAI (async, batched, resumable)
-# ---------------------------------------------------------------------------
 async def _embed_openai(texts: list[str]) -> np.ndarray:
     """Embed via OpenAI text-embedding-3-small with batch checkpointing.
 
@@ -249,9 +220,7 @@ async def _embed_openai(texts: list[str]) -> np.ndarray:
     return full
 
 
-# ---------------------------------------------------------------------------
 # Backend: Local (sentence-transformers, lazy import)
-# ---------------------------------------------------------------------------
 def _embed_local_sync(texts: list[str]) -> np.ndarray:
     try:
         from sentence_transformers import SentenceTransformer  # type: ignore
@@ -279,9 +248,7 @@ def _embed_local_sync(texts: list[str]) -> np.ndarray:
     return np.asarray(vecs, dtype=np.float32)
 
 
-# ---------------------------------------------------------------------------
 # Public API: embed_texts
-# ---------------------------------------------------------------------------
 async def embed_texts(texts: list[str]) -> np.ndarray:
     """
     Embed `texts` via the configured backend and return an (N, dim) float32
@@ -306,9 +273,7 @@ async def embed_texts(texts: list[str]) -> np.ndarray:
     return vecs
 
 
-# ---------------------------------------------------------------------------
 # Build
-# ---------------------------------------------------------------------------
 def _human_size(num_bytes: int) -> str:
     units = ["B", "KB", "MB", "GB"]
     size = float(num_bytes)
@@ -395,9 +360,7 @@ async def build_index() -> None:
     _print_build_summary(n, dim, elapsed)
 
 
-# ---------------------------------------------------------------------------
 # Verify
-# ---------------------------------------------------------------------------
 VERIFY_QUERIES: list[tuple[str, dict]] = [
     (
         "[STRATEGY:RESTATEMENT_OR_PARAPHRASING] [COPING:Duty_Based] "
@@ -498,9 +461,7 @@ async def verify_retrieval(top_k: int = 5) -> float:
     return mean_q
 
 
-# ---------------------------------------------------------------------------
 # CLI
-# ---------------------------------------------------------------------------
 async def amain() -> int:
     parser = argparse.ArgumentParser(
         prog="build_index",

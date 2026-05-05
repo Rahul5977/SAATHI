@@ -1,18 +1,4 @@
-"""
-SAATHI deterministic phase + strategy + lens engine.
-
-This module is the "brain" between the Analyzer and the Generator.
-It runs with **zero LLM calls** — every decision is pure Python and
-fully unit-testable.
-
-Public functions
-----------------
-- compute_phase(analyzer_state, session) -> str
-- compute_allowed_strategies(phase, session) -> list[str]
-- compute_strategy(phase, analyzer_state, session) -> str
-- compute_lens(analyzer_state, seeker_text=None) -> Optional[str]
-- compute_full_strategy(analyzer_state, session) -> StrategyDecision
-"""
+"""Deterministic phase, strategy, and restatement-lens selection (no LLM)."""
 
 from __future__ import annotations
 
@@ -28,7 +14,6 @@ from core.schemas import (
     SessionState,
     StrategyDecision,
 )
-
 
 
 # Lens keyword tables (case-insensitive substring matches)
@@ -66,9 +51,7 @@ LENS_KEYWORDS: dict[str, list[str]] = {
 _LENS_PRIORITY: list[str] = ["A", "B", "C", "D", "E"]
 
 
-# ---------------------------------------------------------------------------
 # Help-seeking detector
-# ---------------------------------------------------------------------------
 # When the seeker EXPLICITLY asks for help/advice/solution, we override the
 # Analyzer's receptiveness reading to "high". This unblocks the gate when the
 # Analyzer (which is distress-biased due to dataset skew) keeps reporting low
@@ -129,9 +112,7 @@ def _effective_receptiveness(
     return analyzer_state.user_receptiveness
 
 
-# ---------------------------------------------------------------------------
 # Anti-stuck heuristic
-# ---------------------------------------------------------------------------
 # After 4 consecutive Exploration turns (without intensity escalating to 5+),
 # we force-promote to Insight. The seeker has been heard enough; staying in
 # Exploration any longer makes the bot feel hollow / circular (the symptom
@@ -180,7 +161,6 @@ def _is_stuck_in_insight(session: SessionState, intensity: int) -> bool:
         len(last_n) >= _INSIGHT_STUCK_THRESHOLD
         and all(p == "Insight" for p in last_n)
     )
-
 
 
 # FUNCTION 1: compute_phase
@@ -274,9 +254,7 @@ def compute_phase(
     return "Exploration"
 
 
-# ---------------------------------------------------------------------------
 # Phase decision explainer (debug / observability)
-# ---------------------------------------------------------------------------
 def explain_phase_decision(
     analyzer_state: AnalyzerState,
     session: SessionState,
@@ -324,7 +302,6 @@ def explain_phase_decision(
     return "R9 default → Exploration"
 
 
-
 # FUNCTION 2: compute_allowed_strategies
 
 def compute_allowed_strategies(phase: str, session: SessionState) -> list[str]:
@@ -357,7 +334,6 @@ def compute_allowed_strategies(phase: str, session: SessionState) -> list[str]:
     return ["PROVIDING_SUGGESTIONS", "EXECUTION", "INFORMATION"]
 
 
-
 # FUNCTION 3: compute_strategy
 
 def _next_in_allowed(strategy: str, allowed: list[str]) -> str:
@@ -371,9 +347,7 @@ def _next_in_allowed(strategy: str, allowed: list[str]) -> str:
     return allowed[0]
 
 
-# ---------------------------------------------------------------------------
 # Supporter-text repetition guard
-# ---------------------------------------------------------------------------
 # If the last two SAATHI replies share too much vocabulary, the strategy
 # selector will rotate to a different allowed strategy. This catches the
 # "Yeh dar waqai bahut bada hai..." → "Yeh dar sach me itna ovewhelming hai..."
@@ -545,7 +519,6 @@ def compute_strategy(
     return allowed[0]
 
 
-
 # FUNCTION 4: compute_lens
 
 def _contains_keyword(haystack: str, keyword: str) -> bool:
@@ -618,7 +591,6 @@ def compute_lens(
     return "F"
 
 
-
 # FUNCTION 5: compute_full_strategy
 
 def compute_full_strategy(
@@ -644,7 +616,6 @@ def compute_full_strategy(
         selected_strategy=strategy,
         restatement_lens=lens,
     )
-
 
 
 # Self-tests
@@ -1154,7 +1125,6 @@ if __name__ == "__main__":
         f"expected EXECUTION follow-up, got {res_followup.selected_strategy}"
     )
 
-    # ---- R2b: stuck-in-Insight anti-stuck → force Action ----------------
     # Scenario: 3 consecutive Insight turns at int=3 with low receptiveness
     # (so R3 wouldn't fire). Without R2b, the bot would stay in Insight
     # for a 4th time and the user gets another reflection instead of help.

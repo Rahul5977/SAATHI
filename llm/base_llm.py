@@ -1,3 +1,5 @@
+"""Abstract async LLM: structured JSON and streaming text."""
+
 from abc import ABC, abstractmethod
 from typing import AsyncGenerator, Optional
 from pydantic import BaseModel

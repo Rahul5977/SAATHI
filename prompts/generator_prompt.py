@@ -1,25 +1,4 @@
-"""
-Generator (Agent 2) prompt builder.
-
-Composes the chat-completions messages array used by the Generator LLM to
-produce the final Hinglish response shown to the seeker.
-
-Inputs flow in from:
-  - `core.schemas.AnalyzerState`        — output of Agent 1 (Analyzer)
-  - `core.schemas.StrategyDecision`     — output of `core.phase_gate.compute_full_strategy`
-  - `core.schemas.TurnRecord` list      — recent conversation history
-  - `retrieval.generator_retriever`     — pre-formatted few-shot block + negative example
-
-Layout of the produced messages:
-  1. SYSTEM — SAATHI identity + persona profile + phase/strategy/lens directive
-              + coping-shade mirror requirement + stigma cue + risk override
-              (if any) + the WHAT-NOT-TO-DO negative example
-  2. USER   — retrieved few-shot examples + recent history + new seeker text +
-              compact "generate now" checklist
-
-The Generator is expected to reply with PLAIN TEXT (no JSON, no labels).
-Downstream safety/post-processing is handled by `agents/safety_checker.py`.
-"""
+"""Builds chat messages for the Generator LLM (system + user blocks)."""
 
 from __future__ import annotations
 
@@ -40,12 +19,6 @@ from prompts.system_prompts import (
 )
 
 
-# ---------------------------------------------------------------------------
-# Persona profiles
-# ---------------------------------------------------------------------------
-# `hindi_ratio` is the target proportion of Hindi-origin words in SAATHI's
-# response (0.0 = pure English, 1.0 = pure Hindi). `note` is a human-readable
-# vocabulary hint dropped into the system prompt verbatim.
 PERSONA_PROFILES: dict[str, dict] = {
     "P0":  {"name": "Unknown",            "hindi_ratio": 0.60, "note": "Neutral register, standard Hinglish"},
     "P1":  {"name": "Rural student",      "hindi_ratio": 0.80, "note": "Simple Hindi-heavy, avoid English jargon, use desi expressions"},
@@ -63,24 +36,14 @@ PERSONA_PROFILES: dict[str, dict] = {
 }
 
 
-# Phase-specific one-line execution hints repeated in the USER message
-# checklist. Kept short on purpose — the heavy explanation is in
-# PHASE_INSTRUCTIONS in the SYSTEM message.
 _PHASE_GEN_HINT: dict[str, str] = {
     "Exploration": "Mirror their feelings. Use their coping shade phrase. Show you heard them. NO advice.",
     "Insight":     "Gently reflect what's beneath their words. No direct advice yet.",
     "Action":      "Offer ONE small, practical, concrete step tied to a fact they actually mentioned.",
 }
 
-# Number of trailing turns of history shown to the Generator (older turns are
-# already summarized in `analyzer_state` from prior Analyzer calls).
 _HISTORY_WINDOW = 6
 
-
-# ---------------------------------------------------------------------------
-# Care-gesture pool — small one-liners SAATHI may slip in occasionally to
-# feel like a friend who notices basic things, not a therapy bot.
-# ---------------------------------------------------------------------------
 _CARE_TAG_POOL: list[str] = [
     "Aaj khaana time pe khaya?",
     "Neend ho rahi hai theek se?",
@@ -91,10 +54,6 @@ _CARE_TAG_POOL: list[str] = [
 ]
 
 
-# ---------------------------------------------------------------------------
-# Voice modulation by emotional intensity — a one-line tone hint we inject
-# into the system prompt so the Generator calibrates register to the moment.
-# ---------------------------------------------------------------------------
 def _voice_modulation(intensity: int) -> str:
     """Return a tone hint string keyed to intensity (1-6)."""
     if intensity >= 6:
@@ -117,7 +76,6 @@ def _voice_modulation(intensity: int) -> str:
             "TONE: warm and conversational. Match their tempo. A small light "
             "touch is OK if it fits the moment."
         )
-    # intensity 1-2: low distress, room for personality.
     return (
         "TONE: warm, friendly, peer-to-peer. Light humor allowed if it "
         "fits. Keep it short and natural — they're settling."
@@ -136,13 +94,9 @@ def _select_care_tag(turn_count: int, last_care_turn: int, intensity: int) -> Op
     turns_since = turn_count - last_care_turn
     if turns_since < SAATHI_CARE_TAG_FREQ:
         return None
-    # Rotate by turn_count so we don't always pick the same tag.
     return _CARE_TAG_POOL[turn_count % len(_CARE_TAG_POOL)]
 
 
-# ---------------------------------------------------------------------------
-# Public API
-# ---------------------------------------------------------------------------
 def _format_facts_block(
     new_facts: list[str],
     facts_log: list[str],
@@ -151,7 +105,6 @@ def _format_facts_block(
     to show. De-duplicates while preserving recency order."""
     seen: set[str] = set()
     ordered: list[str] = []
-    # Newest facts first (they were just extracted), then older log entries.
     for f in (new_facts or []) + list(reversed(facts_log[-SAATHI_FACTS_WINDOW:] or [])):
         key = f.strip().lower()
         if not key or key in seen:
@@ -162,9 +115,11 @@ def _format_facts_block(
         return None
     bulleted = "\n".join(f"  - {f}" for f in ordered[:SAATHI_FACTS_WINDOW])
     return (
-        "CONCRETE FACTS the seeker has shared so far (USE AT LEAST ONE BY "
-        "NAME if it fits this turn — never speak only in abstractions when "
-        "specifics exist):\n" + bulleted
+        "CONCRETE FACTS from this seeker (anchor your situation-talk here — "
+        "exam names, timelines, people they've named. Prefer a light nod to "
+        "something specific when it fits; don't cram facts in if a tiny reply "
+        "only needs presence. Never swap in a different storyline from "
+        "few-shot examples):\n" + bulleted
     )
 
 
@@ -318,7 +273,6 @@ def build_generator_prompt(
     voice_hint = _voice_modulation(analyzer_state.emotion_intensity)
     length_hint = _length_hint(seeker_text)
 
-    # ---------------- SYSTEM message ----------------
     system_parts: list[str] = [
         SAATHI_SYSTEM_PROMPT,
         "",
@@ -347,6 +301,13 @@ def build_generator_prompt(
         voice_hint,
         "",
         length_hint,
+        "",
+        "## NATURALNESS (not a scorecard)",
+        "You're texting a friend, not filling compliance fields. If something "
+        "here clashes with what sounds human for *this* moment, prefer "
+        "warmth and clarity — but keep hard rules: respect the phase (no "
+        "advice in Exploration; no therapy-speak; mirror high-risk moments "
+        "exactly if safety override is on).",
         "",
         f"COPING SHADE TO MIRROR: \"{analyzer_state.coping_shade_signal}\"",
         "→ Echo this phrase (or a direct paraphrase) once in your response — "
@@ -402,15 +363,17 @@ def build_generator_prompt(
 
     system_parts.extend(["", negative_example])
 
-    # ---------------- USER message ----------------
     history_window = conversation_history[-_HISTORY_WINDOW:]
     history_text = format_history(history_window)
     gen_hint = _PHASE_GEN_HINT[phase]
 
     user_parts: list[str] = [
-        "RETRIEVED EXAMPLES FROM SIMILAR CONVERSATIONS:",
-        "(Study these for tone and Hinglish ratio. Do NOT copy poetry/metaphors "
-        "from them verbatim — your reply should sound natural, not literary.)",
+        "FEW-SHOT SNIPPETS (tone, not their story):",
+        "Borrow **how** these sound — Hinglish, pacing, friend-energy — not "
+        "what happened in them. Different exam, college, or problem in a "
+        "snippet? Ignore that plot. This chat's facts live in history, "
+        "CONCRETE FACTS, and SESSION MEMORY.",
+        "Don't lift poetic lines verbatim; normal chat is fine.",
         "",
         retrieved_examples,
         "",
@@ -420,22 +383,18 @@ def build_generator_prompt(
         "SEEKER JUST SAID:",
         f"\"{seeker_text}\"",
         "",
-        "Generate the SAATHI response now.",
-        f"• Length: per LENGTH BUDGET above (seeker wrote {len(seeker_text.split())} words)",
-        f"• Hinglish ({hindi_pct}% Hindi words)",
-        f"• Echo coping shade: \"{analyzer_state.coping_shade_signal}\"",
-        f"• Strategy: {strategy}",
-        f"• {gen_hint}",
-        "• Reference at least one CONCRETE FACT by name if any are listed above",
-        "• If SESSION MEMORY shows an open_thread you started, FOLLOW UP on it now "
-        "before changing topic (\"Pehle wala maths plan kaisa laga?\")",
-        "• Open with a one-line VALIDATION before reflecting (\"Haan yaar...\", "
-        "\"Bhai, this is tough.\", \"Oof.\")",
-        "• If the seeker brought a positive frame, AMPLIFY it — don't reflect on it",
-        "• NO poetry/simile if you've used one in the last 2 turns. Plain Hinglish.",
-        "• ONE gentle question OR one validating observation at the end. Not both.",
-        "• Do NOT use any prohibited clinical vocabulary",
-        "• Return ONLY the response text — no JSON, no labels, no explanation",
+        "Write SAATHI's reply — natural, like a real message thread.",
+        "Phase still matters: Exploration = no advice; Insight = no fixing; "
+        "Action = one small concrete step tied to *their* situation.",
+        f"• Length: LENGTH BUDGET above (they sent ~{len(seeker_text.split())} words).",
+        f"• Hinglish: about {hindi_pct}% Hindi-origin words — ballpark, match their mix.",
+        f"• This turn: {strategy} — {gen_hint}",
+        f"• Slip their coping shade in once if it flows: \"{analyzer_state.coping_shade_signal}\"",
+        "• When you touch their situation, use their facts/memory — not exam names or arcs from few-shots.",
+        "• SESSION MEMORY open threads: follow up only if it fits; don't force callbacks.",
+        "• If they're a little hopeful, you can meet that energy instead of pulling back.",
+        "• Plain words beat fancy metaphors, especially after you've used one recently.",
+        "• No prohibited clinical vocabulary; output only the reply text (no JSON, no labels).",
     ]
 
     return [
@@ -444,9 +403,6 @@ def build_generator_prompt(
     ]
 
 
-# ---------------------------------------------------------------------------
-# Smoke test
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     from core.schemas import AnalyzerState, StrategyDecision, TurnRecord
 
@@ -530,13 +486,13 @@ if __name__ == "__main__":
         assert needle in sys_text, f"missing in SYSTEM: {needle!r}"
 
     required_in_user = [
-        "RETRIEVED EXAMPLES",
+        "FEW-SHOT SNIPPETS",
         "CONVERSATION HISTORY (last 2 turns):",
-        "Aaj bhi wahi haal hai bhai",                     # seeker text
-        "Hinglish (70% Hindi words)",
-        "machine ki tarah chal raha hoon",                # mirror coping shade
-        "Strategy: RESTATEMENT_OR_PARAPHRASING",
-        "Mirror their feelings",                          # phase gen hint
+        "Aaj bhi wahi haal hai bhai",
+        "70% Hindi-origin words",
+        "machine ki tarah chal raha hoon",
+        "RESTATEMENT_OR_PARAPHRASING",
+        "Mirror their feelings",
     ]
     for needle in required_in_user:
         assert needle in user_text, f"missing in USER: {needle!r}"
@@ -660,7 +616,7 @@ if __name__ == "__main__":
     assert "SESSION MEMORY" in s5
     assert "Decide whether to drop a year" in s5
     assert "asked seeker what their parents said" in s5
-    assert "FOLLOW UP" in u5  # checklist hint
+    assert "session memory open threads" in u5.lower()
     print("CASE 5 — SESSION MEMORY + CROSS-SESSION CONTINUITY injected      ✓")
 
     # ---- Case 6: 1st-time user — no continuity block ----

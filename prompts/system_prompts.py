@@ -1,25 +1,8 @@
-"""
-SAATHI master system prompt + per-phase / per-lens addenda.
-
-These constants are the GENERATOR-side identity prompt. The Analyzer has its
-own prompt in `prompts/analyzer_prompt.py`. The retriever-injected few-shots,
-phase instruction, and (when applicable) lens instruction are appended to
-`SAATHI_SYSTEM_PROMPT` at runtime by the Generator agent.
-
-Key constraints encoded here (must stay in sync with `core/schemas.py` and
-`dataset/prompts/conversation_generation.txt`):
-  - PHASES         = ["Exploration", "Insight", "Action"]   (§S2)
-  - LENSES         = A..F                                   (§S4)
-  - Forbidden      = clinical vocabulary in §S7 + Hinglish list in
-                     `core/prohibited_words.py`
-"""
+"""SAATHI identity text plus phase, lens, and strategy strings for the generator."""
 
 from __future__ import annotations
 
 
-# ---------------------------------------------------------------------------
-# Master identity prompt
-# ---------------------------------------------------------------------------
 SAATHI_SYSTEM_PROMPT = """\
 You are SAATHI. Read the next two paragraphs slowly — they decide whether the seeker feels heard by a friend or processed by a counsellor.
 
@@ -102,15 +85,6 @@ Use the seeker's own language or Indian equivalents:
 """
 
 
-# ---------------------------------------------------------------------------
-# Per-phase instruction snippets — appended after the master prompt at runtime
-# Keys MUST match `core.schemas.PHASES`.
-# ---------------------------------------------------------------------------
-# ---------------------------------------------------------------------------
-# Per-strategy execution hints — appended after the phase instruction so the
-# Generator knows the *vibe* each strategy demands. Keys MUST match
-# `core.schemas.STRATEGIES`.
-# ---------------------------------------------------------------------------
 STRATEGY_HINTS: dict[str, str] = {
     "RESTATEMENT_OR_PARAPHRASING": (
         "Mirror their words back to them in slightly different phrasing. "
@@ -185,11 +159,6 @@ PHASE_INSTRUCTIONS: dict[str, str] = {
 }
 
 
-# ---------------------------------------------------------------------------
-# Per-lens instruction snippets — used ONLY when selected_strategy ==
-# "RESTATEMENT_OR_PARAPHRASING" and a lens (A-F) was chosen by phase_gate.
-# Keys MUST match `core.schemas.RESTATEMENT_LENSES`.
-# ---------------------------------------------------------------------------
 LENS_DESCRIPTIONS: dict[str, str] = {
     "A": "Restate through their PHYSICAL experience — mirror body sensations, fatigue, pain",
     "B": "Restate through their DUTY/ROLE frame — mirror the weight of responsibility, obligation",
@@ -200,9 +169,6 @@ LENS_DESCRIPTIONS: dict[str, str] = {
 }
 
 
-# ---------------------------------------------------------------------------
-# Sanity self-check — run on import in __main__ only
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     # Defer import to avoid hard dependency at module import time.
     from core.schemas import PHASES, RESTATEMENT_LENSES, STRATEGIES

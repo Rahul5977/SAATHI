@@ -1,6 +1,6 @@
-import json
+"""Marriage/rishta situation seeds (C3) for dataset generation."""
 
-# 1. PERSONAS COMPATIBLE WITH C3
+import json
 PERSONAS = {
     "P2": "P2 — Female college student (18–22), Safety concerns, restricted mobility, marriage pressure alongside studies.",
     "P5": "P5 — Married woman (25–40), homemaker, Joint family, saas conflict, career gap, child pressure, lost identity.",

@@ -1,36 +1,4 @@
-"""
-Eval runner: drive the orchestrator through hand-authored YAML scenarios
-and capture observations + assertion results per turn.
-
-YAML scenario schema (see `eval/golden/README.md`):
-
-    name: phase_advances_on_help_seeking
-    description: Bot should advance from Exploration to Insight when seeker asks for help
-    user_id: u_test                       # optional; auto-derived from name otherwise
-    persona_code: P0                      # optional; default P0
-    seed_profile:                         # optional; pre-populates a UserProfile
-      sessions_count: 0
-      key_life_facts: []
-    turns:
-      - say: "Sab theek hai, bas thoda thaka hua hoon"
-        expect:
-          phase: Exploration
-      - say: "Kya karu yaar, kuch samajh ni aa raha"
-        expect:
-          phase: Insight
-          decision_reason_matches: "^R3"
-
-The runner produces a `ScenarioResult` per scenario. The CLI in
-`eval/__main__.py` aggregates results and prints a terminal report.
-
-Determinism:
-  - Generator runs at the temperature defined in `config.GENERATOR_TEMPERATURE`.
-    Eval mode does NOT alter agent temperatures (we want to see realistic
-    output behavior). Tests are written using SHAPE assertions
-    (regex / contains / structural), not exact-string matches.
-  - Each scenario uses a fresh in-memory session AND profile (no Redis
-    leakage between tests).
-"""
+"""Loads YAML scenarios, runs the orchestrator, and aggregates `CheckResult`s per turn."""
 
 from __future__ import annotations
 
@@ -46,7 +14,6 @@ from typing import Optional
 
 import yaml
 
-# Import after the path is resolved by being a submodule of `eval`.
 from eval.checks import CheckResult, TurnObservation, run_checks
 
 
@@ -56,9 +23,7 @@ logger = logging.getLogger(__name__)
 GOLDEN_DIR = Path(__file__).parent / "golden"
 
 
-# ---------------------------------------------------------------------------
 # Result containers
-# ---------------------------------------------------------------------------
 @dataclass
 class TurnResult:
     turn_index: int
@@ -97,9 +62,7 @@ class ScenarioResult:
         )
 
 
-# ---------------------------------------------------------------------------
 # Loading
-# ---------------------------------------------------------------------------
 def load_scenarios(
     pattern: Optional[str] = None,
     directory: Optional[Path] = None,
@@ -128,9 +91,7 @@ def load_scenarios(
     return scenarios
 
 
-# ---------------------------------------------------------------------------
 # Single-scenario runner
-# ---------------------------------------------------------------------------
 async def run_scenario(scenario: dict) -> ScenarioResult:
     """Execute one YAML scenario end-to-end against a fresh in-memory
     orchestrator + memory store. Returns a `ScenarioResult` even on harness
@@ -274,9 +235,7 @@ def _build_observation(
     return obs
 
 
-# ---------------------------------------------------------------------------
 # Reporting
-# ---------------------------------------------------------------------------
 def format_terminal_report(
     results: list[ScenarioResult], verbose: bool = False
 ) -> str:
@@ -329,9 +288,7 @@ def format_terminal_report(
     return "\n".join(lines)
 
 
-# ---------------------------------------------------------------------------
 # Entry point used by `python -m eval`
-# ---------------------------------------------------------------------------
 async def run_all(pattern: Optional[str] = None, verbose: bool = False) -> int:
     """Load and run all golden scenarios, print the report, return exit code
     (0 = all passed, 1 = at least one failure)."""

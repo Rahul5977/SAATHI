@@ -1,3 +1,5 @@
+"""LLM client factory: returns OpenAI or local backend by role name."""
+
 from config import (
     ANALYZER_MODEL,
     GENERATOR_MODEL,

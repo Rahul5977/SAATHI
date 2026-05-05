@@ -1,31 +1,4 @@
-"""
-Assertion library for the SAATHI eval harness.
-
-Each `check_*` function returns a `CheckResult` with `passed` + `detail`.
-None of them raise — failures bubble up as data so the harness can collect
-all failures across a scenario before reporting.
-
-A "check spec" is a YAML/dict like:
-
-    expect:
-      phase: Insight                       # check_phase
-      strategy: REFLECTION_OF_FEELINGS     # check_strategy
-      response_contains_any: ["JEE", "exam"]
-      response_max_words: 40
-      response_no_phrases: ["bohot overwhelming"]
-      analyzer:
-        intensity: { ge: 3, le: 4 }
-        receptiveness: high
-        risk_signal_set: false
-      memory:
-        seeker_goal_contains: ["maths", "revise"]
-        key_facts_contains_any: ["JEE Advanced"]
-      decision_reason_matches: "^R3"
-      safety_risk: none
-
-`run_checks(observation, spec)` evaluates every key against the
-observation and returns a `list[CheckResult]`.
-"""
+"""Expectation helpers and `run_checks` for YAML `expect:` blocks."""
 
 from __future__ import annotations
 
@@ -34,9 +7,6 @@ from dataclasses import dataclass
 from typing import Any, Optional
 
 
-# ---------------------------------------------------------------------------
-# Result types
-# ---------------------------------------------------------------------------
 @dataclass
 class CheckResult:
     name: str
@@ -48,9 +18,7 @@ class CheckResult:
         return f"  {marker} {self.name}{(' — ' + self.detail) if self.detail else ''}"
 
 
-# ---------------------------------------------------------------------------
 # Observation contract — the runner builds one of these per turn
-# ---------------------------------------------------------------------------
 @dataclass
 class TurnObservation:
     """Everything we captured about a single turn — passed to every check."""
@@ -69,9 +37,7 @@ class TurnObservation:
     phase_history: Optional[list[str]] = None
 
 
-# ---------------------------------------------------------------------------
 # Atomic check primitives
-# ---------------------------------------------------------------------------
 def check_phase(obs: TurnObservation, expected: str) -> CheckResult:
     actual = obs.phase
     return CheckResult(
@@ -133,9 +99,7 @@ def check_safety_risk(obs: TurnObservation, expected: str) -> CheckResult:
     )
 
 
-# ---------------------------------------------------------------------------
 # Response-text checks
-# ---------------------------------------------------------------------------
 def check_response_contains_any(
     obs: TurnObservation, needles: list[str]
 ) -> CheckResult:
@@ -208,9 +172,7 @@ def check_response_matches(obs: TurnObservation, pattern: str) -> CheckResult:
     )
 
 
-# ---------------------------------------------------------------------------
 # Analyzer / memory sub-spec checks
-# ---------------------------------------------------------------------------
 def _bound_check(value: Any, bounds: dict) -> tuple[bool, str]:
     """Check `value` against {ge, le, gt, lt, eq} bounds. Returns (ok, detail)."""
     if value is None:
@@ -364,9 +326,7 @@ def check_memory(obs: TurnObservation, spec: dict) -> list[CheckResult]:
     return results
 
 
-# ---------------------------------------------------------------------------
 # The orchestrator — turns a per-turn `expect:` spec into CheckResult list
-# ---------------------------------------------------------------------------
 _TOP_LEVEL_DISPATCH = {
     "phase":                  check_phase,
     "phase_in":               check_phase_in,
@@ -407,9 +367,7 @@ def run_checks(obs: TurnObservation, spec: Optional[dict]) -> list[CheckResult]:
     return results
 
 
-# ---------------------------------------------------------------------------
 # Smoke test
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     obs = TurnObservation(
         turn_index=1,

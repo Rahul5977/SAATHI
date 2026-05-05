@@ -1,17 +1,13 @@
-import json
+"""Academic-pressure situation seeds (C1) for dataset generation."""
 
-# ==========================================
-# 1. COMPATIBLE PERSONAS FOR C1
-# ==========================================
+import json
 PERSONAS = {
     "P1": "P1 — Male college student (18–22), Hostel, first-gen or aspirational family, JEE/NEET dropout or placement pressure, Hindi belt or metro.",
     "P2": "P2 — Female college student (18–22), Safety concerns, restricted mobility, marriage pressure alongside studies.",
     "P3": "P3 — UPSC/PSC aspirant (22–30, M/F), Multi-year prep, coaching institute life, family investment, dropper stigma."
 }
 
-# ==========================================
 # 2. ACADEMIC TRIGGER EVENTS (C1 Only)
-# ==========================================
 TRIGGER_EVENTS = [
     "Result card shown to parents and silence followed",
     "Did not get shortlisted in campus placement drive",
@@ -21,10 +17,8 @@ TRIGGER_EVENTS = [
     "Father stopped talking after results"
 ]
 
-# ==========================================
 # 3. CATEGORY 1 STRESSORS & BASE COPING
 # Note: 'Somatization' is explicitly excluded here per your compatibility rule (C1 is too cognitive).
-# ==========================================
 STRESSORS = [
     {"SUB": "12th Board result failure", "DESC": "Marks below family threshold; kuch nahi hoga mindset", "BASE_COP": "Sequential Coping"},
     {"SUB": "JEE/NEET repeat attempt", "DESC": "Dropper shame; 2nd/3rd attempt identity crisis", "BASE_COP": "Duty-Based Coping"},
@@ -34,9 +28,7 @@ STRESSORS = [
     {"SUB": "Low CGPA shame", "DESC": "Back papers; attendance shortage; hostel pressure", "BASE_COP": "Sequential Coping"}
 ]
 
-# ==========================================
 # 4. COMPATIBILITY LOGIC ENGINE
-# ==========================================
 def resolve_coping_mechanism(persona_id, base_coping):
     """
     Adjusts the coping mechanism based on the Persona x Coping compatibility table.
@@ -61,9 +53,7 @@ def get_regional_markers(persona_id):
         return "South India / Metro markers (NRI aspirations, restricted mobility, 'log kya kahenge')"
     return "Urban/Metro markers (anonymity, severe peer pressure)"
 
-# ==========================================
 # 5. ELABORATE PROMPT GENERATOR
-# ==========================================
 def generate_c1_prompts(stressor_list, persona_dict, trigger_list):
     prompts = []
     for s in stressor_list:
@@ -113,9 +103,7 @@ JSON SCHEMA PER OBJECT:
             prompts.append(detailed_prompt.strip())
     return prompts
 
-# ==========================================
 # 6. EXECUTION
-# ==========================================
 all_c1_prompts = generate_c1_prompts(STRESSORS, PERSONAS, TRIGGER_EVENTS)
 
 print(f"Total C1 prompts generated: {len(all_c1_prompts)} (6 stressors x 3 personas)")

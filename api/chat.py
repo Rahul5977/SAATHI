@@ -1,24 +1,4 @@
-"""
-Chat transports.
-
-Three endpoints:
-  - WebSocket `/ws/{session_id}`     — primary streaming transport
-  - REST     `/chat/sync`            — non-streaming convenience endpoint
-  - REST     `/session/{id}/state`   — debug / observability endpoint
-
-The WebSocket protocol (server → client) is one of:
-  {"type": "typing"}                            — model is generating
-  {"type": "token", "content": "<piece>"}       — one stream chunk
-  {"type": "done",  "meta": {...}}              — turn complete
-  {"type": "error", "content": "<msg>"}         — recoverable error
-
-Client sends:
-  {"message": "<seeker text>"}                  — one turn
-
-A SINGLE PipelineOrchestrator is shared across requests. It owns the FAISS
-index (~100 MB resident) and any open Redis connection — recreating it per
-request would be catastrophic for cold-start latency.
-"""
+"""WebSocket and REST chat endpoints; shared PipelineOrchestrator instance."""
 
 from __future__ import annotations
 
@@ -35,13 +15,9 @@ from pipeline.orchestrator import PipelineOrchestrator
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
-# Module-level singleton — cold start (FAISS load) happens here exactly once.
 orchestrator = PipelineOrchestrator()
 
 
-# ---------------------------------------------------------------------------
-# Helpers
-# ---------------------------------------------------------------------------
 def _session_to_meta(session) -> dict[str, Any]:
     """Project a SessionState into the small dict we ship to the client.
     Returns {} if session is None. Never raises."""
@@ -67,6 +43,9 @@ def _session_to_meta(session) -> dict[str, Any]:
         meta["receptiveness"] = az.user_receptiveness
         meta["stigma_cue"] = az.stigma_cue
         meta["risk_signal"] = az.risk_signal
+        meta["problem_type"] = az.problem_type
+        meta["is_new_problem"] = az.is_new_problem
+        meta["concrete_facts"] = list(az.concrete_facts or [])
 
     sf = session.latest_safety_flags
     if sf is not None:
@@ -78,7 +57,6 @@ def _session_to_meta(session) -> dict[str, Any]:
     meta["phase_history"]        = session.phase_history[-10:]
     meta["strategy_history"]     = session.strategy_history[-10:]
 
-    # ---- memory layer surfaces (debug panel) ------------------------------
     meta["turns_in_current_phase"] = session.turns_in_current_phase
     meta["phase_first_reached"]    = session.phase_first_reached
     meta["facts_log_count"]        = len(session.facts_log)
@@ -93,6 +71,12 @@ def _session_to_meta(session) -> dict[str, Any]:
         prof = session.user_profile_snapshot
         meta["user_sessions_count"] = prof.sessions_count
         meta["user_key_life_facts_count"] = len(prof.key_life_facts)
+
+    meta["retrieval_filter_level"] = session.latest_retrieval_filter_level
+    meta["retrieval_query"] = session.latest_retrieval_query
+    meta["retrieval_items"] = [
+        item.model_dump() for item in (session.latest_retrieval_debug or [])
+    ]
     return meta
 
 
@@ -102,9 +86,7 @@ def _user_id_for(session_id: str) -> str:
     return f"user_{session_id[:8]}"
 
 
-# ---------------------------------------------------------------------------
 # WebSocket — primary streaming transport
-# ---------------------------------------------------------------------------
 @router.websocket("/ws/{session_id}")
 async def chat_websocket(websocket: WebSocket, session_id: str) -> None:
     await websocket.accept()
@@ -165,9 +147,7 @@ async def chat_websocket(websocket: WebSocket, session_id: str) -> None:
             pass
 
 
-# ---------------------------------------------------------------------------
 # REST — non-streaming convenience endpoint
-# ---------------------------------------------------------------------------
 class SyncChatRequest(BaseModel):
     session_id: Optional[str] = Field(
         default=None,
@@ -208,9 +188,7 @@ async def chat_sync(request: SyncChatRequest) -> SyncChatResponse:
     )
 
 
-# ---------------------------------------------------------------------------
 # REST — debug / observability
-# ---------------------------------------------------------------------------
 @router.get("/session/{session_id}/state")
 async def get_session_state(session_id: str) -> dict:
     """Dump the full SessionState as JSON. Used by the debug UI panel."""

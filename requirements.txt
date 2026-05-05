@@ -1,8 +1,10 @@
+# Python: 3.11–3.13 recommended. On 3.14, pydantic-core must have a prebuilt
+# wheel for your platform; if pip tries to compile Rust, use 3.12 or 3.13.
 fastapi==0.115.0
 uvicorn[standard]==0.30.0
 openai==1.52.0
 redis[hiredis]==5.1.0
-pydantic==2.9.0
+pydantic==2.13.3
 python-dotenv==1.0.1
 faiss-cpu==1.13.2
 numpy==1.26.4

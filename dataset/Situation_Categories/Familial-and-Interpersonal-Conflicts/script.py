@@ -1,6 +1,6 @@
-import json
+"""Family/interpersonal situation seeds for dataset generation."""
 
-# 1. PERSONAS P1-P12
+import json
 PERSONAS = {
     "P1": "P1 — Male college student (18–22), Hostel, first-gen or aspirational family, JEE/NEET dropout or placement pressure, Hindi belt or metro.",
     "P2": "P2 — Female college student (18–22), Safety concerns, restricted mobility, marriage pressure alongside studies.",

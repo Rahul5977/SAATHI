@@ -1,6 +1,6 @@
-import json
+"""Employment situation seeds (personas and triggers) for dataset generation."""
 
-# 1. PERSONAS COMPATIBLE WITH C4
+import json
 PERSONAS = {
     "P1": "P1 — Male college student (18–22), Hostel, first-gen or aspirational family, JEE/NEET dropout or placement pressure.",
     "P3": "P3 — UPSC/PSC aspirant (22–30, M/F), Multi-year prep, coaching institute life, family investment, dropper stigma.",

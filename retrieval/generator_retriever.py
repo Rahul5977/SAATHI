@@ -1,27 +1,4 @@
-"""
-SAATHI Generator-time retrieval engine.
-
-Given the deterministic decisions made by the Analyzer + phase_gate
-(strategy / coping mechanism / phase / intensity / emotion), this module
-fetches the few-shot examples that get injected into the Generator's prompt.
-
-Pipeline (per `retrieve()`):
-
-  1. Embed a composite query string and pull top-80 from FAISS.
-  2. Hard cascade filter by (strategy, coping, phase) -> (strategy, coping)
-     -> (strategy) -> (no filter), relaxing only when too few records pass.
-  3. Soft re-score: persona match (+0.15), |intensity diff| <= 1 (+0.10),
-     same emotion (+0.05).
-  4. MMR re-ranking over the soft-sorted top-20 (lambda = 0.7) using the
-     L2-normalized embedding matrix from `embeddings.npy`.
-  5. Diversity enforcement: no two selected records may share a
-     `conversation_id`.
-  6. Return the top_k records as plain dicts.
-
-The composite-string template MUST stay aligned with
-`indexing/build_index.build_composite_string` — otherwise we are searching
-in a different distribution than we indexed.
-"""
+"""FAISS few-shot retrieval: composite query embed, domain + behavioral filters, MMR."""
 
 from __future__ import annotations
 
@@ -29,6 +6,7 @@ import asyncio
 import json
 import logging
 import time
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
@@ -42,7 +20,7 @@ from config import (
     OPENAI_API_KEY,
     OPENAI_EMBEDDING_MODEL,
 )
-from core.schemas import normalize_coping
+from core.schemas import normalize_category, normalize_coping
 
 
 logging.basicConfig(
@@ -53,21 +31,105 @@ logging.basicConfig(
 logger = logging.getLogger("generator_retriever")
 
 
-# ---------------------------------------------------------------------------
 # Tunables
-# ---------------------------------------------------------------------------
 FAISS_CANDIDATE_K = 80     # cast wide; we filter aggressively after
+# When problem_type is set, pull more neighbors before domain filter — many
+# top-by-text hits can be the wrong life-domain under short seeker lines.
+FAISS_CANDIDATE_K_WITH_PROBLEM = 200
 SOFT_TOP_N        = 20     # how many enter MMR after soft scoring
 MMR_LAMBDA        = 0.7    # 1.0 = pure relevance, 0.0 = pure diversity
 
 PERSONA_BOOST     = 0.15
 INTENSITY_BOOST   = 0.10
 EMOTION_BOOST     = 0.05
+PROBLEM_CATEGORY_BOOST = 0.10
+
+# Max chars for the SEEKER: segment in the *query* composite string. Slightly
+# above the 200-char index cap so short turns still carry a topic prefix from
+# session context without truncating the current utterance first.
+SEEKER_QUERY_MAX_CHARS = 220
+
+# Lowercase substrings of `record["category"]` (dataset folder name) used to
+# nudge retrieval toward the analyzer's canonical problem when emotion-only
+# similarity would drift (e.g. JEE thread + reply "Haan sach me").
+PROBLEM_CATEGORY_ANCHORS: dict[str, tuple[str, ...]] = {
+    "Academic_Pressure": (
+        "academic",
+        "presuure",
+        "jee",
+        "placement",
+        "gate",
+        "neet",
+        "board",
+        "study",
+        "exam",
+    ),
+    "Family_Dynamics": ("family", "familial"),
+    "Marriage_Rishta": ("marriage", "rishta", "shaadi", "wedding"),
+    "Employment_Livelihood": (
+        "employ",
+        "office",
+        "layoff",
+        "livelihood",
+        "promotion",
+        "job",
+    ),
+    "Financial_Debt": ("financial", "debt", "emi", "loan"),
+    "Gender_Identity": ("gender", "identity", "lgbt", "trans", "queer"),
+    "Health_Chronic_Illness": (
+        "health",
+        "chronic",
+        "illness",
+        "hospital",
+        "therapy",
+        "mental",
+    ),
+    "Migration_Displacement": ("migration", "migrant", "foreign", "visa", "displacement"),
+}
 
 
-# ---------------------------------------------------------------------------
+def _problem_category_match_bonus(
+    target_problem: Optional[str],
+    record_category: Optional[str],
+) -> float:
+    if not target_problem or not record_category:
+        return 0.0
+    cat = record_category.lower()
+    anchors = PROBLEM_CATEGORY_ANCHORS.get(target_problem)
+    if not anchors:
+        return 0.0
+    for a in anchors:
+        if a in cat:
+            return PROBLEM_CATEGORY_BOOST
+    return 0.0
+
+
+def _record_matches_problem_type(
+    target_problem: str,
+    record_category: Optional[str],
+) -> bool:
+    """True if indexed `category` (folder id) belongs to the same canonical
+    problem domain as ``target_problem`` (analyzer PROBLEM_TYPE)."""
+    pt = (target_problem or "").strip()
+    if not pt or not record_category:
+        return False
+    canon = normalize_category(str(record_category))
+    if canon == pt:
+        return True
+    return _problem_category_match_bonus(pt, record_category) > 0.0
+
+
+@dataclass
+class RetrievalOutcome:
+    """Return value of `GeneratorRetriever.retrieve` — records plus debug
+    fields for the dev UI / WebSocket meta."""
+
+    records: list[dict]
+    filter_level: str
+    query_text: str
+
+
 # Helpers
-# ---------------------------------------------------------------------------
 def _norm_strategy(s: Optional[str]) -> str:
     return (s or "").strip().upper()
 
@@ -91,9 +153,7 @@ def _safe_int(v, default: int = 3) -> int:
         return default
 
 
-# ---------------------------------------------------------------------------
 # GeneratorRetriever
-# ---------------------------------------------------------------------------
 class GeneratorRetriever:
     """Loads the FAISS index + records once and serves retrieval queries."""
 
@@ -219,13 +279,24 @@ class GeneratorRetriever:
         phase: str,
         intensity: int,
         emotion: Optional[str],
+        session_context: Optional[str] = None,
     ) -> str:
         """Mirror `indexing.build_index.build_composite_string` so the query
         lives in the same embedding distribution as the indexed records.
         Emotion is included when known to align fully with the build template;
         otherwise we use the literal token 'unknown' (also the build default).
+
+        `session_context` is prepended to the seeker line (topic pins from
+        analyzer + facts + summary) so short replies still embed with the
+        same thread as earlier turns — without reindexing.
         """
-        seeker = (seeker_text or "").strip()[:200]
+        raw = (seeker_text or "").strip()
+        ctx = (session_context or "").strip()
+        if ctx:
+            seeker = f"{ctx} :: {raw}".strip()
+        else:
+            seeker = raw
+        seeker = seeker[:SEEKER_QUERY_MAX_CHARS]
         emo = (emotion or "unknown").strip()
         return (
             f"[STRATEGY:{strategy}] "
@@ -247,23 +318,38 @@ class GeneratorRetriever:
         persona_code: str = "P0",
         emotion: Optional[str] = None,
         top_k: int = 6,
-    ) -> list[dict]:
-        """End-to-end retrieval. Returns up to `top_k` record dicts."""
+        session_context: Optional[str] = None,
+        problem_type: Optional[str] = None,
+    ) -> RetrievalOutcome:
+        """End-to-end retrieval. Returns ``RetrievalOutcome`` with up to
+        ``top_k`` record dicts plus the composite query string and
+        filter-cascade label for observability."""
         if top_k <= 0:
-            return []
+            return RetrievalOutcome(records=[], filter_level="skipped", query_text="")
 
         s_strategy = _norm_strategy(strategy)
         s_coping   = _norm_coping(coping_mech)
         s_phase    = _norm_phase(phase)
         s_intensity = _safe_int(intensity)
 
-        # ---- STEP 1: embed query and FAISS search top-80 ----
+        # ---- STEP 1: embed query and FAISS search top-K ----
         q_text = self._build_query_string(
-            seeker_text, s_strategy, s_coping, s_phase, s_intensity, emotion,
+            seeker_text,
+            s_strategy,
+            s_coping,
+            s_phase,
+            s_intensity,
+            emotion,
+            session_context=session_context,
         )
         q_vec = await self._embed_query(q_text)
 
-        k = min(FAISS_CANDIDATE_K, self.index.ntotal)
+        k_cap = (
+            FAISS_CANDIDATE_K_WITH_PROBLEM
+            if (problem_type or "").strip()
+            else FAISS_CANDIDATE_K
+        )
+        k = min(k_cap, self.index.ntotal)
         scores, idxs = self.index.search(q_vec, k)
         scores = scores[0]
         idxs = idxs[0]
@@ -281,15 +367,23 @@ class GeneratorRetriever:
 
         if not candidates:
             logger.warning("FAISS returned 0 candidates — empty index?")
-            return []
+            return RetrievalOutcome(
+                records=[], filter_level="no_faiss_hits", query_text=q_text,
+            )
 
-        # ---- STEP 2: cascading hard filter ----
+        # ---- STEP 2: problem-domain-first cascade, then strategy/coping/phase ----
         filtered, level = self._filter_cascade(
-            candidates, s_strategy, s_coping, s_phase, top_k,
+            candidates,
+            s_strategy,
+            s_coping,
+            s_phase,
+            top_k,
+            problem_type=(problem_type or "").strip() or None,
         )
         logger.info(
             f"Filter level={level}  candidates={len(filtered)}  "
-            f"(strategy={s_strategy}, coping={s_coping}, phase={s_phase})"
+            f"(problem_type={problem_type!r}, strategy={s_strategy}, "
+            f"coping={s_coping}, phase={s_phase})"
         )
 
         # ---- STEP 3: soft scoring ----
@@ -298,6 +392,7 @@ class GeneratorRetriever:
             target_intensity=s_intensity,
             target_persona=persona_code,
             target_emotion=(emotion or "").strip().lower() or None,
+            target_problem_type=(problem_type or "").strip() or None,
         )
         filtered.sort(key=lambda c: c["score"], reverse=True)
 
@@ -320,22 +415,21 @@ class GeneratorRetriever:
             rec["_retrieval_score"] = round(c["score"], 4)
             rec["_faiss_score"]     = round(c["faiss_score"], 4)
             out.append(rec)
-        return out
+        return RetrievalOutcome(records=out, filter_level=level, query_text=q_text)
 
-    # ---------- step 2: cascade filter ----------
-    def _filter_cascade(
+    def _strategy_coping_phase_cascade(
         self,
-        candidates: list[dict],
+        base: list[dict],
         strategy: str,
         coping: str,
         phase: str,
         top_k: int,
     ) -> tuple[list[dict], str]:
-        """Try strict → relax phase → relax coping → no filter. Returns
-        (filtered_list, level_label)."""
+        """Progressive relaxation of strategy / coping / phase filters on
+        ``base``. Last resort: all of ``base`` (no behavioral hard filters)."""
         def by(strat: bool, cop: bool, ph: bool) -> list[dict]:
             out = []
-            for c in candidates:
+            for c in base:
                 r = c["record"]
                 if strat and _norm_strategy(r.get("strategy")) != strategy:
                     continue
@@ -358,7 +452,45 @@ class GeneratorRetriever:
         if len(only_strat) >= top_k:
             return only_strat, "strategy_only"
 
-        return candidates, "fallback_unfiltered"
+        return base, "fallback_unfiltered"
+
+    def _filter_cascade(
+        self,
+        candidates: list[dict],
+        strategy: str,
+        coping: str,
+        phase: str,
+        top_k: int,
+        problem_type: Optional[str] = None,
+    ) -> tuple[list[dict], str]:
+        """Strategy/coping/phase cascade. When ``problem_type`` is set, the
+        cascade runs on domain-matched records first; cross-domain pool is
+        used only if fewer than ``top_k`` rows survive."""
+        if not (problem_type or "").strip():
+            return self._strategy_coping_phase_cascade(
+                candidates, strategy, coping, phase, top_k,
+            )
+
+        domain = [
+            c for c in candidates
+            if _record_matches_problem_type(
+                problem_type, c["record"].get("category"),
+            )
+        ]
+        filtered, level = self._strategy_coping_phase_cascade(
+            domain, strategy, coping, phase, top_k,
+        )
+        if len(filtered) >= top_k:
+            return filtered, f"problem_domain+{level}"
+
+        logger.info(
+            "problem_domain pool size=%d (need %d) — cross_domain_fallback",
+            len(filtered), top_k,
+        )
+        fb, fb_level = self._strategy_coping_phase_cascade(
+            candidates, strategy, coping, phase, top_k,
+        )
+        return fb, f"cross_domain_fallback+{fb_level}"
 
     # ---------- step 3: soft scoring ----------
     @staticmethod
@@ -367,6 +499,7 @@ class GeneratorRetriever:
         target_intensity: int,
         target_persona: str,
         target_emotion: Optional[str],
+        target_problem_type: Optional[str] = None,
     ) -> None:
         """Mutates `candidates` in place: bumps `score` per spec."""
         for c in candidates:
@@ -384,6 +517,11 @@ class GeneratorRetriever:
                 rec_emo = (r.get("seeker_emotion") or "").strip().lower()
                 if rec_emo and rec_emo == target_emotion:
                     score += EMOTION_BOOST
+
+            score += _problem_category_match_bonus(
+                target_problem_type,
+                r.get("category"),
+            )
 
             c["score"] = score
 
@@ -600,9 +738,7 @@ class GeneratorRetriever:
         )
 
 
-# ---------------------------------------------------------------------------
 # __main__ smoke test
-# ---------------------------------------------------------------------------
 async def _smoke_test() -> None:
     retriever = GeneratorRetriever()
 
@@ -658,7 +794,8 @@ async def _smoke_test() -> None:
         print("=" * 78)
 
         t0 = time.perf_counter()
-        results = await retriever.retrieve(top_k=4, **tq)
+        outcome = await retriever.retrieve(top_k=4, **tq)
+        results = outcome.records
         elapsed_ms = (time.perf_counter() - t0) * 1000.0
 
         print(f"Returned {len(results)} examples in {elapsed_ms:.1f} ms\n")

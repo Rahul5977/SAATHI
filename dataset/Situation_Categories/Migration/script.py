@@ -1,8 +1,6 @@
-import json
+"""Migration situation seeds (C8) for dataset generation."""
 
-# ==========================================
-# 1. PERSONAS COMPATIBLE WITH C8
-# ==========================================
+import json
 PERSONAS = {
     "P1": "P1 — Male college student (18–22), Hostel, first-gen or aspirational family, JEE/NEET dropout or placement pressure, Hindi belt or metro.",
     "P2": "P2 — Female college student (18–22), Safety concerns, restricted mobility, marriage pressure alongside studies.",
@@ -10,9 +8,7 @@ PERSONAS = {
     "P11": "P11 — LGBTQ young adult (20–30), Hidden identity, family fear, urban but isolated."
 }
 
-# ==========================================
 # 2. TRIGGER EVENTS (Health / Identity / Isolation)
-# ==========================================
 TRIGGER_EVENTS = [
     "Doctor dismissed my symptoms as 'stress' again",
     "Couldn't attend a friend's wedding — too exhausted from caregiving",
@@ -23,9 +19,7 @@ TRIGGER_EVENTS = [
     "Realized I haven't spoken to anyone in 3 days"
 ]
 
-# ==========================================
 # 3. CATEGORY 8 STRESSORS & COPING MAPPING
-# ==========================================
 # Coping mechanisms logically assigned based on the socio-cultural context of the displacement
 STRESSORS = [
     {"SUB": "Rural to metro migration", "DESC": "Alone in big city; language barrier; no community", "COP": "Sequential Coping"},
@@ -33,9 +27,7 @@ STRESSORS = [
     {"SUB": "Disaster-induced displacement", "DESC": "Flood/fire loss; government apathy; starting over", "COP": "Duty-Based Coping"}
 ]
 
-# ==========================================
 # 4. ELABORATE PROMPT GENERATOR
-# ==========================================
 def generate_c8_prompts(stressor_list, persona_dict, trigger_list):
     prompts = []
     for s in stressor_list:
@@ -82,9 +74,7 @@ JSON SCHEMA PER OBJECT:
             prompts.append(detailed_prompt.strip())
     return prompts
 
-# ==========================================
 # 5. EXECUTION
-# ==========================================
 all_c8_prompts = generate_c8_prompts(STRESSORS, PERSONAS, TRIGGER_EVENTS)
 
 # Example: Output the logic volume and the first combination 

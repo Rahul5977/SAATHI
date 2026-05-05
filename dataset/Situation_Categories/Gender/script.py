@@ -1,8 +1,6 @@
-import json
+"""Gender/identity situation seeds (C6) for dataset generation."""
 
-# ==========================================
-# 1. PERSONAS COMPATIBLE WITH C6
-# ==========================================
+import json
 PERSONAS = {
     "P2": "P2 — Female college student (18–22), Safety concerns, restricted mobility, marriage pressure alongside studies.",
     "P4": "P4 — IT/software professional (24–35, M/F), Tier-1 or Tier-2 city, MNC or startup, EMI pressure, WFH isolation.",
@@ -12,9 +10,7 @@ PERSONAS = {
     "P12": "P12 — Single mother / divorced woman (28–45), Stigma, economic precarity, children's wellbeing, community exclusion."
 }
 
-# ==========================================
 # 2. TRIGGER EVENTS (Health/Identity/Migration)
-# ==========================================
 TRIGGER_EVENTS = [
     "Doctor dismissed my symptoms as 'stress' again",
     "Couldn't attend a friend's wedding — too exhausted from caregiving",
@@ -25,9 +21,7 @@ TRIGGER_EVENTS = [
     "Realized I haven't spoken to anyone in 3 days"
 ]
 
-# ==========================================
 # 3. CATEGORY 6 STRESSORS & COPING MAPPING
-# ==========================================
 STRESSORS = [
     {"SUB": "Bahu role vs career", "DESC": "Expected to quit job after marriage; ambition suppressed", "COP": "Relational Preservation"},
     {"SUB": "LGBTQ identity hiding", "DESC": "Section 377 legacy fear; family dishonour anxiety", "COP": "Relational Preservation"},
@@ -35,9 +29,7 @@ STRESSORS = [
     {"SUB": "Single mother stigma", "DESC": "Divorce or widowhood; community exclusion; children's schooling", "COP": "Duty-Based Coping"}
 ]
 
-# ==========================================
 # 4. ELABORATE PROMPT GENERATOR
-# ==========================================
 def generate_c6_prompts(stressor_list, persona_dict, trigger_list):
     prompts = []
     for s in stressor_list:
@@ -84,9 +76,7 @@ JSON SCHEMA PER OBJECT:
             prompts.append(detailed_prompt.strip())
     return prompts
 
-# ==========================================
 # 5. EXECUTION
-# ==========================================
 all_c6_prompts = generate_c6_prompts(STRESSORS, PERSONAS, TRIGGER_EVENTS)
 
 # Example: Output the logic volume and the first combination 
