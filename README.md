@@ -36,7 +36,7 @@ SAATHI is a **peer-support style conversational assistant** aimed at Indian coll
 |------|-----|
 | Teesha Ramchandani | 12342260 |
 | Rahul Raj | 12341680 |
-| Suraj Kumar | 12342080 |
+| Suraj Kumar | 12342180 |
 
 ---
 
